@@ -274,7 +274,7 @@
                     <font>-</font>
                     <texturefocus>osd/dark/fullscreen_nf.png</texturefocus>
                     <texturenofocus>osd/dark/fullscreen_nf.png</texturenofocus>
-                    <onclick>ActivateWindow(visualization)</onclick>
+                    <onclick>ActivateWindow(visualisation)</onclick>
                 </control>
             </control>
             <control type="label">
