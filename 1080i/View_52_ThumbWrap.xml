@@ -61,7 +61,7 @@
                         <bordersize>21</bordersize>
                     </control>
                     <control type="image">
-                        <posy>361</posy>
+                        <posy>341</posy>
                         <width>642</width>
                         <height>382</height>
                         <aspectratio>keep</aspectratio>
@@ -145,7 +145,7 @@
                         </control>
                         <control type="image">
                             <posx>-21</posx>
-                            <posy>340</posy>
+                            <posy>320</posy>
                             <width>642</width>
                             <height>382</height>
                             <aspectratio>keep</aspectratio>
