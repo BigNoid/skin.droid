@@ -12,7 +12,7 @@
             <itemgap>10</itemgap>
             <orientation>horizontal</orientation>
             <visible>Player.Forwarding | Player.Rewinding</visible>
-            <animation effect="slide" start="0,0" end="0,-60" time="500" tween="cubic" easing="out" condition="Window.isActive(fullscreeninfo)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,-60" time="500" tween="cubic" easing="out" condition="Window.IsActive(fullscreeninfo)">Conditional</animation>
             <animation type="WindowOpen" reversible="false">
                 <effect type="fade" start="0" end="100" time="200" />
             </animation>
@@ -59,7 +59,7 @@
                 <animation effect="slide" start="0,-110" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
                 <animation effect="slide" start="0,-110" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
                 <animation effect="slide" end="0,-110" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
-                <visible>!Window.IsVisible(videoosd) + Player.Paused</visible>
+                <visible>![Window.IsVisible(videoosd) | Window.IsVisible(script-XBMC-Subtitles-main.xml)] + Player.Paused</visible>
                 <control type="image">
                     <posx>0</posx>
                     <posy>72</posy>
@@ -209,7 +209,7 @@
                 <animation type="WindowClose" reversible="false">
                     <effect type="fade" start="100" end="0" time="500" />
                 </animation>
-                <visible>!Window.IsVisible(videoosd) + Player.Paused</visible>
+                <visible>![Window.IsVisible(videoosd) | Window.IsVisible(script-XBMC-Subtitles-main.xml)] + Player.Paused</visible>
                 <control type="button" id="14">
                     <description>Play/Pause</description>
                     <posx>0</posx>
@@ -236,12 +236,11 @@
                 </control>
             </control>
 
-
             <control type="group">
                 <animation effect="slide" start="0,128" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
                 <animation effect="slide" end="0,128" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
                 <animation effect="slide" start="0,128" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
-                <visible>!Window.IsVisible(videoosd) + Player.Paused</visible>
+                <visible>![Window.IsVisible(videoosd) | Window.IsVisible(script-XBMC-Subtitles-main.xml)] + Player.Paused</visible>
                 <include>FloorFlagsBack</include>
                 <control type="image">
                     <posx>1470</posx>
@@ -411,6 +410,5 @@
                 </control>
             </control>
         </control>
-
     </controls>
 </window>
