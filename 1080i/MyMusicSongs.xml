@@ -58,7 +58,7 @@
                 <label>600</label>
                 <include>MediaMenuButton</include>
             </control>
-
+            <include>MediaMenuBottomButton</include>
         </control>
     </controls>
 

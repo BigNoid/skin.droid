@@ -36,6 +36,7 @@
                 <altlabel>585</altlabel>
                 <include>MediaMenuButton</include>
             </control>
+            <include>MediaMenuBottomButton</include>
         </control>
     </controls>
 

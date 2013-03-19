@@ -61,6 +61,7 @@
                 <label>208</label>
                 <include>MediaMenuButton</include>
             </control>
+            <include>MediaMenuBottomButton</include>
         </control>
     </controls>
 

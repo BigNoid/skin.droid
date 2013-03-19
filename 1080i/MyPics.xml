@@ -208,7 +208,7 @@
                 <label>13319</label>
                 <include>MediaMenuButton</include>
             </control>
-
+            <include>MediaMenuBottomButton</include>
         </control>
     </controls>
 

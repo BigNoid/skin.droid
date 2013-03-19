@@ -60,7 +60,7 @@
                 <label>208</label>
                 <include>MediaMenuGrouplist</include>
             </control>
-
+            <include>MediaMenuBottomButton</include>
         </control>
     </controls>
 

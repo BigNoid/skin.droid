@@ -63,7 +63,7 @@
                 <label>587</label>
                 <include>MediaMenuButton</include>
             </control>
-
+            <include>MediaMenuBottomButton</include>
         </control>
     </controls>
 
