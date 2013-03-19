@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="View_50_List">
+        <control type="group">
+            <visible>Control.isVisible(50)</visible>
+            <control type="image">
+                <posy>126</posy>
+                <width>1236</width>
+                <height>864</height>
+                <texture border="3" flipx="true">dialogs/toast_back_blue.png</texture>
+                    </control>
+            <control type="list" id="50">
+                <posx>0</posx>
+                <posy>126</posy>
+                <width>1236</width>
+                <height>864</height>
+                <onleft>9010</onleft>
+                <onright>60</onright>
+                <onup>50</onup>
+                <ondown>50</ondown>
+                <pagecontrol>60</pagecontrol>
+                <viewtype label="535">list</viewtype>
+                <orientation>vertical</orientation>
+                <scrolltime tween="sine" easing="inout">200</scrolltime>
+                <itemlayout width="1236" height="72">
+                    <control type="image">
+                        <width>1236</width>
+                        <height>72</height>
+                        <texture border="3">dialogs/toast_back_blue.png</texture>
+                        </control>
+
+                    <control type="label">
+                        <posx>0</posx>
+                        <width>1236</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>White2</textcolor>
+                        <textoffsetx>18</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>1236</posx>
+                        <width>1236</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textcolor>grey</textcolor>
+                        <textoffsetx>18</textoffsetx>
+                        <animation effect="slide" start="0" end="-36" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
+                    </control>
+                    <control type="image">
+                        <posx>1195</posx>
+                        <posy>26</posy>
+                        <width>28</width>
+                        <height>24</height>
+                        <texture>$INFO[ListItem.Overlay]</texture>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="1236" height="72">
+                    <control type="image">
+                        <width>1236</width>
+                        <height>72</height>
+                        <texture border="4">dialogs/button_focus.png</texture>
+                            <visible>Control.hasFocus(50)</visible>
+                    </control>
+                    <control type="image">
+                        <width>1236</width>
+                        <height>72</height>
+                        <texture border="3">dialogs/toast_back_blue.png</texture>
+                            <visible>!Control.hasFocus(50)</visible>
+                    </control>
+
+                    <control type="label">
+                        <posx>0</posx>
+                        <width>1236</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textoffsetx>18</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>1236</posx>
+                        <width>1236</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textoffsetx>18</textoffsetx>
+                        <animation effect="slide" start="0" end="-36" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
+                    </control>
+                    <control type="image">
+                        <posx>1195</posx>
+                        <posy>26</posy>
+                        <width>28</width>
+                        <height>24</height>
+                        <texture>$INFO[ListItem.Overlay,]</texture>
+                    </control>
+                </focusedlayout>
+
+            </control>
+            <include>SideScrollbar</include>
+            <control type="image">
+                <posx>1236</posx>
+                <posy>72</posy>
+                <width>612</width>
+                <height>918</height>
+                <include>toast_back</include>
+            </control>
+            <control type="image">
+                <posy>72</posy>
+                <width>1236</width>
+                <height>54</height>
+                <include>toast_back</include>
+            </control>
+            <control type="group">
+                <posy>72</posy>
+                <control type="button">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>1140</width>
+                    <height>54</height>
+                    <texturefocus border="8">dialogs/button_focus.png</texturefocus>
+                    <include>HiddenButton</include>
+                    <onclick>Back</onclick>
+                </control>
+                <control type="label">
+                    <description>Heading</description>
+                    <height>54</height>
+                    <label>$VAR[ListHeaderVar]</label>
+                    <width>1140</width>
+                    <textcolor>$VAR[ThemeColorVar]</textcolor>
+                    <textoffsetx>18</textoffsetx>
+                </control>
+                <control type="label">
+                    <description>Heading</description>
+                    <posx>1236</posx>
+                    <height>54</height>
+                    <label>$INFO[Container(50).CurrentPage]$INFO[Container(50).NumPages,/]</label>
+                    <width>840</width>
+                    <align>right</align>
+                    <textcolor>$VAR[ThemeColorVar]</textcolor>
+                    <textoffsetx>18</textoffsetx>
+                </control>
+            </control>
+
+            <control type="image">
+                <posx>1236</posx>
+                <posy>72</posy>
+                <width>612</width>
+                <height>918</height>
+                <texture background="true">$VAR[InfoPosterThumbVar]</texture>
+                <visible>!IsEmpty(ListItem.Art(poster)) | !IsEmpty(ListItem.Art(tvshow.poster))</visible>
+            </control>
+            <control type="image">
+                <posx>1236</posx>
+                <posy>72</posy>
+                <width>612</width>
+                <height>918</height>
+                <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
+                <aspectratio aligny="center">keep</aspectratio>
+                <visible>IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(tvshow.poster))</visible>
+            </control>
+
+
+        </control>
+    </include>
+
+</includes>

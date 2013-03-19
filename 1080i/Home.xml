@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="0">
+    <defaultcontrol always="true">800</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <controls>
+        <!--<control type="image">
+            <include>Dimensions_Fullscreen</include>
+            <texture background="true">common/background.png</texture>
+            <texture background="true" fallback="special://skin/backgrounds/default_bg.jpg">$INFO[Skin.String(DefaultBG)]</texture>
+            <colordiffuse>FanartDiffuse</colordiffuse>
+        </control>-->
+        <include>GlobalBackground</include>
+
+
+        <control type="group">
+            <animation type="WindowOpen" reversible="false" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation) | Window.Previous(slideshow)]">
+                <effect type="zoom" start="80" end="100" center="960,540" easing="out" tween="cubic" time="300" />
+                <effect type="fade" start="0" end="100" time="300" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="cubic" time="300" />
+                <effect type="fade" start="100" end="0" time="300" />
+            </animation>
+            <!--<include>TopLine</include>-->
+            <!--<control type="image">
+                <posx>100</posx>
+                <posy>149r</posy>
+                <width>1720</width>
+                <height>2</height>
+                <texture>common/blue.png</texture>
+            </control>-->
+            <!--<control type="list" id="300">
+                <description>Home Wraplist</description>
+                <posx>100</posx>
+                <posy>75</posy>
+                <width>1720</width>
+                <height>846</height>
+                <onup>11111</onup>
+                <ondown>8000</ondown>
+                <onleft>300</onleft>
+                <onright>300</onright>
+                <scrolltime tween="sine" easing="inout">200</scrolltime>
+                <orientation>horizontal</orientation>
+                <itemlayout width="344" height="75">
+
+                    <control type="label">
+                        <posy>0</posy>
+                        <posx>0</posx>
+                        <height>75</height>
+                        <width>344</width>
+                        <font>Medium_Caps</font>
+                        <info>ListItem.Label</info>
+                        <textoffsetx>15</textoffsetx>
+                    </control>
+
+                </itemlayout>
+
+                <focusedlayout width="344" height="75">
+
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>69</posy>
+                        <width>344</width>
+                        <height>5</height>
+                        <texture>common/blue.png</texture>
+                    </control>
+                    <control type="label">
+                        <posy>0</posy>
+                        <posx>0</posx>
+                        <width>344</width>
+                        <height>75</height>
+                        <info>ListItem.Label</info>
+                        <font>Medium_Caps</font>
+                        <textcolor>Blue</textcolor>
+                        <textoffsetx>15</textoffsetx>
+                        <visible>Control.hasFocus(300)</visible>
+                    </control>
+                    <control type="label">
+                        <posy>0</posy>
+                        <posx>0</posx>
+                        <width>344</width>
+                        <height>75</height>
+                        <info>ListItem.Label</info>
+                        <font>Medium_Caps</font>
+                        <textoffsetx>15</textoffsetx>
+                        <visible>!Control.hasFocus(300)</visible>
+                    </control>
+
+                </focusedlayout>
+
+                <content>
+                    <item id="1">
+                        <description>Movies</description>
+                        <label>20342</label>
+                        <onclick>ActivateWindow(Video,movietitles)</onclick>
+                        <visible>Library.HasContent(Movies)</visible>
+                    </item>
+                    <item id="2">
+                        <description>TV Shows</description>
+                        <label>20343</label>
+                        <onclick>ActivateWindow(Video,tvshowtitles)</onclick>
+                        <visible>Library.HasContent(TVShows)</visible>
+                    </item>
+                    <item id="3">
+                        <description>Music</description>
+                        <label>2</label>
+                        <onclick>ActivateWindow(Music)</onclick>
+                    </item>
+                    <item id="4">
+                        <description>Videos</description>
+                        <label>3</label>
+                        <onclick>ActivateWindow(Video,Files)</onclick>
+                    </item>
+                    <item id="5">
+                        <description>Pictures</description>
+                        <label>1</label>
+                        <onclick>ActivateWindow(Pictures)</onclick>
+                    </item>
+
+                    <item id="6">
+                        <description>Programs</description>
+                        <label>0</label>
+                        <onclick>ActivateWindow(Programs,Addons)</onclick>
+                    </item>
+                    <item id="7">
+                        <description>Weather</description>
+                        <label>8</label>
+                        <onclick>ActivateWindow(weather)</onclick>
+                    </item>
+                    <item id="8">
+                        <description>Play Disc</description>
+                        <label>341</label>
+                        <onclick>PlayDVD</onclick>
+                        <visible>System.HasMediadvd</visible>
+                    </item>
+
+                </content>
+
+            </control>
+            <control type="list" id="310">
+                <description>Home Wraplist</description>
+                <posx>100</posx>
+                <posy>147r</posy>
+                <width>1720</width>
+                <height>846</height>
+                <onup>8000</onup>
+                <ondown>300</ondown>
+                <onleft>310</onleft>
+                <onright>310</onright>
+                <scrolltime tween="sine" easing="inout">200</scrolltime>
+                <orientation>horizontal</orientation>
+                <itemlayout width="344" height="75">
+
+                    <control type="label">
+                        <posy>0</posy>
+                        <posx>0</posx>
+                        <height>75</height>
+                        <width>344</width>
+                        <font>Medium_Caps</font>
+                        <info>ListItem.Label</info>
+                        <textoffsetx>15</textoffsetx>
+                    </control>
+
+                </itemlayout>
+
+                <focusedlayout width="344" height="75">
+
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>344</width>
+                        <height>5</height>
+                        <texture>common/blue.png</texture>
+                    </control>
+                    <control type="label">
+                        <posy>0</posy>
+                        <posx>0</posx>
+                        <width>344</width>
+                        <height>75</height>
+                        <info>ListItem.Label</info>
+                        <font>Medium_Caps</font>
+                        <textcolor>Blue</textcolor>
+                        <textoffsetx>15</textoffsetx>
+                        <visible>Control.hasFocus(310)</visible>
+                    </control>
+                    <control type="label">
+                        <posy>0</posy>
+                        <posx>0</posx>
+                        <width>344</width>
+                        <height>75</height>
+                        <info>ListItem.Label</info>
+                        <font>Medium_Caps</font>
+                        <textoffsetx>15</textoffsetx>
+                        <visible>!Control.hasFocus(310)</visible>
+                    </control>
+
+                </focusedlayout>
+
+                <content>
+                    <item id="1">
+                        <description>Latest</description>
+                        <label>Latest</label>
+                        <onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
+                        <visible>Container(300).HasFocus(1)</visible>
+                    </item>
+                    <item id="2">
+                        <description>Random</description>
+                        <label>Random</label>
+                        <onclick condition="System.HasAddon(script.randommovie)">RunScript(script.randommovie, prompt=True)</onclick>
+                        <onclick condition="!System.HasAddon(script.randommovie)">XBMC.RunScript(script.randomitems,limit=16&amp;unplayed=True)</onclick>
+                        <visible>Container(300).HasFocus(1)</visible>
+                    </item>
+                    <item id="3">
+                        <description>In progress</description>
+                        <label>In progress</label>
+                        <onclick>ActivateWindow(Videos,special://skin/extras/InProgress.xsp,return)</onclick>
+                        <visible>Container(300).HasFocus(1)</visible>
+                    </item>
+                </content>
+
+            </control>-->
+            <include>HomeItemsPanel</include>
+            <!--<control type="image">
+                <posx>50</posx>
+                <posy>70r</posy>
+                <width>1820</width>
+                <height>2</height>
+                <texture>common/white.png</texture>
+                <colordiffuse>$VAR[NotificationBarColorVar]</colordiffuse>
+            </control>-->
+
+        </control>
+        <include>NotificationCenter</include>
+    </controls>
+
+</window>

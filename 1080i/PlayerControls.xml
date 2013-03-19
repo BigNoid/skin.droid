@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="400">
+	<defaultcontrol>3</defaultcontrol>
+    <include>DialogEffect</include>
+    <controls>
+        <include>GlobalOverlay</include>
+        <control type="group">
+            <posx>548</posx>
+            <posy>310</posy>
+            <visible>!Window.IsActive(visualisation) + !Window.IsActive(karaoke)</visible>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>824</width>
+                <height>460</height>
+                <texture border="18">dialogs/dialog_back_light.png</texture>
+            </control>
+            <control type="image">
+                <posx>12</posx>
+                <posy>306</posy>
+                <width>800</width>
+                <height>2</height>
+                <texture>common/blue2.png</texture>
+            </control>
+            <control type="image">
+                <posx>12</posx>
+                <posy>12</posy>
+                <width>294</width>
+                <height>294</height>
+                <aspectratio align="center">scale</aspectratio>
+                <texture>$INFO[MusicPlayer.Cover]</texture>
+            </control>
+                <control type="label">
+                    <posy>12</posy>
+                    <posx>306</posx>
+                    <height>98</height>
+                    <width>470</width>
+                    <font>Small</font>
+                    <textcolor>PanelBack</textcolor>
+                    <aligny>center</aligny>
+                    <label>$INFO[MusicPlayer.Title]</label>
+                    <textoffsetx>15</textoffsetx>
+                    <wrapmultiline>true</wrapmultiline>
+                </control>
+                <control type="label">
+                    <posy>110</posy>
+                    <posx>306</posx>
+                    <height>98</height>
+                    <width>470</width>
+                    <font>Small</font>
+                    <aligny>center</aligny>
+                    <textcolor>PanelBack</textcolor>
+                    <label>$INFO[MusicPlayer.Artist]</label>
+                    <textoffsetx>15</textoffsetx>
+                    <wrapmultiline>true</wrapmultiline>
+                </control>
+            <control type="label">
+                <posy>208</posy>
+                <posx>306</posx>
+                <height>98</height>
+                <width>470</width>
+                <font>Small</font>
+                <aligny>center</aligny>
+                <textcolor>PanelBack</textcolor>
+                <label>$INFO[MusicPlayer.Album]</label>
+                <textoffsetx>15</textoffsetx>
+                <wrapmultiline>true</wrapmultiline>
+            </control>
+            <control type="grouplist" id="600">
+                <posx>12</posx>
+                <posy>320</posy>
+                <width>800</width>
+                <height>136</height>
+                <itemgap>24</itemgap>
+                <align>center</align>
+                <orientation>horizontal</orientation>
+                <control type="image">
+                    <width>64</width>
+                    <height>64</height>
+                    <texture border="4">settings/button_fo.png</texture>
+
+                    <animation type="Conditional" reversible="false" condition="!Control.HasFocus(1)">
+                        <effect type="fade" start="100" end="0" time="50" />
+                    </animation>
+                </control>
+                <control type="image">
+                    <width>64</width>
+                    <height>64</height>
+                    <texture border="4">settings/button_fo.png</texture>
+
+                    <animation type="Conditional" reversible="false" condition="!Control.HasFocus(2)">
+                        <effect type="fade" start="100" end="0" time="50" />
+                    </animation>
+                </control>
+                <control type="image">
+                    <width>64</width>
+                    <height>64</height>
+                    <texture border="4">settings/button_fo.png</texture>
+
+                    <animation type="Conditional" reversible="false" condition="!Control.HasFocus(3)">
+                        <effect type="fade" start="100" end="0" time="50" />
+                    </animation>
+                </control>
+                <control type="image">
+                    <width>64</width>
+                    <height>64</height>
+                    <texture border="4">settings/button_fo.png</texture>
+
+                    <animation type="Conditional" reversible="false" condition="!Control.HasFocus(4)">
+                        <effect type="fade" start="100" end="0" time="50" />
+                    </animation>
+                </control>
+                <control type="image">
+                    <width>64</width>
+                    <height>64</height>
+                    <texture border="4">settings/button_fo.png</texture>
+
+                    <animation type="Conditional" reversible="false" condition="!Control.HasFocus(5)">
+                        <effect type="fade" start="100" end="0" time="50" />
+                    </animation>
+                </control>
+                <control type="image">
+                    <width>64</width>
+                    <height>64</height>
+                    <texture border="4">settings/button_fo.png</texture>
+
+                    <animation type="Conditional" reversible="false" condition="!Control.HasFocus(6)">
+                        <effect type="fade" start="100" end="0" time="50" />
+                    </animation>
+                </control>
+                <control type="image">
+                    <width>64</width>
+                    <height>64</height>
+                    <texture border="4">settings/button_fo.png</texture>
+
+                    <animation type="Conditional" reversible="false" condition="!Control.HasFocus(7)">
+                        <effect type="fade" start="100" end="0" time="50" />
+                    </animation>
+                </control>
+                <control type="image">
+                    <width>64</width>
+                    <height>64</height>
+                    <texture border="4">settings/button_fo.png</texture>
+
+                    <animation type="Conditional" reversible="false" condition="!Control.HasFocus(8)">
+                        <effect type="fade" start="100" end="0" time="50" />
+                    </animation>
+                </control>
+                <control type="image">
+                    <width>64</width>
+                    <height>64</height>
+                    <texture border="4">settings/button_fo.png</texture>
+
+                    <animation type="Conditional" reversible="false" condition="!Control.HasFocus(10)">
+                        <effect type="fade" start="100" end="0" time="50" />
+                    </animation>
+                </control>
+            </control>
+            <control type="grouplist" id="600">
+                <posx>12</posx>
+                <posy>320</posy>
+                <width>800</width>
+                <height>136</height>
+                <itemgap>24</itemgap>
+                <align>center</align>
+                <orientation>horizontal</orientation>
+                <control type="button" id="1">
+                    <description>Bookmarks</description>
+                    <width>64</width>
+                    <height>64</height>
+                    <label>-</label>
+                    <font>-</font>
+                    <texturefocus>osd/dark/previous_nf.png</texturefocus>
+                    <texturenofocus>osd/dark/previous_nf.png</texturenofocus>
+                    <onclick>PlayerControl(Previous)</onclick>
+                </control>
+                <control type="button" id="2">
+                    <description>Bookmarks</description>
+                    <width>64</width>
+                    <height>64</height>
+                    <label>-</label>
+                    <font>-</font>
+                    <texturefocus>osd/dark/rew_nf.png</texturefocus>
+                    <texturenofocus>osd/dark/rew_nf.png</texturenofocus>
+                    <onclick>PlayerControl(Rewind)</onclick>
+                </control>
+                <control type="togglebutton" id="3">
+                    <description>Play/Pause</description>
+                    <width>64</width>
+                    <height>64</height>
+                    <label>31037</label>
+                    <altlabel>208</altlabel>
+                    <font>-</font>
+                    <texturefocus>osd/dark/play_nf.png</texturefocus>
+                    <texturenofocus>osd/dark/play_nf.png</texturenofocus>
+                    <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+                    <alttexturefocus>osd/dark/pause_nf.png</alttexturefocus>
+                    <alttexturenofocus>osd/dark/pause_nf.png</alttexturenofocus>
+                    <onclick>PlayerControl(Play)</onclick>
+                </control>
+                <control type="button" id="4">
+                    <description>Bookmarks</description>
+                    <width>64</width>
+                    <height>64</height>
+                    <label>-</label>
+                    <font>-</font>
+                    <texturefocus>osd/dark/stop_nf.png</texturefocus>
+                    <texturenofocus>osd/dark/stop_nf.png</texturenofocus>
+                    <onclick>PlayerControl(Stop)</onclick>
+                </control>
+                <control type="button" id="5">
+                    <description>Bookmarks</description>
+                    <width>64</width>
+                    <height>64</height>
+                    <label>-</label>
+                    <font>-</font>
+                    <texturefocus>osd/dark/ff_nf.png</texturefocus>
+                    <texturenofocus>osd/dark/ff_nf.png</texturenofocus>
+                    <onclick>PlayerControl(Forward)</onclick>
+                </control>
+                <control type="button" id="6">
+                    <description>Bookmarks</description>
+                    <width>64</width>
+                    <height>64</height>
+                    <label>-</label>
+                    <font>-</font>
+                    <texturefocus>osd/dark/next_nf.png</texturefocus>
+                    <texturenofocus>osd/dark/next_nf.png</texturenofocus>
+                    <onclick>PlayerControl(Next)</onclick>
+                </control>
+                <control type="togglebutton" id="7">
+                    <description>Random</description>
+                    <width>64</width>
+                    <height>64</height>
+                    <label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
+                    <font>-</font>
+                    <texturefocus>osd/dark/shuffle__off_nf.png</texturefocus>
+                    <texturenofocus>osd/dark/shuffle__off_nf.png</texturenofocus>
+                    <usealttexture>Playlist.IsRandom</usealttexture>
+                    <alttexturefocus>osd/dark/shuffle_nf.png</alttexturefocus>
+                    <alttexturenofocus>osd/dark/shuffle_nf.png</alttexturenofocus>
+                    <onclick>XBMC.PlayerControl(Random)</onclick>
+                </control>
+                <control type="group">
+                    <width>64</width>
+                    <height>64</height>
+                    <control type="button" id="8">
+                        <description>Repeat</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>64</width>
+                        <height>64</height>
+                        <label>-</label>
+                        <font>-</font>
+                        <texturefocus>-</texturefocus>
+                        <texturenofocus>-</texturenofocus>
+                        <onclick>PlayerControl(Repeat)</onclick>
+                    </control>
+                    <control type="image" id="9">
+                        <description>Bookmarks</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>64</width>
+                        <height>64</height>
+                        <texture>$VAR[RepeatButtonVar]</texture>
+                        <fadetime>0</fadetime>
+                    </control>
+                </control>
+                <control type="button" id="10">
+                    <description>Bookmarks</description>
+                    <width>64</width>
+                    <height>64</height>
+                    <label>-</label>
+                    <font>-</font>
+                    <texturefocus>osd/dark/fullscreen_nf.png</texturefocus>
+                    <texturenofocus>osd/dark/fullscreen_nf.png</texturenofocus>
+                    <onclick>ActivateWindow(visualization)</onclick>
+                </control>
+            </control>
+            <control type="label">
+                <posy>400</posy>
+                <posx>162</posx>
+                <height>23</height>
+                <width>150</width>
+                <font>Small</font>
+                <align>right</align>
+                <aligny>center</aligny>
+                <textcolor>PanelBack</textcolor>
+                <label>$INFO[Player.Time]</label>
+                <textoffsetx>15</textoffsetx>
+            </control>
+            <control type="progress">
+                <description>Progressbar</description>
+                <posx>162</posx>
+                <posy>400</posy>
+                <width>500</width>
+                <info>Player.Progress</info>
+                    </control>
+            <control type="slider">
+                <description>Progressbar</description>
+                <posx>162</posx>
+                <posy>400</posy>
+                <width>500</width>
+                <texturesliderbar>-</texturesliderbar>
+                <textureslidernib border="2">-</textureslidernib>
+                <textureslidernibfocus border="2">-</textureslidernibfocus>
+                <info>Player.Progress</info>
+                <action>seek</action>
+            </control>
+            <control type="label">
+                <posy>400</posy>
+                <posx>762</posx>
+                <height>23</height>
+                <width>150</width>
+                <font>Small</font>
+                <align>right</align>
+                <aligny>center</aligny>
+                <textcolor>PanelBack</textcolor>
+                <label>$INFO[Player.TimeRemaining]</label>
+                <textoffsetx>15</textoffsetx>
+            </control>
+        </control>
+    </controls>
+
+</window>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="146">
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <controls>
+        <control type="group">
+            <animation type="WindowOpen" reversible="false">
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="fade" start="100" end="0" time="200" />
+            </animation>
+            <control type="image">
+                <posx>0</posx>
+                <posy>72</posy>
+                <width>480</width>
+                <height>486</height>
+                <include>toast_back</include>
+            </control>
+            <control type="image" id="3">
+                <posx>0</posx>
+                <posy>72</posy>
+                <width>480</width>
+                <height>486</height>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$INFO[ListItem.Icon]</texture>
+            </control>
+            <control type="grouplist" id="9000">
+                <posx>0</posx>
+                <posy>558</posy>
+                <width>480</width>
+                <height>432</height>
+                <itemgap>0</itemgap>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <onright>61</onright>
+                <onleft>61</onleft>
+                <orientation>vertical</orientation>
+                <control type="button" id="6">
+                    <description>Install/Uninstall Addon button</description>
+                    <width>480</width>
+                    <label>24022</label>
+                </control>
+                <control type="button" id="7">
+                    <description>Enable/Disable Addon button</description>
+                    <width>480</width>
+                    <label>24021</label>
+                </control>
+                <control type="button" id="9">
+                    <description>Addon Settings</description>
+                    <width>480</width>
+                    <label>24020</label>
+                </control>
+                <control type="button" id="8">
+                    <description>Update Addon button</description>
+                    <width>480</width>
+                    <label>24069</label>
+                </control>
+                <control type="button" id="10">
+                    <description>Changelog button</description>
+                    <width>480</width>
+                    <label>24036</label>
+                </control>
+                <control type="button" id="11">
+                    <description>Rollback button</description>
+                    <width>480</width>
+                    <label>24048</label>
+                </control>
+            </control>
+            <control type="group">
+                <posx>480</posx>
+                <posy>72</posy>
+                <control type="image">
+                    <width>1440</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="label">
+                    <posx>256</posx>
+                    <width>1184</width>
+                    <height>90</height>
+                    <font>Medium_Caps2</font>
+                    <label>$INFO[ListItem.Property(Addon.Name)]</label>
+                    <textoffsetx>8</textoffsetx>
+                </control>
+                <control type="group">
+                    <posy>90</posy>
+                    <control type="image">
+                        <width>256</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>256</posx>
+                        <width>680</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>936</posx>
+                        <width>504</width>
+                        <height>288</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>936</posx>
+                        <width>504</width>
+                        <height>288</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture>$INFO[ListItem.Art(fanart)]</texture>
+                    </control>
+                    <control type="label">
+                        <posx>256</posx>
+                        <width>256</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <label>$LOCALIZE[21863]:</label>
+                        <textoffsetx>8</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>256</posx>
+                        <width>686</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Property(Addon.Creator)]</label>
+                        <textoffsetx>8</textoffsetx>
+                    </control>
+                </control>
+                <control type="group">
+                    <posy>162</posy>
+                    <control type="image">
+                        <width>256</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>256</posx>
+                        <width>680</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="label">
+                        <posx>256</posx>
+                        <width>256</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <label>$LOCALIZE[24051]</label>
+                        <textoffsetx>8</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>256</posx>
+                        <width>680</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Property(Addon.Version)]</label>
+                        <textoffsetx>8</textoffsetx>
+                    </control>
+                </control>
+                <control type="group">
+                    <posy>234</posy>
+                    <control type="image">
+                        <width>256</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>256</posx>
+                        <width>680</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="label">
+                        <posx>256</posx>
+                        <width>256</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <label>$LOCALIZE[146]</label>
+                        <textoffsetx>8</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>256</posx>
+                        <width>680</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Property(Addon.Type)]</label>
+                        <textoffsetx>8</textoffsetx>
+                    </control>
+                </control>
+                <control type="group">
+                    <control type="image">
+                        <posy>306</posy>
+                        <width>936</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posy>378</posy>
+                        <width>1440</width>
+                        <height>42</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posy>742</posy>
+                        <width>1440</width>
+                        <height>32</height>
+                        <include>toast_back</include>
+                    </control>
+                </control>
+                <control type="group">
+                    <posy>414</posy>
+                    <control type="image">
+                        <width>256</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posy>72</posy>
+                        <width>256</width>
+                        <height>256</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>256</posx>
+                        <width>1168</width>
+                        <height>328</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="label">
+                        <posx>256</posx>
+                        <width>256</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <align>right</align>
+                        <label>$LOCALIZE[21821]:</label>
+                        <textoffsetx>8</textoffsetx>
+                    </control>
+                    <control type="textbox">
+                        <description>Description</description>
+                        <posx>264</posx>
+                        <posy>10</posy>
+                        <width>1130</width>
+                        <height>312</height>
+                        <align>left</align>
+                        <font>Plot</font>
+                        <label>$INFO[ListItem.Property(Addon.Description)]</label>
+                        <pagecontrol>61</pagecontrol>
+                        <autoscroll>False</autoscroll>
+                    </control>
+                    <control type="scrollbar" id="61">
+                        <posx>1424</posx>
+                        <posy>0</posy>
+                        <height>328</height>
+                        <width>16</width>
+                        <onleft>9000</onleft>
+                        <onright>9000</onright>
+                        <texturesliderbackground border="3">dialogs/toast_back_blue.png</texturesliderbackground>
+                        <colordiffuse>$VAR[ScrollbarColorVar]</colordiffuse>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <posy>774</posy>
+                    <control type="image">
+                        <width>256</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posy>72</posy>
+                        <width>256</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>256</posx>
+                        <width>1184</width>
+                        <height>144</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="label">
+                        <posx>256</posx>
+                        <width>256</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <textcolor>Orange</textcolor>
+                        <label>$LOCALIZE[24052]:</label>
+                        <textoffsetx>8</textoffsetx>
+                    </control>
+                    <control type="textbox">
+                        <description>Description</description>
+                        <posx>264</posx>
+                        <posy>10</posy>
+                        <width>1130</width>
+                        <height>130</height>
+                        <align>left</align>
+                        <font>Plot</font>
+                        <label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
+                        <pagecontrol>61</pagecontrol>
+                        <autoscroll delay="1000" time="AutoScrollTime" repeat="8001">True</autoscroll>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

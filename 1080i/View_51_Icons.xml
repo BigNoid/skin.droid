@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<include name="View_51_Icons">
+		<control type="group">
+			<visible>Control.isVisible(51)</visible>
+            <control type="image">
+                <posy>72</posy>
+                <width>1848</width>
+                <height>918</height>
+                <include>toast_back</include>
+            </control>
+            <control type="panel" id="51">
+                <posx>0</posx>
+                <posy>72</posy>
+                <width>1848</width>
+                <height>920</height>
+                <onleft>9010</onleft>
+                <onright>60</onright>
+                <onup>51</onup>
+                <ondown>51</ondown>
+                <pagecontrol>60</pagecontrol>
+                <orientation>vertical</orientation>
+                <preloaditems>2</preloaditems>
+                <viewtype label="536">icon</viewtype>
+                <scrolltime tween="quadratic">300</scrolltime>
+                <itemlayout width="462" height="459" condition="Container.Content(episodes) | SubString(Container.FolderPath,youtube)">
+                    <control type="image">
+                        <width>462</width>
+                        <height>260</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posy>261</posy>
+                        <width>462</width>
+                        <height>198</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <width>462</width>
+                        <height>260</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <aspectratio align="center">scale</aspectratio>
+                        <bordersize>2</bordersize>
+                        <fadetime>200</fadetime>
+                    </control>
+                    <control type="image">
+                        <posx>362</posx>
+                        <posy>160</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>$INFO[ListItem.Overlay,common/]</texture>
+                        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                        <bordersize>2</bordersize>
+                    </control>
+                    <control type="label">
+                        <posy>261</posy>
+                        <width>462</width>
+                        <height>66</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>grey</textcolor>
+                        <textoffsetx>18</textoffsetx>
+                    </control>
+                    <control type="textbox">
+                        <posx>18</posx>
+                        <posy>327</posy>
+                        <width>436</width>
+                        <height>100</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Plot]</label>
+                        <textcolor>grey</textcolor>
+                        <autoscroll>False</autoscroll>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="462" height="459" condition="Container.Content(episodes) | SubString(Container.FolderPath,youtube)">
+                    <control type="image">
+                        <width>462</width>
+                        <height>260</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posy>261</posy>
+                        <width>462</width>
+                        <height>198</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="group">
+                        <animation type="Focus">
+                            <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+                            <effect type="fade" start="80" end="100" time="200" tween="sine" easing="in" />
+                        </animation>
+                        <control type="image">
+                            <width>462</width>
+                            <height>260</height>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                            <aspectratio align="center">scale</aspectratio>
+                            <bordertexture border="8">thumbs/thumb_focus_no_shadow.png</bordertexture>
+                            <bordersize>8</bordersize>
+                            <fadetime>200</fadetime>
+                        </control>
+                        <control type="image">
+                            <posx>356</posx>
+                            <posy>154</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <texture>$INFO[ListItem.Overlay,common/]</texture>
+                            <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                            <bordersize>2</bordersize>
+                        </control>
+                    </control>
+                    <control type="label">
+                        <posy>261</posy>
+                        <width>462</width>
+                        <height>66</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textoffsetx>18</textoffsetx>
+                    </control>
+                    <control type="textbox">
+                        <posx>18</posx>
+                        <posy>327</posy>
+                        <width>436</width>
+                        <height>100</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Plot]</label>
+                        <autoscroll delay="1000" time="AutoScrollTime" repeat="8001">True</autoscroll>
+                    </control>
+                </focusedlayout>
+                <itemlayout width="308" height="459" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]">
+                    <control type="image">
+                        <width>308</width>
+                        <height>459</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <width>308</width>
+                        <height>459</height>
+                        <texture background="true">$VAR[PosterThumbVar]</texture>
+                        <aspectratio>scale</aspectratio>
+                        <fadetime>200</fadetime>
+                        <bordersize>2</bordersize>
+                    </control>
+                    <control type="image">
+                        <posx>208</posx>
+                        <posy>359</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>$INFO[ListItem.Overlay,common/]</texture>
+                        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                        <bordersize>2</bordersize>
+                    </control>
+                    <!--<control type="image">
+                        <width>308</width>
+                        <height>459</height>
+                        <texture>common/black.png</texture>
+                        <colordiffuse>66FFFFFF</colordiffuse>
+                        <bordersize>2</bordersize>
+                        <visible>Control.HasFocus(51)</visible>
+                        <include>VisibleChangeEffect</include>
+                    </control>-->
+                </itemlayout>
+                <focusedlayout width="308" height="459" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]">
+                    <control type="image">
+                        <width>308</width>
+                        <height>459</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="group">
+                        <animation type="Focus">
+                            <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+                            <effect type="fade" start="80" end="100" time="200" tween="sine" easing="in" />
+                        </animation>
+                        <control type="image">
+                            <width>308</width>
+                            <height>459</height>
+                            <texture background="true">$VAR[PosterThumbVar]</texture>
+                            <aspectratio>scale</aspectratio>
+                            <fadetime>200</fadetime>
+                            <bordertexture border="8">thumbs/thumb_focus_no_shadow.png</bordertexture>
+                            <bordersize>8</bordersize>
+                        </control>
+                        <control type="image">
+                            <posx>202</posx>
+                            <posy>353</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <texture>$INFO[ListItem.Overlay,common/]</texture>
+                            <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                            <bordersize>2</bordersize>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <itemlayout width="462" height="459" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes) | SubString(Container.FolderPath,youtube)]">
+                    <control type="image">
+                        <width>462</width>
+                        <height>459</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <width>462</width>
+                        <height>459</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <aspectratio align="center">scale</aspectratio>
+                        <bordersize>2</bordersize>
+                        <fadetime>200</fadetime>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="462" height="459" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes) | SubString(Container.FolderPath,youtube)]">
+                    <control type="image">
+                        <width>462</width>
+                        <height>459</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <width>462</width>
+                        <height>459</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <aspectratio align="center">scale</aspectratio>
+                        <bordertexture border="8">thumbs/thumb_focus_no_shadow.png</bordertexture>
+                        <bordersize>8</bordersize>
+                        <fadetime>200</fadetime>
+                        <animation type="Focus">
+                            <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+                            <effect type="fade" start="80" end="100" time="200" tween="sine" easing="in" />
+                        </animation>
+                    </control>
+                </focusedlayout>
+
+            </control>
+
+            <include>SideScrollbar</include>
+
+        </control>
+	</include>
+
+</includes>

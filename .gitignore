@@ -1,0 +1,5 @@
+scripts/*
+media/unused/*
+media/other_textures/*
+*.db
+*.txt
