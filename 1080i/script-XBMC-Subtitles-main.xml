@@ -54,8 +54,8 @@
                     <posy>144</posy>
                     <width>1440</width>
                     <height>576</height>
-                    <onleft>121</onleft>
-                    <onright>150</onright>
+                    <onleft>150</onleft>
+                    <onright>121</onright>
                     <onup>120</onup>
                     <ondown>120</ondown>
                     <viewtype label="535">list</viewtype>
@@ -210,8 +210,8 @@
 					<subtype>page</subtype>
 					<textcolor>White2</textcolor>
 					<onleft>120</onleft>
-					<onright>120</onright>
-					<ondown>120</ondown>
+					<onright>150</onright>
+					<ondown>150</ondown>
 					<onup>120</onup>
 					<textoffsetx>30</textoffsetx>
 					<showonepage>false</showonepage>
@@ -265,7 +265,7 @@
 					<width>1440</width>
 					<height>216</height>
 					<onleft>120</onleft>
-					<onright>120</onright>
+					<onright>121</onright>
 					<onup>150</onup>
 					<ondown>150</ondown>
 					<viewtype label="535">list</viewtype>
