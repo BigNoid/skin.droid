@@ -111,8 +111,8 @@
 		<height>72</height>
 		<label>-</label>
 		<font>Small</font>
-		<spinwidth>48</spinwidth>
-		<spinheight>48</spinheight>
+		<spinwidth>64</spinwidth>
+		<spinheight>64</spinheight>
         <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
         <texturefocus border="8">dialogs/button_focus.png</texturefocus>
         <textureup>settings/textureup.png</textureup>
