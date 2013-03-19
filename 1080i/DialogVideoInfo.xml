@@ -485,13 +485,16 @@
                     <textoffsetx>8</textoffsetx>
                     <visible>Container.Content(episodes)</visible>
                 </control>
-                <control type="label">
+                <control type="button">
                     <posx>256</posx>
                     <width>1064</width>
                     <height>90</height>
                     <font>Medium_Caps2</font>
                     <label>$INFO[ListItem.Title]</label>
+                    <label2>$INFO[ListItem.Top250,$LOCALIZE[13409] # , ]</label2>
                     <textoffsetx>8</textoffsetx>
+                    <disabledcolor>White2</disabledcolor>
+                    <enable>no</enable>
                     <visible>!Container.Content(episodes)</visible>
                 </control>
                 <control type="group">
