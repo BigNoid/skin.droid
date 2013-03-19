@@ -134,7 +134,9 @@
     </variable>
 
     <variable name="OverlayVar">
-        <value condition="ListItem.IsResumable">$INFO[ListItem.PercentPlayed,overlays/resume/,.png]</value>
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,74)">overlays/OverlayWatched75.png</value>
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,49)">overlays/OverlayWatched50.png</value>
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,24)">overlays/OverlayWatched25.png</value>
         <value>$INFO[ListItem.Overlay,overlays/]</value>
     </variable>
 </includes>
