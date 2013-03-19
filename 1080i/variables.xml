@@ -133,4 +133,8 @@
         <value condition="Player.Forwarding32x | Player.Rewinding32x">32X</value>
     </variable>
 
+    <variable name="OverlayVar">
+        <value condition="ListItem.IsResumable">$INFO[ListItem.PercentPlayed,overlays/resume/,.png]</value>
+        <value>$INFO[ListItem.Overlay,overlays/]</value>
+    </variable>
 </includes>

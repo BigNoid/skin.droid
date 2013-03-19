@@ -51,11 +51,11 @@
                         <animation effect="slide" start="0" end="-36" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
                     </control>
                     <control type="image">
-                        <posx>1195</posx>
-                        <posy>26</posy>
-                        <width>28</width>
-                        <height>24</height>
-                        <texture>$INFO[ListItem.Overlay]</texture>
+                        <posx>1184</posx>
+                        <posy>13</posy>
+                        <width>48</width>
+                        <height>48</height>
+                        <texture>$VAR[OverlayVar]</texture>
                     </control>
                 </itemlayout>
                 <focusedlayout width="1236" height="72">
@@ -91,11 +91,11 @@
                         <animation effect="slide" start="0" end="-36" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
                     </control>
                     <control type="image">
-                        <posx>1195</posx>
-                        <posy>26</posy>
-                        <width>28</width>
-                        <height>24</height>
-                        <texture>$INFO[ListItem.Overlay,]</texture>
+                        <posx>1184</posx>
+                        <posy>13</posy>
+                        <width>48</width>
+                        <height>48</height>
+                        <texture>$VAR[OverlayVar]</texture>
                     </control>
                 </focusedlayout>
 
