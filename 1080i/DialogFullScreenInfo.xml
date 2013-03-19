@@ -95,6 +95,7 @@
                         <label>$INFO[Player.Chapter,[COLOR=blue]$LOCALIZE[21396]:[/COLOR] ]$INFO[Player.ChapterCount, / ]</label>
                         <disabledcolor>White2</disabledcolor>
                         <enable>no</enable>
+                        <visible>Player.ChapterCount</visible>
                     </control>
                     <control type="label">
                         <posy>0</posy>
