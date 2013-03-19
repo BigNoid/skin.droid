@@ -161,14 +161,14 @@
                 <include>toast_back</include>
             </control>
             <control type="scrollbar" id="60">
-                <posx>42r</posx>
+                <posx>58r</posx>
                 <posy>144</posy>
                 <height>774</height>
-                <width>12</width>
+                <width>40</width>
                 <onleft>5</onleft>
                 <onright>5</onright>
                 <texturesliderbackground border="3">dialogs/toast_back_blue.png</texturesliderbackground>
-                        <animation effect="fade" start="100" end="50" time="400" condition="!Control.HasFocus(60)">Conditional</animation>
+                <animation effect="fade" start="100" end="50" time="400" condition="!Control.HasFocus(60)">Conditional</animation>
             </control>
         </control>
     </controls>

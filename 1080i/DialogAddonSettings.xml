@@ -175,10 +175,10 @@
                     <include>toast_back</include>
                 </control>
                 <control type="scrollbar" id="60">
-                    <posx>42r</posx>
+                    <posx>58r</posx>
                     <posy>144</posy>
                     <height>774</height>
-                    <width>12</width>
+                    <width>40</width>
                     <onleft>2</onleft>
                     <onright>9001</onright>
                     <texturesliderbackground border="3">dialogs/toast_back_blue.png</texturesliderbackground>
