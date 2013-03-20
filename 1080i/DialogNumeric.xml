@@ -2,16 +2,16 @@
 <window id="109">
     <defaultcontrol always="true">21</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <animation effect="slide" start="0,480" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
-    <animation effect="slide" end="0,480" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
+    <animation effect="slide" start="1024" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
+    <animation effect="slide" end="1024" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
     <controls>
         <control type="group">
-            <posy>600</posy>
+            <posy>573</posy>
             <control type="image">
                 <posx>896</posx>
                 <posy>0</posy>
                 <width>1024</width>
-                <height>480</height>
+                <height>500</height>
                 <texture border="2">keyboard/keyboard_background.png</texture>
                 <colordiffuse>$VAR[ThemeColorVar]</colordiffuse>
             </control>

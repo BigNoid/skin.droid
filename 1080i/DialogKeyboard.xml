@@ -11,8 +11,7 @@
         <control type="group">
             <posx>0</posx>
             <posy>540</posy>
-            <animation effect="slide" start="0,615" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
-            <visible>!Window.IsVisible(numericinput)</visible>
+            <animation effect="slide" start="0" end="-1024" time="500" tween="cubic" easing="out" condition="Window.IsVisible(numericinput)">Conditional</animation>
             <control type="image">
                 <posx>0</posx>
                 <posy>33</posy>
