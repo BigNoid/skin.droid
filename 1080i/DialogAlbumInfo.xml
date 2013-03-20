@@ -497,6 +497,12 @@
                     </control>
                 </focusedlayout>
             </control>
+            <control type="image">
+                <posy>918</posy>
+                <width>600</width>
+                <height>72</height>
+                <texture border="3">dialogs/toast_back_blue_mask.png</texture>
+            </control>
             <control type="group">
                 <posx>600</posx>
                 <posy>72</posy>
@@ -772,6 +778,12 @@
                         <texturesliderbackground border="3">dialogs/toast_back_blue.png</texturesliderbackground>
                         <colordiffuse>$VAR[ScrollbarColorVar]</colordiffuse>
                     </control>
+                </control>
+                <control type="image">
+                    <posy>846</posy>
+                    <width>1304</width>
+                    <height>72</height>
+                    <texture border="3">dialogs/toast_back_blue_mask.png</texture>
                 </control>
             </control>
         </control>
