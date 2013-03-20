@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window id="107">
     <zorder>2</zorder>
     <include>NotificationEffect</include>    
@@ -38,20 +37,20 @@
         <control type="label" id="401">
             <posy>0</posy>
             <posx>712r</posx>
-            <height>30</height>
+            <height>36</height>
             <width>640</width>
-            <font>Small</font>
+            <font>Small_Caps</font>
             <textcolor>$VAR[ThemeColorVar]</textcolor>
             <aligny>center</aligny>
             <label>-</label>
             <textoffsetx>15</textoffsetx>
         </control>
         <control type="label" id="402">
-            <posy>30</posy>
+            <posy>36</posy>
             <posx>712r</posx>
-            <height>35</height>
+            <height>36</height>
             <width>640</width>
-            <font>Small</font>
+            <font>Small_Caps</font>
             <aligny>center</aligny>
             <label>-</label>
             <textoffsetx>15</textoffsetx>

@@ -377,7 +377,7 @@
                     <control type="label">
                         <posy>0</posy>
                         <posx>100</posx>
-                        <height>33</height>
+                        <height>36</height>
                         <width>800</width>
                         <font>Small_Caps</font>
                         <textcolor>$VAR[ThemeColorVar]</textcolor>
@@ -386,9 +386,9 @@
                         <textoffsetx>15</textoffsetx>
                     </control>
                     <control type="label">
-                        <posy>33</posy>
+                        <posy>36</posy>
                         <posx>100</posx>
-                        <height>33</height>
+                        <height>36</height>
                         <width>800</width>
                         <font>Small_Caps</font>
                         <aligny>center</aligny>
