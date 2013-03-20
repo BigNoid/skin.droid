@@ -95,6 +95,16 @@
                 <onclick>Filter</onclick>
                 <visible>Container.CanFilterAdvanced</visible>
             </control>
+            <control type="button" id="4001">
+                <description>ShowCaseWrap</description>
+                <label>$LOCALIZE[31046]:</label>
+                <label2>[COLOR Blue2]$VAR[ShowCaseNavLabelVar][/COLOR]</label2>
+                <onclick>Skin.ToggleSetting(showcasewrap)</onclick>
+                <onclick>ActivateWindow(1113)</onclick>
+                <onclick>ActivateWindow(videos)</onclick>
+                <include>MediaMenuButton</include>
+                <visible>Control.IsVisible(53)</visible>
+            </control>
             <include>MediaMenuBottomButton</include>
 
         </control>
