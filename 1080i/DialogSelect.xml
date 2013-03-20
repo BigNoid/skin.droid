@@ -10,6 +10,13 @@
             <animation type="WindowClose" reversible="false">
                 <effect type="fade" start="100" end="0" time="200" />
             </animation>
+            <control type="image">
+                <posx>0</posx>
+                <posy>72</posy>
+                <width>480</width>
+                <height>486</height>
+                <include>toast_back</include>
+            </control>
             <control type="grouplist" id="9000">
                 <posx>0</posx>
                 <posy>72</posy>
@@ -21,40 +28,16 @@
                 <onup>3</onup>
                 <ondown>3</ondown>
                 <orientation>vertical</orientation>
-                <animation effect="slide" start="0,0" end="0,54" time="500" tween="cubic" easing="out" condition="Control.IsVisible(6)">Conditional</animation>
                 <control type="image">
-                    <posy>72</posy>
-                    <width>480</width>
-                    <height>54</height>
-                    <include>toast_back</include>
-                    <visible>!Control.IsVisible(6)</visible>
-                </control>
-                <control type="group">
-                    <visible>Control.IsVisible(6)</visible>
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>480</width>
                     <height>486</height>
-                    <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>480</width>
-                        <height>486</height>
-                        <include>toast_back</include>
-                    </control>
-                    <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>480</width>
-                        <height>486</height>
-                        <aspectratio>scale</aspectratio>
-                        <texture fallback="DefaultAddonNone.png">$INFO[Container(6).ListItem.Icon]</texture>
-                    </control>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$INFO[Container(6).ListItem.Icon]</texture>
                 </control>
                 <control type="button" id="5">
                     <description>Manual</description>
-                    <posx>705</posx>
-                    <posy>189</posy>
                     <width>480</width>
                     <label>368</label>
                     <onleft>3</onleft>

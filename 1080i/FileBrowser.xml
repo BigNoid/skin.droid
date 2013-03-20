@@ -22,7 +22,7 @@
                 <posy>72</posy>
                 <width>480</width>
                 <height>486</height>
-                <aspectratio>scale</aspectratio>
+                <aspectratio>keep</aspectratio>
                 <texture background="true">$INFO[ListItem.Icon]</texture>
                 <visible>!SubString(Control.GetLabel(416),*)</visible>
             </control>
@@ -31,7 +31,7 @@
                 <posy>72</posy>
                 <width>480</width>
                 <height>486</height>
-                <aspectratio>scale</aspectratio>
+                <aspectratio>keep</aspectratio>
                 <texture background="true" flipx="true">$INFO[ListItem.Icon]</texture>
                 <visible>SubString(Control.GetLabel(416),*)</visible>
             </control>
@@ -256,8 +256,8 @@
                     <height>72</height>
                     <include>toast_back</include>
                 </control>
-                <include>FloorFlagsBack</include>
             </control>
+            <include>FloorFlagsBack</include>
         </control>
 	</controls>
 </window>
