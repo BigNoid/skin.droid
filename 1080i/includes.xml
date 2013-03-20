@@ -201,7 +201,7 @@
                         <posy>0</posy>
                         <width>72</width>
                         <height>72</height>
-                        <onclick>ActivateWindow(settings)</onclick>
+                        <onclick>$VAR[NotificationSettingsButtonActionVar]</onclick>
                         <onleft>11121</onleft>
                         <onright>11116</onright>
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>

@@ -173,4 +173,13 @@
         <value condition="!IntegerGreaterThan(Container(206).NumItems,0)">$LOCALIZE[17][CR]$INFO[Window(home).Property(NextAired.7.Date)]</value>
         <value>$LOCALIZE[17]$INFO[Container(206).NumItems, (,)][CR]$INFO[Window(home).Property(NextAired.7.Date)]</value>
     </variable>
+
+    <variable name="NotificationSettingsButtonActionVar">
+        <value condition="Window.IsActive(videos) | Window.IsActive(videoplaylist)">ActivateWindow(videossettings)</value>
+        <value condition="Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicplaylisteditor)">ActivateWindow(musicsettings)</value>
+        <value condition="Window.IsActive(programs)">ActivateWindow(programssettings)</value>
+        <value condition="Window.IsActive(pictures)">ActivateWindow(picturessettings)</value>
+        <value condition="Window.IsActive(weather)">ActivateWindow(weathersettings)</value>
+        <value>ActivateWindow(settings)</value>
+    </variable>
 </includes>
