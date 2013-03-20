@@ -98,6 +98,7 @@
                 <control type="multiimage">
                     <include>Dimensions_Fullscreen</include>
                     <fadetime>800</fadetime>
+                    <randomize>true</randomize>
                     <imagepath background="true">$VAR[GlobalBackgroundVar]</imagepath>
                     <colordiffuse>FanartDiffuse</colordiffuse>
                 </control>
