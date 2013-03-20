@@ -13,142 +13,164 @@
                 <include>toast_back</include>
             </control>
             <control type="panel" id="9000">
-                <posx>330</posx>
-                <posy>216</posy>
-                <width>1260</width>
-                <height>504</height>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1920</width>
+                <height>1026</height>
                 <onleft>9000</onleft>
                 <onright>9000</onright>
                 <onup>9010</onup>
                 <ondown>9010</ondown>
                 <scrolltime>0</scrolltime>
-                <itemlayout width="252" height="252">
+                <itemlayout width="640" height="342">
                     <control type="image">
-                        <width>252</width>
-                        <height>252</height>
+                        <width>640</width>
+                        <height>342</height>
                         <texture border="3">dialogs/toast_back_blue.png</texture>
-                        </control>
+                    </control>
                     <control type="image">
-                        <width>252</width>
-                        <height>252</height>
+                        <posx>500</posx>
+                        <width>140</width>
+                        <height>140</height>
                         <texture>$INFO[ListItem.Icon]</texture>
+                        <colordiffuse>White2</colordiffuse>
                     </control>
                     <control type="label">
-                        <posx>126</posx>
-                        <posy>150</posy>
-                        <width>252</width>
-                        <height>102</height>
-                        <label>$INFO[ListItem.Label]</label>
-                        <font>Medium</font>
-                        <align>center</align>
-                        <aligny>center</aligny>
+                        <width>283</width>
+                        <height>72</height>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                        <font>Medium_Caps</font>
+                        <textcolor>White2</textcolor>
                         <textoffsetx>20</textoffsetx>
                     </control>
-                    <!--<control type="image">
-                        <posx>0</posx>
-                        <width>1</width>
-                        <height>252</height>
-                        <texture>common/white.png</texture>
-                        <colordiffuse>ff282828</colordiffuse>
+                    <control type="textbox">
+                        <posx>20</posx>
+                        <posy>100</posy>
+                        <width>600</width>
+                        <height>210</height>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <font>Medium</font>
+                        <textcolor>White2</textcolor>
+                        <autoscroll>false</autoscroll>
                     </control>
-                    <control type="image">
-                        <posx>1</posx>
-                        <width>1</width>
-                        <height>252</height>
-                        <texture>common/white.png</texture>
-                        <colordiffuse>ff1e1e1e</colordiffuse>
-                    </control>
-                    <control type="image">
-                        <posx>251</posx>
-                        <width>1</width>
-                        <height>252</height>
-                        <texture>common/white.png</texture>
-                        <colordiffuse>ff080808</colordiffuse>
-                    </control>
-                    <control type="image">
-                        <posx>250</posx>
-                        <width>1</width>
-                        <height>252</height>
-                        <texture>common/white.png</texture>
-                        <colordiffuse>ff151515</colordiffuse>
-                    </control>-->
                 </itemlayout>
-                <focusedlayout width="252" height="252">
-                    <control type="image">
-                        <width>252</width>
-                        <height>252</height>
-                        <texture border="3">dialogs/toast_back_blue.png</texture>
+                <focusedlayout width="640" height="342">
+                    <control type="group">
+                        <visible>!Control.HasFocus(9000)</visible>
+                        <control type="image">
+                            <width>640</width>
+                            <height>342</height>
+                            <texture border="3">dialogs/toast_back_blue.png</texture>
                         </control>
-                    <control type="image">
-                        <width>252</width>
-                        <height>252</height>
-                        <texture border="8">listselect_fo.png</texture>
+                        <control type="image">
+                            <posx>500</posx>
+                            <width>140</width>
+                            <height>140</height>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                            <colordiffuse>White2</colordiffuse>
                         </control>
-                    <control type="image">
-                        <width>252</width>
-                        <height>252</height>
-                        <texture>$INFO[ListItem.Icon]</texture>
+                        <control type="label">
+                            <width>283</width>
+                            <height>72</height>
+                            <label>[B]$INFO[ListItem.Label][/B]</label>
+                            <font>Medium_Caps</font>
+                            <textcolor>White2</textcolor>
+                            <textoffsetx>20</textoffsetx>
+                        </control>
+                        <control type="textbox">
+                            <posx>20</posx>
+                            <posy>100</posy>
+                            <width>600</width>
+                            <height>210</height>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <font>Medium</font>
+                            <textcolor>White2</textcolor>
+                            <autoscroll>false</autoscroll>
+                        </control>
                     </control>
-                    <control type="label">
-                        <posx>126</posx>
-                        <posy>150</posy>
-                        <width>252</width>
-                        <height>102</height>
-                        <label>$INFO[ListItem.Label]</label>
-                        <font>Medium</font>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <textoffsetx>20</textoffsetx>
+                    <control type="group">
+                        <visible>Control.HasFocus(9000)</visible>
+                        <control type="image">
+                            <width>640</width>
+                            <height>342</height>
+                            <texture border="8">listselect_fo.png</texture>
+                        </control>
+                        <control type="image">
+                            <posx>500</posx>
+                            <width>140</width>
+                            <height>140</height>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                        </control>
+                        <control type="label">
+                            <width>283</width>
+                            <height>72</height>
+                            <label>[B]$INFO[ListItem.Label][/B]</label>
+                            <font>Medium_Caps</font>
+                            <textoffsetx>20</textoffsetx>
+                        </control>
+                        <control type="textbox">
+                            <posx>20</posx>
+                            <posy>100</posy>
+                            <width>600</width>
+                            <height>210</height>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <font>Medium</font>
+                            <autoscroll>false</autoscroll>
+                        </control>
                     </control>
                 </focusedlayout>
                 <content>
                     <item id="1">
                         <label>$LOCALIZE[480]</label>
+                        <label2>31400</label2>
                         <icon>home/icons/appearance.png</icon>
                         <onclick>ActivateWindow(appearancesettings)</onclick>
                     </item>
                     <item id="2">
                         <label>$LOCALIZE[157]</label>
+                        <label2>31401</label2>
                         <icon>home/icons/video.png</icon>
                         <onclick>ActivateWindow(videossettings)</onclick>
                     </item>
                     <item id="3">
                         <label>$LOCALIZE[2]</label>
+                        <label2>31402</label2>
                         <icon>home/icons/music.png</icon>
                         <onclick>ActivateWindow(musicsettings)</onclick>
                     </item>
                     <item id="4">
                         <label>$LOCALIZE[1]</label>
+                        <label2>31403</label2>
                         <icon>home/icons/pictures.png</icon>
                         <onclick>ActivateWindow(picturessettings)</onclick>
                     </item>
-                    <item id="5">
-                        <label>Live TV</label>
-                        <icon>home/icons/tvshows.png</icon>
-                        <onclick>ActivateWindow(pvrsettings)</onclick>
-                    </item>
                     <item id="6">
                         <label>$LOCALIZE[14036]</label>
+                        <label2>31409</label2>
                         <icon>home/icons/network.png</icon>
                         <onclick>ActivateWindow(servicesettings)</onclick>
                     </item>
                     <item id="7">
                         <label>$LOCALIZE[13200]</label>
+                        <label2>31405</label2>
                         <icon>home/icons/profiles.png</icon>
                         <onclick>ActivateWindow(profiles)</onclick>
                     </item>
                     <item id="8">
-                        <label>$LOCALIZE[24001]</label>
-                        <icon>home/icons/addons.png</icon>
-                        <onclick>ActivateWindow(addonbrowser)</onclick>
+                        <label>$LOCALIZE[8]</label>
+                        <label2>31404</label2>
+                        <icon>home/icons/weather.png</icon>
+                        <onclick>ActivateWindow(weathersettings)</onclick>
                     </item>
                     <item id="9">
                         <label>$LOCALIZE[130]</label>
+                        <label2>31408</label2>
                         <icon>home/icons/sysinfo.png</icon>
                         <onclick>activatewindow(7)</onclick>
                     </item>
                     <item id="10">
                         <label>$LOCALIZE[13000]</label>
+                        <label2>31406</label2>
                         <icon>home/icons/system.png</icon>
                         <onclick>ActivateWindow(systemsettings)</onclick>
                     </item>
