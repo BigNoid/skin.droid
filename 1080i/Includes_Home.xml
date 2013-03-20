@@ -136,9 +136,9 @@
                             <visible>Container(800).HasFocus(1)</visible>
                         </item>
                         <item>
-                            <label>Smart Playlists</label>
-                            <icon>DefaultPlaylist.png</icon>
-                            <onclick>ActivateWindow(Videos,Playlists,return)</onclick>
+                            <label>Videos</label>
+                            <icon>DefaultAddonVideo.png</icon>
+                            <onclick>ActivateWindow(Videos,root)</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
                         </item>
                         <item>
@@ -155,9 +155,10 @@
                             <visible>Container(800).HasFocus(2)</visible>
                         </item>
                         <item>
-                            <label>Files</label>
-                            <icon>DefaultFile.png</icon>
-                            <onclick>ActivateWindow(Videos,Files,return)</onclick>
+                            <label>TV Guide</label>
+                            <icon>DefaultTVGuide.png</icon>
+                            <onclick condition="System.HasAddon(script.tv.show.next.aired)">RunAddon(script.tv.show.next.aired)</onclick>
+                            <onclick condition="!System.HasAddon(script.tv.show.next.aired)">ActivateWindow(Videos,InProgressTVShows,return)</onclick>
                             <visible>Container(800).HasFocus(2)</visible>
                         </item>
                         <item>
