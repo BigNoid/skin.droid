@@ -95,10 +95,10 @@
             </animation>-->
             <control type="group">
                 <visible>![[Control.isVisible(50) | Control.isVisible(51)] + !Window.IsActive(home)]</visible>
-                <control type="image">
+                <control type="multiimage">
                     <include>Dimensions_Fullscreen</include>
                     <fadetime>800</fadetime>
-                    <texture background="true">$VAR[GlobalBackgroundVar]</texture>
+                    <imagepath background="true">$VAR[GlobalBackgroundVar]</imagepath>
                     <colordiffuse>FanartDiffuse</colordiffuse>
                 </control>
                 <control type="group">
