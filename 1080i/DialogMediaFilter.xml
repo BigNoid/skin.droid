@@ -11,6 +11,14 @@
             <posx>524</posx>
             <posy>288</posy>
             <animation effect="slide" start="0,0" end="0,-216" time="500" tween="cubic" easing="out" condition="!IsEmpty(Window(Home).Property(SlideFilterDialogup))">Conditional</animation>
+            <animation type="WindowOpen" reversible="false">
+                <effect type="zoom" start="50" end="100" center="940,400" easing="out" tween="cubic" time="200" />
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="zoom" start="100" end="50" center="940,400" easing="in" tween="cubic" time="200" />
+                <effect type="fade" start="100" end="0" time="200"/>
+            </animation>
             <control type="image">
                 <posx>-21</posx>
                 <posy>-21</posy>
