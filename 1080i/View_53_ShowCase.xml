@@ -430,16 +430,16 @@
     <include name="MovieShowcaseThumbReflection">
         <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
         <fadetime>0</fadetime>
-        <posx>17</posx>
+        <posx>18</posx>
         <posy>394</posy>
-        <width>262</width>
+        <width>260</width>
         <height>384</height>
         <colordiffuse>d1FFFFFF</colordiffuse>
     </include>
 
     <include name="WatchedOverlayShowCase">
         <posx>200</posx>
-        <posy>316</posy>
+        <posy>314</posy>
         <width>100</width>
         <height>100</height>
         <fadetime>0</fadetime>
@@ -448,7 +448,7 @@
 
     <include name="WatchedOverlayShowCaseReflection">
         <posx>200</posx>
-        <posy>374</posy>
+        <posy>371</posy>
         <width>100</width>
         <height>100</height>
         <fadetime>0</fadetime>
@@ -484,6 +484,8 @@
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-6Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+            <width>121</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
         <control type="image">
@@ -502,6 +504,8 @@
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-5Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+            <width>131</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
         <control type="image">
@@ -520,6 +524,8 @@
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-4Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+            <width>145</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
         <control type="image">
@@ -538,6 +544,8 @@
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-3Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+            <width>160</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
         <control type="image">
@@ -556,6 +564,8 @@
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-2Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+            <width>179</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
         <control type="image">
@@ -574,6 +584,8 @@
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+            <width>180</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
         <control type="image">
@@ -610,6 +622,9 @@
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+            <posx>37</posx>
+            <width>240</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
         <control type="image">
@@ -628,6 +643,9 @@
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem2Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+            <posx>102</posx>
+            <width>177</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
         <control type="image">
@@ -646,6 +664,9 @@
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem3Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+            <posx>121</posx>
+            <width>158</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
         <control type="image">
@@ -664,6 +685,9 @@
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem4Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+            <posx>136</posx>
+            <width>142</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
         <control type="image">
@@ -682,6 +706,9 @@
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem5Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+            <posx>146</posx>
+            <width>133</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
         <control type="image">
@@ -700,6 +727,9 @@
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem6Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+            <posx>156</posx>
+            <width>122</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
         <control type="image">
