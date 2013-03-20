@@ -431,7 +431,7 @@
         <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
         <fadetime>0</fadetime>
         <posx>18</posx>
-        <posy>394</posy>
+        <posy>393</posy>
         <width>260</width>
         <height>384</height>
         <colordiffuse>d1FFFFFF</colordiffuse>
@@ -453,6 +453,7 @@
         <height>100</height>
         <fadetime>0</fadetime>
         <bordersize>21</bordersize>
+        <colordiffuse>4FFFFFFF</colordiffuse>
     </include>
 
     <include name="MovieShowCaseItem-7">
@@ -470,7 +471,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(-7).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(-7).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem-6">
@@ -490,7 +491,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(-6).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(-6).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem-5">
@@ -510,7 +511,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(-5).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(-5).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem-4">
@@ -530,7 +531,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(-4).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(-4).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem-3">
@@ -550,7 +551,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(-3).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(-3).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem-2">
@@ -570,7 +571,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(-2).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(-2).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem-1">
@@ -590,7 +591,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(-1).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(-1).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem0">
@@ -608,7 +609,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(0).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(0).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem1">
@@ -629,7 +630,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(1).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(1).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem2">
@@ -650,7 +651,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(2).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(2).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem3">
@@ -671,7 +672,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(3).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(3).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem4">
@@ -692,7 +693,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(4).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(4).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem5">
@@ -713,7 +714,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(5).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(5).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem6">
@@ -734,7 +735,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(6).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(6).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem7">
@@ -752,7 +753,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem(7).Overlay,common/]</texture>
+            <texture flipy="true">$INFO[ListItem(7).Overlay,common/]</texture>
         </control>
     </include>
 
