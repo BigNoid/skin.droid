@@ -14,7 +14,7 @@
         <value condition="Player.hasMedia  + !IsEmpty(Player.Property(Fanart_Image))">$INFO[Player.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(Skin.String(DefaultBG))">$INFO[Skin.String(DefaultBG)]</value>
-        <value condition="Window.IsActive(home)">$INFO[Window(home).Property(RandomMovie.1.Art(fanart))]</value>
+        <!--<value condition="Window.IsActive(home)">$INFO[Window(home).Property(RandomMovie.1.Art(fanart))]</value>-->
         <value>special://skin/backgrounds/default_bg.jpg</value>
     </variable>
 
