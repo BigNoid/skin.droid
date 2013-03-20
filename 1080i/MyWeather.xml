@@ -120,7 +120,7 @@
                         <onclick>$VAR[NotificationSettingsButtonActionVar]</onclick>
                         <onleft>11121</onleft>
                         <onright>11116</onright>
-                        <ondown>$VAR[NotificationButtonActionsVar]</ondown>
+                        <ondown>600</ondown>
                     </control>
                     <control type="image">
                         <posx>12</posx>
@@ -141,7 +141,7 @@
                         <onclick>ActivateWindow(favourites)</onclick>
                         <onleft>11115</onleft>
                         <onright>11117</onright>
-                        <ondown>$VAR[NotificationButtonActionsVar]</ondown>
+                        <ondown>600</ondown>
                     </control>
                     <control type="image">
                         <posx>12</posx>
@@ -162,7 +162,7 @@
                         <onclick>RunScript(script.globalsearch)</onclick>
                         <onleft>11116</onleft>
                         <onright>11118</onright>
-                        <ondown>$VAR[NotificationButtonActionsVar]</ondown>
+                        <ondown>600</ondown>
                     </control>
                     <control type="image">
                         <posx>12</posx>
@@ -183,7 +183,7 @@
                         <onclick>ActivateWindow(shutdownmenu)</onclick>
                         <onleft>11117</onleft>
                         <onright>11119</onright>
-                        <ondown>$VAR[NotificationButtonActionsVar]</ondown>
+                        <ondown>600</ondown>
                     </control>
                     <control type="image">
                         <posx>12</posx>
@@ -196,7 +196,6 @@
                 <control type="group">
                     <width>72</width>
                     <height>72</height>
-                    <visible>!Window.IsActive(home)</visible>
                     <control type="button" id="11119">
                         <posx>0</posx>
                         <posy>0</posy>
@@ -205,9 +204,8 @@
                         <onclick>Dialog.Close(all,true)</onclick>
                         <onclick>ActivateWindow(home)</onclick>
                         <onleft>11117</onleft>
-                        <onright>11121</onright>
-                        <ondown>$VAR[NotificationButtonActionsVar]</ondown>
-                        <visible>!Window.IsActive(home)</visible>
+                        <onright>2</onright>
+                        <ondown>600</ondown>
                     </control>
                     <control type="image">
                         <posx>12</posx>
@@ -367,10 +365,10 @@
                         <posy>0</posy>
                         <width>72</width>
                         <height>72</height>
-                        <onleft>11120</onleft>
+                        <onleft>11119</onleft>
                         <onright>11122</onright>
                         <font>-</font>
-                        <ondown>$VAR[NotificationButtonActionsVar]</ondown>
+                        <ondown>600</ondown>
                     </control>
                     <control type="image">
                         <posx>12</posx>
@@ -391,11 +389,9 @@
                         <onclick condition="IsEmpty(Window(Home).property(MediaMenu))">SetProperty(MediaMenu,True,Home)</onclick>
                         <onclick condition="IsEmpty(Window(Home).property(MediaMenu))">SetFocus(9000)</onclick>
                         <onclick condition="!IsEmpty(Window(Home).property(MediaMenu))">ClearProperty(MediaMenu,Home)</onclick>
-                        <onleft condition="Window.IsActive(home)">11118</onleft>
-                        <onleft condition="!Window.IsActive(home)">11119</onleft>
                         <onright>11115</onright>
-                        <ondown>$VAR[NotificationButtonActionsVar]</ondown>
-
+                        <ondown>600</ondown>
+                        <onleft>2</onleft>
                     </control>
                     <control type="image">
                         <posx>12</posx>
@@ -488,13 +484,6 @@
                                     <width>600</width>
                                     <height>100</height>
                                     <texture border="3">dialogs/toast_back_blue.png</texture>
-                                </control>
-                                <control type="image">
-                                    <posx>0</posx>
-                                    <posy>0</posy>
-                                    <width>600</width>
-                                    <height>100</height>
-                                    <texture border="8">listselect_fo.png</texture>
                                 </control>
                                 <control type="label">
                                     <posy>0</posy>
@@ -673,21 +662,39 @@
                         </control>
                     </focusedlayout>
                     <content>
-                        <item id="1">
+                        <item>
                             <label>$INFO[Window(weather).Property(Day1.Title)]</label>
                             <label2>$INFO[Window(weather).Property(Day1.LowTemp),[COLOR Blue]]$INFO[System.TemperatureUnits, ,[/COLOR]]$INFO[Window(weather).Property(Day1.HighTemp), | [COLOR Red]]$INFO[System.TemperatureUnits, ,[/COLOR]]</label2>
                             <icon>-</icon>
                             <onclick>noop</onclick>
                         </item>
-                        <item id="2">
+                        <item>
                             <label>$INFO[Window(weather).Property(Day2.Title)]</label>
                             <label2>$INFO[Window(weather).Property(Day2.LowTemp),[COLOR Blue]]$INFO[System.TemperatureUnits, ,[/COLOR]]$INFO[Window(weather).Property(Day3.HighTemp), | [COLOR Red]]$INFO[System.TemperatureUnits, ,[/COLOR]]</label2>
                             <icon>-</icon>
                             <onclick>noop</onclick>
                         </item>
-                        <item id="3">
+                        <item>
                             <label>$INFO[Window(weather).Property(Day3.Title)]</label>
                             <label2>$INFO[Window(weather).Property(Day3.LowTemp),[COLOR Blue]]$INFO[System.TemperatureUnits, ,[/COLOR]]$INFO[Window(weather).Property(Day3.HighTemp), | [COLOR Red]]$INFO[System.TemperatureUnits, ,[/COLOR]]</label2>
+                            <icon>-</icon>
+                            <onclick>noop</onclick>
+                        </item>
+                        <item>
+                            <label>$INFO[Window(weather).Property(Day4.Title)]</label>
+                            <label2>$INFO[Window(weather).Property(Day4.LowTemp),[COLOR Blue]]$INFO[System.TemperatureUnits, ,[/COLOR]]$INFO[Window(weather).Property(Day4.HighTemp), | [COLOR Red]]$INFO[System.TemperatureUnits, ,[/COLOR]]</label2>
+                            <icon>-</icon>
+                            <onclick>noop</onclick>
+                        </item>
+                        <item>
+                            <label>$INFO[Window(weather).Property(Day5.Title)]</label>
+                            <label2>$INFO[Window(weather).Property(Day5.LowTemp),[COLOR Blue]]$INFO[System.TemperatureUnits, ,[/COLOR]]$INFO[Window(weather).Property(Day5.HighTemp), | [COLOR Red]]$INFO[System.TemperatureUnits, ,[/COLOR]]</label2>
+                            <icon>-</icon>
+                            <onclick>noop</onclick>
+                        </item>
+                        <item>
+                            <label>$INFO[Window(weather).Property(Day6.Title)]</label>
+                            <label2>$INFO[Window(weather).Property(Day6.LowTemp),[COLOR Blue]]$INFO[System.TemperatureUnits, ,[/COLOR]]$INFO[Window(weather).Property(Day6.HighTemp), | [COLOR Red]]$INFO[System.TemperatureUnits, ,[/COLOR]]</label2>
                             <icon>-</icon>
                             <onclick>noop</onclick>
                         </item>
@@ -781,13 +788,6 @@
                                     <width>700</width>
                                     <height>115</height>
                                     <texture border="3">dialogs/toast_back_blue.png</texture>
-                                </control>
-                                <control type="image">
-                                    <posx>0</posx>
-                                    <posy>0</posy>
-                                    <width>700</width>
-                                    <height>115</height>
-                                    <texture border="8">listselect_fo.png</texture>
                                 </control>
                                 <control type="label">
                                     <posy>0</posy>
