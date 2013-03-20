@@ -4,6 +4,7 @@
         <control type="group">
             <visible>Control.IsVisible(53)</visible>
             <posy>-50</posy>
+            <posx>0</posx>
             <animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
             <control type="group">
                 <camera x="960" y="810" />
@@ -382,6 +383,57 @@
             </control>
             <include condition="!Skin.HasSetting(showcasewrap)">scmfixed</include>
             <include condition="Skin.HasSetting(showcasewrap)">scmwrap</include>
+            <control type="group">
+                <visible>system.getbool(input.enablemouse)</visible>
+                <control type="button">
+                    <posx>0</posx>
+                    <posy>570</posy>
+                    <width>110</width>
+                    <height>190</height>
+                    <include>HiddenButton</include>
+                    <onclick>Control.Move(53,-1)</onclick>
+                </control>
+                <control type="button">
+                    <posx>0</posx>
+                    <posy>760</posy>
+                    <width>110</width>
+                    <height>190</height>
+                    <include>HiddenButton</include>
+                    <onclick>pageup(61)</onclick>
+                </control>
+                <control type="button">
+                    <posx>1800</posx>
+                    <posy>570</posy>
+                    <width>120</width>
+                    <height>190</height>
+                    <include>HiddenButton</include>
+                    <onclick>Control.Move(53,1)</onclick>
+                </control>
+                <control type="button">
+                    <posx>1800</posx>
+                    <posy>760</posy>
+                    <width>120</width>
+                    <height>190</height>
+                    <include>HiddenButton</include>
+                    <onclick>pagedown(61)</onclick>
+                </control>
+            </control>
+            <control type="scrollbar" id="61">
+                <posx>110</posx>
+                <posy>1030</posy>
+                <width>1680</width>
+                <height>12</height>
+                <onup>53</onup>
+                <ondown>9010</ondown>
+                <texturesliderbackground border="1">-</texturesliderbackground>
+                <texturesliderbar border="6,0,6,0">dialogs/scrollbar/texturesliderbar_hor.png</texturesliderbar>
+                <texturesliderbarfocus border="6,0,6,0">dialogs/scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
+                <textureslidernib>-</textureslidernib>
+                <textureslidernibfocus>-</textureslidernibfocus>
+                <showonepage>true</showonepage>
+                <orientation>horizontal</orientation>
+                <animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+            </control>
         </control>
     </include>
 
@@ -401,9 +453,13 @@
         <posy>540</posy>
         <width>2058</width>
         <height>525</height>
+        <posx>110</posx>
+        <posy>540</posy>
+        <width>1680</width>
+        <height>525</height>
         <onleft>53</onleft>
         <onright>53</onright>
-        <onup>7000</onup>
+        <onup>9010</onup>
         <ondown>61</ondown>
         <viewtype label="ShowCase">bigwrap</viewtype>
         <pagecontrol>61</pagecontrol>
@@ -411,8 +467,8 @@
         <focusposition>3</focusposition>
         <orientation>horizontal</orientation>
         <preloaditems>2</preloaditems>
-        <itemlayout height="600" width="294"/>
-        <focusedlayout height="525" width="294"/>
+        <itemlayout height="525" width="260"/>
+        <focusedlayout height="525" width="260"/>
     </include>
 
     <include name="MovieShowcaseThumb">
