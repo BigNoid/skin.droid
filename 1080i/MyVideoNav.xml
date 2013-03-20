@@ -5,7 +5,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<views>50,51,52,53</views>
     <onload>RunScript(script.tv.show.next.aired,backend=True)</onload>
-	<controls>
+    <controls>
         <include>GlobalBackground</include>
         <control type="group">
             <include>WindowEffect</include>
@@ -104,6 +104,14 @@
                 <onclick>ActivateWindow(videos)</onclick>
                 <include>MediaMenuButton</include>
                 <visible>Control.IsVisible(53)</visible>
+            </control>
+            <control type="button" id="4002">
+                <description>ShowCaseWrap</description>
+                <label>Navigation help</label>
+                <onclick>ClearProperty(MediaMenu,Home)</onclick>
+                <onclick>ActivateWindow(1114)</onclick>
+                <include>MediaMenuButton</include>
+                <visible>Control.IsVisible(53) + system.getbool(input.enablemouse)</visible>
             </control>
             <include>MediaMenuBottomButton</include>
 

@@ -384,7 +384,6 @@
             <include condition="!Skin.HasSetting(showcasewrap)">scmfixed</include>
             <include condition="Skin.HasSetting(showcasewrap)">scmwrap</include>
             <control type="group">
-                <visible>system.getbool(input.enablemouse)</visible>
                 <control type="button">
                     <posx>0</posx>
                     <posy>570</posy>
