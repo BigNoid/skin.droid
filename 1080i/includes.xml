@@ -1079,7 +1079,7 @@
             <control type="image">
                 <posx>1252</posx>
                 <include>MediaFlagVars</include>
-                <texture fallback="flags/stars/0.png">$INFO[ListItem.Rating,flags/stars/,.png]</texture>
+                <texture fallback="rating0.png">$INFO[ListItem.StarRating]</texture>
                 <animation type="Conditional" reversible="false" condition="true">
                     <effect type="zoom" start="100" end="130" center="auto" easing="in" tween="cubic" time="0" />
                 </animation>
