@@ -83,6 +83,17 @@
                 <hinttext></hinttext>
                 <height>72</height>
                 <include>MediaMenuButton</include>
+                <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+            </control>
+            <control type="radiobutton" id="19">
+                <description>Advanced Filter</description>
+                <label>587</label>
+                <height>72</height>
+                <include>MediaMenuButton</include>
+                <onclick condition="Control.IsVisible(52) | Control.IsVisible(53)">SetProperty(SlideFilterDialogup,True,Home)</onclick>
+                <onclick>ClearProperty(MediaMenu,Home)</onclick>
+                <onclick>Filter</onclick>
+                <visible>Container.CanFilterAdvanced</visible>
             </control>
             <include>MediaMenuBottomButton</include>
 
