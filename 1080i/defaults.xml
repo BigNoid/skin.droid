@@ -44,7 +44,19 @@
         <fadetime>200</fadetime>
     </default>
 
-	<default type="button">
+    <default type="multiimage">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>-</width>
+        <height>-</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <imagepath>-</imagepath>
+        <timeperimage>10000</timeperimage>
+        <fadetime>200</fadetime>
+    </default>
+
+    <default type="button">
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>344</width>
