@@ -2,7 +2,7 @@
 <window id="2600">
 	<defaultcontrol always="true">2</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<controls>
+    <controls>
         <control type="group">
             <control type="label" id="223">
                 <posy>0</posy>
@@ -408,7 +408,7 @@
             </control>
         </control>
         <control type="group" id="8000">
-            <visible>yes</visible>
+            <include>WindowEffect</include>
             <control type="group">
                 <posx>0</posx>
                 <posy>230</posy>
