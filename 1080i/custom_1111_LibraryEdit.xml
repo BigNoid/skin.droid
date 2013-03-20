@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1111">
     <defaultcontrol>7000</defaultcontrol>
-    <zorder>2</zorder>
+    <zorder>1</zorder>
     <animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
     <animation effect="fade" end="100" start="0" time="400">WindowOpen</animation>
     <controls>

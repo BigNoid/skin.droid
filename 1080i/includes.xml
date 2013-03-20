@@ -549,6 +549,7 @@
         <texturenofocus border="14,0,14,2">dialogs/shutdown_nofocus.png</texturenofocus>
         <alttexturefocus border="14,0,14,0">dialogs/shutdown_focus.png</alttexturefocus>
         <alttexturenofocus border="14,0,14,2">dialogs/shutdown_nofocus.png</alttexturenofocus>
+        <radioposx>340</radioposx>
     </include>
 
     <include name="MediaMenuBottomButton">
