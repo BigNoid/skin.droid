@@ -47,6 +47,9 @@
     <string id="31043">[B]1[/B]</string>
     <string id="31044">Total time</string>
     <string id="31045">[B]Never[/B]</string>
+    <string id="31046">Navigation</string>
+    <string id="31047">Fixed</string>
+    <string id="31048">Wrap</string>
     <!-- Description Labels  -->
     <string id="31400">[B]CONFIGURE APPEARANCE SETTINGS[/B][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver</string>
     <string id="31401">[B]CONFIGURE VIDEO SETTINGS[/B][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts</string>

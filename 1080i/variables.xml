@@ -139,4 +139,9 @@
         <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,24)">overlays/OverlayWatched25.png</value>
         <value>$INFO[ListItem.Overlay,overlays/]</value>
     </variable>
+
+    <variable name="ShowCaseNavLabelVar">
+        <value condition="Skin.HasSetting(showcasewrap)">$LOCALIZE[31048]</value>
+        <value>$LOCALIZE[31047]</value>
+    </variable>
 </includes>
