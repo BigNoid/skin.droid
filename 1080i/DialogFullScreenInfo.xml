@@ -185,7 +185,6 @@
                 </control>
             </control>
 
-
             <control type="group">
                 <animation effect="slide" start="0,128" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
                 <animation effect="slide" end="0,128" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
@@ -270,6 +269,7 @@
                         </control>
                     </control>
                     <control type="image">
+                        <colordiffuse>White2</colordiffuse>
                         <include>MediaFlagVars</include>
                         <texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
                         <visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
@@ -277,6 +277,7 @@
                     <control type="group">
                         <width>135</width>
                         <control type="image" id="800011">
+                            <colordiffuse>White2</colordiffuse>
                             <include>MediaFlagVars</include>
                             <bordersize>2</bordersize>
                             <texture>$INFO[VideoPlayer.Studio,flags/studios/,.png]</texture>
@@ -351,6 +352,7 @@
                         </control>
                     </control>
                     <control type="image">
+                        <colordiffuse>White2</colordiffuse>
                         <include>MediaFlagVars</include>
                         <texture fallback="flags/stars/0.0.png">$INFO[VideoPlayer.Rating,flags/stars/,.png]</texture>
                         <animation type="Conditional" reversible="false" condition="true">
