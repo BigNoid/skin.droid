@@ -8,6 +8,7 @@
     <include file="View_51_Icons.xml" />
     <include file="View_52_ThumbWrap.xml" />
     <include file="View_53_ShowCase.xml" />
+    <include file="View_54_InfoList.xml" />
 
     <!-- Constants -->
     <constant name="AutoScrollTime">2000</constant>

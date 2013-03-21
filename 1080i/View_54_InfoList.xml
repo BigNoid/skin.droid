@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="View_54_InfoList">
+        <control type="group">
+            <visible>Control.isVisible(54)</visible>
+
+            <control type="group">
+                <!-- Left Panel -->
+                <posx>0</posx>
+                <posy>192</posy>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>341</posy>
+                    <width>642</width>
+                    <height>380</height>
+                    <include>toast_back</include>
+                    <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
+                    <bordersize>21</bordersize>
+                </control>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>341</posy>
+                    <width>642</width>
+                    <height>380</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture>$VAR[LandscapeThumbVar]</texture>
+                    <bordersize>21</bordersize>
+                </control>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>679</posy>
+                    <width>642</width>
+                    <height>380</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$VAR[LandscapeThumbVar]</texture>
+                    <bordersize>21</bordersize>
+                </control>
+                <control type="image">
+                    <posx>21</posx>
+                    <posy>700</posy>
+                    <width>589</width>
+                    <height>119</height>
+                    <texture>reflect.png</texture>
+                </control>
+            </control>
+
+            <control type="group">
+                <!-- Right Panel -->
+                <posx>1278</posx>
+                <posy>192</posy>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>341</posy>
+                    <width>642</width>
+                    <height>380</height>
+                    <include>toast_back</include>
+                    <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
+                    <bordersize>21</bordersize>
+                </control>
+                <control type="textbox">
+                    <description>Plot</description>
+                    <posx>51</posx>
+                    <posy>365</posy>
+                    <width>540</width>
+                    <height>330</height>
+                    <align>left</align>
+                    <font>Plot</font>
+                    <label>$VAR[GlobalPlotVar]</label>
+                    <pagecontrol>61</pagecontrol>
+                    <autoscroll>False</autoscroll>
+                    <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
+                </control>
+                <control type="scrollbar" id="61">
+                    <posx>51</posx>
+                    <posy>365</posy>
+                    <width>540</width>
+                    <height>298</height>
+                    <onup>61</onup>
+                    <ondown>61</ondown>
+                    <onleft>54</onleft>
+                    <onright>54</onright>
+                    <texturesliderbackground>-</texturesliderbackground>
+                    <texturesliderbar>-</texturesliderbar>
+                    <texturesliderbarfocus>-</texturesliderbarfocus>
+                    <colordiffuse>$VAR[ScrollbarColorVar]</colordiffuse>
+                </control>
+                <control type="image">
+                    <posx>21</posx>
+                    <posy>629</posy>
+                    <width>600</width>
+                    <height>72</height>
+                    <texture border="3">dialogs/toast_back_blue_mask.png</texture>
+                </control>
+                <control type="image">
+                    <posx>32</posx>
+                    <posy>700</posy>
+                    <width>589</width>
+                    <height>119</height>
+                    <texture>reflect.png</texture>
+                </control>
+            </control>
+
+            <control type="group">
+                <!-- Mid Panel -->
+                <posx>589</posx>
+                <posy>166</posy>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>341</posy>
+                    <width>742</width>
+                    <height>431</height>
+                    <texture border="21">thumbs/thumb_shadow.png</texture>
+                </control>
+                <control type="grouplist">
+                    <posx>21</posx>
+                    <posy>362</posy>
+                    <width>700</width>
+                    <height>390</height>
+                    <align>center</align>
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+                    <control type="image">
+                        <width>700</width>
+                        <height>65</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <width>700</width>
+                        <height>65</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <width>700</width>
+                        <height>65</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <width>700</width>
+                        <height>65</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <width>700</width>
+                        <height>65</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <width>700</width>
+                        <height>65</height>
+                        <include>toast_back</include>
+                    </control>
+                </control>
+                <control type="list" id="54">
+                    <posx>21</posx>
+                    <posy>362</posy>
+                    <width>700</width>
+                    <height>390</height>
+                    <onleft>9010</onleft>
+                    <onright>61</onright>
+                    <onup>54</onup>
+                    <ondown>54</ondown>
+                    <pagecontrol>60</pagecontrol>
+                    <viewtype label="InfoList">list</viewtype>
+                    <orientation>vertical</orientation>
+                    <scrolltime tween="sine" easing="inout">200</scrolltime>
+                    <itemlayout width="700" height="65">
+                        <control type="label">
+                            <posx>0</posx>
+                            <width>700</width>
+                            <height>65</height>
+                            <font>Small</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>White2</textcolor>
+                            <textoffsetx>18</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>700</posx>
+                            <width>700</width>
+                            <height>65</height>
+                            <font>Small</font>
+                            <align>right</align>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>grey</textcolor>
+                            <textoffsetx>18</textoffsetx>
+                            <animation effect="slide" start="0" end="-36" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
+                        </control>
+                        <control type="image">
+                            <posx>646</posx>
+                            <posy>9</posy>
+                            <width>48</width>
+                            <height>48</height>
+                            <texture>$VAR[OverlayVar]</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="700" height="65">
+                        <control type="group">
+                            <visible>!Control.hasFocus(54)</visible>
+                            <control type="label">
+                                <posx>0</posx>
+                                <width>700</width>
+                                <height>65</height>
+                                <font>Small</font>
+                                <label>$INFO[ListItem.Label]</label>
+                                <textcolor>White2</textcolor>
+                                <textoffsetx>18</textoffsetx>
+                            </control>
+                            <control type="label">
+                                <posx>700</posx>
+                                <width>700</width>
+                                <height>65</height>
+                                <font>Small</font>
+                                <align>right</align>
+                                <label>$INFO[ListItem.Label2]</label>
+                                <textcolor>grey</textcolor>
+                                <textoffsetx>18</textoffsetx>
+                                <animation effect="slide" start="0" end="-36" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>Control.HasFocus(54)</visible>
+                            <control type="image">
+                                <width>1236</width>
+                                <height>65</height>
+                                <texture border="4">dialogs/button_focus.png</texture>
+                            </control>
+                            <control type="label">
+                                <posx>0</posx>
+                                <width>700</width>
+                                <height>65</height>
+                                <font>Small</font>
+                                <label>$INFO[ListItem.Label]</label>
+                                <textoffsetx>18</textoffsetx>
+                            </control>
+                            <control type="label">
+                                <posx>700</posx>
+                                <width>700</width>
+                                <height>65</height>
+                                <font>Small</font>
+                                <align>right</align>
+                                <label>$INFO[ListItem.Label2]</label>
+                                <textoffsetx>18</textoffsetx>
+                                <animation effect="slide" start="0" end="-36" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>646</posx>
+                            <posy>9</posy>
+                            <width>48</width>
+                            <height>48</height>
+                            <texture>$VAR[OverlayVar]</texture>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <control type="image">
+                    <posx>21</posx>
+                    <posy>751</posy>
+                    <width>700</width>
+                    <height>119</height>
+                    <texture>reflect.png</texture>
+                </control>
+            </control>
+            
+        </control>
+    </include>
+</includes>
