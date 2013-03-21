@@ -2,7 +2,7 @@
 <window id="115">
 	<defaultcontrol always="true">901</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+	<visible>VideoPlayer.IsFullscreen + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
 	<controls>
         <control type="grouplist">
             <posx>30</posx>
@@ -320,6 +320,7 @@
                         </control>
                     </control>
                     <control type="image">
+                        <colordiffuse>White2</colordiffuse>
                         <include>MediaFlagVars</include>
                         <texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
                         <visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
@@ -327,6 +328,7 @@
                     <control type="group">
                         <width>135</width>
                         <control type="image" id="800011">
+                            <colordiffuse>White2</colordiffuse>
                             <include>MediaFlagVars</include>
                             <bordersize>2</bordersize>
                             <texture>$INFO[VideoPlayer.Studio,flags/studios/,.png]</texture>
@@ -401,6 +403,7 @@
                         </control>
                     </control>
                     <control type="image">
+                        <colordiffuse>White2</colordiffuse>
                         <include>MediaFlagVars</include>
                         <texture fallback="flags/stars/0.0.png">$INFO[VideoPlayer.Rating,flags/stars/,.png]</texture>
                         <animation type="Conditional" reversible="false" condition="true">
