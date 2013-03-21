@@ -432,6 +432,7 @@
                         <height>72</height>
                         <font>Small</font>
                         <label>[COLOR $VAR[ThemeColorVar]]$INFO[ListItem.TrackNumber,,: ][/COLOR]$INFO[ListItem.Label]</label>
+                        <textcolor>White2</textcolor>
                         <textoffsetx>8</textoffsetx>
                     </control>
                     <control type="label">
@@ -442,6 +443,7 @@
                         <align>right</align>
                         <label>$INFO[ListItem.Duration]</label>
                         <textcolor>grey</textcolor>
+                        <textcolor>White2</textcolor>
                         <textoffsetx>8</textoffsetx>
                     </control>
                 </itemlayout>
@@ -459,6 +461,7 @@
                             <font>Small</font>
                             <label>[COLOR $VAR[ThemeColorVar]]$INFO[ListItem.TrackNumber,,: ][/COLOR]$INFO[ListItem.Label]</label>
                             <textoffsetx>8</textoffsetx>
+                            <textcolor>White2</textcolor>
                         </control>
                         <control type="label">
                             <posx>600</posx>
@@ -517,6 +520,7 @@
                     <height>90</height>
                     <font>Medium_Caps2</font>
                     <label>$INFO[ListItem.Album]</label>
+                    <textcolor>White2</textcolor>
                     <textoffsetx>8</textoffsetx>
                     <visible>Container.Content(albums)</visible>
                 </control>
@@ -567,6 +571,7 @@
                             <height>72</height>
                             <font>Small</font>
                             <label>$INFO[ListItem.Artist]</label>
+                            <textcolor>White2</textcolor>
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
@@ -600,6 +605,7 @@
                             <height>72</height>
                             <font>Small</font>
                             <label>$INFO[ListItem.Property(Artist_Born)]$INFO[ListItem.Property(Artist_Formed)]</label>
+                            <textcolor>White2</textcolor>
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
@@ -635,6 +641,7 @@
                             <height>72</height>
                             <font>Small</font>
                             <label fallback="N/A">$INFO[ListItem.Genre]</label>
+                            <textcolor>White2</textcolor>
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
@@ -657,6 +664,7 @@
                             <font>Small</font>
                             <label>$INFO[ListItem.Property(Artist_Genre)]</label>
                             <textoffsetx>8</textoffsetx>
+                            <textcolor>White2</textcolor>
                             <visible>Container.Content(artists)</visible>
                         </control>
                     </control>
@@ -704,6 +712,7 @@
                             <height>72</height>
                             <font>Small</font>
                             <label>$INFO[ListItem.Property(Artist_Died)]$INFO[ListItem.Property(Artist_Disbanded)]</label>
+                            <textcolor>White2</textcolor>
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
@@ -767,22 +776,26 @@
                         <font>Plot</font>
                         <pagecontrol>61</pagecontrol>
                         <autoscroll>False</autoscroll>
+                        <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
                     </control>
                     <control type="scrollbar" id="61">
-                        <posx>1304</posx>
-                        <posy>0</posy>
-                        <height>570</height>
-                        <width>16</width>
+                        <posx>264</posx>
+                        <posy>10</posy>
+                        <width>1000</width>
+                        <height>552</height>
                         <onleft>50</onleft>
                         <onright>5000</onright>
-                        <texturesliderbackground border="3">dialogs/toast_back_blue.png</texturesliderbackground>
-                        <colordiffuse>$VAR[ScrollbarColorVar]</colordiffuse>
+                        <showonepage>false</showonepage>
+                        <texturesliderbackground>-</texturesliderbackground>
+                        <texturesliderbar>-</texturesliderbar>
+                        <texturesliderbarfocus>-</texturesliderbarfocus>
+                        <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                 </control>
                 <control type="image">
                     <posx>256</posx>
                     <posy>846</posy>
-                    <width>1048</width>
+                    <width>1064</width>
                     <height>72</height>
                     <texture border="3">dialogs/toast_back_blue_mask.png</texture>
                 </control>

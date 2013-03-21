@@ -78,6 +78,7 @@
                     <font>Medium_Caps2</font>
                     <align>right</align>
                     <label>$INFO[ListItem.TrackNumber]:</label>
+                    <textcolor>White2</textcolor>
                     <textoffsetx>8</textoffsetx>
                 </control>
                 <control type="label">
@@ -87,6 +88,7 @@
                     <font>Medium_Caps2</font>
                     <label>$INFO[ListItem.Title]</label>
                     <textoffsetx>8</textoffsetx>
+                    <textcolor>White2</textcolor>
                 </control>
                 <control type="group">
                     <posy>90</posy>
@@ -125,6 +127,7 @@
                             <height>72</height>
                             <font>Small</font>
                             <label>$INFO[ListItem.Artist]</label>
+                            <textcolor>White2</textcolor>
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
@@ -159,6 +162,7 @@
                             <height>72</height>
                             <font>Small</font>
                             <label fallback="N/A">$INFO[ListItem.Album]</label>
+                            <textcolor>White2</textcolor>
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
@@ -194,6 +198,7 @@
                             <height>72</height>
                             <font>Small</font>
                             <label>$INFO[ListItem.AlbumArtist]</label>
+                            <textcolor>White2</textcolor>
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
@@ -246,22 +251,26 @@
                         <label>$INFO[ListItem.Comment]</label>
                         <pagecontrol>61</pagecontrol>
                         <autoscroll>False</autoscroll>
+                        <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
                     </control>
                     <control type="scrollbar" id="61">
-                        <posx>1304</posx>
-                        <posy>0</posy>
-                        <height>570</height>
-                        <width>16</width>
+                        <posx>264</posx>
+                        <posy>10</posy>
+                        <width>1000</width>
+                        <height>552</height>
                         <onleft>50</onleft>
                         <onright>5000</onright>
-                        <texturesliderbackground border="3">dialogs/toast_back_blue.png</texturesliderbackground>
-                        <colordiffuse>$VAR[ScrollbarColorVar]</colordiffuse>
+                        <showonepage>false</showonepage>
+                        <texturesliderbackground>-</texturesliderbackground>
+                        <texturesliderbar>-</texturesliderbar>
+                        <texturesliderbarfocus>-</texturesliderbarfocus>
+                        <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                 </control>
                 <control type="image">
                     <posx>256</posx>
                     <posy>846</posy>
-                    <width>1048</width>
+                    <width>1064</width>
                     <height>72</height>
                     <texture border="3">dialogs/toast_back_blue_mask.png</texture>
                 </control>

@@ -472,7 +472,7 @@
                 </control>
                 <control type="image">
                     <posx>60</posx>
-                    <colordiffuse>White</colordiffuse>
+                    <colordiffuse>White2</colordiffuse>
                     <include>MediaFlagVars</include>
                     <texture>$VAR[RatingFlagVar,flags/rating/,.png]</texture>
                 </control>
@@ -483,6 +483,7 @@
                     <font>Medium_Caps2</font>
                     <label>$VAR[ListItemSeasonVar,S]$VAR[ListItemEpisodeVar,E, - ]$INFO[ListItem.Title]</label>
                     <textoffsetx>8</textoffsetx>
+                    <textcolor>White2</textcolor>
                     <visible>Container.Content(episodes)</visible>
                 </control>
                 <control type="button">
@@ -544,6 +545,7 @@
                             <height>72</height>
                             <font>Small</font>
                             <label>$INFO[ListItem.TvShowTitle]</label>
+                            <textcolor>White2</textcolor>
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
@@ -565,6 +567,7 @@
                             <height>72</height>
                             <font>Small</font>
                             <label>$INFO[ListItem.Genre]</label>
+                            <textcolor>White2</textcolor>
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
@@ -605,6 +608,7 @@
                             <height>72</height>
                             <font>Small</font>
                             <label fallback="N/A">$INFO[ListItem.Director]</label>
+                            <textcolor>White2</textcolor>
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
@@ -626,6 +630,7 @@
                             <height>72</height>
                             <font>Small</font>
                             <label>$INFO[Window(Home).Property(NextAired.Status)]</label>
+                            <textcolor>White2</textcolor>
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
@@ -661,6 +666,7 @@
                             <height>72</height>
                             <font>Small</font>
                             <label fallback="N/A">$INFO[ListItem.Writer]</label>
+                            <textcolor>White2</textcolor>
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
@@ -787,7 +793,7 @@
                     </control>
                     <control type="image">
                         <posx>256</posx>
-                        <width>1104</width>
+                        <width>1120</width>
                         <height>270</height>
                         <include>toast_back</include>
                     </control>
@@ -811,16 +817,20 @@
                         <font>Plot</font>
                         <pagecontrol>61</pagecontrol>
                         <autoscroll>False</autoscroll>
+                        <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
                     </control>
                     <control type="scrollbar" id="61">
-                        <posx>1304</posx>
-                        <posy>0</posy>
-                        <height>270</height>
-                        <width>16</width>
+                        <posx>264</posx>
+                        <posy>10</posy>
+                        <width>1000</width>
+                        <height>250</height>
                         <onleft>50</onleft>
                         <onright>5000</onright>
-                        <texturesliderbackground border="3">dialogs/toast_back_blue.png</texturesliderbackground>
-                        <colordiffuse>$VAR[ScrollbarColorVar]</colordiffuse>
+                        <showonepage>false</showonepage>
+                        <texturesliderbackground>-</texturesliderbackground>
+                        <texturesliderbar>-</texturesliderbar>
+                        <texturesliderbarfocus>-</texturesliderbarfocus>
+                        <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                 </control>
             </control>
