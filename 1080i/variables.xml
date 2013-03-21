@@ -141,11 +141,92 @@
         <value condition="Player.Forwarding32x | Player.Rewinding32x">32X</value>
     </variable>
 
-    <variable name="OverlayVar">
-        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,74)">overlays/OverlayWatched75.png</value>
-        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,49)">overlays/OverlayWatched50.png</value>
-        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,24)">overlays/OverlayWatched25.png</value>
+    <variable name="IconOverlay-7Var">
+        <value condition="ListItem(-7).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(-7).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay-6Var">
+        <value condition="ListItem(-6).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(-6).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay-5Var">
+        <value condition="ListItem(-5).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(-5).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay-4Var">
+        <value condition="ListItem(-4).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(-4).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay-3Var">
+        <value condition="ListItem(-3).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(-3).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay-2Var">
+        <value condition="ListItem(-2).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(-2).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay-1Var">
+        <value condition="ListItem(-1).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(-1).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay0Var">
+        <value condition="Container(53).ListItem.IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem.Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay1Var">
+        <value condition="ListItem(1).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(1).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay2Var">
+        <value condition="ListItem(2).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(2).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay3Var">
+        <value condition="ListItem(3).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(3).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay4Var">
+        <value condition="ListItem(4).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(4).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay5Var">
+        <value condition="ListItem(5).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(5).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay6Var">
+        <value condition="ListItem(6).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(6).Overlay,overlays/showcase/]</value>
+    </variable>
+    <variable name="IconOverlay7Var">
+        <value condition="ListItem(7).IsResumable">overlays/showcase/resumable.png</value>
+        <value>$INFO[ListItem(7).Overlay,overlays/showcase/]</value>
+    </variable>
+
+    <variable name="IconOverlayVar">
+        <value condition="ListItem.IsResumable">overlays/resumable.png</value>
         <value>$INFO[ListItem.Overlay,overlays/]</value>
+    </variable>
+
+    <variable name="InfoIconOverlayVar">
+        <value condition="Control.IsEnabled(9)">overlays/resumable.png</value>
+        <value>$INFO[ListItem.Overlay,overlays/]</value>
+    </variable>
+
+    <!--<variable name="OverlayVar">
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,82)">overlays/progress/82.5.png</value>
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,74)">overlays/progress/75.png</value>
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,62)">overlays/progress/62.5.png</value>
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,49)">overlays/progress/50.png</value>
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,37)">overlays/progress/37.5.png</value>
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,24)">overlays/progress/25.png</value>
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,12)">overlays/progress/12.5.png</value>
+        <value>$INFO[ListItem.Overlay,overlays/progress/]</value>
+    </variable>-->
+    <variable name="OverlayVar">
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,74)">overlays/list/OverlayWatched75.png</value>
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,49)">overlays/list/OverlayWatched50.png</value>
+        <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,24)">overlays/list/OverlayWatched25.png</value>
+        <value>$INFO[ListItem.Overlay,overlays/list/]</value>
     </variable>
 
     <variable name="ShowCaseNavLabelVar">

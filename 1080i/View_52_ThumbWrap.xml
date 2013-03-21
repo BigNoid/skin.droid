@@ -63,20 +63,10 @@
                     </control>
                     <control type="image">
                         <posx>500</posx>
-                        <posy>240</posy>
+                        <posy>0</posy>
                         <width>142</width>
                         <height>142</height>
-                        <texture>$INFO[ListItem.Overlay,common/]</texture>
-                        <aspectratio align="center" aligny="bottom">keep</aspectratio>
-                        <bordersize>21</bordersize>
-                    </control>
-                    <control type="image">
-                        <posx>500</posx>
-                        <posy>341</posy>
-                        <width>142</width>
-                        <height>142</height>
-                        <aspectratio scalediffuse="false">stretch</aspectratio>
-                        <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem.Overlay,common/]</texture>
+                        <texture>$VAR[IconOverlayVar]</texture>
                         <aspectratio align="center" aligny="bottom">keep</aspectratio>
                         <bordersize>21</bordersize>
                     </control>
@@ -148,20 +138,10 @@
                         </control>
                         <control type="image">
                             <posx>479</posx>
-                            <posy>219</posy>
+                            <posy>-21</posy>
                             <width>142</width>
                             <height>142</height>
-                            <texture>$INFO[ListItem.Overlay,common/]</texture>
-                            <aspectratio align="center" aligny="bottom">keep</aspectratio>
-                            <bordersize>21</bordersize>
-                        </control>
-                        <control type="image">
-                            <posx>479</posx>
-                            <posy>320</posy>
-                            <width>142</width>
-                            <height>142</height>
-                            <aspectratio scalediffuse="false">stretch</aspectratio>
-                            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem.Overlay,common/]</texture>
+                            <texture>$VAR[IconOverlayVar]</texture>
                             <aspectratio align="center" aligny="bottom">keep</aspectratio>
                             <bordersize>21</bordersize>
                         </control>

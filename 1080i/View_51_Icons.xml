@@ -46,10 +46,10 @@
                     </control>
                     <control type="image">
                         <posx>362</posx>
-                        <posy>160</posy>
+                        <posy>0</posy>
                         <width>100</width>
                         <height>100</height>
-                        <texture>$INFO[ListItem.Overlay,common/]</texture>
+                        <texture>$VAR[IconOverlayVar]</texture>
                         <aspectratio align="center" aligny="bottom">keep</aspectratio>
                         <bordersize>2</bordersize>
                     </control>
@@ -95,18 +95,18 @@
                             <height>260</height>
                             <texture background="true">$INFO[ListItem.Icon]</texture>
                             <aspectratio align="center">scale</aspectratio>
-                            <bordertexture border="8">thumbs/thumb_focus_no_shadow.png</bordertexture>
+                            <bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
                             <bordersize>8</bordersize>
                             <fadetime>200</fadetime>
                         </control>
                         <control type="image">
                             <posx>356</posx>
-                            <posy>154</posy>
+                            <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
-                            <texture>$INFO[ListItem.Overlay,common/]</texture>
+                            <texture>$VAR[IconOverlayVar]</texture>
                             <aspectratio align="center" aligny="bottom">keep</aspectratio>
-                            <bordersize>2</bordersize>
+                            <bordersize>8</bordersize>
                         </control>
                     </control>
                     <control type="label">
@@ -143,22 +143,13 @@
                     </control>
                     <control type="image">
                         <posx>208</posx>
-                        <posy>359</posy>
+                        <posy>0</posy>
                         <width>100</width>
                         <height>100</height>
-                        <texture>$INFO[ListItem.Overlay,common/]</texture>
+                        <texture>$VAR[IconOverlayVar]</texture>
                         <aspectratio align="center" aligny="bottom">keep</aspectratio>
                         <bordersize>2</bordersize>
                     </control>
-                    <!--<control type="image">
-                        <width>308</width>
-                        <height>459</height>
-                        <texture>common/black.png</texture>
-                        <colordiffuse>66FFFFFF</colordiffuse>
-                        <bordersize>2</bordersize>
-                        <visible>Control.HasFocus(51)</visible>
-                        <include>VisibleChangeEffect</include>
-                    </control>-->
                 </itemlayout>
                 <focusedlayout width="308" height="459" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]">
                     <control type="image">
@@ -177,17 +168,17 @@
                             <texture background="true">$VAR[PosterThumbVar]</texture>
                             <aspectratio>scale</aspectratio>
                             <fadetime>200</fadetime>
-                            <bordertexture border="8">thumbs/thumb_focus_no_shadow.png</bordertexture>
+                            <bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
                             <bordersize>8</bordersize>
                         </control>
                         <control type="image">
-                            <posx>202</posx>
-                            <posy>353</posy>
+                            <posx>208</posx>
+                            <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
-                            <texture>$INFO[ListItem.Overlay,common/]</texture>
+                            <texture>$VAR[IconOverlayVar]</texture>
                             <aspectratio align="center" aligny="bottom">keep</aspectratio>
-                            <bordersize>2</bordersize>
+                            <bordersize>8</bordersize>
                         </control>
                     </control>
                 </focusedlayout>
@@ -205,6 +196,16 @@
                         <bordersize>2</bordersize>
                         <fadetime>200</fadetime>
                     </control>
+                    <control type="image">
+                        <posx>356</posx>
+                        <posy>0</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>overlays/enabled.png</texture>
+                        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                        <visible>StringCompare(ListItem.Label2,$LOCALIZE[449])</visible>
+                        <bordersize>2</bordersize>
+                    </control>
                 </itemlayout>
                 <focusedlayout width="462" height="459" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes) | SubString(Container.FolderPath,youtube)]">
                     <control type="image">
@@ -212,26 +213,34 @@
                         <height>459</height>
                         <include>toast_back</include>
                     </control>
-                    <control type="image">
-                        <width>462</width>
-                        <height>459</height>
-                        <texture background="true">$INFO[ListItem.Icon]</texture>
-                        <aspectratio align="center">scale</aspectratio>
-                        <bordertexture border="8">thumbs/thumb_focus_no_shadow.png</bordertexture>
-                        <bordersize>8</bordersize>
-                        <fadetime>200</fadetime>
+                    <control type="group">
                         <animation type="Focus">
                             <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
                             <effect type="fade" start="80" end="100" time="200" tween="sine" easing="in" />
                         </animation>
+                        <control type="image">
+                            <width>462</width>
+                            <height>459</height>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                            <aspectratio align="center">scale</aspectratio>
+                            <bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+                            <bordersize>8</bordersize>
+                            <fadetime>200</fadetime>
+                        </control>
+                        <control type="image">
+                            <posx>356</posx>
+                            <posy>0</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <texture>overlays/enabled.png</texture>
+                            <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                            <visible>StringCompare(ListItem.Label2,$LOCALIZE[449])</visible>
+                            <bordersize>8</bordersize>
+                        </control>
                     </control>
                 </focusedlayout>
-
             </control>
-
             <include>SideScrollbar</include>
-
         </control>
 	</include>
-
 </includes>

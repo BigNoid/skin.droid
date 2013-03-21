@@ -461,6 +461,13 @@
                 <aspectratio>stretch</aspectratio>
                 <texture background="true">$VAR[InfoPosterThumbVar]</texture>
             </control>
+            <control type="image">
+                <posx>434</posx>
+                <posy>72</posy>
+                <width>166</width>
+                <height>166</height>
+                <texture>$VAR[InfoIconOverlayVar]</texture>
+            </control>
 
             <control type="group">
                 <posx>600</posx>

@@ -493,23 +493,14 @@
     </include>
 
     <include name="WatchedOverlayShowCase">
-        <posx>200</posx>
-        <posy>314</posy>
-        <width>100</width>
-        <height>100</height>
+        <posx>180</posx>
+        <posy>-11</posy>
+        <width>120</width>
+        <height>120</height>
         <fadetime>0</fadetime>
         <bordersize>21</bordersize>
     </include>
 
-    <include name="WatchedOverlayShowCaseReflection">
-        <posx>200</posx>
-        <posy>371</posy>
-        <width>100</width>
-        <height>100</height>
-        <fadetime>0</fadetime>
-        <bordersize>21</bordersize>
-        <colordiffuse>4FFFFFFF</colordiffuse>
-    </include>
 
     <include name="MovieShowCaseItem-7">
         <control type="image">
@@ -518,15 +509,11 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(-7).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay-7Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-7Var]</texture>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(-7).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem-6">
@@ -536,17 +523,13 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(-6).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay-6Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-6Var]</texture>
             <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
             <width>121</width>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(-6).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem-5">
@@ -556,17 +539,13 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(-5).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay-5Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-5Var]</texture>
             <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
             <width>131</width>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(-5).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem-4">
@@ -576,17 +555,13 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(-4).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay-4Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-4Var]</texture>
             <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
             <width>145</width>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(-4).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem-3">
@@ -596,17 +571,13 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(-3).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay-3Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-3Var]</texture>
             <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
             <width>160</width>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(-3).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem-2">
@@ -616,17 +587,13 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(-2).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay-2Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-2Var]</texture>
             <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
             <width>179</width>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(-2).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem-1">
@@ -636,17 +603,13 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(-1).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay-1Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
             <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
             <width>180</width>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(-1).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem0">
@@ -656,15 +619,11 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(0).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay0Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem0Var]</texture>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(0).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem1">
@@ -674,7 +633,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(1).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay1Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
@@ -682,10 +641,6 @@
             <posx>37</posx>
             <width>240</width>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(1).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem2">
@@ -695,7 +650,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(2).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay2Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem2Var]</texture>
@@ -703,10 +658,6 @@
             <posx>102</posx>
             <width>177</width>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(2).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem3">
@@ -716,7 +667,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(3).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay3Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem3Var]</texture>
@@ -724,10 +675,6 @@
             <posx>121</posx>
             <width>158</width>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(3).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem4">
@@ -737,7 +684,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(4).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay4Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem4Var]</texture>
@@ -745,10 +692,6 @@
             <posx>136</posx>
             <width>142</width>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(4).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem5">
@@ -758,7 +701,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(5).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay5Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem5Var]</texture>
@@ -766,10 +709,6 @@
             <posx>146</posx>
             <width>133</width>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(5).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem6">
@@ -779,7 +718,7 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(6).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay6Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem6Var]</texture>
@@ -787,10 +726,6 @@
             <posx>156</posx>
             <width>122</width>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(6).Overlay,common/]</texture>
         </control>
     </include>
     <include name="MovieShowCaseItem7">
@@ -800,15 +735,11 @@
         </control>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
-            <texture>$INFO[ListItem(7).Overlay,common/]</texture>
+            <texture>$VAR[IconOverlay7Var]</texture>
         </control>
         <control type="image">
             <texture background="true" flipy="true" diffuse="views/landscape/mask_reflect.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem7Var]</texture>
             <include>MovieShowcaseThumbReflection</include>
-        </control>
-        <control type="image">
-            <include>WatchedOverlayShowCaseReflection</include>
-            <texture flipy="true">$INFO[ListItem(7).Overlay,common/]</texture>
         </control>
     </include>
 
