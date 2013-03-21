@@ -920,7 +920,7 @@
                     <include>MediaMenuButton</include>
                     <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
-                    <visible>System.HasAddon(script.libraryeditor) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+                    <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
                 </control>
                 <control type="button" id="9003">
                     <description>Manual artwork</description>
@@ -928,7 +928,7 @@
                     <include>MediaMenuButton</include>
                     <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-                    <visible>System.HasAddon(script.libraryeditor) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+                    <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
                 </control>
                 <include>MediaMenuBottomButton</include>
             </control>
