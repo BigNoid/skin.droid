@@ -725,7 +725,7 @@
     </include>
     
     <include name="VideoFlags">
-        <control type="grouplist">
+        <control type="grouplist" id="6050">
             <posx>52</posx>
             <posy>90r</posy>
             <width>1816</width>
@@ -970,6 +970,7 @@
             <posy>90r</posy>
             <width>1920</width>
             <visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
+            <visible>Container.Content(songs) | Container.Content(albums)</visible>
             <control type="group">
                 <visible>Container.Content(songs)</visible>
                 <control type="group">

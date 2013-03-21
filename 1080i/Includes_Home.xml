@@ -176,7 +176,8 @@
                         <item>
                             <label>Apps</label>
                             <icon>DefaultAddonProgram.png</icon>
-                            <onclick>ActivateWindow(Programs,Addons,return)</onclick>
+                            <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
+                            <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
                             <visible>Container(800).HasFocus(3)</visible>
                         </item>
                     </content>

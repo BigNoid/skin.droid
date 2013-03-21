@@ -14,10 +14,10 @@
         </control>
         <include>NotificationCenter</include>
         <control type="group">
-            <visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
+            <visible>Control.IsVisible(50)</visible>
             <include>FloorFlagsBack</include>
         </control>
-        <control type="grouplist">
+        <control type="grouplist" id="6050">
             <posx>52</posx>
             <posy>90r</posy>
             <width>1816</width>

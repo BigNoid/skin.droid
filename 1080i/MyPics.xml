@@ -13,13 +13,14 @@
         </control>
         <include>NotificationCenter</include>
         <control type="group">
-            <visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
+            <visible>Control.IsVisible(50)</visible>
             <include>FloorFlagsBack</include>
         </control>
         <control type="group">
             <posx>0</posx>
             <posy>90r</posy>
             <width>1920</width>
+            <visible>Control.IsVisible(50)</visible>
             <control type="group">
                 <posx>0</posx>
                 <visible>!IsEmpty(ListItem.PictureResolution)</visible>
@@ -168,41 +169,48 @@
             </control>
         </control>
 
+        <control type="button">
+            <posx>0</posx>
+            <posy>90r</posy>
+            <width>1920</width>
+            <height>90</height>
+            <font>Medium_Caps2</font>
+            <label>$INFO[ListItem.Label]</label>
+            <label2>$INFO[ListItem.Label2]</label2>
+            <textoffsetx>30</textoffsetx>
+            <disabledcolor>White2</disabledcolor>
+            <enable>no</enable>
+            <visible>Control.IsVisible(51)</visible>
+        </control>
 
         <control type="grouplist" id="9000">
             <include>MediaMenuGrouplist</include>
-
             <control type="button" id="2">
                 <description>View</description>
                 <include>MediaMenuButton</include>
             </control>
-
             <control type="button" id="3">
                 <description>Sort</description>
                 <include>MediaMenuButton</include>
             </control>
-
             <control type="togglebutton" id="4">
                 <description>Ascending</description>
                 <label>584</label>
                 <altlabel>585</altlabel>
                 <include>MediaMenuButton</include>
             </control>
-
             <control type="button" id="6">
                 <description>Slideshow</description>
                 <label>108</label>
                 <include>MediaMenuButton</include>
                 <visible>!ListItem.IsFolder</visible>
             </control>
-
             <control type="button" id="7">
                 <description>Recursive Slideshow</description>
                 <label>108</label>
                 <include>MediaMenuButton</include>
                 <visible>ListItem.IsFolder</visible>
             </control>
-
             <control type="radiobutton" id="9">
                 <description>Randomise</description>
                 <label>13319</label>
@@ -211,5 +219,4 @@
             <include>MediaMenuBottomButton</include>
         </control>
     </controls>
-
 </window>
