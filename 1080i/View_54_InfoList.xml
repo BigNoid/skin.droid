@@ -7,12 +7,12 @@
             <control type="group">
                 <!-- Left Panel -->
                 <posx>0</posx>
-                <posy>192</posy>
+                <posy>190</posy>
                 <control type="image">
                     <posx>0</posx>
                     <posy>341</posy>
                     <width>642</width>
-                    <height>380</height>
+                    <height>382</height>
                     <include>toast_back</include>
                     <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
                     <bordersize>21</bordersize>
@@ -21,23 +21,42 @@
                     <posx>0</posx>
                     <posy>341</posy>
                     <width>642</width>
-                    <height>380</height>
+                    <height>382</height>
                     <aspectratio>scale</aspectratio>
                     <texture>$VAR[LandscapeThumbVar]</texture>
                     <bordersize>21</bordersize>
                 </control>
+                <control type="group">
+                    <visible>[Container.Content(movies) | Container.Content(tvshows)] + IsEmpty(ListItem.Art(landscape))</visible>
+                    <control type="image">
+                        <posy>341</posy>
+                        <width>642</width>
+                        <height>382</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Art(clearlogo)]</texture>
+                        <bordersize>21</bordersize>
+                    </control>
+                    <control type="image">
+                        <posy>681</posy>
+                        <width>642</width>
+                        <height>382</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem.Art(clearlogo)]</texture>
+                        <bordersize>21</bordersize>
+                    </control>
+                </control>
                 <control type="image">
                     <posx>0</posx>
-                    <posy>679</posy>
+                    <posy>681</posy>
                     <width>642</width>
-                    <height>380</height>
+                    <height>382</height>
                     <aspectratio>scale</aspectratio>
                     <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$VAR[LandscapeThumbVar]</texture>
                     <bordersize>21</bordersize>
                 </control>
                 <control type="image">
                     <posx>21</posx>
-                    <posy>700</posy>
+                    <posy>702</posy>
                     <width>589</width>
                     <height>119</height>
                     <texture>reflect.png</texture>
@@ -47,12 +66,12 @@
             <control type="group">
                 <!-- Right Panel -->
                 <posx>1278</posx>
-                <posy>192</posy>
+                <posy>190</posy>
                 <control type="image">
                     <posx>0</posx>
                     <posy>341</posy>
                     <width>642</width>
-                    <height>380</height>
+                    <height>382</height>
                     <include>toast_back</include>
                     <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
                     <bordersize>21</bordersize>
@@ -60,7 +79,7 @@
                 <control type="textbox">
                     <description>Plot</description>
                     <posx>51</posx>
-                    <posy>365</posy>
+                    <posy>367</posy>
                     <width>540</width>
                     <height>330</height>
                     <align>left</align>
@@ -86,14 +105,14 @@
                 </control>
                 <control type="image">
                     <posx>21</posx>
-                    <posy>629</posy>
+                    <posy>631</posy>
                     <width>600</width>
                     <height>72</height>
                     <texture border="3">dialogs/toast_back_blue_mask.png</texture>
                 </control>
                 <control type="image">
                     <posx>32</posx>
-                    <posy>700</posy>
+                    <posy>702</posy>
                     <width>589</width>
                     <height>119</height>
                     <texture>reflect.png</texture>
@@ -174,15 +193,15 @@
                             <textoffsetx>18</textoffsetx>
                         </control>
                         <control type="label">
-                            <posx>700</posx>
-                            <width>700</width>
+                            <posx>664</posx>
+                            <width>664</width>
                             <height>65</height>
                             <font>Small</font>
                             <align>right</align>
                             <label>$INFO[ListItem.Label2]</label>
                             <textcolor>grey</textcolor>
                             <textoffsetx>18</textoffsetx>
-                            <animation effect="slide" start="0" end="-36" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
+                            <animation effect="slide" start="0" end="36" reversible="true" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
                         </control>
                         <control type="image">
                             <posx>646</posx>
@@ -205,15 +224,15 @@
                                 <textoffsetx>18</textoffsetx>
                             </control>
                             <control type="label">
-                                <posx>700</posx>
-                                <width>700</width>
+                                <posx>664</posx>
+                                <width>664</width>
                                 <height>65</height>
                                 <font>Small</font>
                                 <align>right</align>
                                 <label>$INFO[ListItem.Label2]</label>
                                 <textcolor>grey</textcolor>
                                 <textoffsetx>18</textoffsetx>
-                                <animation effect="slide" start="0" end="-36" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
+                                <animation effect="slide" start="0" end="36" reversible="true" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
                             </control>
                         </control>
                         <control type="group">
@@ -232,14 +251,14 @@
                                 <textoffsetx>18</textoffsetx>
                             </control>
                             <control type="label">
-                                <posx>700</posx>
-                                <width>700</width>
+                                <posx>664</posx>
+                                <width>664</width>
                                 <height>65</height>
                                 <font>Small</font>
                                 <align>right</align>
                                 <label>$INFO[ListItem.Label2]</label>
                                 <textoffsetx>18</textoffsetx>
-                                <animation effect="slide" start="0" end="-36" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
+                                <animation effect="slide" start="0" end="36" reversible="true" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
                             </control>
                         </control>
                         <control type="image">

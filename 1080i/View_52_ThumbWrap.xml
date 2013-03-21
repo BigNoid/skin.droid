@@ -43,13 +43,23 @@
                         <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
                         <bordersize>21</bordersize>
                     </control>
-                    <control type="image">
-                        <width>642</width>
-                        <height>382</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Art(clearlogo)]</texture>
-                        <bordersize>21</bordersize>
-                        <visible>IsEmpty(ListItem.Art(landscape))</visible>
+                    <control type="group">
+                        <visible>[Container.Content(movies) | Container.Content(tvshows)] + IsEmpty(ListItem.Art(landscape))</visible>
+                        <control type="image">
+                            <width>642</width>
+                            <height>382</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture>$INFO[ListItem.Art(clearlogo)]</texture>
+                            <bordersize>21</bordersize>
+                        </control>
+                        <control type="image">
+                            <posy>341</posy>
+                            <width>642</width>
+                            <height>382</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem.Art(clearlogo)]</texture>
+                            <bordersize>21</bordersize>
+                        </control>
                     </control>
                     <control type="image">
                         <posx>500</posx>
@@ -59,15 +69,6 @@
                         <texture>$INFO[ListItem.Overlay,common/]</texture>
                         <aspectratio align="center" aligny="bottom">keep</aspectratio>
                         <bordersize>21</bordersize>
-                    </control>
-                    <control type="image">
-                        <posy>341</posy>
-                        <width>642</width>
-                        <height>382</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem.Art(clearlogo)]</texture>
-                        <bordersize>21</bordersize>
-                        <visible>IsEmpty(ListItem.Art(landscape))</visible>
                     </control>
                     <control type="image">
                         <posx>500</posx>
@@ -124,15 +125,26 @@
                             <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
                             <bordersize>21</bordersize>
                         </control>
-                        <control type="image">
-                            <posx>-21</posx>
-                            <posy>-21</posy>
-                            <width>642</width>
-                            <height>382</height>
-                            <aspectratio>keep</aspectratio>
-                            <texture>$INFO[ListItem.Art(clearlogo)]</texture>
-                            <bordersize>21</bordersize>
-                            <visible>IsEmpty(ListItem.Art(landscape))</visible>
+                        <control type="group">
+                            <visible>[Container.Content(movies) | Container.Content(tvshows)] + IsEmpty(ListItem.Art(landscape))</visible>
+                            <control type="image">
+                                <posx>-21</posx>
+                                <posy>-21</posy>
+                                <width>642</width>
+                                <height>382</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[ListItem.Art(clearlogo)]</texture>
+                                <bordersize>21</bordersize>
+                            </control>
+                            <control type="image">
+                                <posx>-21</posx>
+                                <posy>320</posy>
+                                <width>642</width>
+                                <height>382</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem.Art(clearlogo)]</texture>
+                                <bordersize>21</bordersize>
+                            </control>
                         </control>
                         <control type="image">
                             <posx>479</posx>
@@ -142,16 +154,6 @@
                             <texture>$INFO[ListItem.Overlay,common/]</texture>
                             <aspectratio align="center" aligny="bottom">keep</aspectratio>
                             <bordersize>21</bordersize>
-                        </control>
-                        <control type="image">
-                            <posx>-21</posx>
-                            <posy>320</posy>
-                            <width>642</width>
-                            <height>382</height>
-                            <aspectratio>keep</aspectratio>
-                            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem.Art(clearlogo)]</texture>
-                            <bordersize>21</bordersize>
-                            <visible>IsEmpty(ListItem.Art(landscape))</visible>
                         </control>
                         <control type="image">
                             <posx>479</posx>
