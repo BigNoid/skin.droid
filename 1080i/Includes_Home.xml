@@ -880,7 +880,7 @@
                     <height>387</height>
                     <texture border="21">thumbs/thumb_shadow.png</texture>
                 </control>
-                <control type="image">
+                <!--<control type="image">
                     <posx>-17</posx>
                     <posy>383</posy>
                     <width>38</width>
@@ -893,7 +893,7 @@
                     <width>38</width>
                     <height>298</height>
                     <texture border="1" flipx="true">settings/side_shadow.png</texture>
-                </control>
+                </control>-->
                 <control type="panel" id="800">
                     <posx>21</posx>
                     <posy>362</posy>
