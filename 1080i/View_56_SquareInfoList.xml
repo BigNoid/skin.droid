@@ -1,114 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="View_54_InfoList">
+    <include name="View_56_SquareInfoList">
         <control type="group">
-            <visible>Control.isVisible(54)</visible>
+            <visible>Control.isVisible(56)</visible>
             <animation type="VisibleChange" reversible="false">
-                <effect type="zoom" start="200" end="100" center="960,540" easing="out" tween="cubic" time="300" />
+                <effect type="zoom" start="200" end="100" center="960,560" easing="out" tween="cubic" time="300" />
                 <effect type="fade" start="0" end="100" time="300" />
             </animation>
             <control type="group">
-                <posx>54</posx>
-                <posy>340</posy>
+                <posx>66</posx>
+                <posy>412</posy>
                 <control type="group">
-                    <animation effect="zoom" start="100" end="90" time="640" easing="inout" tween="circle" center="380,250" condition="true">Conditional</animation>
+                    <animation effect="zoom" start="100" end="90" time="640" easing="inout" tween="circle" center="0,250" condition="true">Conditional</animation>
                     <control type="image">
                         <posx>-40</posx>
                         <posy>-40</posy>
-                        <width>464</width>
-                        <height>656</height>
+                        <width>584</width>
+                        <height>584</height>
                         <texture border="40">shadow.png</texture>
                     </control>
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>384</width>
-                        <height>576</height>
+                        <width>504</width>
+                        <height>504</height>
                         <include>toast_back</include>
                     </control>
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>384</width>
-                        <height>576</height>
+                        <width>504</width>
+                        <height>504</height>
                         <aspectratio>scale</aspectratio>
-                        <texture background="true">$VAR[InfoPosterThumbVar]</texture>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
                     </control>
-                    <!--<control type="image">
-                        <posx>0</posx>
-                        <posy>576</posy>
-                        <width>384</width>
-                        <height>119</height>
-                        <texture>reflect.png</texture>
-                    </control>-->
                     <control type="image">
                         <posx>0</posx>
-                        <posy>576</posy>
-                        <width>384</width>
-                        <height>576</height>
+                        <posy>504</posy>
+                        <width>504</width>
+                        <height>504</height>
                         <aspectratio aligny="top">scale</aspectratio>
-                        <texture flipy="true" diffuse="thumbs/thumb_diffuse.png">$VAR[InfoPosterThumbVar]</texture>
+                        <texture flipy="true" diffuse="thumbs/thumb_diffuse.png">$INFO[ListItem.Icon]</texture>
                     </control>
                 </control>
 
                 <control type="group">
-                    <animation effect="zoom" start="100" end="90" time="640" easing="inout" tween="circle" center="1200,250" condition="true">Conditional</animation>
+                    <animation effect="zoom" start="100" end="90" time="640" easing="inout" tween="circle" center="1270,250" condition="true">Conditional</animation>
                     <control type="image">
-                        <posx>1164</posx>
+                        <posx>1234</posx>
                         <posy>-40</posy>
-                        <width>688</width>
-                        <height>656</height>
+                        <width>614</width>
+                        <height>584</height>
                         <texture border="40">shadow.png</texture>
                     </control>
                     <control type="image">
-                        <posx>1204</posx>
+                        <posx>1274</posx>
                         <posy>0</posy>
-                        <width>608</width>
-                        <height>342</height>
+                        <width>534</width>
+                        <height>300</height>
                         <include>toast_back</include>
                     </control>
                     <control type="image">
-                        <posx>1204</posx>
-                        <posy>342</posy>
-                        <width>608</width>
-                        <height>234</height>
+                        <posx>1274</posx>
+                        <posy>300</posy>
+                        <width>534</width>
+                        <height>204</height>
                         <include>toast_back</include>
                     </control>
                     <control type="image">
-                        <posx>1204</posx>
+                        <posx>1274</posx>
                         <posy>0</posy>
-                        <posy>576</posy>
-                        <width>608</width>
-                        <height>342</height>
+                        <width>534</width>
+                        <height>300</height>
                         <aspectratio>scale</aspectratio>
-                        <texture>$VAR[LandscapeThumbVar]</texture>
+                        <texture>$INFO[ListItem.Art(fanart)]</texture>
                     </control>
                     <control type="textbox">
                         <description>Plot outline</description>
-                        <posx>1222</posx>
-                        <posy>360</posy>
-                        <width>572</width>
-                        <height>200</height>
+                        <posx>1292</posx>
+                        <posy>320</posy>
+                        <width>498</width>
+                        <height>180</height>
                         <align>left</align>
                         <font>Plot</font>
-                        <label>$VAR[MoviePlotVar]</label>
+                        <label>$VAR[GlobalPlotVar]</label>
                         <pagecontrol>61</pagecontrol>
                         <autoscroll>False</autoscroll>
                         <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
                     </control>
                     <control type="image">
-                        <posx>1204</posx>
-                        <posy>504</posy>
-                        <width>608</width>
+                        <posx>1274</posx>
+                        <posy>434</posy>
+                        <width>534</width>
                         <height>72</height>
                         <texture border="3">dialogs/toast_back_blue_mask.png</texture>
                     </control>
                     <control type="scrollbar" id="61">
-                        <posx>1204</posx>
-                        <posy>344</posy>
-                        <width>608</width>
-                        <height>230</height>
-                        <onleft>54</onleft>
+                        <posx>1274</posx>
+                        <posy>302</posy>
+                        <width>534</width>
+                        <height>200</height>
+                        <onleft>56</onleft>
                         <onright>9010</onright>
                         <showonepage>false</showonepage>
                         <texturesliderbackground>-</texturesliderbackground>
@@ -117,9 +109,9 @@
                         <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                     <control type="image">
-                        <posx>1204</posx>
-                        <posy>576</posy>
-                        <width>608</width>
+                        <posx>1274</posx>
+                        <posy>504</posy>
+                        <width>534</width>
                         <height>119</height>
                         <texture>reflect.png</texture>
                     </control>
@@ -127,47 +119,47 @@
 
                 <control type="group">
                     <control type="image">
-                        <posx>344</posx>
+                        <posx>414</posx>
                         <posy>-40</posy>
                         <width>900</width>
-                        <height>656</height>
+                        <height>584</height>
                         <texture border="40">shadow.png</texture>
                     </control>
                     <control type="image">
-                        <posx>346</posx>
+                        <posx>416</posx>
                         <posy>25</posy>
                         <width>38</width>
-                        <height>518</height>
+                        <height>446</height>
                         <texture border="1">settings/side_shadow.png</texture>
                     </control>
                     <control type="image">
-                        <posx>1204</posx>
+                        <posx>1274</posx>
                         <posy>24</posy>
                         <width>38</width>
-                        <height>519</height>
+                        <height>447</height>
                         <texture border="1" flipx="true">settings/side_shadow.png</texture>
                     </control>
                     <control type="image">
-                        <posx>384</posx>
+                        <posx>454</posx>
                         <posy>0</posy>
                         <width>820</width>
-                        <height>576</height>
+                        <height>504</height>
                         <include>toast_back</include>
                     </control>
-                    <control type="list" id="54">
-                        <posx>384</posx>
+                    <control type="list" id="56">
+                        <posx>454</posx>
                         <posy>0</posy>
                         <width>820</width>
-                        <height>575</height>
+                        <height>503</height>
                         <onleft>9010</onleft>
                         <onright>61</onright>
-                        <onup>54</onup>
-                        <ondown>54</ondown>
+                        <onup>56</onup>
+                        <ondown>56</ondown>
                         <movement>5</movement>
                         <pagecontrol>60</pagecontrol>
                         <viewtype label="InfoList">list</viewtype>
                         <orientation>vertical</orientation>
-                        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes)</visible>
+                        <visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes)]</visible>
                         <scrolltime tween="sine" easing="inout">200</scrolltime>
                         <itemlayout width="820" height="72">
                             <control type="image">
@@ -177,7 +169,7 @@
                             </control>
                             <control type="label">
                                 <posx>0</posx>
-                                <width>778</width>
+                                <width>820</width>
                                 <height>72</height>
                                 <font>Small</font>
                                 <label>$INFO[ListItem.Label]</label>
@@ -185,21 +177,14 @@
                                 <textoffsetx>18</textoffsetx>
                             </control>
                             <control type="label">
-                                <posx>778</posx>
-                                <width>778</width>
+                                <posx>820</posx>
+                                <width>820</width>
                                 <height>72</height>
                                 <font>Small</font>
                                 <align>right</align>
                                 <label>$INFO[ListItem.Label2]</label>
                                 <textcolor>grey</textcolor>
                                 <textoffsetx>18</textoffsetx>
-                            </control>
-                            <control type="image">
-                                <posx>768</posx>
-                                <posy>12</posy>
-                                <width>48</width>
-                                <height>48</height>
-                                <texture>$VAR[OverlayVar]</texture>
                             </control>
                         </itemlayout>
                         <focusedlayout width="820" height="72">
@@ -209,10 +194,10 @@
                                 <include>toast_back</include>
                             </control>
                             <control type="group">
-                                <visible>!Control.hasFocus(54)</visible>
+                                <visible>!Control.hasFocus(56)</visible>
                                 <control type="label">
                                     <posx>0</posx>
-                                    <width>778</width>
+                                    <width>820</width>
                                     <height>72</height>
                                     <font>Small</font>
                                     <label>$INFO[ListItem.Label]</label>
@@ -220,8 +205,8 @@
                                     <textoffsetx>18</textoffsetx>
                                 </control>
                                 <control type="label">
-                                    <posx>778</posx>
-                                    <width>778</width>
+                                    <posx>820</posx>
+                                    <width>820</width>
                                     <height>72</height>
                                     <font>Small</font>
                                     <align>right</align>
@@ -231,7 +216,7 @@
                                 </control>
                             </control>
                             <control type="group">
-                                <visible>Control.HasFocus(54)</visible>
+                                <visible>Control.HasFocus(56)</visible>
                                 <control type="image">
                                     <width>820</width>
                                     <height>72</height>
@@ -239,15 +224,15 @@
                                 </control>
                                 <control type="label">
                                     <posx>0</posx>
-                                    <width>778</width>
+                                    <width>820</width>
                                     <height>72</height>
                                     <font>Small</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textoffsetx>18</textoffsetx>
                                 </control>
                                 <control type="label">
-                                    <posx>778</posx>
-                                    <width>778</width>
+                                    <posx>820</posx>
+                                    <width>820</width>
                                     <height>72</height>
                                     <font>Small</font>
                                     <align>right</align>
@@ -255,25 +240,18 @@
                                     <textoffsetx>18</textoffsetx>
                                 </control>
                             </control>
-                            <control type="image">
-                                <posx>768</posx>
-                                <posy>12</posy>
-                                <width>48</width>
-                                <height>48</height>
-                                <texture>$VAR[OverlayVar]</texture>
-                            </control>
                         </focusedlayout>
                     </control>
                     <control type="image">
-                        <posx>384</posx>
-                        <posy>544</posy>
+                        <posx>454</posx>
+                        <posy>472</posy>
                         <width>820</width>
                         <height>32</height>
                         <texture border="3">dialogs/toast_back_blue_mask.png</texture>
                     </control>
                     <control type="image">
-                        <posx>384</posx>
-                        <posy>576</posy>
+                        <posx>454</posx>
+                        <posy>504</posy>
                         <width>820</width>
                         <height>119</height>
                         <texture>reflect.png</texture>

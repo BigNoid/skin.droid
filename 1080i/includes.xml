@@ -10,6 +10,7 @@
     <include file="View_53_ShowCase.xml" />
     <include file="View_54_InfoList.xml" />
     <include file="View_55_SmallIcons.xml" />
+    <include file="View_56_SquareInfoList.xml" />
 
     <!-- Constants -->
     <constant name="AutoScrollTime">2000</constant>
@@ -798,13 +799,8 @@
                 <label>[B]$INFO[ListItem.VideoResolution][/B]</label>
                 <font>Large</font>
                 <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                <visible>!IsEmpty(ListItem.VideoResolution)</visible>
+                <visible>!Container.Content(tvshows)</visible>
             </control>
-            <!--<control type="image">
-                    <include>MediaFlagVars</include>
-                    <texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-                    <visible>!IsEmpty(ListItem.VideoResolution)</visible>
-                </control>-->
             <control type="group">
                 <visible>Container.Content(tvshows)</visible>
                 <width>135</width>
@@ -836,7 +832,7 @@
                 <label>[B]$INFO[ListItem.VideoAspect,,:1][/B]</label>
                 <font>Large</font>
                 <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                <visible>!IsEmpty(ListItem.VideoAspect)</visible>
+                <visible>!Container.Content(tvshows)</visible>
             </control>
             <control type="group">
                 <visible>Container.Content(tvshows)</visible>
@@ -883,7 +879,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>Container.Content(tvshows) + IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+                <visible>Container.Content(tvshows)</visible>
                 <width>135</width>
                 <control type="label">
                     <posx>-40</posx>
@@ -891,31 +887,8 @@
                     <width>215</width>
                     <height>60</height>
                     <align>center</align>
-                    <label>[B]$INFO[ListItem.Premiered][/B]</label>
-                    <font>Medium_Floor_Caps</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-                <control type="label">
-                    <posy>52</posy>
-                    <width>135</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <label>[LOWERCASE]$LOCALIZE[20416][/LOWERCASE]</label>
-                    <font>Medium_Small</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-            </control>
-            <control type="group">
-                <visible>Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
-                <width>135</width>
-                <control type="label">
-                    <posx>-40</posx>
-                    <posy>2</posy>
-                    <width>215</width>
-                    <height>60</height>
-                    <align>center</align>
-                    <label>[B]$INFO[Window(Home).Property(NextAired.NextDate)][/B]</label>
-                    <font>Medium_Floor_Caps</font>
+                    <label fallback="N/A">$INFO[Window(Home).Property(NextAired.NextDate)]</label>
+                    <font>Medium_Bold_Floor_Caps</font>
                     <textcolor>$VAR[FloorDiffuseVar]</textcolor>
                 </control>
                 <control type="label">
@@ -930,7 +903,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+                <visible>!Container.Content(tvshows)</visible>
                 <width>135</width>
                 <control type="label">
                     <posy>2</posy>
@@ -954,7 +927,7 @@
             <control type="image">
                 <include>MediaFlagVars</include>
                 <texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
-                <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+                <visible>!Container.Content(tvshows)</visible>
             </control>
             <control type="group">
                 <width>135</width>
@@ -996,7 +969,7 @@
                     <width>195</width>
                     <height>60</height>
                     <align>center</align>
-                    <label>[B]$VAR[DuarationVar][/B]</label>
+                    <label>[B]$VAR[DurationVar][/B]</label>
                     <font>Large</font>
                     <textcolor>$VAR[FloorDiffuseVar]</textcolor>
                 </control>
@@ -1019,156 +992,4 @@
             </control>
         </control>
     </include>
-    
-    <include name="MusicFlags">
-        <control type="group" id="6051">
-            <posx>0</posx>
-            <posy>90r</posy>
-            <width>1920</width>
-            <visible>Container.Content(songs) | Container.Content(albums)</visible>
-            <control type="group">
-                <visible>Container.Content(songs)</visible>
-                <control type="group">
-                    <posx>0</posx>
-                    <control type="label">
-                        <posy>2</posy>
-                        <width>240</width>
-                        <height>60</height>
-                        <align>center</align>
-                        <label>[B]$INFO[Container.Totaltime][/B]</label>
-                        <font>Large</font>
-                        <textoffsetx>4</textoffsetx>
-                        <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    </control>
-                    <control type="label">
-                        <posy>52</posy>
-                        <width>240</width>
-                        <height>30</height>
-                        <align>center</align>
-                        <label>[LOWERCASE]$LOCALIZE[31044][/LOWERCASE]</label>
-                        <font>Medium_Small</font>
-                        <textoffsetx>4</textoffsetx>
-                        <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    </control>
-                </control>
-                <control type="group">
-                    <posx>240</posx>
-                    <control type="label">
-                        <posy>2</posy>
-                        <width>240</width>
-                        <height>60</height>
-                        <align>center</align>
-                        <label fallback="31043">$INFO[ListItem.DiscNumber,[B],[/B]]</label>
-                        <font>Large</font>
-                        <textoffsetx>4</textoffsetx>
-                        <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    </control>
-                    <control type="label">
-                        <posy>52</posy>
-                        <width>240</width>
-                        <height>30</height>
-                        <align>center</align>
-                        <label>[LOWERCASE]$LOCALIZE[427][/LOWERCASE]</label>
-                        <font>Medium_Small</font>
-                        <textoffsetx>4</textoffsetx>
-                        <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    </control>
-                </control>
-                <control type="group">
-                    <posx>480</posx>
-                    <control type="label">
-                        <posy>2</posy>
-                        <width>240</width>
-                        <height>60</height>
-                        <align>center</align>
-                        <label fallback="31042">$INFO[ListItem.PlayCount,[B],[/B]]</label>
-                        <font>Large</font>
-                        <textoffsetx>4</textoffsetx>
-                        <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    </control>
-                    <control type="label">
-                        <posy>52</posy>
-                        <width>240</width>
-                        <height>30</height>
-                        <align>center</align>
-                        <label>[LOWERCASE]$LOCALIZE[576][/LOWERCASE]</label>
-                        <font>Medium_Small</font>
-                        <textoffsetx>4</textoffsetx>
-                        <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    </control>
-                </control>
-                <control type="group">
-                    <posx>720</posx>
-                    <control type="label">
-                        <posy>2</posy>
-                        <width>240</width>
-                        <height>60</height>
-                        <align>center</align>
-                        <label fallback="31045">$INFO[ListItem.LastPlayed,[B],[/B]]</label>
-                        <font>Medium_Floor_Caps</font>
-                        <textoffsetx>4</textoffsetx>
-                        <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    </control>
-                    <control type="label">
-                        <posy>52</posy>
-                        <width>240</width>
-                        <height>30</height>
-                        <align>center</align>
-                        <label>[LOWERCASE]$LOCALIZE[568][/LOWERCASE]</label>
-                        <font>Medium_Small</font>
-                        <textoffsetx>4</textoffsetx>
-                        <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    </control>
-                </control>
-            </control>
-            <control type="label">
-                <posy>4</posy>
-                <posx>960</posx>
-                <width>240</width>
-                <height>82</height>
-                <align>center</align>
-                <wrapmultiline>true</wrapmultiline>
-                <textoffsetx>4</textoffsetx>
-                <label>$INFO[ListItem.Genre]</label>
-                <font>Medium_Floor_Caps</font>
-                <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-            </control>
-            <control type="image">
-                <posx>1252</posx>
-                <include>MediaFlagVars</include>
-                <texture fallback="rating0.png">$INFO[ListItem.StarRating]</texture>
-                <animation type="Conditional" reversible="false" condition="true">
-                    <effect type="zoom" start="100" end="130" center="auto" easing="in" tween="cubic" time="0" />
-                </animation>
-            </control>
-            <control type="label">
-                <posx>1492</posx>
-                <posy>0</posy>
-                <width>135</width>
-                <height>90</height>
-                <align>center</align>
-                <label>[B]$INFO[ListItem.Year][/B]</label>
-                <font>Large</font>
-                <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-            </control>
-            <control type="image">
-                <posx>1732</posx>
-                <include>MediaFlagVars</include>
-                <texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
-                <visible>!IsEmpty(ListItem.FileExtension)</visible>
-            </control>
-            <control type="label">
-                <posx>1722</posx>
-                <width>155</width>
-                <height>90</height>
-                <align>center</align>
-                <label>$INFO[ListItem.Property(Album_Label)]</label>
-                <font>Very_Small_Caps</font>
-                <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                <wrapmultiline>true</wrapmultiline>
-                <visible>Container.Content(albums)</visible>
-            </control>
-        </control>
-    </include>
-
 </includes>

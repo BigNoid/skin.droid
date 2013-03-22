@@ -94,9 +94,10 @@
         <value>$LOCALIZE[20360]</value>
     </variable>
 
-    <variable name="DuarationVar">
-        <value condition="Container.Content(tvshows)">$INFO[Window(Home).Property(NextAired.Runtime)]</value>
-        <value>$INFO[ListItem.Duration]</value>
+    <variable name="DurationVar">
+        <value condition="Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.Runtime))">$INFO[Window(Home).Property(NextAired.Runtime)]</value>
+        <value condition="!IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration]</value>
+        <value>[B]?[/B]</value>
     </variable>
 
     <variable name="FloorDiffuseVar">
@@ -271,6 +272,16 @@
     </variable>
 
     <variable name="GlobalPlotVar">
+        <value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
+        <value condition="Container.Content(albums)">$LOCALIZE[414]</value>
+        <value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
+        <value condition="Container.Content(artists)">$LOCALIZE[547]</value>
+        <value condition="Container.Content(addons) + !IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>
+        <value condition="!IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
+        <value>$LOCALIZE[416]</value>
+    </variable>
+
+    <variable name="MoviePlotVar">
         <value condition="!IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
         <value>$INFO[ListItem.Plot]</value>
     </variable>

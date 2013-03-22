@@ -2,7 +2,7 @@
 <window id="502">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,51,55</views>
+	<views>50,51,55,56</views>
 
 	<controls>
         <include>GlobalBackground</include>
@@ -12,12 +12,12 @@
             <include>View_50_List</include>
             <include>View_51_Icons</include>
             <include>View_55_SmallIcons</include>
+            <include>View_56_SquareInfoList</include>
         </control>
         <control type="group">
-            <visible>Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(55)</visible>
+            <visible>Control.IsVisible(50)</visible>
             <include>FloorFlagsBack</include>
         </control>
-        <include>MusicFlags</include>
         <control type="button">
             <posx>0</posx>
             <posy>90r</posy>

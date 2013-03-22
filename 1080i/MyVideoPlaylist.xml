@@ -114,7 +114,7 @@
                     <width>195</width>
                     <height>60</height>
                     <align>center</align>
-                    <label>[B]$VAR[DuarationVar][/B]</label>
+                    <label>[B]$VAR[DurationVar][/B]</label>
                     <font>Large</font>
                     <textcolor>$VAR[FloorDiffuseVar]</textcolor>
                 </control>

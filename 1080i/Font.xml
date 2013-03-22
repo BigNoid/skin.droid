@@ -46,6 +46,13 @@
             <linespacing>0.8</linespacing>
         </font>
         <font>
+            <name>Medium_Bold_Floor_Caps</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>37</size>
+            <style>uppercase bold</style>
+            <linespacing>0.8</linespacing>
+        </font>
+        <font>
             <name>Medium_Floor</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
             <size>37</size>

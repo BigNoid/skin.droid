@@ -800,6 +800,55 @@
                     </control>
                 </control>
             </control>
+
+            <control type="grouplist">
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
+                <align>center</align>
+                <orientation>horizontal</orientation>
+                <itemgap>0</itemgap>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+            </control>
         </control>
     </controls>
 </window>

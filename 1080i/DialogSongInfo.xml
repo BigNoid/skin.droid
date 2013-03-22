@@ -303,6 +303,7 @@
                     <onup>noop</onup>
                     <ondown>noop</ondown>
                 </control>
+
             </control>
 		</control>
 	</controls>
