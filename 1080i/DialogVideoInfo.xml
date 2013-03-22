@@ -813,11 +813,13 @@
                         <onright>61</onright>
                         <ondown>5000</ondown>
                         <onup>50</onup>
-                        <label>$LOCALIZE[207]:</label>
-                        <altlabel>$LOCALIZE[203]:</altlabel>
+                        <label>$VAR[VideoInfoPlotLabelVar]</label>
+                        <altlabel>$VAR[VideoInfoPlotLabelVar]</altlabel>
                         <textoffsetx>8</textoffsetx>
                         <onclick>Skin.ToggleSetting(VideoInfoPlotToggle)</onclick>
                         <usealttexture>Skin.HasSetting(VideoInfoPlotToggle)</usealttexture>
+                        <disabledcolor>$VAR[ThemeColorVar]</disabledcolor>
+                        <enable>!IsEmpty(ListItem.PlotOutline)</enable>
                     </control>
                     <control type="textbox">
                         <description>Plot outline</description>
@@ -842,7 +844,7 @@
                         <showonepage>false</showonepage>
                         <texturesliderbackground>-</texturesliderbackground>
                         <texturesliderbar>-</texturesliderbar>
-                        <texturesliderbarfocus>-</texturesliderbarfocus>
+                        <texturesliderbarfocus border="3,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
                         <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                 </control>

@@ -263,7 +263,7 @@
                         <showonepage>false</showonepage>
                         <texturesliderbackground>-</texturesliderbackground>
                         <texturesliderbar>-</texturesliderbar>
-                        <texturesliderbarfocus>-</texturesliderbarfocus>
+                        <texturesliderbarfocus border="3,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
                         <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                 </control>
