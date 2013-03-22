@@ -56,7 +56,7 @@
                     </control>
                     <control type="image">
                         <posx>1184</posx>
-                        <posy>13</posy>
+                        <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>$VAR[OverlayVar]</texture>
@@ -95,7 +95,7 @@
                     </control>
                     <control type="image">
                         <posx>1184</posx>
-                        <posy>13</posy>
+                        <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>$VAR[OverlayVar]</texture>
