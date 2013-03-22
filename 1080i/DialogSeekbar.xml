@@ -144,7 +144,7 @@
                         <font>Medium_Caps</font>
                         <onclick>-</onclick>
                         <align>right</align>
-                        <label>$INFO[Player.Chapter,[COLOR=blue]$LOCALIZE[21396]:[/COLOR] ]$INFO[Player.ChapterCount, / ]</label>
+                        <label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
                         <disabledcolor>White2</disabledcolor>
                         <visible>player.chaptercount</visible>
                         <enable>no</enable>
@@ -281,11 +281,6 @@
                         <textcolor>White2</textcolor>
                         <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
                     </control>
-                    <!--<control type="image">
-                    <include>MediaFlagVars</include>
-                    <texture>$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
-                    <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
-                </control>-->
                     <control type="label">
                         <posx>0</posx>
                         <posy>0</posy>
@@ -356,7 +351,7 @@
                             <label>[B]$INFO[VideoPlayer.Year][/B]</label>
                             <font>Large</font>
                             <textcolor>White2</textcolor>
-                            <visible>!IsEmpty(VideoPlayer.Year)</visible>
+                            <visible>VideoPlayer.Content(movies)</visible>
                         </control>
                         <control type="label">
                             <posx>-40</posx>
@@ -367,7 +362,7 @@
                             <label>[B]$INFO[VideoPlayer.Premiered][/B]</label>
                             <font>Medium_Floor_Caps</font>
                             <textcolor>White2</textcolor>
-                            <visible>IsEmpty(VideoPlayer.Year)</visible>
+                            <visible>VideoPlayer.Content(episodes)</visible>
                         </control>
                         <control type="label">
                             <posy>52</posy>
@@ -376,8 +371,8 @@
                             <align>center</align>
                             <label>[LOWERCASE]$LOCALIZE[20416][/LOWERCASE]</label>
                             <font>Medium_Small</font>
-                            <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                            <visible>IsEmpty(VideoPlayer.Year)</visible>
+                            <textcolor>White2</textcolor>
+                            <visible>VideoPlayer.Content(episodes)</visible>
                         </control>
                     </control>
                     <control type="group">
@@ -410,6 +405,93 @@
                             <effect type="zoom" start="100" end="130" center="auto" easing="in" tween="cubic" time="0" />
                         </animation>
                     </control>
+                </control>
+            </control>
+        </control>
+
+
+        <control type="label">
+            <description>Cache Label</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1920</width>
+            <height>1080</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>OSD</font>
+            <textcolor>44FFFFFF</textcolor>
+            <label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
+            <visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
+        </control>
+
+        <control type="group">
+            <visible>!Player.Paused + Player.DisplayAfterSeek</visible>
+            <animation type="VisibleChange" reversible="false">
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <control type="image">
+                <posx>0</posx>
+                <posy>800</posy>
+                <width>1920</width>
+                <height>280</height>
+                <texture>views/landscape/shade.png</texture>
+            </control>
+            <control type="group">
+                <posx>0</posx>
+                <posy>96r</posy>
+                <control type="label">
+                    <posx>256</posx>
+                    <posy>0</posy>
+                    <width>256</width>
+                    <height>96</height>
+                    <align>right</align>
+                    <label>$INFO[Player.Time]</label>
+                    <textoffsetx>8</textoffsetx>
+                </control>
+                <control type="label">
+                    <posx>1664</posx>
+                    <posy>0</posy>
+                    <width>1680</width>
+                    <height>96</height>
+                    <label>$INFO[Player.Duration]</label>
+                    <textoffsetx>8</textoffsetx>
+                </control>
+                <control type="progress">
+                    <description>Progress Bar</description>
+                    <posx>260</posx>
+                    <posy>40</posy>
+                    <width>1400</width>
+                    <info>Player.ProgressCache</info>
+                    <visible>true</visible>
+                    <midtexture border="1">common/texturesliderbar.png</midtexture>
+                    <righttexture border="1">common/texturesliderbar.png</righttexture>
+                </control>
+                <control type="progress" id="23">
+                    <description>Progress Bar</description>
+                    <posx>260</posx>
+                    <posy>40</posy>
+                    <width>1400</width>
+                    <info>Player.Progress</info>
+                    <visible>true</visible>
+                    <texturebg border="2">settings/texturebg_cache.png</texturebg>
+                    <righttexture border="0,0,26,0">-</righttexture>
+                    <colordiffuse>Blue2</colordiffuse>
+                </control>
+                <control type="slider" id="24">
+                    <description>Seekbar</description>
+                    <posx>260</posx>
+                    <posy>20</posy>
+                    <width>1400</width>
+                    <height>66</height>
+                    <texturesliderbar border="2">settings/texturebg_slider.png</texturesliderbar>
+                    <textureslidernib>osd/slider_nf.png</textureslidernib>
+                    <textureslidernibfocus>osd/slider.png</textureslidernibfocus>
+                    <controloffsetx>0</controloffsetx>
+                    <controloffsety>0</controloffsety>
+                    <action>seek</action>
+                    <info>player.progress</info>
+                    <visible>true</visible>
+                    <colordiffuse>Blue2</colordiffuse>
                 </control>
             </control>
         </control>

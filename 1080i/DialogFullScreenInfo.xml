@@ -92,7 +92,7 @@
                         <font>Medium_Caps</font>
                         <onclick>-</onclick>
                         <align>right</align>
-                        <label>$INFO[Player.Chapter,[COLOR=blue]$LOCALIZE[21396]:[/COLOR] ]$INFO[Player.ChapterCount, / ]</label>
+                        <label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
                         <disabledcolor>White2</disabledcolor>
                         <enable>no</enable>
                         <visible>Player.ChapterCount</visible>
@@ -230,11 +230,6 @@
                         <textcolor>White2</textcolor>
                         <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
                     </control>
-                    <!--<control type="image">
-                    <include>MediaFlagVars</include>
-                    <texture>$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
-                    <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
-                </control>-->
                     <control type="label">
                         <posx>0</posx>
                         <posy>0</posy>
@@ -305,7 +300,7 @@
                             <label>[B]$INFO[VideoPlayer.Year][/B]</label>
                             <font>Large</font>
                             <textcolor>White2</textcolor>
-                            <visible>!IsEmpty(VideoPlayer.Year)</visible>
+                            <visible>VideoPlayer.Content(movies)</visible>
                         </control>
                         <control type="label">
                             <posx>-40</posx>
@@ -316,17 +311,17 @@
                             <label>[B]$INFO[VideoPlayer.Premiered][/B]</label>
                             <font>Medium_Floor_Caps</font>
                             <textcolor>White2</textcolor>
-                            <visible>IsEmpty(VideoPlayer.Year)</visible>
+                            <visible>VideoPlayer.Content(episodes)</visible>
                         </control>
                         <control type="label">
                             <posy>52</posy>
                             <width>135</width>
-                            <height>30</height>
+                            <height>30</height>i
                             <align>center</align>
                             <label>[LOWERCASE]$LOCALIZE[20416][/LOWERCASE]</label>
                             <font>Medium_Small</font>
-                            <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                            <visible>IsEmpty(VideoPlayer.Year)</visible>
+                            <textcolor>White2</textcolor>
+                            <visible>VideoPlayer.Content(episodes)</visible>
                         </control>
                     </control>
                     <control type="group">
