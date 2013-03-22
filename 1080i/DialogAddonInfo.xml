@@ -81,6 +81,7 @@
                     <height>90</height>
                     <font>Medium_Caps2</font>
                     <label>$INFO[ListItem.Property(Addon.Name)]</label>
+                    <textcolor>White2</textcolor>
                     <textoffsetx>8</textoffsetx>
                 </control>
                 <control type="group">
@@ -125,6 +126,7 @@
                         <height>72</height>
                         <font>Small</font>
                         <label>$INFO[ListItem.Property(Addon.Creator)]</label>
+                        <textcolor>White2</textcolor>
                         <textoffsetx>8</textoffsetx>
                     </control>
                 </control>
@@ -157,6 +159,7 @@
                         <height>72</height>
                         <font>Small</font>
                         <label>$INFO[ListItem.Property(Addon.Version)]</label>
+                        <textcolor>White2</textcolor>
                         <textoffsetx>8</textoffsetx>
                     </control>
                 </control>
@@ -190,6 +193,7 @@
                         <font>Small</font>
                         <label>$INFO[ListItem.Property(Addon.Type)]</label>
                         <textoffsetx>8</textoffsetx>
+                        <textcolor>White2</textcolor>
                     </control>
                 </control>
                 <control type="group">
@@ -227,7 +231,7 @@
                     </control>
                     <control type="image">
                         <posx>256</posx>
-                        <width>1168</width>
+                        <width>1184</width>
                         <height>328</height>
                         <include>toast_back</include>
                     </control>
@@ -252,16 +256,20 @@
                         <label>$INFO[ListItem.Property(Addon.Description)]</label>
                         <pagecontrol>61</pagecontrol>
                         <autoscroll>False</autoscroll>
+                        <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
                     </control>
                     <control type="scrollbar" id="61">
-                        <posx>1424</posx>
+                        <posx>256</posx>
                         <posy>0</posy>
                         <height>328</height>
-                        <width>16</width>
+                        <width>1184</width>
                         <onleft>9000</onleft>
                         <onright>9000</onright>
-                        <texturesliderbackground border="3">dialogs/toast_back_blue.png</texturesliderbackground>
-                        <colordiffuse>$VAR[ScrollbarColorVar]</colordiffuse>
+                        <showonepage>false</showonepage>
+                        <texturesliderbackground>-</texturesliderbackground>
+                        <texturesliderbar>-</texturesliderbar>
+                        <texturesliderbarfocus>-</texturesliderbarfocus>
+                        <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                 </control>
 
@@ -302,8 +310,8 @@
                         <height>130</height>
                         <align>left</align>
                         <font>Plot</font>
+                        <textcolor>White2</textcolor>
                         <label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
-                        <pagecontrol>61</pagecontrol>
                         <autoscroll delay="1000" time="AutoScrollTime" repeat="8001">True</autoscroll>
                     </control>
                 </control>
