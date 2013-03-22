@@ -29,14 +29,14 @@
                 <visible>!Container.Content(episodes)</visible>
                 <viewtype label="536">icon</viewtype>
                 <scrolltime tween="quadratic">300</scrolltime>
-                <itemlayout width="204" height="306" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]">
+                <itemlayout width="205" height="306" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]">
                     <control type="image">
-                        <width>204</width>
+                        <width>205</width>
                         <height>306</height>
                         <include>toast_back</include>
                     </control>
                     <control type="image">
-                        <width>204</width>
+                        <width>205</width>
                         <height>306</height>
                         <texture background="true">$VAR[PosterThumbVar]</texture>
                         <aspectratio>scale</aspectratio>
@@ -53,9 +53,9 @@
                         <bordersize>2</bordersize>
                     </control>
                 </itemlayout>
-                <focusedlayout width="204" height="306" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]">
+                <focusedlayout width="205" height="306" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]">
                     <control type="image">
-                        <width>204</width>
+                        <width>205</width>
                         <height>306</height>
                         <include>toast_back</include>
                     </control>
@@ -65,7 +65,7 @@
                             <effect type="fade" start="80" end="100" time="200" tween="sine" easing="in" />
                         </animation>
                         <control type="image">
-                            <width>204</width>
+                            <width>205</width>
                             <height>306</height>
                             <texture background="true">$VAR[PosterThumbVar]</texture>
                             <aspectratio>scale</aspectratio>
