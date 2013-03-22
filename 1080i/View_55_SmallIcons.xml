@@ -28,7 +28,7 @@
                 <preloaditems>2</preloaditems>
                 <visible>!Container.Content(episodes)</visible>
                 <viewtype label="536">icon</viewtype>
-                <scrolltime tween="quadratic">300</scrolltime>
+                <scrolltime tween="sine" easing="inout">200</scrolltime>
                 <itemlayout width="205" height="306" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]">
                     <control type="image">
                         <width>205</width>

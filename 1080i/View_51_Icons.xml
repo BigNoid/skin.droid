@@ -27,7 +27,7 @@
                 <orientation>vertical</orientation>
                 <preloaditems>2</preloaditems>
                 <viewtype label="BigIcons">bigicon</viewtype>
-                <scrolltime tween="quadratic">300</scrolltime>
+                <scrolltime tween="sine" easing="inout">200</scrolltime>
                 <itemlayout width="462" height="459" condition="Container.Content(episodes) | SubString(Container.FolderPath,youtube)">
                     <control type="image">
                         <width>462</width>

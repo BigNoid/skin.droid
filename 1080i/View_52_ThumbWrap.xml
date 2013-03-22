@@ -21,7 +21,7 @@
                 <focusposition>1</focusposition>
                 <orientation>horizontal</orientation>
                 <viewtype label="Landscape">bigwrap</viewtype>
-                <scrolltime tween="quadratic">300</scrolltime>
+                <scrolltime tween="sine" easing="inout">200</scrolltime>
                 <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
                 <itemlayout width="642" height="680">
                     <control type="group">
