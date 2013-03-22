@@ -3,6 +3,10 @@
     <include name="View_52_ThumbWrap">
         <control type="group">
             <visible>Control.isVisible(52)</visible>
+            <animation type="VisibleChange" reversible="false">
+                <effect type="zoom" start="200" end="100" center="960,540" easing="out" tween="cubic" time="300" />
+                <effect type="fade" start="0" end="100" time="300" />
+            </animation>
             <posy>168</posy>
             <control type="wraplist" id="52">
                 <posx>0</posx>
@@ -67,7 +71,7 @@
                         <width>142</width>
                         <height>142</height>
                         <texture>$VAR[IconOverlayVar]</texture>
-                        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                        <aspectratio align="center" aligny="top">keep</aspectratio>
                         <bordersize>21</bordersize>
                     </control>
                     <control type="image">
@@ -142,7 +146,7 @@
                             <width>142</width>
                             <height>142</height>
                             <texture>$VAR[IconOverlayVar]</texture>
-                            <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                            <aspectratio align="center" aligny="top">keep</aspectratio>
                             <bordersize>21</bordersize>
                         </control>
                         <control type="image">

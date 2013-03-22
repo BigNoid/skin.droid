@@ -5,11 +5,11 @@
     <views>50</views>
     <controls>
         <include>GlobalBackground</include>
+        <include>NotificationCenter</include>
         <control type="group">
             <include>WindowEffect</include>
             <include>View_50_List</include>
         </control>
-        <include>NotificationCenter</include>
         <control type="group">
             <visible>Control.IsVisible(50)</visible>
             <include>FloorFlagsBack</include>

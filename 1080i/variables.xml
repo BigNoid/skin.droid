@@ -100,7 +100,7 @@
     </variable>
 
     <variable name="FloorDiffuseVar">
-        <value condition="[Control.IsVisible(50) | Control.IsVisible(51) | Window.IsActive(DialogVideoInfo.xml)]">White2</value>
+        <value condition="[Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(55) | Window.IsActive(DialogVideoInfo.xml)]">White2</value>
         <value>Floor</value>
     </variable>
 

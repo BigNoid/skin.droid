@@ -2,17 +2,18 @@
 <window id="6">
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <views>50,52,53,54</views>
+    <views>50,52,53,54,55</views>
     <controls>
         <include>GlobalBackground</include>
+        <include>NotificationCenter</include>
         <control type="group">
             <include>WindowEffect</include>
             <include>View_50_List</include>
             <include>View_52_ThumbWrap</include>
             <include>View_53_ShowCase</include>
             <include>View_54_InfoList</include>
+            <include>View_55_SmallIcons</include>
         </control>
-        <include>NotificationCenter</include>
         <control type="group">
             <visible>Control.IsVisible(50)</visible>
             <include>FloorFlagsBack</include>
@@ -135,7 +136,6 @@
                 </animation>
             </control>
         </control>
-        <include>NotificationCenter</include>
         <control type="grouplist" id="9000">
             <include>MediaMenuGrouplist</include>
             <control type="button" id="2">

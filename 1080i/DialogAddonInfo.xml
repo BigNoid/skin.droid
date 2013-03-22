@@ -309,5 +309,6 @@
                 </control>
             </control>
         </control>
+        <include>FloorFlagsBack</include>
     </controls>
 </window>

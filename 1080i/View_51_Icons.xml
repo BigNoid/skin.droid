@@ -4,6 +4,10 @@
 	<include name="View_51_Icons">
 		<control type="group">
 			<visible>Control.isVisible(51)</visible>
+            <animation type="VisibleChange" reversible="false">
+                <effect type="zoom" start="200" end="100" center="960,540" easing="out" tween="cubic" time="300" />
+                <effect type="fade" start="0" end="100" time="300" />
+            </animation>
             <control type="image">
                 <posy>72</posy>
                 <width>1848</width>
@@ -22,7 +26,7 @@
                 <pagecontrol>60</pagecontrol>
                 <orientation>vertical</orientation>
                 <preloaditems>2</preloaditems>
-                <viewtype label="536">icon</viewtype>
+                <viewtype label="BigIcons">bigicon</viewtype>
                 <scrolltime tween="quadratic">300</scrolltime>
                 <itemlayout width="462" height="459" condition="Container.Content(episodes) | SubString(Container.FolderPath,youtube)">
                     <control type="image">
@@ -50,7 +54,7 @@
                         <width>100</width>
                         <height>100</height>
                         <texture>$VAR[IconOverlayVar]</texture>
-                        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                        <aspectratio align="center" aligny="top">keep</aspectratio>
                         <bordersize>2</bordersize>
                     </control>
                     <control type="label">
@@ -105,7 +109,7 @@
                             <width>100</width>
                             <height>100</height>
                             <texture>$VAR[IconOverlayVar]</texture>
-                            <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                            <aspectratio align="center" aligny="top">keep</aspectratio>
                             <bordersize>8</bordersize>
                         </control>
                     </control>
@@ -147,7 +151,7 @@
                         <width>100</width>
                         <height>100</height>
                         <texture>$VAR[IconOverlayVar]</texture>
-                        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                        <aspectratio align="center" aligny="top">keep</aspectratio>
                         <bordersize>2</bordersize>
                     </control>
                 </itemlayout>
@@ -177,12 +181,12 @@
                             <width>100</width>
                             <height>100</height>
                             <texture>$VAR[IconOverlayVar]</texture>
-                            <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                            <aspectratio align="center" aligny="top">keep</aspectratio>
                             <bordersize>8</bordersize>
                         </control>
                     </control>
                 </focusedlayout>
-                <itemlayout width="462" height="459" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes) | SubString(Container.FolderPath,youtube)]">
+                <itemlayout width="462" height="459">
                     <control type="image">
                         <width>462</width>
                         <height>459</height>
@@ -202,12 +206,12 @@
                         <width>100</width>
                         <height>100</height>
                         <texture>overlays/enabled.png</texture>
-                        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                        <aspectratio align="center" aligny="top">keep</aspectratio>
                         <visible>StringCompare(ListItem.Label2,$LOCALIZE[449])</visible>
                         <bordersize>2</bordersize>
                     </control>
                 </itemlayout>
-                <focusedlayout width="462" height="459" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes) | SubString(Container.FolderPath,youtube)]">
+                <focusedlayout width="462" height="459">
                     <control type="image">
                         <width>462</width>
                         <height>459</height>

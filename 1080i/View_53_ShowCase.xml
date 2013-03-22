@@ -5,7 +5,10 @@
             <visible>Control.IsVisible(53)</visible>
             <posy>-50</posy>
             <posx>0</posx>
-            <animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
+            <animation type="VisibleChange" reversible="false">
+                <effect type="zoom" start="200" end="100" center="960,540" easing="out" tween="cubic" time="300" />
+                <effect type="fade" start="0" end="100" time="300" />
+            </animation>
             <control type="group">
                 <camera x="960" y="810" />
                 <control type="group" id="6001">

@@ -9,6 +9,7 @@
     <include file="View_52_ThumbWrap.xml" />
     <include file="View_53_ShowCase.xml" />
     <include file="View_54_InfoList.xml" />
+    <include file="View_55_SmallIcons.xml" />
 
     <!-- Constants -->
     <constant name="AutoScrollTime">2000</constant>
@@ -95,7 +96,7 @@
                 <effect type="fade" start="100" end="0" time="200" />
             </animation>-->
             <control type="group">
-                <visible>![[Control.isVisible(50) | Control.isVisible(51)] + !Window.IsActive(home)]</visible>
+                <visible>![[Control.isVisible(50) | Control.isVisible(51) | Control.isVisible(55)] + !Window.IsActive(home)]</visible>
                 <control type="multiimage">
                     <include>Dimensions_Fullscreen</include>
                     <fadetime>800</fadetime>
@@ -160,7 +161,6 @@
                 <width>1920</width>
                 <height>38</height>
                 <texture border="1">settings/bottom_shadow.png</texture>
-                <visible>![[Control.isVisible(50) | Control.isVisible(51)] + !Window.IsActive(home)]</visible>
             </control>
             <control type="grouplist" id="11111">
                 <posx>0</posx>
@@ -980,11 +980,10 @@
     </include>
     
     <include name="MusicFlags">
-        <control type="group">
+        <control type="group" id="6051">
             <posx>0</posx>
             <posy>90r</posy>
             <width>1920</width>
-            <visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
             <visible>Container.Content(songs) | Container.Content(albums)</visible>
             <control type="group">
                 <visible>Container.Content(songs)</visible>
