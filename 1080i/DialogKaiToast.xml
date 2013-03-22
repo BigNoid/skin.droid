@@ -4,23 +4,23 @@
     <include>NotificationEffect</include>    
     <controls>
         <control type="image">
-            <posx>712r</posx>
+            <posx>1032</posx>
             <posy>0</posy>
-            <width>640</width>
+            <width>816</width>
             <height>72</height>
             <include>toast_back</include>
             <visible>![VideoPlayer.IsFullscreen | Window.IsActive(visualisation) | Window.IsActive(slideshow)]</visible>
         </control>
         <control type="image">
-            <posx>794r</posx>
+            <posx>948</posx>
             <posy>-12</posy>
-            <width>734</width>
+            <width>912</width>
             <height>98</height>
             <texture border="14">dialogs/shutdown_bottom.png</texture>
             <visible>[VideoPlayer.IsFullscreen | Window.IsActive(visualisation) | Window.IsActive(slideshow)]</visible>
         </control>
         <control type="image">
-            <posx>782r</posx>
+            <posx>960</posx>
             <posy>0</posy>
             <width>72</width>
             <height>72</height>
@@ -28,7 +28,7 @@
             <colordiffuse>FF1d3741</colordiffuse>
         </control>
         <control type="image" id="400">
-            <posx>782r</posx>
+            <posx>960</posx>
             <posy>0</posy>
             <width>72</width>
             <height>72</height>
@@ -36,7 +36,7 @@
         </control>
         <control type="label" id="401">
             <posy>0</posy>
-            <posx>712r</posx>
+            <posx>1032</posx>
             <height>36</height>
             <width>640</width>
             <font>Small_Caps</font>
@@ -47,7 +47,7 @@
         </control>
         <control type="label" id="402">
             <posy>36</posy>
-            <posx>712r</posx>
+            <posx>1032</posx>
             <height>36</height>
             <width>640</width>
             <font>Small_Caps</font>
@@ -55,7 +55,5 @@
             <label>-</label>
             <textoffsetx>15</textoffsetx>
         </control>
-
     </controls>
-
 </window>
