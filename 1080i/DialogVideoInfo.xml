@@ -800,7 +800,7 @@
                     </control>
                     <control type="image">
                         <posx>256</posx>
-                        <width>1120</width>
+                        <width>1064</width>
                         <height>270</height>
                         <include>toast_back</include>
                     </control>
@@ -835,16 +835,16 @@
                         <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
                     </control>
                     <control type="scrollbar" id="61">
-                        <posx>264</posx>
-                        <posy>10</posy>
-                        <width>1000</width>
-                        <height>250</height>
+                        <posy>2</posy>
+                        <posx>256</posx>
+                        <width>1064</width>
+                        <height>266</height>
                         <onleft>70</onleft>
                         <onright>5000</onright>
                         <showonepage>false</showonepage>
                         <texturesliderbackground>-</texturesliderbackground>
                         <texturesliderbar>-</texturesliderbar>
-                        <texturesliderbarfocus border="3,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+                        <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
                         <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                 </control>

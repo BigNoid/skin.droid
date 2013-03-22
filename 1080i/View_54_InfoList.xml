@@ -9,7 +9,7 @@
             </animation>
             <control type="group">
                 <posx>54</posx>
-                <posy>330</posy>
+                <posy>340</posy>
                 <control type="group">
                     <animation effect="zoom" start="100" end="90" time="640" easing="inout" tween="circle" center="380,250" condition="true">Conditional</animation>
                     <control type="image">
@@ -87,7 +87,7 @@
                         <description>Plot outline</description>
                         <posx>1222</posx>
                         <posy>360</posy>
-                        <width>584</width>
+                        <width>572</width>
                         <height>200</height>
                         <align>left</align>
                         <font>Plot</font>
@@ -96,25 +96,25 @@
                         <autoscroll>False</autoscroll>
                         <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
                     </control>
-                    <control type="scrollbar" id="61">
-                        <posx>1204</posx>
-                        <posy>342</posy>
-                        <width>608</width>
-                        <height>234</height>
-                        <onleft>54</onleft>
-                        <onright>9010</onright>
-                        <showonepage>false</showonepage>
-                        <texturesliderbackground>-</texturesliderbackground>
-                        <texturesliderbar>-</texturesliderbar>
-                        <texturesliderbarfocus border="3,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
-                        <texturesliderbackground border="3">-</texturesliderbackground>
-                    </control>
                     <control type="image">
                         <posx>1204</posx>
                         <posy>504</posy>
                         <width>608</width>
                         <height>72</height>
                         <texture border="3">dialogs/toast_back_blue_mask.png</texture>
+                    </control>
+                    <control type="scrollbar" id="61">
+                        <posx>1204</posx>
+                        <posy>344</posy>
+                        <width>608</width>
+                        <height>230</height>
+                        <onleft>54</onleft>
+                        <onright>9010</onright>
+                        <showonepage>false</showonepage>
+                        <texturesliderbackground>-</texturesliderbackground>
+                        <texturesliderbar>-</texturesliderbar>
+                        <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+                        <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                     <control type="image">
                         <posx>1204</posx>
@@ -158,7 +158,7 @@
                         <posx>384</posx>
                         <posy>0</posy>
                         <width>820</width>
-                        <height>576</height>
+                        <height>575</height>
                         <onleft>9010</onleft>
                         <onright>61</onright>
                         <onup>54</onup>
@@ -263,6 +263,13 @@
                                 <texture>$VAR[OverlayVar]</texture>
                             </control>
                         </focusedlayout>
+                    </control>
+                    <control type="image">
+                        <posx>384</posx>
+                        <posy>544</posy>
+                        <width>820</width>
+                        <height>32</height>
+                        <texture border="3">dialogs/toast_back_blue_mask.png</texture>
                     </control>
                     <control type="image">
                         <posx>384</posx>

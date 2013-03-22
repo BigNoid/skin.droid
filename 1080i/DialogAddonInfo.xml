@@ -260,15 +260,15 @@
                     </control>
                     <control type="scrollbar" id="61">
                         <posx>256</posx>
-                        <posy>0</posy>
-                        <height>328</height>
+                        <posy>2</posy>
+                        <height>324</height>
                         <width>1184</width>
                         <onleft>9000</onleft>
                         <onright>9000</onright>
                         <showonepage>false</showonepage>
                         <texturesliderbackground>-</texturesliderbackground>
                         <texturesliderbar>-</texturesliderbar>
-                        <texturesliderbarfocus border="3,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+                        <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
                         <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                 </control>
@@ -310,6 +310,7 @@
                         <height>130</height>
                         <align>left</align>
                         <font>Plot</font>
+                        <pagecontrol>-</pagecontrol>
                         <textcolor>White2</textcolor>
                         <label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
                         <autoscroll delay="1000" time="AutoScrollTime" repeat="8001">True</autoscroll>
