@@ -2,6 +2,12 @@
 <!-- Foundation -->
 <fonts>
     <fontset id="default" unicode="true">
+        <font>
+            <name>OSD</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <style>uppercase bold</style>
+            <size>180</size>
+        </font>
 
         <font>
             <name>Home</name>
