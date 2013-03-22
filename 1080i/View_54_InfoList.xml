@@ -8,280 +8,271 @@
                 <effect type="fade" start="0" end="100" time="300" />
             </animation>
             <control type="group">
-                <!-- Left Panel -->
-                <posx>0</posx>
-                <posy>190</posy>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>341</posy>
-                    <width>642</width>
-                    <height>382</height>
-                    <include>toast_back</include>
-                    <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
-                    <bordersize>21</bordersize>
-                </control>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>341</posy>
-                    <width>642</width>
-                    <height>382</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture>$VAR[LandscapeThumbVar]</texture>
-                    <bordersize>21</bordersize>
-                </control>
+                <posx>54</posx>
+                <posy>330</posy>
                 <control type="group">
-                    <visible>[Container.Content(movies) | Container.Content(tvshows)] + IsEmpty(ListItem.Art(landscape))</visible>
+                    <animation effect="zoom" start="100" end="90" time="640" easing="inout" tween="circle" center="380,250" condition="true">Conditional</animation>
                     <control type="image">
-                        <posy>341</posy>
-                        <width>642</width>
-                        <height>382</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Art(clearlogo)]</texture>
-                        <bordersize>21</bordersize>
+                        <posx>-40</posx>
+                        <posy>-40</posy>
+                        <width>464</width>
+                        <height>656</height>
+                        <texture border="40">shadow.png</texture>
                     </control>
                     <control type="image">
-                        <posy>681</posy>
-                        <width>642</width>
-                        <height>382</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem.Art(clearlogo)]</texture>
-                        <bordersize>21</bordersize>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>384</width>
+                        <height>576</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>384</width>
+                        <height>576</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture background="true">$VAR[InfoPosterThumbVar]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>576</posy>
+                        <width>384</width>
+                        <height>119</height>
+                        <texture>reflect.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>573</posy>
+                        <width>384</width>
+                        <height>576</height>
+                        <aspectratio aligny="top">scale</aspectratio>
+                        <texture flipy="true" diffuse="thumbs/diffuse_mirror3.png">$VAR[InfoPosterThumbVar]</texture>
                     </control>
                 </control>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>681</posy>
-                    <width>642</width>
-                    <height>382</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$VAR[LandscapeThumbVar]</texture>
-                    <bordersize>21</bordersize>
-                </control>
-                <control type="image">
-                    <posx>21</posx>
-                    <posy>702</posy>
-                    <width>589</width>
-                    <height>119</height>
-                    <texture>reflect.png</texture>
-                </control>
-            </control>
 
-            <control type="group">
-                <!-- Right Panel -->
-                <posx>1278</posx>
-                <posy>190</posy>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>341</posy>
-                    <width>642</width>
-                    <height>382</height>
-                    <include>toast_back</include>
-                    <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
-                    <bordersize>21</bordersize>
+                <control type="group">
+                    <animation effect="zoom" start="100" end="90" time="640" easing="inout" tween="circle" center="1200,250" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>1164</posx>
+                        <posy>-40</posy>
+                        <width>688</width>
+                        <height>656</height>
+                        <texture border="40">shadow.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>1204</posx>
+                        <posy>0</posy>
+                        <width>608</width>
+                        <height>342</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>1204</posx>
+                        <posy>342</posy>
+                        <width>608</width>
+                        <height>234</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>1204</posx>
+                        <posy>0</posy>
+                        <posy>576</posy>
+                        <width>608</width>
+                        <height>342</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture>$VAR[LandscapeThumbVar]</texture>
+                    </control>
+                    <control type="textbox">
+                        <description>Plot outline</description>
+                        <posx>1222</posx>
+                        <posy>360</posy>
+                        <width>584</width>
+                        <height>200</height>
+                        <align>left</align>
+                        <font>Plot</font>
+                        <label>$VAR[GlobalPlotVar]</label>
+                        <pagecontrol>61</pagecontrol>
+                        <autoscroll>False</autoscroll>
+                        <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
+                    </control>
+                    <control type="scrollbar" id="61">
+                        <posx>1204</posx>
+                        <posy>342</posy>
+                        <width>608</width>
+                        <height>234</height>
+                        <onleft>54</onleft>
+                        <onright>9010</onright>
+                        <showonepage>false</showonepage>
+                        <texturesliderbackground>-</texturesliderbackground>
+                        <texturesliderbar>-</texturesliderbar>
+                        <texturesliderbarfocus border="3,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+                        <texturesliderbackground border="3">-</texturesliderbackground>
+                    </control>
+                    <control type="image">
+                        <posx>1204</posx>
+                        <posy>504</posy>
+                        <width>608</width>
+                        <height>72</height>
+                        <texture border="3">dialogs/toast_back_blue_mask.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>1204</posx>
+                        <posy>576</posy>
+                        <width>608</width>
+                        <height>119</height>
+                        <texture>reflect.png</texture>
+                    </control>
                 </control>
-                <control type="textbox">
-                    <description>Plot</description>
-                    <posx>51</posx>
-                    <posy>367</posy>
-                    <width>540</width>
-                    <height>330</height>
-                    <align>left</align>
-                    <font>Plot</font>
-                    <label>$VAR[GlobalPlotVar]</label>
-                    <pagecontrol>61</pagecontrol>
-                    <autoscroll>False</autoscroll>
-                    <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
-                </control>
-                <control type="scrollbar" id="61">
-                    <posx>51</posx>
-                    <posy>365</posy>
-                    <width>540</width>
-                    <height>298</height>
-                    <onup>61</onup>
-                    <ondown>61</ondown>
-                    <onleft>54</onleft>
-                    <onright>54</onright>
-                    <texturesliderbackground>-</texturesliderbackground>
-                    <texturesliderbar>-</texturesliderbar>
-                    <texturesliderbarfocus>-</texturesliderbarfocus>
-                    <colordiffuse>$VAR[ScrollbarColorVar]</colordiffuse>
-                </control>
-                <control type="image">
-                    <posx>21</posx>
-                    <posy>631</posy>
-                    <width>600</width>
-                    <height>72</height>
-                    <texture border="3">dialogs/toast_back_blue_mask.png</texture>
-                </control>
-                <control type="image">
-                    <posx>32</posx>
-                    <posy>702</posy>
-                    <width>589</width>
-                    <height>119</height>
-                    <texture>reflect.png</texture>
-                </control>
-            </control>
 
-            <control type="group">
-                <!-- Mid Panel -->
-                <posx>589</posx>
-                <posy>166</posy>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>341</posy>
-                    <width>742</width>
-                    <height>431</height>
-                    <texture border="21">thumbs/thumb_shadow.png</texture>
-                </control>
-                <control type="grouplist">
-                    <posx>21</posx>
-                    <posy>362</posy>
-                    <width>700</width>
-                    <height>390</height>
-                    <align>center</align>
-                    <orientation>vertical</orientation>
-                    <itemgap>0</itemgap>
+                <control type="group">
                     <control type="image">
-                        <width>700</width>
-                        <height>65</height>
-                        <include>toast_back</include>
+                        <posx>344</posx>
+                        <posy>-40</posy>
+                        <width>900</width>
+                        <height>656</height>
+                        <texture border="40">shadow.png</texture>
                     </control>
                     <control type="image">
-                        <width>700</width>
-                        <height>65</height>
-                        <include>toast_back</include>
+                        <posx>346</posx>
+                        <posy>25</posy>
+                        <width>38</width>
+                        <height>518</height>
+                        <texture border="1">settings/side_shadow.png</texture>
                     </control>
                     <control type="image">
-                        <width>700</width>
-                        <height>65</height>
-                        <include>toast_back</include>
+                        <posx>1204</posx>
+                        <posy>24</posy>
+                        <width>38</width>
+                        <height>519</height>
+                        <texture border="1" flipx="true">settings/side_shadow.png</texture>
                     </control>
                     <control type="image">
-                        <width>700</width>
-                        <height>65</height>
+                        <posx>384</posx>
+                        <posy>0</posy>
+                        <width>820</width>
+                        <height>576</height>
                         <include>toast_back</include>
                     </control>
-                    <control type="image">
-                        <width>700</width>
-                        <height>65</height>
-                        <include>toast_back</include>
-                    </control>
-                    <control type="image">
-                        <width>700</width>
-                        <height>65</height>
-                        <include>toast_back</include>
-                    </control>
-                </control>
-                <control type="list" id="54">
-                    <posx>21</posx>
-                    <posy>362</posy>
-                    <width>700</width>
-                    <height>390</height>
-                    <onleft>9010</onleft>
-                    <onright>61</onright>
-                    <onup>54</onup>
-                    <ondown>54</ondown>
-                    <pagecontrol>60</pagecontrol>
-                    <viewtype label="InfoList">list</viewtype>
-                    <orientation>vertical</orientation>
-                    <scrolltime tween="sine" easing="inout">200</scrolltime>
-                    <itemlayout width="700" height="65">
-                        <control type="label">
-                            <posx>0</posx>
-                            <width>700</width>
-                            <height>65</height>
-                            <font>Small</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <textcolor>White2</textcolor>
-                            <textoffsetx>18</textoffsetx>
-                        </control>
-                        <control type="label">
-                            <posx>664</posx>
-                            <width>664</width>
-                            <height>65</height>
-                            <font>Small</font>
-                            <align>right</align>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <textcolor>grey</textcolor>
-                            <textoffsetx>18</textoffsetx>
-                            <animation effect="slide" start="0" end="36" reversible="true" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
-                        </control>
-                        <control type="image">
-                            <posx>646</posx>
-                            <posy>9</posy>
-                            <width>48</width>
-                            <height>48</height>
-                            <texture>$VAR[OverlayVar]</texture>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout width="700" height="65">
-                        <control type="group">
-                            <visible>!Control.hasFocus(54)</visible>
+                    <control type="list" id="54">
+                        <posx>384</posx>
+                        <posy>0</posy>
+                        <width>820</width>
+                        <height>576</height>
+                        <onleft>9010</onleft>
+                        <onright>61</onright>
+                        <onup>54</onup>
+                        <ondown>54</ondown>
+                        <movement>5</movement>
+                        <pagecontrol>60</pagecontrol>
+                        <viewtype label="InfoList">list</viewtype>
+                        <orientation>vertical</orientation>
+                        <scrolltime tween="sine" easing="inout">200</scrolltime>
+                        <itemlayout width="820" height="72">
+                            <control type="image">
+                                <width>820</width>
+                                <height>72</height>
+                                <include>toast_back</include>
+                            </control>
                             <control type="label">
                                 <posx>0</posx>
-                                <width>700</width>
-                                <height>65</height>
+                                <width>778</width>
+                                <height>72</height>
                                 <font>Small</font>
                                 <label>$INFO[ListItem.Label]</label>
                                 <textcolor>White2</textcolor>
                                 <textoffsetx>18</textoffsetx>
                             </control>
                             <control type="label">
-                                <posx>664</posx>
-                                <width>664</width>
-                                <height>65</height>
+                                <posx>778</posx>
+                                <width>820</width>
+                                <height>72</height>
                                 <font>Small</font>
                                 <align>right</align>
                                 <label>$INFO[ListItem.Label2]</label>
                                 <textcolor>grey</textcolor>
                                 <textoffsetx>18</textoffsetx>
-                                <animation effect="slide" start="0" end="36" reversible="true" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
                             </control>
-                        </control>
-                        <control type="group">
-                            <visible>Control.HasFocus(54)</visible>
                             <control type="image">
-                                <width>1236</width>
-                                <height>65</height>
-                                <texture border="4">dialogs/button_focus.png</texture>
+                                <posx>768</posx>
+                                <posy>12</posy>
+                                <width>48</width>
+                                <height>48</height>
+                                <texture>$VAR[OverlayVar]</texture>
                             </control>
-                            <control type="label">
-                                <posx>0</posx>
-                                <width>700</width>
-                                <height>65</height>
-                                <font>Small</font>
-                                <label>$INFO[ListItem.Label]</label>
-                                <textoffsetx>18</textoffsetx>
+                        </itemlayout>
+                        <focusedlayout width="820" height="72">
+                            <control type="image">
+                                <width>820</width>
+                                <height>72</height>
+                                <include>toast_back</include>
                             </control>
-                            <control type="label">
-                                <posx>664</posx>
-                                <width>664</width>
-                                <height>65</height>
-                                <font>Small</font>
-                                <align>right</align>
-                                <label>$INFO[ListItem.Label2]</label>
-                                <textoffsetx>18</textoffsetx>
-                                <animation effect="slide" start="0" end="36" reversible="true" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
+                            <control type="group">
+                                <visible>!Control.hasFocus(54)</visible>
+                                <control type="label">
+                                    <posx>0</posx>
+                                    <width>778</width>
+                                    <height>72</height>
+                                    <font>Small</font>
+                                    <label>$INFO[ListItem.Label]</label>
+                                    <textcolor>White2</textcolor>
+                                    <textoffsetx>18</textoffsetx>
+                                </control>
+                                <control type="label">
+                                    <posx>778</posx>
+                                    <width>778</width>
+                                    <height>72</height>
+                                    <font>Small</font>
+                                    <align>right</align>
+                                    <label>$INFO[ListItem.Label2]</label>
+                                    <textcolor>grey</textcolor>
+                                    <textoffsetx>18</textoffsetx>
+                                    <animation effect="slide" start="0" end="36" reversible="true" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
+                                </control>
                             </control>
-                        </control>
-                        <control type="image">
-                            <posx>646</posx>
-                            <posy>9</posy>
-                            <width>48</width>
-                            <height>48</height>
-                            <texture>$VAR[OverlayVar]</texture>
-                        </control>
-                    </focusedlayout>
-                </control>
-                <control type="image">
-                    <posx>21</posx>
-                    <posy>751</posy>
-                    <width>700</width>
-                    <height>119</height>
-                    <texture>reflect.png</texture>
+                            <control type="group">
+                                <visible>Control.HasFocus(54)</visible>
+                                <control type="image">
+                                    <width>820</width>
+                                    <height>72</height>
+                                    <texture border="8">listselect_fo.png</texture>
+                                </control>
+                                <control type="label">
+                                    <posx>0</posx>
+                                    <width>778</width>
+                                    <height>72</height>
+                                    <font>Small</font>
+                                    <label>$INFO[ListItem.Label]</label>
+                                    <textoffsetx>18</textoffsetx>
+                                </control>
+                                <control type="label">
+                                    <posx>778</posx>
+                                    <width>778</width>
+                                    <height>72</height>
+                                    <font>Small</font>
+                                    <align>right</align>
+                                    <label>$INFO[ListItem.Label2]</label>
+                                    <textoffsetx>18</textoffsetx>
+                                </control>
+                            </control>
+                            <control type="image">
+                                <posx>768</posx>
+                                <posy>12</posy>
+                                <width>48</width>
+                                <height>48</height>
+                                <texture>$VAR[OverlayVar]</texture>
+                            </control>
+                        </focusedlayout>
+                    </control>
+                    <control type="image">
+                        <posx>384</posx>
+                        <posy>576</posy>
+                        <width>820</width>
+                        <height>119</height>
+                        <texture>reflect.png</texture>
+                    </control>
                 </control>
             </control>
-            
         </control>
     </include>
 </includes>
