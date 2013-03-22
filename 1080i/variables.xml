@@ -275,4 +275,9 @@
         <value>$INFO[ListItem.Plot]</value>
     </variable>
 
+    <variable name="VideoInfoPlotVar">
+        <value condition="Skin.HasSetting(VideoInfoPlotToggle)">$INFO[ListItem.PlotOutline]</value>
+        <value>$INFO[ListItem.Plot]</value>
+    </variable>
+
 </includes>

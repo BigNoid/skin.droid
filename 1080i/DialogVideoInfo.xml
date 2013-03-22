@@ -736,7 +736,7 @@
                         <onup>50</onup>
                         <ondown>50</ondown>
                         <onleft>5000</onleft>
-                        <onright>61</onright>
+                        <onright>70</onright>
                         <orientation>vertical</orientation>
                         <scrolltime tween="quadratic">200</scrolltime>
                         <itemlayout width="844" height="72">
@@ -804,24 +804,30 @@
                         <height>270</height>
                         <include>toast_back</include>
                     </control>
-                    <control type="label">
-                        <posx>256</posx>
+                    <control type="togglebutton" id="70">
+                        <posx>0</posx>
                         <width>256</width>
-                        <height>72</height>
-                        <font>Small</font>
                         <textcolor>$VAR[ThemeColorVar]</textcolor>
                         <align>right</align>
+                        <onleft>50</onleft>
+                        <onright>61</onright>
+                        <ondown>5000</ondown>
+                        <onup>50</onup>
                         <label>$LOCALIZE[207]:</label>
+                        <altlabel>$LOCALIZE[203]:</altlabel>
                         <textoffsetx>8</textoffsetx>
+                        <onclick>Skin.ToggleSetting(VideoInfoPlotToggle)</onclick>
+                        <usealttexture>Skin.HasSetting(VideoInfoPlotToggle)</usealttexture>
                     </control>
-                    <control type="textbox" id="4">
-                        <description>Plot</description>
+                    <control type="textbox">
+                        <description>Plot outline</description>
                         <posx>264</posx>
                         <posy>10</posy>
                         <width>1000</width>
                         <height>250</height>
                         <align>left</align>
                         <font>Plot</font>
+                        <label>$VAR[VideoInfoPlotVar]</label>
                         <pagecontrol>61</pagecontrol>
                         <autoscroll>False</autoscroll>
                         <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
@@ -831,7 +837,7 @@
                         <posy>10</posy>
                         <width>1000</width>
                         <height>250</height>
-                        <onleft>50</onleft>
+                        <onleft>70</onleft>
                         <onright>5000</onright>
                         <showonepage>false</showonepage>
                         <texturesliderbackground>-</texturesliderbackground>
