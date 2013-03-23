@@ -102,6 +102,7 @@
             <control type="group">
                 <control type="image">
                     <posy>0</posy>
+                    <animation effect="slide" start="0,0" end="0,50" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
                     <include>Dimensions_Fullscreen</include>
                     <texture border="1">background/floor_back.png</texture>
                 </control>

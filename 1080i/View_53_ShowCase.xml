@@ -59,37 +59,37 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
                         <visible>!Container.OnNext</visible>
                         <animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
-                        <animation effect="rotatey" center="2205" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="2100" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem6</include>
                     </control>
                     <control type="group">
                         <posx>1500</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1965" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem5</include>
                     </control>
                     <control type="group">
                         <posx>1365</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1830" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem4</include>
                     </control>
                     <control type="group">
                         <posx>1230</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1695" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem3</include>
                     </control>
                     <control type="group">
                         <posx>1095</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1560" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem2</include>
                     </control>
                     <control type="group">
                         <posx>960</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1425" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem1</include>
                     </control>
                     <control type="group">
@@ -99,8 +99,8 @@
                             <posx>825</posx>
                             <visible>Container.OnNext</visible>
                             <visible>!IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                            <animation effect="rotatey" center="1395" end="-55" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
-                            <animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
+                            <animation effect="rotatey" center="1290" end="-55" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+                            <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
                             <include>MovieShowCaseItem0</include>
                         </control>
                         <control type="group">
@@ -134,37 +134,37 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(7).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
                         <visible>Container.OnPrevious</visible>
                         <animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
-                        <animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1965" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem7</include>
                     </control>
                     <control type="group">
                         <posx>1365</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1830" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem6</include>
                     </control>
                     <control type="group">
                         <posx>1230</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1695" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem5</include>
                     </control>
                     <control type="group">
                         <posx>1095</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1560" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem4</include>
                     </control>
                     <control type="group">
                         <posx>960</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1425" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem3</include>
                     </control>
                     <control type="group">
                         <posx>825</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem2</include>
                     </control>
                     <control type="group">
@@ -220,7 +220,7 @@
                             <posx>758</posx>
                             <visible>!IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
                             <visible>Container.OnPrevious</visible>
-                            <animation effect="rotatey" center="1328" end="55" time="200" reversible="false" tween="quadratic">Hidden</animation>
+                            <animation effect="rotatey" center="1223" end="55" time="200" reversible="false" tween="quadratic">Hidden</animation>
                             <control type="image">
                                 <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
                                 <include>MovieShowcaseThumb</include>
@@ -288,37 +288,37 @@
                     <control type="group">
                         <posx>1500</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1965" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem6</include>
                     </control>
                     <control type="group">
                         <posx>1365</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1830" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem5</include>
                     </control>
                     <control type="group">
                         <posx>1230</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1695" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem4</include>
                     </control>
                     <control type="group">
                         <posx>1095</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1560" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem3</include>
                     </control>
                     <control type="group">
                         <posx>960</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1425" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem2</include>
                     </control>
                     <control type="group">
                         <posx>825</posx>
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(showcasewrap)</visible>
-                        <animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <include>MovieShowCaseItem1</include>
                     </control>
                     <control type="group">
@@ -588,8 +588,8 @@
         <control type="image">
             <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
             <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
-            <posx>37</posx>
-            <width>240</width>
+            <posx>86</posx>
+            <width>192</width>
             <include>MovieShowcaseThumbReflection</include>
         </control>
     </include>
