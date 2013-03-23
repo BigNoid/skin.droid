@@ -404,9 +404,9 @@
                 <include>toast_back</include>
             </control>
             <control type="image">
-                <posy>960</posy>
+                <posy>672</posy>
                 <width>600</width>
-                <height>30</height>
+                <height>408</height>
                 <include>toast_back</include>
             </control>
             <control type="list" id="50">
@@ -414,7 +414,7 @@
                 <posx>0</posx>
                 <posy>672</posy>
                 <width>600</width>
-                <height>318</height>
+                <height>408</height>
                 <onup>50</onup>
                 <ondown>50</ondown>
                 <onleft>5000</onleft>
@@ -501,7 +501,7 @@
                 </focusedlayout>
             </control>
             <control type="image">
-                <posy>918</posy>
+                <posy>1008</posy>
                 <width>600</width>
                 <height>72</height>
                 <texture border="3">dialogs/toast_back_blue_mask.png</texture>
@@ -513,6 +513,17 @@
                     <width>1320</width>
                     <height>90</height>
                     <include>toast_back</include>
+                </control>
+                <control type="label">
+                    <posx>256</posx>
+                    <width>256</width>
+                    <height>90</height>
+                    <align>right</align>
+                    <font>Medium_Caps2</font>
+                    <label>$INFO[ListItem.Year]</label>
+                    <textcolor>Blue2</textcolor>
+                    <textoffsetx>8</textoffsetx>
+                    <visible>Container.Content(albums)</visible>
                 </control>
                 <control type="label">
                     <posx>256</posx>
@@ -530,6 +541,7 @@
                     <height>90</height>
                     <font>Medium_Caps2</font>
                     <label>$INFO[ListItem.Artist]</label>
+                    <textcolor>White2</textcolor>
                     <textoffsetx>8</textoffsetx>
                     <visible>Container.Content(artists)</visible>
                 </control>
@@ -542,16 +554,9 @@
                     </control>
                     <control type="image">
                         <posx>256</posx>
-                        <width>680</width>
+                        <width>1064</width>
                         <height>72</height>
                         <include>toast_back</include>
-                    </control>
-                    <control type="image">
-                        <posx>936</posx>
-                        <width>384</width>
-                        <height>216</height>
-                        <aspectratio>scale</aspectratio>
-                        <texture fallback="dialogs/toast_back_blue.png">$INFO[ListItem.Art(fanart)]</texture>
                     </control>
                     <control type="group">
                         <visible>Container.Content(albums)</visible>
@@ -567,7 +572,7 @@
                         </control>
                         <control type="label">
                             <posx>256</posx>
-                            <width>680</width>
+                            <width>1064</width>
                             <height>72</height>
                             <font>Small</font>
                             <label>$INFO[ListItem.Artist]</label>
@@ -601,7 +606,7 @@
                         </control>
                         <control type="label">
                             <posx>256</posx>
-                            <width>680</width>
+                            <width>1064</width>
                             <height>72</height>
                             <font>Small</font>
                             <label>$INFO[ListItem.Property(Artist_Born)]$INFO[ListItem.Property(Artist_Formed)]</label>
@@ -613,13 +618,20 @@
                 <control type="group">
                     <posy>162</posy>
                     <control type="image">
+                        <posx>720</posx>
+                        <width>600</width>
+                        <height>342</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture fallback="dialogs/toast_back_blue.png">$INFO[ListItem.Art(fanart)]</texture>
+                    </control>
+                    <control type="image">
                         <width>256</width>
                         <height>72</height>
                         <include>toast_back</include>
                     </control>
                     <control type="image">
                         <posx>256</posx>
-                        <width>680</width>
+                        <width>464</width>
                         <height>72</height>
                         <include>toast_back</include>
                     </control>
@@ -637,7 +649,7 @@
                         </control>
                         <control type="label">
                             <posx>256</posx>
-                            <width>680</width>
+                            <width>464</width>
                             <height>72</height>
                             <font>Small</font>
                             <label fallback="N/A">$INFO[ListItem.Genre]</label>
@@ -659,7 +671,7 @@
                         </control>
                         <control type="label">
                             <posx>256</posx>
-                            <width>680</width>
+                            <width>464</width>
                             <height>72</height>
                             <font>Small</font>
                             <label>$INFO[ListItem.Property(Artist_Genre)]</label>
@@ -678,9 +690,31 @@
                     </control>
                     <control type="image">
                         <posx>256</posx>
-                        <width>680</width>
+                        <width>464</width>
                         <height>72</height>
                         <include>toast_back</include>
+                    </control>
+                    <control type="group">
+                        <visible>Container.Content(albums)</visible>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>256</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <align>right</align>
+                            <textcolor>$VAR[ThemeColorVar]</textcolor>
+                            <label>$LOCALIZE[21899]:</label>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>464</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <label>$INFO[ListItem.Property(Album_Label)]</label>
+                            <textcolor>White2</textcolor>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
                     </control>
                     <control type="group">
                         <visible>Container.Content(artists)</visible>
@@ -708,7 +742,7 @@
                         </control>
                         <control type="label">
                             <posx>256</posx>
-                            <width>680</width>
+                            <width>464</width>
                             <height>72</height>
                             <font>Small</font>
                             <label>$INFO[ListItem.Property(Artist_Died)]$INFO[ListItem.Property(Artist_Disbanded)]</label>
@@ -720,13 +754,19 @@
                 <control type="group">
                     <control type="image">
                         <posy>306</posy>
+                        <width>720</width>
+                        <height>198</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posy>504</posy>
                         <width>1320</width>
                         <height>42</height>
                         <include>toast_back</include>
                     </control>
                 </control>
                 <control type="group">
-                    <posy>348</posy>
+                    <posy>546</posy>
                     <control type="image">
                         <width>256</width>
                         <height>72</height>
@@ -735,13 +775,13 @@
                     <control type="image">
                         <posy>72</posy>
                         <width>256</width>
-                        <height>498</height>
+                        <height>390</height>
                         <include>toast_back</include>
                     </control>
                     <control type="image">
                         <posx>256</posx>
                         <width>1064</width>
-                        <height>570</height>
+                        <height>462</height>
                         <include>toast_back</include>
                     </control>
                     <control type="label">
@@ -771,7 +811,7 @@
                         <posx>264</posx>
                         <posy>10</posy>
                         <width>1000</width>
-                        <height>552</height>
+                        <height>444</height>
                         <align>left</align>
                         <font>Plot</font>
                         <pagecontrol>61</pagecontrol>
@@ -780,7 +820,7 @@
                     </control>
                     <control type="image">
                         <posx>256</posx>
-                        <posy>498</posy>
+                        <posy>390</posy>
                         <width>1064</width>
                         <height>72</height>
                         <texture border="3">dialogs/toast_back_blue_mask.png</texture>
@@ -789,7 +829,7 @@
                         <posy>2</posy>
                         <posx>256</posx>
                         <width>1064</width>
-                        <height>566</height>
+                        <height>458</height>
                         <onleft>50</onleft>
                         <onright>5000</onright>
                         <showonepage>false</showonepage>
@@ -801,54 +841,6 @@
                 </control>
             </control>
 
-            <control type="grouplist">
-                <posx>0</posx>
-                <posy>90r</posy>
-                <width>1920</width>
-                <align>center</align>
-                <orientation>horizontal</orientation>
-                <itemgap>0</itemgap>
-                <control type="image">
-                    <width>240</width>
-                    <height>90</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="image">
-                    <width>240</width>
-                    <height>90</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="image">
-                    <width>240</width>
-                    <height>90</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="image">
-                    <width>240</width>
-                    <height>90</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="image">
-                    <width>240</width>
-                    <height>90</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="image">
-                    <width>240</width>
-                    <height>90</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="image">
-                    <width>240</width>
-                    <height>90</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="image">
-                    <width>240</width>
-                    <height>90</height>
-                    <include>toast_back</include>
-                </control>
-            </control>
         </control>
     </controls>
 </window>
