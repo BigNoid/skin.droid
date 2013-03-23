@@ -24,21 +24,6 @@
                 <scrolltime tween="sine" easing="inout">200</scrolltime>
                 <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
                 <itemlayout width="642" height="680">
-                    <control type="group">
-                        <visible>IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(clearlogo))</visible>
-                        <control type="label">
-                            <posx>321</posx>
-                            <posy>-18</posy>
-                            <width>642</width>
-                            <height>60</height>
-                            <align>center</align>
-                            <font>Small_Caps</font>
-                            <textcolor>White2</textcolor>
-                            <shadowcolor>Black</shadowcolor>
-                            <label>$INFO[ListItem.Label]</label>
-                            <textoffsetx>30</textoffsetx>
-                        </control>
-                    </control>
                     <control type="image">
                         <width>642</width>
                         <height>382</height>
@@ -60,8 +45,8 @@
                             <posy>341</posy>
                             <width>642</width>
                             <height>382</height>
-                            <aspectratio>keep</aspectratio>
-                            <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem.Art(clearlogo)]</texture>
+                            <aspectratio scalediffuse="false">keep</aspectratio>
+                            <texture flipy="true" diffuse="thumbs/thumb_diffuse.png">$INFO[ListItem.Art(clearlogo)]</texture>
                             <bordersize>21</bordersize>
                         </control>
                     </control>
@@ -80,7 +65,7 @@
                         <width>600</width>
                         <height>340</height>
                         <aspectratio>scale</aspectratio>
-                        <texture flipy="true" fallback="DefaultVideoCover.png" diffuse="views/landscape/mask_reflect.png">$VAR[LandscapeThumbVar]</texture>
+                        <texture flipy="true" fallback="DefaultVideoCover.png" diffuse="thumbs/thumb_diffuse.png">$VAR[LandscapeThumbVar]</texture>
                         <!--<bordersize>25</bordersize>-->
                     </control>
                 </itemlayout>
@@ -94,21 +79,6 @@
                         <animation type="Focus" reversible="false">
                             <effect type="zoom" start="88.4" end="100" center="auto" easing="out" tween="cubic" time="200" />
                         </animation>
-                        <control type="group">
-                            <visible>IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(clearlogo))</visible>
-                            <control type="label">
-                                <posx>300</posx>
-                                <posy>-70</posy>
-                                <width>642</width>
-                                <height>110</height>
-                                <align>center</align>
-                                <font>Small_Caps</font>
-                                <textcolor>White2</textcolor>
-                                <shadowcolor>Black</shadowcolor>
-                                <label>$INFO[ListItem.Label]</label>
-                                <textoffsetx>30</textoffsetx>
-                            </control>
-                        </control>
                         <control type="image">
                             <posx>-21</posx>
                             <posy>-21</posy>
@@ -135,8 +105,8 @@
                                 <posy>320</posy>
                                 <width>642</width>
                                 <height>382</height>
-                                <aspectratio>keep</aspectratio>
-                                <texture flipy="true" diffuse="views/landscape/mask_reflect.png">$INFO[ListItem.Art(clearlogo)]</texture>
+                                <aspectratio scalediffuse="false">keep</aspectratio>
+                                <texture flipy="true" diffuse="thumbs/thumb_diffuse.png">$INFO[ListItem.Art(clearlogo)]</texture>
                                 <bordersize>21</bordersize>
                             </control>
                         </control>
@@ -154,10 +124,27 @@
                             <width>600</width>
                             <height>340</height>
                             <aspectratio>scale</aspectratio>
-                            <texture flipy="true" fallback="DefaultVideoCover.png" diffuse="views/landscape/mask_reflect.png">$VAR[LandscapeThumbVar]</texture>
+                            <texture flipy="true" fallback="DefaultVideoCover.png" diffuse="thumbs/thumb_diffuse.png">$VAR[LandscapeThumbVar]</texture>
                         </control>
                     </control>
                 </focusedlayout>
+            </control>
+            <control type="label">
+                <posx>0</posx>
+                <posy>740</posy>
+                <width>1920</width>
+                <height>110</height>
+                <align>center</align>
+                <font>Medium_Bold_Floor_Caps</font>
+                <textcolor>Floor</textcolor>
+                <shadowcolor>FF424244</shadowcolor>
+                <label>$INFO[ListItem.Label]</label>
+                <textoffsetx>30</textoffsetx>
+                <visible>Container.Content(episodes) | [IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(clearlogo))]</visible>
+                <animation type="Visible">
+                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="100"/>
+                    <effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" delay="100"/>
+                </animation>
             </control>
         </control>
     </include>
