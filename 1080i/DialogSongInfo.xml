@@ -240,8 +240,15 @@
                         <posx>720</posx>
                         <width>600</width>
                         <height>342</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>720</posx>
+                        <width>600</width>
+                        <height>342</height>
                         <aspectratio>scale</aspectratio>
                         <texture fallback="dialogs/toast_back_blue.png">$INFO[ListItem.Art(fanart)]</texture>
+                        <bordersize>2</bordersize>
                     </control>
                 </control>
                 <control type="group">

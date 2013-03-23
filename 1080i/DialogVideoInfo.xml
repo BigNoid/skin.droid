@@ -460,10 +460,11 @@
                 <height>918</height>
                 <aspectratio>stretch</aspectratio>
                 <texture background="true">$VAR[InfoPosterThumbVar]</texture>
+                <bordersize>2</bordersize>
             </control>
             <control type="image">
                 <posx>434</posx>
-                <posy>72</posy>
+                <posy>74</posy>
                 <width>166</width>
                 <height>166</height>
                 <texture>$VAR[InfoIconOverlayVar]</texture>
@@ -522,8 +523,15 @@
                         <posx>936</posx>
                         <width>384</width>
                         <height>216</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>936</posx>
+                        <width>384</width>
+                        <height>216</height>
                         <aspectratio>scale</aspectratio>
                         <texture>$INFO[ListItem.Art(fanart)]</texture>
+                        <bordersize>2</bordersize>
                         <visible>!Container.Content(episodes) | IsEmpty(Control.GetLabel(4001))</visible>
                     </control>
                     <control type="image" id="4001">
@@ -533,6 +541,7 @@
                         <aspectratio>scale</aspectratio>
                         <texture>$INFO[ListItem.Art(thumb)]</texture>
                         <visible>Container.Content(episodes)</visible>
+                        <bordersize>2</bordersize>
                     </control>
                     <control type="group">
                         <visible>Container.Content(episodes)</visible>
@@ -783,6 +792,7 @@
                         <aspectratio>keep</aspectratio>
                         <bordersize>2</bordersize>
                         <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
+                        <bordersize>2</bordersize>
                     </control>
                 </control>
                 <control type="group">
