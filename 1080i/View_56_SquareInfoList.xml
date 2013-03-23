@@ -75,38 +75,40 @@
                         <aspectratio>scale</aspectratio>
                         <texture>$INFO[ListItem.Art(fanart)]</texture>
                     </control>
-                    <control type="textbox">
-                        <description>Plot outline</description>
-                        <posx>1292</posx>
-                        <posy>320</posy>
-                        <width>498</width>
-                        <height>180</height>
-                        <align>left</align>
-                        <font>Plot</font>
-                        <label>$VAR[GlobalPlotVar]</label>
-                        <pagecontrol>61</pagecontrol>
-                        <autoscroll>False</autoscroll>
-                        <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
-                    </control>
-                    <control type="image">
-                        <posx>1274</posx>
-                        <posy>434</posy>
-                        <width>534</width>
-                        <height>72</height>
-                        <texture border="3">dialogs/toast_back_blue_mask.png</texture>
-                    </control>
-                    <control type="scrollbar" id="61">
-                        <posx>1274</posx>
-                        <posy>302</posy>
-                        <width>534</width>
-                        <height>200</height>
-                        <onleft>56</onleft>
-                        <onright>9010</onright>
-                        <showonepage>false</showonepage>
-                        <texturesliderbackground>-</texturesliderbackground>
-                        <texturesliderbar>-</texturesliderbar>
-                        <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
-                        <texturesliderbackground border="3">-</texturesliderbackground>
+                    <control type="group">
+                        <control type="textbox">
+                            <description>Plot outline</description>
+                            <posx>1292</posx>
+                            <posy>320</posy>
+                            <width>498</width>
+                            <height>180</height>
+                            <align>left</align>
+                            <font>Plot</font>
+                            <label>$VAR[GlobalPlotVar]</label>
+                            <pagecontrol>61</pagecontrol>
+                            <autoscroll>False</autoscroll>
+                            <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
+                        </control>
+                        <control type="image">
+                            <posx>1274</posx>
+                            <posy>434</posy>
+                            <width>534</width>
+                            <height>72</height>
+                            <texture border="3">dialogs/toast_back_blue_mask.png</texture>
+                        </control>
+                        <control type="scrollbar" id="61">
+                            <posx>1274</posx>
+                            <posy>302</posy>
+                            <width>534</width>
+                            <height>200</height>
+                            <onleft>56</onleft>
+                            <onright>9010</onright>
+                            <showonepage>false</showonepage>
+                            <texturesliderbackground>-</texturesliderbackground>
+                            <texturesliderbar>-</texturesliderbar>
+                            <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+                            <texturesliderbackground border="3">-</texturesliderbackground>
+                        </control>
                     </control>
                     <control type="image">
                         <posx>1274</posx>
@@ -256,6 +258,35 @@
                         <height>119</height>
                         <texture>reflect.png</texture>
                     </control>
+                </control>
+            </control>
+
+            <control type="group">
+                <visible>Container.Content(songs) | Container.Content(albums)</visible>
+                <posy>90r</posy>
+                <control type="label">
+                    <posx>60</posx>
+                    <posy>0</posy>
+                    <width>135</width>
+                    <height>90</height>
+                    <align>center</align>
+                    <label>[B]$INFO[ListItem.Year][/B]</label>
+                    <font>Large</font>
+                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
+                    <visible>Container.Content(albums)</visible>
+                </control>
+                <control type="image">
+                    <posx>60</posx>
+                    <include>MediaFlagVars</include>
+                    <texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
+                    <visible>Container.Content(songs)</visible>
+                </control>
+                <control type="image">
+                    <posx>1640</posx>
+                    <width>200</width>
+                    <height>90</height>
+                    <include>MediaFlagVars</include>
+                    <texture fallback="rating0.png">$INFO[ListItem.StarRating]</texture>
                 </control>
             </control>
         </control>

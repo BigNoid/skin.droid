@@ -278,7 +278,6 @@
         <value condition="Container.Content(artists)">$LOCALIZE[547]</value>
         <value condition="Container.Content(addons) + !IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>
         <value condition="!IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
-        <value>$LOCALIZE[416]</value>
     </variable>
 
     <variable name="MoviePlotVar">
