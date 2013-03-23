@@ -81,7 +81,7 @@
                         <width>608</width>
                         <height>342</height>
                         <aspectratio>scale</aspectratio>
-                        <texture>$INFO[ListItem.Art(fanart)]</texture>
+                        <texture>$INFO[InfoListThumbVar]</texture>
                     </control>
                     <control type="textbox">
                         <description>Plot outline</description>
@@ -177,7 +177,7 @@
                             </control>
                             <control type="label">
                                 <posx>0</posx>
-                                <width>778</width>
+                                <width>768</width>
                                 <height>72</height>
                                 <font>Small</font>
                                 <label>$INFO[ListItem.Label]</label>
@@ -185,8 +185,8 @@
                                 <textoffsetx>18</textoffsetx>
                             </control>
                             <control type="label">
-                                <posx>778</posx>
-                                <width>778</width>
+                                <posx>768</posx>
+                                <width>768</width>
                                 <height>72</height>
                                 <font>Small</font>
                                 <align>right</align>
@@ -213,7 +213,7 @@
                                 <visible>!Control.hasFocus(54)</visible>
                                 <control type="label">
                                     <posx>0</posx>
-                                    <width>778</width>
+                                    <width>768</width>
                                     <height>72</height>
                                     <font>Small</font>
                                     <label>$INFO[ListItem.Label]</label>
@@ -221,8 +221,8 @@
                                     <textoffsetx>18</textoffsetx>
                                 </control>
                                 <control type="label">
-                                    <posx>778</posx>
-                                    <width>778</width>
+                                    <posx>768</posx>
+                                    <width>768</width>
                                     <height>72</height>
                                     <font>Small</font>
                                     <align>right</align>
@@ -241,15 +241,16 @@
                                 </control>
                                 <control type="label">
                                     <posx>0</posx>
-                                    <width>778</width>
+                                    <width>768</width>
                                     <height>72</height>
                                     <font>Small</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textoffsetx>18</textoffsetx>
+                                    <scroll>true</scroll>
                                 </control>
                                 <control type="label">
-                                    <posx>778</posx>
-                                    <width>778</width>
+                                    <posx>768</posx>
+                                    <width>768</width>
                                     <height>72</height>
                                     <font>Small</font>
                                     <align>right</align>

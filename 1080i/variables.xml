@@ -48,6 +48,10 @@
         <value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
         <value>$INFO[ListItem.Art(fanart)]</value>
     </variable>
+    <variable name="InfoListThumbVar">
+        <value condition="Container.Content(episodes)">$INFO[ListItem.Art(thumb)]</value>
+        <value>$INFO[ListItem.Art(fanart)]</value>
+    </variable>
     <variable name="BannerThumbVar">
         <value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
         <value>$INFO[ListItem.Icon]</value>
