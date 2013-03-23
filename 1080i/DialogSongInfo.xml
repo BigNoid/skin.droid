@@ -431,7 +431,7 @@
                     </control>
                 </control>
                 <control type="image">
-                    <posx>1140</posx>
+                    <posx>1668</posx>
                     <width>240</width>
                     <height>90</height>
                     <colordiffuse>White2</colordiffuse>
@@ -439,7 +439,7 @@
                     <texture fallback="rating0.png">$INFO[ListItem.StarRating]</texture>
                 </control>
                 <control type="label">
-                    <posx>1456</posx>
+                    <posx>1192</posx>
                     <posy>0</posy>
                     <width>135</width>
                     <height>90</height>
@@ -449,7 +449,7 @@
                     <textcolor>White2</textcolor>
                 </control>
                 <control type="image">
-                    <posx>1720</posx>
+                    <posx>1456</posx>
                     <colordiffuse>White2</colordiffuse>
                     <include>MediaFlagVars</include>
                     <texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
