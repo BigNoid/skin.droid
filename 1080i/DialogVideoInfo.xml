@@ -722,6 +722,28 @@
                             <textoffsetx>8</textoffsetx>
                         </control>
                     </control>
+                    <control type="group">
+                        <visible>Container.Content(tvshows)</visible>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>256</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <align>right</align>
+                            <textcolor>$VAR[ThemeColorVar]</textcolor>
+                            <label>$LOCALIZE[20416]:</label>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>680</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <label>$INFO[ListItem.Premiered]</label>
+                            <textcolor>White2</textcolor>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                    </control>
                 </control>
                 <control type="group">
                     <control type="image">
@@ -943,18 +965,16 @@
                     <include>toast_back</include>
                 </control>
             </control>
-            <control type="grouplist" id="6050">
-                <posx>52</posx>
+            <control type="group" id="6050">
+                <posx>0</posx>
                 <posy>90r</posy>
-                <width>1816</width>
+                <width>1920</width>
                 <align>center</align>
-                <orientation>horizontal</orientation>
-                <itemgap>104</itemgap>
                 <visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + !SubString(Container.FolderPath,plugin://,left)</visible>
                 <control type="label">
                     <posx>0</posx>
                     <posy>0</posy>
-                    <width>135</width>
+                    <width>240</width>
                     <height>90</height>
                     <align>center</align>
                     <label>[B]$INFO[ListItem.VideoResolution][/B]</label>
@@ -964,10 +984,9 @@
                 </control>
                 <control type="group">
                     <visible>Container.Content(tvshows)</visible>
-                    <width>135</width>
                     <control type="label">
                         <posy>2</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>60</height>
                         <align>center</align>
                         <label>[B]$INFO[ListItem.Property(TotalSeasons)][/B]</label>
@@ -976,7 +995,7 @@
                     </control>
                     <control type="label">
                         <posy>52</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>30</height>
                         <align>center</align>
                         <label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
@@ -985,9 +1004,9 @@
                     </control>
                 </control>
                 <control type="label">
-                    <posx>0</posx>
+                    <posx>240</posx>
                     <posy>0</posy>
-                    <width>135</width>
+                    <width>240</width>
                     <height>90</height>
                     <align>center</align>
                     <label>[B]$INFO[ListItem.VideoAspect,,:1][/B]</label>
@@ -997,10 +1016,10 @@
                 </control>
                 <control type="group">
                     <visible>Container.Content(tvshows)</visible>
-                    <width>135</width>
+                    <posx>240</posx>
                     <control type="label">
                         <posy>2</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>60</height>
                         <align>center</align>
                         <label>[B]$INFO[ListItem.Property(TotalEpisodes)][/B]</label>
@@ -1009,7 +1028,7 @@
                     </control>
                     <control type="label">
                         <posy>52</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>30</height>
                         <align>center</align>
                         <label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
@@ -1019,10 +1038,10 @@
                 </control>
                 <control type="group">
                     <visible>Container.Content(tvshows)</visible>
-                    <width>135</width>
+                    <posx>480</posx>
                     <control type="label">
                         <posy>2</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>60</height>
                         <align>center</align>
                         <label>[B]$INFO[ListItem.Property(UnWatchedEpisodes)][/B]</label>
@@ -1031,7 +1050,7 @@
                     </control>
                     <control type="label">
                         <posy>52</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>30</height>
                         <align>center</align>
                         <label>[LOWERCASE]$LOCALIZE[16101][/LOWERCASE]</label>
@@ -1041,11 +1060,11 @@
                 </control>
                 <control type="group">
                     <visible>Container.Content(tvshows)</visible>
-                    <width>135</width>
+                    <posx>720</posx>
                     <control type="label">
-                        <posx>-40</posx>
+                        <posx>0</posx>
                         <posy>2</posy>
-                        <width>215</width>
+                        <width>240</width>
                         <height>60</height>
                         <align>center</align>
                         <label fallback="N/A">$INFO[Window(Home).Property(NextAired.NextDate)]</label>
@@ -1054,7 +1073,7 @@
                     </control>
                     <control type="label">
                         <posy>52</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>30</height>
                         <align>center</align>
                         <label>next episode</label>
@@ -1065,10 +1084,10 @@
                 </control>
                 <control type="group">
                     <visible>!Container.Content(tvshows)</visible>
-                    <width>135</width>
+                    <posx>480</posx>
                     <control type="label">
                         <posy>2</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>60</height>
                         <align>center</align>
                         <label>[B]$INFO[ListItem.AudioChannels][/B]</label>
@@ -1077,7 +1096,7 @@
                     </control>
                     <control type="label">
                         <posy>52</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>30</height>
                         <align>center</align>
                         <label>[LOWERCASE]$LOCALIZE[19019][/LOWERCASE]</label>
@@ -1086,13 +1105,16 @@
                     </control>
                 </control>
                 <control type="image">
+                    <posx>772</posx>
+                    <colordiffuse>White2</colordiffuse>
                     <include>MediaFlagVars</include>
                     <texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
                     <visible>!Container.Content(tvshows)</visible>
                 </control>
                 <control type="group">
-                    <width>135</width>
+                    <posx>1012</posx>
                     <control type="image" id="800011">
+                        <colordiffuse>White2</colordiffuse>
                         <include>MediaFlagVars</include>
                         <bordersize>2</bordersize>
                         <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
@@ -1110,11 +1132,11 @@
                     </control>
                 </control>
                 <control type="group">
-                    <width>135</width>
+                    <posx>1200</posx>
                     <control type="label">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>90</height>
                         <align>center</align>
                         <label>[B]$INFO[ListItem.Year][/B]</label>
@@ -1123,9 +1145,9 @@
                         <visible>!Container.Content(episodes)</visible>
                     </control>
                     <control type="label">
-                        <posx>-40</posx>
+                        <posx>0</posx>
                         <posy>2</posy>
-                        <width>215</width>
+                        <width>240</width>
                         <height>60</height>
                         <align>center</align>
                         <label>[B]$INFO[ListItem.Premiered][/B]</label>
@@ -1135,8 +1157,8 @@
                     </control>
                     <control type="label">
                         <posy>52</posy>
-                        <width>135</width>
-                        <height>30</height>i
+                        <width>240</width>
+                        <height>30</height>
                         <align>center</align>
                         <label>[LOWERCASE]$LOCALIZE[20416][/LOWERCASE]</label>
                         <font>Medium_Small</font>
@@ -1145,11 +1167,11 @@
                     </control>
                 </control>
                 <control type="group">
-                    <width>135</width>
+                    <posx>1440</posx>
                     <control type="label">
-                        <posx>-30</posx>
+                        <posx>0</posx>
                         <posy>2</posy>
-                        <width>195</width>
+                        <width>240</width>
                         <height>60</height>
                         <align>center</align>
                         <label>[B]$VAR[DurationVar][/B]</label>
@@ -1158,7 +1180,7 @@
                     </control>
                     <control type="label">
                         <posy>52</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>30</height>
                         <align>center</align>
                         <label>[LOWERCASE]$LOCALIZE[12391][/LOWERCASE]</label>
@@ -1166,14 +1188,31 @@
                         <textcolor>White2</textcolor>
                     </control>
                 </control>
-                <control type="image">
-                    <include>MediaFlagVars</include>
-                    <texture fallback="flags/stars/0.0.png">$INFO[ListItem.Rating,flags/stars/,.png]</texture>
-                    <animation type="Conditional" reversible="false" condition="true">
-                        <effect type="zoom" start="100" end="130" center="auto" easing="in" tween="cubic" time="0" />
-                    </animation>
+                <control type="group">
+                    <posx>1680</posx>
+                    <visible>!IsEmpty(ListItem.Rating)</visible>
+                    <control type="label">
+                        <posx>0</posx>
+                        <posy>2</posy>
+                        <width>240</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label>[B]$INFO[ListItem.Rating][/B]</label>
+                        <font>Large</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                    <control type="label">
+                        <posy>52</posy>
+                        <width>240</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <label>[LOWERCASE]$LOCALIZE[563][/LOWERCASE]</label>
+                        <font>Medium_Small</font>
+                        <textcolor>White2</textcolor>
+                    </control>
                 </control>
             </control>
+            
             <control type="grouplist" id="9000">
                 <posx>1520</posx>
                 <posy>72</posy>
