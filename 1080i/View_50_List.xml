@@ -178,99 +178,37 @@
     <include name="View_50_PictureList">
         <control type="group">
             <visible>Control.IsVisible(50)</visible>
-            <control type="image">
-                <posy>324</posy>
-                <posx>950</posx>
-                <width>898</width>
-                <height>504</height>
-                <include>toast_back</include>
-            </control>
-            <control type="image">
-                <posy>324</posy>
-                <posx>950</posx>
-                <width>898</width>
-                <height>504</height>
-                <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
-                <aspectratio>keep</aspectratio>
-                <bordersize>2</bordersize>
-            </control>
             <control type="group">
-                <visible>!IsEmpty(Container.FolderPath)</visible>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>72</posy>
-                    <width>950</width>
-                    <height>1008</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="image">
-                    <posy>828</posy>
-                    <posx>950</posx>
-                    <width>449</width>
-                    <height>252</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="image">
-                    <posy>828</posy>
-                    <posx>950</posx>
-                    <width>449</width>
-                    <height>252</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture background="true">$INFO[Container(50).ListItem(1).Icon]</texture>
-                    <bordersize>2</bordersize>
-                    <colordiffuse>7EFFFFFF</colordiffuse>
-                </control>
-                <control type="image">
-                    <posy>828</posy>
-                    <posx>1399</posx>
-                    <width>449</width>
-                    <height>252</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="image">
-                    <posy>828</posy>
-                    <posx>1399</posx>
-                    <width>449</width>
-                    <height>252</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture background="true">$INFO[Container(50).ListItem(2).Icon]</texture>
-                    <bordersize>2</bordersize>
-                    <colordiffuse>7EFFFFFF</colordiffuse>
-                </control>
                 <control type="image">
                     <posy>72</posy>
                     <posx>950</posx>
-                    <width>449</width>
-                    <height>252</height>
+                    <width>898</width>
+                    <height>504</height>
                     <include>toast_back</include>
                 </control>
                 <control type="image">
                     <posy>72</posy>
                     <posx>950</posx>
-                    <width>449</width>
-                    <height>252</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture background="true">$INFO[Container(50).ListItem(-1).Icon]</texture>
+                    <width>898</width>
+                    <height>504</height>
+                    <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
+                    <aspectratio>keep</aspectratio>
                     <bordersize>2</bordersize>
-                    <colordiffuse>7EFFFFFF</colordiffuse>
                 </control>
                 <control type="image">
-                    <posy>72</posy>
-                    <posx>1399</posx>
-                    <width>449</width>
-                    <height>252</height>
+                    <posy>576</posy>
+                    <posx>950</posx>
+                    <width>898</width>
+                    <height>504</height>
                     <include>toast_back</include>
                 </control>
-                <control type="image">
-                    <posy>72</posy>
-                    <posx>1399</posx>
-                    <width>449</width>
-                    <height>252</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture background="true">$INFO[Container(50).ListItem(-2).Icon]</texture>
-                    <bordersize>2</bordersize>
-                    <colordiffuse>7EFFFFFF</colordiffuse>
-                </control>
+            </control>
+            <control type="image">
+                <posx>0</posx>
+                <posy>72</posy>
+                <width>950</width>
+                <height>1008</height>
+                <include>toast_back</include>
             </control>
             <control type="list" id="50">
                 <posx>0</posx>
