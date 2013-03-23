@@ -233,7 +233,7 @@
     </variable>
 
     <variable name="ShowCaseNavLabelVar">
-        <value condition="Skin.HasSetting(showcasewrap)">$LOCALIZE[31048]</value>
+        <value condition="!Skin.HasSetting(showcasewrap)">$LOCALIZE[31048]</value>
         <value>$LOCALIZE[31047]</value>
     </variable>
 
@@ -299,4 +299,9 @@
         <value>$LOCALIZE[207]:</value>
     </variable>
 
+    <variable name="FanartDiffuseVar">
+        <value condition="!IsEmpty(Skin.String(Custom.Transparency))">$INFO[Skin.String(Custom.Transparency)]</value>
+        <value condition="Window.IsActive(home) | Window.IsActive(weather) | Window.IsActive(settings)">FanartDiffuse</value>
+        <value>AAFFFFFF</value>
+    </variable>
 </includes>
