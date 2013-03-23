@@ -124,7 +124,7 @@
                     <content>
                         <item>
                             <label>Recently added</label>
-                            <icon>DefaultRecentlyAddedMovies.png</icon>
+                            <icon>home/icons/DefaultRecentlyAddedMovies.png</icon>
                             <onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
                         </item>
@@ -137,13 +137,13 @@
                         </item>
                         <item>
                             <label>Videos</label>
-                            <icon>DefaultAddonVideo.png</icon>
+                            <icon>home/icons/DefaultAddonVideo.png</icon>
                             <onclick>ActivateWindow(Videos,root)</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
                         </item>
                         <item>
                             <label>Recently added</label>
-                            <icon>DefaultRecentlyAddedEpisodes.png</icon>
+                            <icon>home/icons/DefaultRecentlyAddedEpisodes.png</icon>
                             <onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
                             <visible>Container(800).HasFocus(2)</visible>
                         </item>
@@ -156,26 +156,26 @@
                         </item>
                         <item>
                             <label>TV Guide</label>
-                            <icon>DefaultTVGuide.png</icon>
+                            <icon>home/icons/DefaultTVGuide.png</icon>
                             <onclick condition="System.HasAddon(script.tv.show.next.aired)">RunAddon(script.tv.show.next.aired)</onclick>
                             <onclick condition="!System.HasAddon(script.tv.show.next.aired)">ActivateWindow(Videos,InProgressTVShows,return)</onclick>
                             <visible>Container(800).HasFocus(2)</visible>
                         </item>
                         <item>
                             <label>Video Add-ons</label>
-                            <icon>DefaultAddonVideo.png</icon>
+                            <icon>home/icons/DefaultAddonVideo.png</icon>
                             <onclick>ActivateWindow(Videos,Addons,return)</onclick>
                             <visible>Container(800).HasFocus(3)</visible>
                         </item>
                         <item>
                             <label>Music Add-ons</label>
-                            <icon>DefaultAddonMusic.png</icon>
+                            <icon>home/icons/DefaultAddonMusic.png</icon>
                             <onclick>ActivateWindow(Music,Addons,return)</onclick>
                             <visible>Container(800).HasFocus(3)</visible>
                         </item>
                         <item>
                             <label>Apps</label>
-                            <icon>DefaultAddonProgram.png</icon>
+                            <icon>home/icons/DefaultAddonProgram.png</icon>
                             <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
                             <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
                             <visible>Container(800).HasFocus(3)</visible>
@@ -842,20 +842,20 @@
                         </item>
                         <item>
                             <label>Music</label>
-                            <icon>DefaultMusicSongs.png</icon>
+                            <icon>home/icons/DefaultMusicSongs.png</icon>
                             <onclick condition="Library.HasContent(Music)">ActivateWindow(MusicLibrary,root,return)</onclick>
                             <onclick condition="!Library.HasContent(Music)">ActivateWindow(MusicFiles,root,return)</onclick>
                             <visible>Container(800).HasFocus(3)</visible>
                         </item>
                         <item>
                             <label>Pictures</label>
-                            <icon>DefaultPicture.png</icon>
+                            <icon>home/icons/DefaultPicture.png</icon>
                             <onclick>ActivateWindow(Pictures)</onclick>
                             <visible>Container(800).HasFocus(3)</visible>
                         </item>
                         <item>
                             <label>Weather</label>
-                            <icon>DefaultAddonWeather.png</icon>
+                            <icon>home/icons/DefaultAddonWeather.png</icon>
                             <onclick>ActivateWindow(Weather,return)</onclick>
                             <visible>Container(800).HasFocus(3)</visible>
                         </item>
@@ -1010,17 +1010,17 @@
                     <content>
                         <item id="1">
                             <label>Movies</label>
-                            <icon>DefaultMovies.png</icon>
+                            <icon>home/icons/DefaultMovies.png</icon>
                             <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
                         </item>
                         <item id="2">
                             <label>TV Shows</label>
-                            <icon>DefaultTVShows.png</icon>
+                            <icon>home/icons/DefaultTVShows.png</icon>
                             <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
                         </item>
                         <item id="3">
                             <label>Add-ons</label>
-                            <icon>DefaultAddon.png</icon>
+                            <icon>home/icons/DefaultAddon.png</icon>
                             <onclick>ActivateWindow(AddonBrowser)</onclick>
                         </item>
                     </content>
