@@ -171,7 +171,7 @@
                     <control type="button">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>100</width>
+                        <width>72</width>
                         <height>72</height>
                         <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
                         <texturefocus border="8">dialogs/button_focus.png</texturefocus>
@@ -179,7 +179,7 @@
                         <onclick>ActivateWindow(PlayerControls)</onclick>
                     </control>
                     <control type="button">
-                        <posx>100</posx>
+                        <posx>72</posx>
                         <posy>0</posy>
                         <width>800</width>
                         <height>72</height>
@@ -190,45 +190,28 @@
                     </control>
                     <control type="image">
                         <description>Now Playing - Paused</description>
-                        <posx>0</posx>
-                        <posy>-15</posy>
-                        <width>100</width>
-                        <height>100</height>
-                        <texture>dialogs/pause.png</texture>
+                        <posx>12</posx>
+                        <posy>12</posy>
+                        <width>48</width>
+                        <height>48</height>
+                        <texture>osd/pause_nf.png</texture>
                         <include>NotificationVisibilityEffect</include>
                         <visible>Player.Paused</visible>
                     </control>
                     <control type="image">
                         <description>Now Playing - Play</description>
-                        <posx>0</posx>
-                        <posy>-15</posy>
-                        <width>100</width>
-                        <height>100</height>
-                        <texture>dialogs/play.png</texture>
+                        <posx>12</posx>
+                        <posy>12</posy>
+                        <width>48</width>
+                        <height>48</height>
+                        <texture>osd/play_nf.png</texture>
                         <include>NotificationVisibilityEffect</include>
                         <visible>!Player.Paused</visible>
                     </control>
-                    <control type="progress" id="933">
-                        <texturebg>-</texturebg>
-                        <lefttexture>-</lefttexture>
-                        <midtexture>-</midtexture>
-                        <righttexture>-</righttexture>
-                        <info>Player.Progress</info>
-                        <visible>false</visible>
-                    </control>
-                    <control type="image">
-                        <posx>0</posx>
-                        <posy>-15</posy>
-                        <width>100</width>
-                        <height>100</height>
-                        <fadetime>0</fadetime>
-                        <texture>$INFO[Control.GetLabel(933),dialogs/circle/p,.png]</texture>
-                        <visible>!IsEmpty(Player.Duration)</visible>
-                    </control>
                     <control type="label">
                         <posy>0</posy>
-                        <posx>100</posx>
-                        <height>33</height>
+                        <posx>72</posx>
+                        <height>36</height>
                         <width>800</width>
                         <font>Small_Caps</font>
                         <textcolor>$VAR[ThemeColorVar]</textcolor>
@@ -237,14 +220,40 @@
                         <textoffsetx>15</textoffsetx>
                     </control>
                     <control type="label">
-                        <posy>33</posy>
-                        <posx>100</posx>
-                        <height>33</height>
+                        <posy>36</posy>
+                        <posx>72</posx>
+                        <height>36</height>
                         <width>800</width>
                         <font>Small_Caps</font>
                         <aligny>center</aligny>
+                        <textcolor>White2</textcolor>
                         <label>$INFO[MusicPlayer.Artist]</label>
                         <textoffsetx>15</textoffsetx>
+                        <visible>Player.HasAudio</visible>
+                    </control>
+                    <control type="label">
+                        <posy>36</posy>
+                        <posx>72</posx>
+                        <height>36</height>
+                        <width>800</width>
+                        <font>Small_Caps</font>
+                        <aligny>center</aligny>
+                        <textcolor>White2</textcolor>
+                        <label>$INFO[VideoPlayer.TvShowTitle]</label>
+                        <textoffsetx>15</textoffsetx>
+                        <visible>Player.HasVideo + VideoPlayer.Content(episodes)</visible>
+                    </control>
+                    <control type="label">
+                        <posy>36</posy>
+                        <posx>72</posx>
+                        <height>36</height>
+                        <width>800</width>
+                        <font>Small_Caps</font>
+                        <aligny>center</aligny>
+                        <textcolor>White2</textcolor>
+                        <label>$INFO[VideoPlayer.Tagline]</label>
+                        <textoffsetx>15</textoffsetx>
+                        <visible>Player.HasVideo + VideoPlayer.Content(movies)</visible>
                     </control>
                 </control>
             </control>
@@ -444,6 +453,33 @@
                         <height>48</height>
                         <texture>icons/menu_nf.png</texture>
                     </control>
+                </control>
+            </control>
+            <control type="group">
+                <visible>Player.HasMedia</visible>
+                <control type="progress">
+                    <description>Progress Bar</description>
+                    <posx>0</posx>
+                    <posy>-12</posy>
+                    <width>1920</width>
+                    <height>23</height>
+                    <info>Player.ProgressCache</info>
+                    <visible>true</visible>
+                    <texturebg border="2">settings/texturebg_cache.png</texturebg>
+                    <midtexture border="1">common/texturesliderbar.png</midtexture>
+                    <righttexture border="1">common/texturesliderbar.png</righttexture>
+                </control>
+                <control type="progress" id="23">
+                    <description>Progress Bar</description>
+                    <posx>0</posx>
+                    <posy>-12</posy>
+                    <width>1920</width>
+                    <height>23</height>
+                    <info>Player.Progress</info>
+                    <visible>true</visible>
+                    <texturebg border="2">settings/texturebg_cache.png</texturebg>
+                    <righttexture border="0,0,26,0">-</righttexture>
+                    <colordiffuse>Blue2</colordiffuse>
                 </control>
             </control>
             <control type="image">
