@@ -11,7 +11,7 @@
                 <posy>126</posy>
                 <width>1236</width>
                 <height>864</height>
-                <texture border="3" flipx="true">dialogs/toast_back_blue.png</texture>
+                <texture border="3">dialogs/toast_back_blue.png</texture>
             </control>
 
             <control type="list" id="50">
@@ -137,6 +137,11 @@
             <control type="group">
                 <posx>1236</posx>
                 <posy>72</posy>
+            </control>
+            <control type="group">
+                <posx>1236</posx>
+                <posy>72</posy>
+                <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)</visible>
                 <control type="image">
                     <width>612</width>
                     <height>918</height>
@@ -146,15 +151,257 @@
                     <width>612</width>
                     <height>918</height>
                     <texture background="true">$VAR[InfoPosterThumbVar]</texture>
+                    <bordersize>2</bordersize>
                     <visible>!IsEmpty(ListItem.Art(poster)) | !IsEmpty(ListItem.Art(tvshow.poster))</visible>
+                </control>
+            </control>
+            <control type="group">
+                <posx>1236</posx>
+                <posy>72</posy>
+                <!--<visible>Container.Content(albums) | Container.Content(artist) | Container.Content(songs)</visible>-->
+                <control type="image">
+                    <width>612</width>
+                    <height>918</height>
+                    <include>toast_back</include>
                 </control>
                 <control type="image">
                     <width>612</width>
                     <height>918</height>
                     <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
-                    <aspectratio aligny="center">keep</aspectratio>
-                    <visible>IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(tvshow.poster))</visible>
+                    <aspectratio aligny="top">keep</aspectratio>
+                    <bordersize>2</bordersize>
                 </control>
+            </control>
+        </control>
+    </include>
+
+    <include name="View_50_PictureList">
+        <control type="group">
+            <visible>Control.IsVisible(50)</visible>
+            <control type="image">
+                <posy>324</posy>
+                <posx>950</posx>
+                <width>898</width>
+                <height>504</height>
+                <include>toast_back</include>
+            </control>
+            <control type="image">
+                <posy>324</posy>
+                <posx>950</posx>
+                <width>898</width>
+                <height>504</height>
+                <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
+                <aspectratio>keep</aspectratio>
+                <bordersize>2</bordersize>
+            </control>
+            <control type="group">
+                <visible>!IsEmpty(Container.FolderPath)</visible>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>72</posy>
+                    <width>950</width>
+                    <height>1008</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <posy>828</posy>
+                    <posx>950</posx>
+                    <width>449</width>
+                    <height>252</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <posy>828</posy>
+                    <posx>950</posx>
+                    <width>449</width>
+                    <height>252</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture background="true">$INFO[Container(50).ListItem(1).Icon]</texture>
+                    <bordersize>2</bordersize>
+                    <colordiffuse>7EFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posy>828</posy>
+                    <posx>1399</posx>
+                    <width>449</width>
+                    <height>252</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <posy>828</posy>
+                    <posx>1399</posx>
+                    <width>449</width>
+                    <height>252</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture background="true">$INFO[Container(50).ListItem(2).Icon]</texture>
+                    <bordersize>2</bordersize>
+                    <colordiffuse>7EFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posy>72</posy>
+                    <posx>950</posx>
+                    <width>449</width>
+                    <height>252</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <posy>72</posy>
+                    <posx>950</posx>
+                    <width>449</width>
+                    <height>252</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture background="true">$INFO[Container(50).ListItem(-1).Icon]</texture>
+                    <bordersize>2</bordersize>
+                    <colordiffuse>7EFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posy>72</posy>
+                    <posx>1399</posx>
+                    <width>449</width>
+                    <height>252</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <posy>72</posy>
+                    <posx>1399</posx>
+                    <width>449</width>
+                    <height>252</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture background="true">$INFO[Container(50).ListItem(-2).Icon]</texture>
+                    <bordersize>2</bordersize>
+                    <colordiffuse>7EFFFFFF</colordiffuse>
+                </control>
+            </control>
+            <control type="list" id="50">
+                <posx>0</posx>
+                <posy>72</posy>
+                <width>950</width>
+                <height>1007</height>
+                <onleft>9010</onleft>
+                <onright>60</onright>
+                <onup>50</onup>
+                <ondown>50</ondown>
+                <pagecontrol>60</pagecontrol>
+                <viewtype label="535">list</viewtype>
+                <orientation>vertical</orientation>
+                <scrolltime tween="sine" easing="inout">200</scrolltime>
+                <itemlayout width="950" height="72">
+                    <control type="image">
+                        <width>950</width>
+                        <height>72</height>
+                        <texture border="3">dialogs/toast_back_blue.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>0</posx>
+                        <width>950</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>White2</textcolor>
+                        <textoffsetx>18</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>950</posx>
+                        <width>950</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textcolor>grey</textcolor>
+                        <textoffsetx>18</textoffsetx>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="950" height="72">
+                    <control type="image">
+                        <width>950</width>
+                        <height>72</height>
+                        <texture border="4">dialogs/button_focus.png</texture>
+                        <visible>Control.hasFocus(50)</visible>
+                    </control>
+                    <control type="image">
+                        <width>950</width>
+                        <height>72</height>
+                        <texture border="3">dialogs/toast_back_blue.png</texture>
+                        <visible>!Control.hasFocus(50)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>0</posx>
+                        <width>950</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textoffsetx>18</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>950</posx>
+                        <width>950</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textoffsetx>18</textoffsetx>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="image">
+                <posx>0</posx>
+                <posy>1008</posy>
+                <width>950</width>
+                <height>72</height>
+                <texture border="3">dialogs/toast_back_blue_mask.png</texture>
+            </control>
+            <control type="button">
+                <posx>72r</posx>
+                <posy>72</posy>
+                <width>72</width>
+                <height>72</height>
+                <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
+                <texturefocus border="8">dialogs/button_focus.png</texturefocus>
+                <include>HiddenButton</include>
+                <onclick>pageup(60)</onclick>
+            </control>
+            <control type="button">
+                <posx>72r</posx>
+                <posy>1008</posy>
+                <width>72</width>
+                <height>72</height>
+                <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
+                <texturefocus border="8">dialogs/button_focus.png</texturefocus>
+                <include>HiddenButton</include>
+                <onclick>pagedown(60)</onclick>
+            </control>
+            <control type="image">
+                <posx>58r</posx>
+                <posy>88</posy>
+                <width>40</width>
+                <height>40</height>
+                <aspectratio>keep</aspectratio>
+                <texture flipy="true">arrowdown.png</texture>
+            </control>
+            <control type="image">
+                <posx>58r</posx>
+                <posy>1024</posy>
+                <width>40</width>
+                <height>40</height>
+                <aspectratio>keep</aspectratio>
+                <texture>arrowdown.png</texture>
+            </control>
+            <control type="image">
+                <posx>72r</posx>
+                <posy>144</posy>
+                <width>72</width>
+                <height>864</height>
+                <include>toast_back</include>
+            </control>
+            <control type="scrollbar" id="60">
+                <posx>58r</posx>
+                <posy>144</posy>
+                <height>864</height>
+                <width>40</width>
+                <onleft>50</onleft>
+                <onright>9000</onright>
+                <texturesliderbackground border="3">dialogs/toast_back_blue.png</texturesliderbackground>
+                <animation effect="fade" start="100" end="50" time="400" condition="!Control.HasFocus(60)">Conditional</animation>
             </control>
         </control>
     </include>

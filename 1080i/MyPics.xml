@@ -9,12 +9,12 @@
         <include>NotificationCenter</include>
         <control type="group">
             <include>WindowEffect</include>
-            <include>View_50_List</include>
+            <include>View_50_PictureList</include>
             <include>View_51_Icons</include>
             <include>View_55_SmallIcons</include>
         </control>
         <control type="group">
-            <visible>Control.IsVisible(50)</visible>
+            <visible>no</visible>
             <include>FloorFlagsBack</include>
         </control>
 
@@ -36,7 +36,7 @@
             <posx>0</posx>
             <posy>90r</posy>
             <width>1920</width>
-            <visible>Control.IsVisible(50)</visible>
+            <visible>no</visible>
             <control type="group">
                 <posx>0</posx>
                 <visible>!IsEmpty(ListItem.PictureResolution)</visible>
