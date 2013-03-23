@@ -81,7 +81,7 @@
                         <width>608</width>
                         <height>342</height>
                         <aspectratio>scale</aspectratio>
-                        <texture>$INFO[InfoListThumbVar]</texture>
+                        <texture>$VAR[InfoListThumbVar]</texture>
                     </control>
                     <control type="textbox">
                         <description>Plot outline</description>
