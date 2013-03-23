@@ -193,6 +193,7 @@
                                 <label>$INFO[ListItem.Label2]</label>
                                 <textcolor>grey</textcolor>
                                 <textoffsetx>18</textoffsetx>
+                                <visible>!Container.Content(tvshows)</visible>
                             </control>
                             <control type="image">
                                 <posx>768</posx>
@@ -226,6 +227,7 @@
                                     <font>Small</font>
                                     <align>right</align>
                                     <label>$INFO[ListItem.Label2]</label>
+                                    <visible>!Container.Content(tvshows)</visible>
                                     <textcolor>grey</textcolor>
                                     <textoffsetx>18</textoffsetx>
                                 </control>
@@ -252,6 +254,7 @@
                                     <font>Small</font>
                                     <align>right</align>
                                     <label>$INFO[ListItem.Label2]</label>
+                                    <visible>!Container.Content(tvshows)</visible>
                                     <textoffsetx>18</textoffsetx>
                                 </control>
                             </control>

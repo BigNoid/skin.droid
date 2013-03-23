@@ -152,13 +152,12 @@
                     <height>918</height>
                     <texture background="true">$VAR[InfoPosterThumbVar]</texture>
                     <bordersize>2</bordersize>
-                    <visible>!IsEmpty(ListItem.Art(poster)) | !IsEmpty(ListItem.Art(tvshow.poster))</visible>
                 </control>
             </control>
             <control type="group">
                 <posx>1236</posx>
                 <posy>72</posy>
-                <!--<visible>Container.Content(albums) | Container.Content(artist) | Container.Content(songs)</visible>-->
+                <visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes)]</visible>
                 <control type="image">
                     <width>612</width>
                     <height>918</height>
@@ -168,7 +167,55 @@
                     <width>612</width>
                     <height>918</height>
                     <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
-                    <aspectratio aligny="top">keep</aspectratio>
+                    <aspectratio aligny="bottom">keep</aspectratio>
+                    <bordersize>2</bordersize>
+                </control>
+            </control>
+            <control type="group">
+                <visible>Container.Content(episodes)</visible>
+                <posx>1236</posx>
+                <posy>72</posy>
+                <control type="image">
+                    <width>612</width>
+                    <height>342</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>612</width>
+                    <height>342</height>
+                    <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
+                    <aspectratio>scale</aspectratio>
+                    <bordersize>2</bordersize>
+                </control>
+                <control type="image">
+                    <posy>342</posy>
+                    <width>612</width>
+                    <height>458</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="textbox">
+                    <description>Plot outline</description>
+                    <posx>30</posx>
+                    <posy>352</posy>
+                    <width>540</width>
+                    <height>448</height>
+                    <align>left</align>
+                    <font>Plot</font>
+                    <textcolor>White2</textcolor>
+                    <label>$VAR[VideoInfoPlotVar]</label>
+                </control>
+                <control type="image">
+                    <posy>800</posy>
+                    <width>612</width>
+                    <height>118</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <posy>800</posy>
+                    <width>612</width>
+                    <height>118</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
                     <bordersize>2</bordersize>
                 </control>
             </control>

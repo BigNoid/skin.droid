@@ -959,6 +959,28 @@
                     <label>[B]$INFO[ListItem.Year][/B]</label>
                     <font>Large</font>
                     <textcolor>$VAR[FloorDiffuseVar]</textcolor>
+                    <visible>!Container.Content(episodes)</visible>
+                </control>
+                <control type="label">
+                    <posx>-40</posx>
+                    <posy>2</posy>
+                    <width>215</width>
+                    <height>60</height>
+                    <align>center</align>
+                    <label>[B]$INFO[ListItem.Premiered][/B]</label>
+                    <font>Medium_Floor_Caps</font>
+                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
+                    <visible>Container.Content(episodes)</visible>
+                </control>
+                <control type="label">
+                    <posy>52</posy>
+                    <width>135</width>
+                    <height>30</height>i
+                    <align>center</align>
+                    <label>[LOWERCASE]$LOCALIZE[20416][/LOWERCASE]</label>
+                    <font>Medium_Small</font>
+                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
+                    <visible>Container.Content(episodes)</visible>
                 </control>
             </control>
             <control type="group">
