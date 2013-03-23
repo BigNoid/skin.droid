@@ -81,7 +81,7 @@
                         <width>608</width>
                         <height>342</height>
                         <aspectratio>scale</aspectratio>
-                        <texture>$VAR[LandscapeThumbVar]</texture>
+                        <texture>$INFO[ListItem.Art(fanart)]</texture>
                     </control>
                     <control type="textbox">
                         <description>Plot outline</description>
