@@ -382,18 +382,18 @@
                         <posx>72</posx>
                         <height>36</height>
                         <width>800</width>
-                        <font>Small_Caps</font>
+                        <font>Smaller_Caps</font>
                         <textcolor>$VAR[ThemeColorVar]</textcolor>
                         <aligny>center</aligny>
                         <label>$INFO[Player.Title]</label>
                         <textoffsetx>15</textoffsetx>
                     </control>
                     <control type="label">
-                        <posy>36</posy>
+                        <posy>33</posy>
                         <posx>72</posx>
                         <height>36</height>
                         <width>800</width>
-                        <font>Small_Caps</font>
+                        <font>Smaller_Caps</font>
                         <aligny>center</aligny>
                         <textcolor>White2</textcolor>
                         <label>$INFO[MusicPlayer.Artist]</label>
@@ -401,11 +401,11 @@
                         <visible>Player.HasAudio</visible>
                     </control>
                     <control type="label">
-                        <posy>36</posy>
+                        <posy>33</posy>
                         <posx>72</posx>
                         <height>36</height>
                         <width>800</width>
-                        <font>Small_Caps</font>
+                        <font>Smaller_Caps</font>
                         <aligny>center</aligny>
                         <textcolor>White2</textcolor>
                         <label>$INFO[VideoPlayer.TvShowTitle]</label>
@@ -413,7 +413,7 @@
                         <visible>Player.HasVideo + VideoPlayer.Content(episodes)</visible>
                     </control>
                     <control type="label">
-                        <posy>36</posy>
+                        <posy>33</posy>
                         <posx>72</posx>
                         <height>36</height>
                         <width>800</width>
@@ -436,6 +436,18 @@
                 <onleft condition="Window.IsActive(home)">11118</onleft>
                 <onleft condition="!Window.IsActive(home)">11119</onleft>
                 <onright>11115</onright>
+                <!--<control type="label">
+                    <description>Breadrumbs label</description>
+                    <width min="900" max="900">auto</width>
+                    <height>69</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <font>Smaller_Caps</font>
+                    <label>$VAR[BreadcrumbsVar]$INFO[Container.FolderName][CR]$INFO[Container.NumItems,, $LOCALIZE[31049]]</label>
+                    <textcolor>White2</textcolor>
+                    <textoffsetx>15</textoffsetx>
+                    <visible>!Window.IsActive(home)</visible>
+                </control>-->
                 <control type="label">
                     <description>Busy label</description>
                     <width min="100" max="450">auto</width>
@@ -485,7 +497,6 @@
                         <onleft condition="!Window.IsActive(home)">11119</onleft>
                         <onright>11115</onright>
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
-
                     </control>
                     <control type="image">
                         <posx>12</posx>

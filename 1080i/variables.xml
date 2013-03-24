@@ -290,4 +290,13 @@
         <value>AAFFFFFF</value>
     </variable>
 
+    <variable name="BreadcrumbsVar">
+        <value condition="Container.Content(movies)">[COLOR Blue2]$LOCALIZE[20342]:[/COLOR] </value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons) | StringCompare(Container.FolderPath,videodb://5/)">[COLOR Blue2]$LOCALIZE[20343]:[/COLOR] </value>
+        <value condition="Container.Content(episodes)">[COLOR Blue2]$INFO[ListItem.TvShowTitle]:[/COLOR] </value>
+        <value condition="SubString(Container.FolderPath,videodb://2/,left) + !StringCompare(Container.FolderName,$LOCALIZE[20343])">[COLOR Blue2]$LOCALIZE[20343]:[/COLOR] </value>
+        <value condition="SubString(Container.FolderPath,videodb://1/,left) + !StringCompare(Container.FolderName,$LOCALIZE[20342])">[COLOR Blue2]$LOCALIZE[20343]:[/COLOR] </value>
+        <value condition="!IsEmpty(Container.FolderName)">[COLOR Blue2]$INFO[System.CurrentWindow]:[/COLOR] </value>
+        <value>[COLOR Blue2]$INFO[System.CurrentWindow][/COLOR]</value>
+    </variable>
 </includes>

@@ -39,18 +39,18 @@
             <posx>1032</posx>
             <height>36</height>
             <width>640</width>
-            <font>Small_Caps</font>
+            <font>Smaller_Caps</font>
             <textcolor>$VAR[ThemeColorVar]</textcolor>
             <aligny>center</aligny>
             <label>-</label>
             <textoffsetx>15</textoffsetx>
         </control>
         <control type="label" id="402">
-            <posy>36</posy>
+            <posy>33</posy>
             <posx>1032</posx>
             <height>36</height>
             <width>640</width>
-            <font>Small_Caps</font>
+            <font>Smaller_Caps</font>
             <aligny>center</aligny>
             <label>-</label>
             <textoffsetx>15</textoffsetx>

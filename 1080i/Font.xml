@@ -96,6 +96,13 @@
             <style>uppercase</style>
         </font>
         <font>
+            <name>Smaller_Caps</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>33</size>
+            <style>uppercase</style>
+            <linespacing>0.75</linespacing>
+        </font>
+        <font>
             <name>Medium_Small</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
             <size>26</size>

@@ -32,7 +32,7 @@
             <textoffsetx>15</textoffsetx>
         </control>
         <control type="label" id="31">
-            <posy>30</posy>
+            <posy>33</posy>
             <posx>712r</posx>
             <height>35</height>
             <width>640</width>
