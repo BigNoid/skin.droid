@@ -300,11 +300,12 @@
             <control type="slider">
                 <description>Progressbar</description>
                 <posx>162</posx>
-                <posy>400</posy>
+                <posy>380</posy>
+                <height>66</height>
                 <width>500</width>
-                <texturesliderbar>-</texturesliderbar>
-                <textureslidernib border="2">-</textureslidernib>
-                <textureslidernibfocus border="2">-</textureslidernibfocus>
+                <texturesliderbar border="2">settings/texturebg_slider.png</texturesliderbar>
+                <textureslidernib>osd/slider_nf.png</textureslidernib>
+                <textureslidernibfocus>osd/slider.png</textureslidernibfocus>
                 <info>Player.Progress</info>
                 <action>seek</action>
             </control>

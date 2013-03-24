@@ -5,11 +5,6 @@
         <value>grey</value>
     </variable>
 
-    <variable name="ListHeaderVar">
-        <value condition="!IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
-        <value>$INFO[System.CurrentWindow]</value>
-    </variable>
-
     <variable name="GlobalBackgroundVar">
         <value condition="Player.hasMedia  + !IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Art(fanart)]</value>
@@ -254,7 +249,7 @@
     <variable name="NotificationSettingsButtonActionVar">
         <value condition="Window.IsActive(videos) | Window.IsActive(videoplaylist)">ActivateWindow(videossettings)</value>
         <value condition="Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicplaylisteditor)">ActivateWindow(musicsettings)</value>
-        <value condition="Window.IsActive(programs)">ActivateWindow(programssettings)</value>
+        <!--<value condition="Window.IsActive(programs)">ActivateWindow(programssettings)</value> According to wiki. Does nothing here -->
         <value condition="Window.IsActive(pictures)">ActivateWindow(picturessettings)</value>
         <value condition="Window.IsActive(weather)">ActivateWindow(weathersettings)</value>
         <value>ActivateWindow(settings)</value>
@@ -291,12 +286,12 @@
     </variable>
 
     <variable name="BreadcrumbsVar">
-        <value condition="Container.Content(movies)">[COLOR Blue2]$LOCALIZE[20342]:[/COLOR] </value>
-        <value condition="Container.Content(tvshows) | Container.Content(seasons) | StringCompare(Container.FolderPath,videodb://5/)">[COLOR Blue2]$LOCALIZE[20343]:[/COLOR] </value>
-        <value condition="Container.Content(episodes)">[COLOR Blue2]$INFO[ListItem.TvShowTitle]:[/COLOR] </value>
-        <value condition="SubString(Container.FolderPath,videodb://2/,left) + !StringCompare(Container.FolderName,$LOCALIZE[20343])">[COLOR Blue2]$LOCALIZE[20343]:[/COLOR] </value>
-        <value condition="SubString(Container.FolderPath,videodb://1/,left) + !StringCompare(Container.FolderName,$LOCALIZE[20342])">[COLOR Blue2]$LOCALIZE[20343]:[/COLOR] </value>
-        <value condition="!IsEmpty(Container.FolderName)">[COLOR Blue2]$INFO[System.CurrentWindow]:[/COLOR] </value>
-        <value>[COLOR Blue2]$INFO[System.CurrentWindow][/COLOR]</value>
+        <value condition="Container.Content(movies)">$LOCALIZE[20342]: </value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons) | StringCompare(Container.FolderPath,videodb://5/)">$LOCALIZE[20343]: </value>
+        <value condition="Container.Content(episodes) + !StringCompare(Container.FolderName,ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle]: </value>
+        <value condition="SubString(Container.FolderPath,videodb://2/,left) + !StringCompare(Container.FolderName,$LOCALIZE[20343])">$LOCALIZE[20343]: </value>
+        <value condition="SubString(Container.FolderPath,videodb://1/,left) + !StringCompare(Container.FolderName,$LOCALIZE[20342])">$LOCALIZE[20343]: </value>
+        <value condition="!IsEmpty(Container.FolderName)">$INFO[System.CurrentWindow]: </value>
+        <value>$INFO[System.CurrentWindow]</value>
     </variable>
 </includes>

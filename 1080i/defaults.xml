@@ -193,6 +193,8 @@
         <texturebg border="2">settings/texturebg.png</texturebg>
 		<lefttexture>-</lefttexture>
 		<midtexture border="2">settings/midtexture.png</midtexture>
+        <righttexture>-</righttexture>
+        <righttexture border="11">settings/righttexture.png</righttexture>
         <righttexture border="0,0,26,0">settings/righttexture2.png</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>

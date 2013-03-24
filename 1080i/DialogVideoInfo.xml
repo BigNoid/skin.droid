@@ -214,18 +214,18 @@
                         <posx>72</posx>
                         <height>36</height>
                         <width>800</width>
-                        <font>Small_Caps</font>
+                        <font>Smaller_Caps</font>
                         <textcolor>$VAR[ThemeColorVar]</textcolor>
                         <aligny>center</aligny>
                         <label>$INFO[Player.Title]</label>
                         <textoffsetx>15</textoffsetx>
                     </control>
                     <control type="label">
-                        <posy>36</posy>
+                        <posy>33</posy>
                         <posx>72</posx>
                         <height>36</height>
                         <width>800</width>
-                        <font>Small_Caps</font>
+                        <font>Smaller_Caps</font>
                         <aligny>center</aligny>
                         <textcolor>White2</textcolor>
                         <label>$INFO[MusicPlayer.Artist]</label>
@@ -233,11 +233,11 @@
                         <visible>Player.HasAudio</visible>
                     </control>
                     <control type="label">
-                        <posy>36</posy>
+                        <posy>33</posy>
                         <posx>72</posx>
                         <height>36</height>
                         <width>800</width>
-                        <font>Small_Caps</font>
+                        <font>Smaller_Caps</font>
                         <aligny>center</aligny>
                         <textcolor>White2</textcolor>
                         <label>$INFO[VideoPlayer.TvShowTitle]</label>
@@ -245,11 +245,11 @@
                         <visible>Player.HasVideo + VideoPlayer.Content(episodes)</visible>
                     </control>
                     <control type="label">
-                        <posy>36</posy>
+                        <posy>33</posy>
                         <posx>72</posx>
                         <height>36</height>
                         <width>800</width>
-                        <font>Small_Caps</font>
+                        <font>Smaller_Caps</font>
                         <aligny>center</aligny>
                         <textcolor>White2</textcolor>
                         <label>$INFO[VideoPlayer.Tagline]</label>

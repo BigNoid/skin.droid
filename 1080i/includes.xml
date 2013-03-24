@@ -102,7 +102,7 @@
             <control type="group">
                 <control type="image">
                     <posy>0</posy>
-                    <animation effect="slide" start="0,0" end="0,50" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="0,20" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
                     <include>Dimensions_Fullscreen</include>
                     <texture border="1">background/floor_back.png</texture>
                 </control>
@@ -113,7 +113,7 @@
                     <height>262</height>
                     <texture>background/mid_fade.png</texture>
                     <colordiffuse>$VAR[ThemeColorVar]</colordiffuse>
-                    <animation effect="slide" start="0,0" end="0,50" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="0,20" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
                     <animation type="WindowOpen" reversible="false">
                         <effect type="fade" start="0" end="100" time="300" />
                     </animation>
@@ -436,18 +436,6 @@
                 <onleft condition="Window.IsActive(home)">11118</onleft>
                 <onleft condition="!Window.IsActive(home)">11119</onleft>
                 <onright>11115</onright>
-                <!--<control type="label">
-                    <description>Breadrumbs label</description>
-                    <width min="900" max="900">auto</width>
-                    <height>69</height>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>Smaller_Caps</font>
-                    <label>$VAR[BreadcrumbsVar]$INFO[Container.FolderName][CR]$INFO[Container.NumItems,, $LOCALIZE[31049]]</label>
-                    <textcolor>White2</textcolor>
-                    <textoffsetx>15</textoffsetx>
-                    <visible>!Window.IsActive(home)</visible>
-                </control>-->
                 <control type="label">
                     <description>Busy label</description>
                     <width min="100" max="450">auto</width>
@@ -779,333 +767,52 @@
             </control>
         </control>
     </include>
-    
-    <include name="VideoFlags">
-        <control type="group" id="6050">
-            <posx>0</posx>
-            <posy>90r</posy>
-            <width>1920</width>
-            <align>center</align>
-            <include>WindowEffect</include>
-            <visible>!Control.IsVisible(53)</visible>
-            <visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + !SubString(Container.FolderPath,plugin://,left)</visible>
-            <control type="label">
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>240</width>
-                <height>90</height>
-                <align>center</align>
-                <label>[B]$INFO[ListItem.VideoResolution][/B]</label>
-                <font>Large</font>
-                <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                <visible>!Container.Content(tvshows)</visible>
-            </control>
-            <control type="group">
-                <visible>Container.Content(tvshows)</visible>
-                <control type="label">
-                    <posy>2</posy>
-                    <width>240</width>
-                    <height>60</height>
-                    <align>center</align>
-                    <label>[B]$INFO[ListItem.Property(TotalSeasons)][/B]</label>
-                    <font>Large</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-                <control type="label">
-                    <posy>52</posy>
-                    <width>240</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
-                    <font>Medium_Small</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-            </control>
-            <control type="label">
-                <posx>240</posx>
-                <posy>0</posy>
-                <width>240</width>
-                <height>90</height>
-                <align>center</align>
-                <label>[B]$INFO[ListItem.VideoAspect,,:1][/B]</label>
-                <font>Large</font>
-                <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                <visible>!Container.Content(tvshows)</visible>
-            </control>
-            <control type="group">
-                <visible>Container.Content(tvshows)</visible>
-                <posx>240</posx>
-                <control type="label">
-                    <posy>2</posy>
-                    <width>240</width>
-                    <height>60</height>
-                    <align>center</align>
-                    <label>[B]$INFO[ListItem.Property(TotalEpisodes)][/B]</label>
-                    <font>Large</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-                <control type="label">
-                    <posy>52</posy>
-                    <width>240</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
-                    <font>Medium_Small</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-            </control>
-            <control type="group">
-                <visible>Container.Content(tvshows)</visible>
-                <posx>480</posx>
-                <control type="label">
-                    <posy>2</posy>
-                    <width>240</width>
-                    <height>60</height>
-                    <align>center</align>
-                    <label>[B]$INFO[ListItem.Property(UnWatchedEpisodes)][/B]</label>
-                    <font>Large</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-                <control type="label">
-                    <posy>52</posy>
-                    <width>240</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <label>[LOWERCASE]$LOCALIZE[16101][/LOWERCASE]</label>
-                    <font>Medium_Small</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-            </control>
-            <control type="group">
-                <visible>Container.Content(tvshows)</visible>
-                <posx>720</posx>
-                <control type="label">
-                    <posx>0</posx>
-                    <posy>2</posy>
-                    <width>240</width>
-                    <height>60</height>
-                    <align>center</align>
-                    <label fallback="N/A">$INFO[Window(Home).Property(NextAired.NextDate)]</label>
-                    <font>Medium_Bold_Floor_Caps</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-                <control type="label">
-                    <posy>52</posy>
-                    <width>240</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <label>next episode</label>
-                    <label>[LOWERCASE]$LOCALIZE[20416][/LOWERCASE]</label>
-                    <font>Medium_Small</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-            </control>
-            <control type="group">
-                <visible>!Container.Content(tvshows)</visible>
-                <posx>480</posx>
-                <control type="label">
-                    <posy>2</posy>
-                    <width>240</width>
-                    <height>60</height>
-                    <align>center</align>
-                    <label>[B]$INFO[ListItem.AudioChannels][/B]</label>
-                    <font>Large</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-                <control type="label">
-                    <posy>52</posy>
-                    <width>240</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <label>[LOWERCASE]$LOCALIZE[19019][/LOWERCASE]</label>
-                    <font>Medium_Small</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-            </control>
-            <control type="image">
-                <posx>772</posx>
-                <include>MediaFlagVars</include>
-                <texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
-                <visible>!Container.Content(tvshows)</visible>
-            </control>
-            <control type="group">
-                <posx>1012</posx>
-                <control type="image" id="800011">
-                    <include>MediaFlagVars</include>
-                    <bordersize>2</bordersize>
-                    <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
-                </control>
-                <control type="label">
-                    <posx>-10</posx>
-                    <width>155</width>
-                    <height>90</height>
-                    <align>center</align>
-                    <label>$INFO[ListItem.Studio]</label>
-                    <font>Very_Small_Caps</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    <wrapmultiline>true</wrapmultiline>
-                    <visible>IsEmpty(Control.GetLabel(800011))</visible>
-                </control>
-            </control>
-            <control type="group">
-                <posx>1200</posx>
-                <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>240</width>
-                    <height>90</height>
-                    <align>center</align>
-                    <label>[B]$INFO[ListItem.Year][/B]</label>
-                    <font>Large</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    <visible>!Container.Content(episodes)</visible>
-                </control>
-                <control type="label">
-                    <posx>0</posx>
-                    <posy>2</posy>
-                    <width>240</width>
-                    <height>60</height>
-                    <align>center</align>
-                    <label>[B]$INFO[ListItem.Premiered][/B]</label>
-                    <font>Medium_Floor_Caps</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    <visible>Container.Content(episodes)</visible>
-                </control>
-                <control type="label">
-                    <posy>52</posy>
-                    <width>240</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <label>[LOWERCASE]$LOCALIZE[20416][/LOWERCASE]</label>
-                    <font>Medium_Small</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    <visible>Container.Content(episodes)</visible>
-                </control>
-            </control>
-            <control type="group">
-                <posx>1440</posx>
-                <control type="label">
-                    <posx>0</posx>
-                    <posy>2</posy>
-                    <width>240</width>
-                    <height>60</height>
-                    <align>center</align>
-                    <label>[B]$VAR[DurationVar][/B]</label>
-                    <font>Large</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-                <control type="label">
-                    <posy>52</posy>
-                    <width>240</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <label>[LOWERCASE]$LOCALIZE[12391][/LOWERCASE]</label>
-                    <font>Medium_Small</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-            </control>
-            <!--<control type="group">
-                <posx>1680</posx>
-                <visible>!IsEmpty(ListItem.Rating)</visible>
-                <control type="label">
-                    <posx>0</posx>
-                    <posy>2</posy>
-                    <width>240</width>
-                    <height>60</height>
-                    <align>center</align>
-                    <label>[B]$INFO[ListItem.Rating][/B]</label>
-                    <font>Large</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-                <control type="label">
-                    <posy>52</posy>
-                    <width>240</width>
-                    <height>30</height>
-                    <align>center</align>
-                    <label>[LOWERCASE]$LOCALIZE[563][/LOWERCASE]</label>
-                    <font>Medium_Small</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                </control>
-            </control>-->
-            <control type="image">
-                <posx>1685</posx>
-                <width>190</width>
-                <include>MediaFlagVars</include>
-                <texture fallback="flags/stars/0.0.png">$INFO[ListItem.Rating,flags/stars/,.png]</texture>
-            </control>
-        </control>
 
+    <include name="BreadcrumbsLabel">
         <control type="group">
-            <posx>0</posx>
-            <posy>90r</posy>
-            <width>1920</width>
-            <include>WindowEffect</include>
-            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + Control.IsVisible(53)</visible>
-            <control type="group">
-                <posx>110</posx>
-                <control type="image" id="800012">
-                    <include>MediaFlagVars</include>
-                    <bordersize>2</bordersize>
-                    <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
-                </control>
-                <control type="label">
-                    <posx>-10</posx>
-                    <width>155</width>
-                    <height>90</height>
-                    <align>center</align>
-                    <label>$INFO[ListItem.Studio]</label>
-                    <font>Very_Small_Caps</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    <wrapmultiline>true</wrapmultiline>
-                    <visible>IsEmpty(Control.GetLabel(800012))</visible>
-                </control>
+            <visible>!Control.IsVisible(53)</visible>
+            <control type="button">
+                <posy>90r</posy>
+                <width>1920</width>
+                <height>90</height>
+                <font>Medium_Bold_Floor_Caps</font>
+                <label>$VAR[BreadcrumbsVar]$INFO[Container.FolderName]</label>
+                <label2>$INFO[Container.NumItems,, $LOCALIZE[31049]]</label2>
+                <aligny>top</aligny>
+                <textoffsety>28</textoffsety>
+                <textoffsetx>30</textoffsetx>
+                <texturenofocus border="18">-</texturenofocus>
+                <disabledcolor>Floor</disabledcolor>
+                <enable>no</enable>
+                <visible>![Control.IsVisible(50) | Control.IsVisible(51)  | Control.IsVisible(55)]</visible>
+                <include>WindowEffect</include>
             </control>
-            <control type="image">
-                <posx>1610</posx>
-                <width>190</width>
-                <include>MediaFlagVars</include>
-                <texture fallback="flags/stars/0.0.png">$INFO[ListItem.Rating,flags/stars/,.png]</texture>
+            <control type="button">
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
+                <height>90</height>
+                <font>Medium_Bold_Floor_Caps</font>
+                <label>$VAR[BreadcrumbsVar]$INFO[Container.FolderName]</label>
+                <label2>$INFO[Container.NumItems,, $LOCALIZE[31049]]</label2>
+                <textoffsetx>18</textoffsetx>
+                <disabledcolor>White2</disabledcolor>
+                <enable>no</enable>
+                <visible>[Control.IsVisible(50) | Control.IsVisible(51)  | Control.IsVisible(55)]</visible>
+                <include>WindowEffect</include>
             </control>
-        </control>
-        <control type="group">
-            <posx>0</posx>
-            <posy>90r</posy>
-            <width>1920</width>
-            <include>WindowEffect</include>
-            <visible>[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(53)</visible>
-            <control type="group">
-                <posx>110</posx>
-                <control type="image" id="800013">
-                    <include>MediaFlagVars</include>
-                    <bordersize>2</bordersize>
-                    <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
-                </control>
-                <control type="label">
-                    <posx>-10</posx>
-                    <width>155</width>
-                    <height>90</height>
-                    <align>center</align>
-                    <label>$INFO[ListItem.Studio]</label>
-                    <font>Very_Small_Caps</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    <wrapmultiline>true</wrapmultiline>
-                    <visible>IsEmpty(Control.GetLabel(800013))</visible>
-                </control>
-            </control>
-            <control type="image">
-                <posx>350</posx>
-                <include>MediaFlagVars</include>
-                <texture fallback="flags/rating/NR.png">$INFO[ListItem.MPAA,flags/rating/,.png]</texture>
-            </control>
-            <control type="image">
-                <posx>1675</posx>
-                <include>MediaFlagVars</include>
-                <texture>$INFO[ListItem.VideoCodec,flags/video/,.png]</texture>
-            </control>
-            <control type="image">
-                <posx>1435</posx>
-                <include>MediaFlagVars</include>
-                <texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
+            <control type="button">
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
+                <height>90</height>
+                <font>Medium_Caps2</font>
+                <label>$INFO[ListItem.Label]</label>
+                <label2>$INFO[ListItem.Label2]</label2>
+                <textoffsetx>30</textoffsetx>
+                <disabledcolor>White2</disabledcolor>
+                <enable>no</enable>
+                <visible>[[Control.IsVisible(51) + !Container.COntent(episodes)] | Control.IsVisible(55)] + !System.IdleTime(10)</visible>
             </control>
         </control>
     </include>

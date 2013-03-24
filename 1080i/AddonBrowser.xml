@@ -12,23 +12,7 @@
             <include>View_51_Icons</include>
             <include>View_55_SmallIcons</include>
         </control>
-        <control type="group">
-            <visible>Control.IsVisible(50)</visible>
-            <include>FloorFlagsBack</include>
-        </control>
-        <control type="button">
-            <posx>0</posx>
-            <posy>90r</posy>
-            <width>1920</width>
-            <height>90</height>
-            <font>Medium_Caps2</font>
-            <label>$INFO[ListItem.Label]</label>
-            <label2>$INFO[ListItem.Label2]</label2>
-            <textoffsetx>30</textoffsetx>
-            <disabledcolor>White2</disabledcolor>
-            <enable>no</enable>
-            <visible>Control.IsVisible(51) | Control.IsVisible(55)</visible>
-        </control>
+        <include>BreadcrumbsLabel</include>
         <control type="grouplist" id="9000">
             <include>MediaMenuGrouplist</include>
             <control type="button" id="2">

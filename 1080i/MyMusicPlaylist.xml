@@ -10,11 +10,7 @@
             <include>WindowEffect</include>
             <include>View_50_List</include>
         </control>
-        <control type="group">
-            <visible>Control.IsVisible(50)</visible>
-            <include>FloorFlagsBack</include>
-        </control>
-        <include>MusicFlags</include>
+        <include>BreadcrumbsLabel</include>
         <control type="grouplist" id="9000">
             <include>MediaMenuGrouplist</include>
             <control type="button" id="2">
