@@ -74,21 +74,6 @@
         <value>$INFO[ListItem.Label2]</value>
     </variable>
 
-    <variable name="RatingFlagVar">
-        <value condition="SubString(ListItem.mpaa,US:G) | SubString(ListItem.mpaa,USA:G) | SubString(ListItem.mpaa,Rated G)">MPAA_G_Certificate_US</value>
-        <value condition="SubString(ListItem.mpaa,PG-13)">MPAA_PG-13_Certificate_US</value>
-        <value condition="Substring(ListItem.mpaa,Rated PG) | StringCompare(ListItem.Mpaa,PG)">MPAA_PG_Certificate_US</value>
-        <value condition="SubString(ListItem.mpaa,US:R) | SubString(ListItem.mpaa,USA:R) | SubString(ListItem.mpaa,Rated R) | StringCompare(ListItem.mpaa,R)">MPAA_R_Certificate_US</value>
-        <value condition="SubString(ListItem.mpaa,US:NC-17)| SubString(ListItem.mpaa,USA:NC-17)| SubString(ListItem.mpaa,Rated NC-17)">MPAA_NC-17_Certificate_US</value>
-        <value condition="substring(ListItem.mpaa,TV-G)">TV-G_Certificate_US</value>
-        <value condition="substring(ListItem.mpaa,TV-PG)">TV-PG_Certificate_US</value>
-        <value condition="substring(ListItem.mpaa,TV-14)">TV-14_Certificate_US</value>
-        <value condition="substring(ListItem.mpaa,TV-MA)">TV-MA_Certificate_US</value>
-        <value condition="substring(ListItem.mpaa,TV-Y7)">tv-y7</value>
-        <value condition="substring(ListItem.mpaa,TV-Y)">tv-y</value>
-        <value>MPAA_NR_Certificate_US</value>
-    </variable>
-    
     <variable name="OneOrMoreSeasonsVar">
         <value condition="StringCompare(ListItem.Property(TotalSeasons),1)">$LOCALIZE[20373]</value>
         <value>$LOCALIZE[33054]</value>
@@ -304,4 +289,5 @@
         <value condition="Window.IsActive(home) | Window.IsActive(weather) | Window.IsActive(settings)">FanartDiffuse</value>
         <value>AAFFFFFF</value>
     </variable>
+
 </includes>

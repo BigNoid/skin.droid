@@ -993,7 +993,7 @@
                     <textcolor>$VAR[FloorDiffuseVar]</textcolor>
                 </control>
             </control>
-            <control type="group">
+            <!--<control type="group">
                 <posx>1680</posx>
                 <visible>!IsEmpty(ListItem.Rating)</visible>
                 <control type="label">
@@ -1015,6 +1015,12 @@
                     <font>Medium_Small</font>
                     <textcolor>$VAR[FloorDiffuseVar]</textcolor>
                 </control>
+            </control>-->
+            <control type="image">
+                <posx>1685</posx>
+                <width>190</width>
+                <include>MediaFlagVars</include>
+                <texture fallback="flags/stars/0.0.png">$INFO[ListItem.Rating,flags/stars/,.png]</texture>
             </control>
         </control>
 
@@ -1078,12 +1084,12 @@
             <control type="image">
                 <posx>350</posx>
                 <include>MediaFlagVars</include>
-                <texture>$VAR[RatingFlagVar,flags/rating/,.png]</texture>
+                <texture fallback="flags/rating/NR.png">$INFO[ListItem.MPAA,flags/rating/,.png]</texture>
             </control>
             <control type="image">
                 <posx>1675</posx>
                 <include>MediaFlagVars</include>
-                <texture>$INFO[ListItem.FileExtension,flags/video/,.png]</texture>
+                <texture>$INFO[ListItem.VideoCodec,flags/video/,.png]</texture>
             </control>
             <control type="image">
                 <posx>1435</posx>

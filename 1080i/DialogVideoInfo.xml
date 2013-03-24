@@ -32,6 +32,7 @@
                     <width min="10" max="400">auto</width>
                     <font>Clock</font>
                     <aligny>center</aligny>
+                    <textcolor>White2</textcolor>
                     <label>$INFO[System.Time]</label>
                     <textoffsetx>15</textoffsetx>
                 </control>
@@ -518,7 +519,7 @@
                     <posx>60</posx>
                     <colordiffuse>White2</colordiffuse>
                     <include>MediaFlagVars</include>
-                    <texture>$VAR[RatingFlagVar,flags/rating/,.png]</texture>
+                    <texture fallback="flags/rating/NR.png">$INFO[ListItem.MPAA,flags/rating/,.png]</texture>
                 </control>
                 <control type="label">
                     <posx>256</posx>
@@ -639,7 +640,7 @@
                         <onup>9010</onup>
                         <ondown>50</ondown>
                         <onleft>5000</onleft>
-                        <onright>5000</onright>
+                        <onright>50</onright>
                         <enable>!IsEmpty(ListItem.Director)</enable>
                     </control>
                     <control type="group">
@@ -802,7 +803,7 @@
                         <height>216</height>
                         <onup>50</onup>
                         <ondown>50</ondown>
-                        <onleft>5000</onleft>
+                        <onleft>13</onleft>
                         <onright>70</onright>
                         <orientation>vertical</orientation>
                         <scrolltime tween="quadratic">200</scrolltime>
