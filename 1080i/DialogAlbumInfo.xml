@@ -31,6 +31,7 @@
                     <aligny>center</aligny>
                     <label>$INFO[System.Time]</label>
                     <textoffsetx>15</textoffsetx>
+                    <textcolor>White2</textcolor>
                 </control>
                 <control type="button" id="11114">
                     <posx>0</posx>
