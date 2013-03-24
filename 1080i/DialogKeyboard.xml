@@ -22,13 +22,25 @@
             </control>
             <control type="label" id="310">
                 <description>Edit Text</description>
+                <posx>1920</posx>
+                <posy>33</posy>
+                <width>1920</width>
+                <height>75</height>
+                <align>right</align>
+                <font>Large</font>
+                <textoffsetx>20</textoffsetx>
+                <textcolor>White2</textcolor>
+            </control>
+            <control type="label" id="311">
+                <description>Edit Text</description>
                 <posx>0</posx>
                 <posy>33</posy>
                 <width>1920</width>
                 <height>75</height>
-                <align>center</align>
+                <align>left</align>
                 <font>Large</font>
                 <textcolor>$VAR[ThemeColorVar]</textcolor>
+                <textoffsetx>20</textoffsetx>
             </control>
 
             <control type="grouplist" id="312">
