@@ -68,6 +68,12 @@
                 <label>137</label>
                 <include>MediaMenuButton</include>
             </control>
+            <control type="button" id="10">
+                <description>Hide Watched</description>
+                <label>-</label>
+                <label2>[COLOR Blue2]$INFO[Container.NumItems][/COLOR]</label2>
+                <include>MediaMenuButton</include>
+            </control>
 
             <control type="radiobutton" id="11">
                 <description>Unlock Shares</description>
@@ -89,7 +95,6 @@
                 <description>Flatten</description>
                 <label>20411</label>
                 <include>MediaMenuButton</include>
-                <visible>IsEmpty(Container.FolderName)</visible>
             </control>
 
             <control type="edit" id="19">
@@ -100,7 +105,7 @@
                 <include>MediaMenuButton</include>
                 <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
             </control>
-            <control type="radiobutton" id="19">
+            <control type="radiobutton" id="20">
                 <description>Advanced Filter</description>
                 <label>587</label>
                 <height>72</height>
