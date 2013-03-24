@@ -382,6 +382,35 @@
                 <orientation>horizontal</orientation>
                 <animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
             </control>
+            <control type="group">
+                <posx>510</posx>
+                <posy>90r</posy>
+                <control type="label">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>900</width>
+                    <height>60</height>
+                    <align>center</align>
+                    <font>Medium_Bold_Floor_Caps</font>
+                    <textcolor>Floor</textcolor>
+                    <shadowcolor>FF5d5b5a</shadowcolor>
+                    <scroll>true</scroll>
+                    <label>$INFO[ListItem.Label]</label>
+                    <textoffsetx>30</textoffsetx>
+                </control>
+                <control type="label">
+                    <posx>0</posx>
+                    <posy>50</posy>
+                    <width>900</width>
+                    <height>30</height>
+                    <align>center</align>
+                    <font>Medium_Small_Caps</font>
+                    <textcolor>Floor</textcolor>
+                    <shadowcolor>FF6e6e6e</shadowcolor>
+                    <label>$INFO[ListItem.Genre]</label>
+                    <textoffsetx>30</textoffsetx>
+                </control>
+            </control>
         </control>
     </include>
 

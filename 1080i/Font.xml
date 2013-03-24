@@ -101,6 +101,12 @@
             <size>26</size>
         </font>
         <font>
+            <name>Medium_Small_Caps</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>26</size>
+        </font>
+        <font>
             <name>Very_Small_Caps</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
             <size>22</size>
