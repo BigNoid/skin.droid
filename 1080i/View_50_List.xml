@@ -52,14 +52,34 @@
                         <label>$INFO[ListItem.Label2]</label>
                         <textcolor>grey</textcolor>
                         <textoffsetx>18</textoffsetx>
-                        <animation effect="slide" start="0" end="-36" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
+                        <animation effect="slide" start="0" end="-50" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
                     </control>
                     <control type="image">
-                        <posx>1184</posx>
-                        <posy>12</posy>
-                        <width>48</width>
-                        <height>48</height>
+                        <posx>1172</posx>
+                        <posy>4</posy>
+                        <width>64</width>
+                        <height>64</height>
                         <texture>$VAR[OverlayVar]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>1172</posx>
+                        <posy>4</posy>
+                        <width>64</width>
+                        <height>64</height>
+                        <texture>overlays/list/OverlayUnWatched.png</texture>
+                        <visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>1204</posx>
+                        <posy>10</posy>
+                        <width>98</width>
+                        <height>48</height>
+                        <font>Medium_Small_Caps</font>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+                        <textcolor>grey</textcolor>
+                        <textoffsetx>18</textoffsetx>
+                        <visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout width="1236" height="72">
@@ -91,14 +111,34 @@
                         <align>right</align>
                         <label>$INFO[ListItem.Label2]</label>
                         <textoffsetx>18</textoffsetx>
-                        <animation effect="slide" start="0" end="-36" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
+                        <animation effect="slide" start="0" end="-50" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
                     </control>
                     <control type="image">
-                        <posx>1184</posx>
-                        <posy>12</posy>
-                        <width>48</width>
-                        <height>48</height>
+                        <posx>1172</posx>
+                        <posy>4</posy>
+                        <width>64</width>
+                        <height>64</height>
                         <texture>$VAR[OverlayVar]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>1172</posx>
+                        <posy>4</posy>
+                        <width>64</width>
+                        <height>64</height>
+                        <texture>overlays/list/OverlayUnWatched.png</texture>
+                        <visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>1204</posx>
+                        <posy>10</posy>
+                        <width>98</width>
+                        <height>48</height>
+                        <font>Medium_Small_Caps</font>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+                        <textcolor>grey</textcolor>
+                        <textoffsetx>18</textoffsetx>
+                        <visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
                     </control>
                 </focusedlayout>
             </control>
