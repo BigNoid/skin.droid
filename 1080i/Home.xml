@@ -62,27 +62,5 @@
                 <texture>common/rss_fade.png</texture>
             </control>
         </control>
-
-        <control type="group">
-            <visible>Player.HasVideo</visible>
-            <posx>592</posx>
-            <posy>72</posy>
-            <control type="image">
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>736</width>
-                <height>412</height>
-                <texture border="14">dialogs/shutdown_bottom.png</texture>
-            </control>
-            <control type="videowindow" id="2">
-                <description>Home window video</description>
-                <posx>12</posx>
-                <posy>0</posy>
-                <width>712</width>
-                <height>400</height>
-                <visible>Player.HasVideo</visible>
-            </control>
-        </control>
-        
     </controls>
 </window>
