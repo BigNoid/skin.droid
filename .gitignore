@@ -4,3 +4,4 @@ media/other_textures/*
 *.db
 *.txt
 *.bat
+/unused.xml
