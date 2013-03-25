@@ -20,7 +20,8 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
-		<summary>Droid - A theme based on the Holo theme in Android</summary>
-		<description>'Droid' is a skin that uses textures and inspiration from the Holo Dark theme available in Android ICS/JB.</description>
+		<summary lang="en">Droid - A theme based on the Holo theme in Android</summary>
+		<description lang="en">'Droid' is a skin that uses textures and inspiration from the Holo Dark theme available in Android ICS/JB.</description>
+        <disclaimer lang="en">No PVR support.</disclaimer>
 	</extension>
 </addon>
