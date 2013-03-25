@@ -34,16 +34,16 @@
                 <width>600</width>
                 <label>31002</label>
                 <onclick>Dialog.Close(1112)</onclick>
-                <onclick>Skin.SetString(DefaultBG,randommovies)</onclick>
-                <selected>StringCompare(Skin.String(DefaultBG,randommovies))</selected>
+                <onclick>Skin.SetString(DefaultBG,2)</onclick>
+                <selected>StringCompare(Skin.String(DefaultBG),2)</selected>
             </control>
             <control type="radiobutton" id="4">
                 <description>Latest movies</description>
                 <width>600</width>
                 <label>31003</label>
                 <onclick>Dialog.Close(1112)</onclick>
-                <onclick>Skin.SetString(DefaultBG,latestmovies)</onclick>
-                <selected>StringCompare(Skin.String(DefaultBG,latestmovies))</selected>
+                <onclick>Skin.SetString(DefaultBG,1)</onclick>
+                <selected>StringCompare(Skin.String(DefaultBG),1)</selected>
             </control>
             <control type="radiobutton" id="8">
                 <description>Fanart toggle</description>
@@ -55,13 +55,13 @@
             <control type="button" id="9">
                 <description>Reset</description>
                 <width>600</width>
-                <label>1031</label>
+                <label>31005</label>
                 <onclick>Dialog.Close(1112)</onclick>
                 <onclick>Skin.Reset(DefaultBG)</onclick>
             </control>
             <control type="button" id="11">
                 <description>Heading label</description>
-                <width>600</width>
+                <width>614</width>
                 <label>21389</label>
                 <onclick>-</onclick>
                 <aligny>top</aligny>
