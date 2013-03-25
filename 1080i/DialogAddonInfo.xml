@@ -2,14 +2,9 @@
 <window id="146">
     <defaultcontrol always="true">9000</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
+    <include>DialogEffect</include>
     <controls>
         <control type="group">
-            <animation type="WindowOpen" reversible="false">
-                <effect type="fade" start="0" end="100" time="200" />
-            </animation>
-            <animation type="WindowClose" reversible="false">
-                <effect type="fade" start="100" end="0" time="200" />
-            </animation>
             <control type="image">
                 <posx>0</posx>
                 <posy>72</posy>
@@ -23,6 +18,7 @@
                 <width>480</width>
                 <height>486</height>
                 <aspectratio>scale</aspectratio>
+                <bordersize>2</bordersize>
                 <texture background="true">$INFO[ListItem.Icon]</texture>
             </control>
             <control type="grouplist" id="9000">
@@ -109,6 +105,7 @@
                         <height>288</height>
                         <aspectratio>scale</aspectratio>
                         <texture>$INFO[ListItem.Art(fanart)]</texture>
+                        <bordersize>2</bordersize>
                     </control>
                     <control type="label">
                         <posx>256</posx>
@@ -317,7 +314,18 @@
                     </control>
                 </control>
             </control>
+            <control type="button">
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
+                <height>90</height>
+                <font>Medium_Bold_Floor_Caps</font>
+                <label>$LOCALIZE[24003]</label>
+                <label2></label2>
+                <textoffsetx>18</textoffsetx>
+                <disabledcolor>White2</disabledcolor>
+                <enable>no</enable>
+            </control>
         </control>
-        <include>FloorFlagsBack</include>
     </controls>
 </window>

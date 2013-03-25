@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="400">
 	<defaultcontrol>3</defaultcontrol>
-    <include>DialogEffect</include>
+    <include>PopUpEffect</include>
     <controls>
         <include>GlobalOverlay</include>
         <control type="group">

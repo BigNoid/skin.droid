@@ -302,7 +302,7 @@
                 <posx>0</posx>
                 <posy>72</posy>
                 <width>950</width>
-                <height>1007</height>
+                <height>918</height>
                 <onleft>9010</onleft>
                 <onright>60</onright>
                 <onup>50</onup>
@@ -371,7 +371,7 @@
             </control>
             <control type="image">
                 <posx>0</posx>
-                <posy>1008</posy>
+                <posy>918</posy>
                 <width>950</width>
                 <height>72</height>
                 <texture border="3">dialogs/toast_back_blue_mask.png</texture>

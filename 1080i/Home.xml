@@ -62,6 +62,23 @@
                 <texture>common/rss_fade.png</texture>
             </control>
         </control>
+
+        <!--<control type="button">
+            <posy>90r</posy>
+            <width>1920</width>
+            <height>90</height>
+            <font>Medium_Bold_Floor_Caps</font>
+            <label>$INFO[System.Date(DDD)]</label>
+            <label2>$INFO[System.Date(dd-yyyy)]</label2>
+            <aligny>top</aligny>
+            <textoffsety>28</textoffsety>
+            <textoffsetx>30</textoffsetx>
+            <texturenofocus border="18">-</texturenofocus>
+            <disabledcolor>Floor</disabledcolor>
+            <enable>no</enable>
+            <include>WindowEffect</include>
+        </control>-->
+
         <control type="group">
             <visible>Player.HasVideo</visible>
             <posx>592</posx>
