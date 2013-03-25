@@ -313,16 +313,20 @@
                     <width>256</width>
                     <height>96</height>
                     <align>right</align>
+                    <font>Medium_Caps3</font>
+                    <textcolor>White2</textcolor>
                     <label>$INFO[Player.Time]</label>
-                    <textoffsetx>8</textoffsetx>
+                    <textoffsetx>30</textoffsetx>
                 </control>
                 <control type="label">
-                    <posx>1664</posx>
+                    <posx>1644</posx>
                     <posy>0</posy>
                     <width>1680</width>
                     <height>96</height>
-                    <label>$INFO[Player.Duration]</label>
-                    <textoffsetx>8</textoffsetx>
+                    <font>Medium_Caps3</font>
+                    <label>$INFO[Player.TimeRemaining,- ]</label>
+                    <textcolor>White2</textcolor>
+                    <textoffsetx>30</textoffsetx>
                 </control>
                 <control type="progress">
                     <description>Progress Bar</description>

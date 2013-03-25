@@ -194,28 +194,28 @@
                                 <textoffsetx>18</textoffsetx>
                             </control>
                             <control type="image">
-                                <posx>765</posx>
-                                <posy>9</posy>
-                                <width>56</width>
-                                <height>56</height>
+                                <posx>755</posx>
+                                <posy>4</posy>
+                                <width>64</width>
+                                <height>64</height>
                                 <texture>$VAR[OverlayVar]</texture>
                             </control>
                             <control type="image">
-                                <posx>765</posx>
-                                <posy>9</posy>
-                                <width>56</width>
-                                <height>56</height>
+                                <posx>755</posx>
+                                <posy>4</posy>
+                                <width>64</width>
+                                <height>64</height>
                                 <texture>overlays/list/OverlayUnWatched.png</texture>
                                 <visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
                             </control>
                             <control type="label">
-                                <posx>793</posx>
+                                <posx>787</posx>
                                 <posy>12</posy>
-                                <width>98</width>
+                                <width>102</width>
                                 <height>48</height>
-                                <font>Very_Small_Caps</font>
+                                <font>Medium_Small_Caps</font>
                                 <align>center</align>
-                                <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+                                <label>$VAR[ListOverlayEpisodesVar]</label>
                                 <textcolor>grey</textcolor>
                                 <textoffsetx>18</textoffsetx>
                                 <visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -276,28 +276,28 @@
                                 </control>
                             </control>
                             <control type="image">
-                                <posx>765</posx>
-                                <posy>9</posy>
-                                <width>56</width>
-                                <height>56</height>
+                                <posx>755</posx>
+                                <posy>4</posy>
+                                <width>64</width>
+                                <height>64</height>
                                 <texture>$VAR[OverlayVar]</texture>
                             </control>
                             <control type="image">
-                                <posx>765</posx>
-                                <posy>9</posy>
-                                <width>56</width>
-                                <height>56</height>
+                                <posx>755</posx>
+                                <posy>4</posy>
+                                <width>64</width>
+                                <height>64</height>
                                 <texture>overlays/list/OverlayUnWatched.png</texture>
                                 <visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
                             </control>
                             <control type="label">
-                                <posx>793</posx>
+                                <posx>787</posx>
                                 <posy>12</posy>
-                                <width>98</width>
+                                <width>102</width>
                                 <height>48</height>
-                                <font>Very_Small_Caps</font>
+                                <font>Medium_Small_Caps</font>
                                 <align>center</align>
-                                <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+                                <label>$VAR[ListOverlayEpisodesVar]</label>
                                 <textcolor>grey</textcolor>
                                 <textoffsetx>18</textoffsetx>
                                 <visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
