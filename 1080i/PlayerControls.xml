@@ -293,14 +293,14 @@
             <control type="progress">
                 <description>Progressbar</description>
                 <posx>162</posx>
-                <posy>400</posy>
+                <posy>404</posy>
                 <width>500</width>
                 <info>Player.Progress</info>
                     </control>
             <control type="slider">
                 <description>Progressbar</description>
                 <posx>162</posx>
-                <posy>380</posy>
+                <posy>384</posy>
                 <height>66</height>
                 <width>500</width>
                 <texturesliderbar border="2">settings/texturebg_slider.png</texturesliderbar>
@@ -311,7 +311,7 @@
             </control>
             <control type="label">
                 <posy>400</posy>
-                <posx>762</posx>
+                <posx>772</posx>
                 <height>23</height>
                 <width>150</width>
                 <font>Small</font>
