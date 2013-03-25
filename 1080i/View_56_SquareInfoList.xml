@@ -152,7 +152,7 @@
                         <posx>454</posx>
                         <posy>0</posy>
                         <width>820</width>
-                        <height>503</height>
+                        <height>504</height>
                         <onleft>9010</onleft>
                         <onright>61</onright>
                         <onup>56</onup>
@@ -196,61 +196,39 @@
                                 <include>toast_back</include>
                             </control>
                             <control type="group">
-                                <visible>!Control.hasFocus(56)</visible>
-                                <control type="label">
-                                    <posx>0</posx>
-                                    <width>820</width>
-                                    <height>72</height>
-                                    <font>Small</font>
-                                    <label>$INFO[ListItem.Label]</label>
-                                    <textcolor>White2</textcolor>
-                                    <textoffsetx>18</textoffsetx>
-                                </control>
-                                <control type="label">
-                                    <posx>820</posx>
-                                    <width>820</width>
-                                    <height>72</height>
-                                    <font>Small</font>
-                                    <align>right</align>
-                                    <label>$INFO[ListItem.Label2]</label>
-                                    <textcolor>grey</textcolor>
-                                    <textoffsetx>18</textoffsetx>
-                                </control>
-                            </control>
-                            <control type="group">
                                 <visible>Control.HasFocus(56)</visible>
                                 <control type="image">
                                     <width>820</width>
                                     <height>72</height>
                                     <texture border="8">listselect_fo.png</texture>
                                 </control>
-                                <control type="label">
-                                    <posx>0</posx>
-                                    <width>820</width>
-                                    <height>72</height>
-                                    <font>Small</font>
-                                    <label>$INFO[ListItem.Label]</label>
-                                    <textoffsetx>18</textoffsetx>
-                                </control>
-                                <control type="label">
-                                    <posx>820</posx>
-                                    <width>820</width>
-                                    <height>72</height>
-                                    <font>Small</font>
-                                    <align>right</align>
-                                    <label>$INFO[ListItem.Label2]</label>
-                                    <textoffsetx>18</textoffsetx>
-                                </control>
+                            </control>
+                            <control type="label">
+                                <posx>0</posx>
+                                <width>820</width>
+                                <height>72</height>
+                                <font>Small</font>
+                                <label>$INFO[ListItem.Label]</label>
+                                <textoffsetx>18</textoffsetx>
+                            </control>
+                            <control type="label">
+                                <posx>820</posx>
+                                <width>820</width>
+                                <height>72</height>
+                                <font>Small</font>
+                                <align>right</align>
+                                <label>$INFO[ListItem.Label2]</label>
+                                <textoffsetx>18</textoffsetx>
                             </control>
                         </focusedlayout>
                     </control>
-                    <control type="image">
+                    <!--<control type="image">
                         <posx>454</posx>
                         <posy>472</posy>
                         <width>820</width>
                         <height>32</height>
                         <texture border="3">dialogs/toast_back_blue_mask.png</texture>
-                    </control>
+                    </control>-->
                     <control type="image">
                         <posx>454</posx>
                         <posy>504</posy>
@@ -258,35 +236,6 @@
                         <height>119</height>
                         <texture>reflect.png</texture>
                     </control>
-                </control>
-            </control>
-
-            <control type="group">
-                <visible>Container.Content(songs) | Container.Content(albums)</visible>
-                <posy>90r</posy>
-                <control type="label">
-                    <posx>60</posx>
-                    <posy>0</posy>
-                    <width>135</width>
-                    <height>90</height>
-                    <align>center</align>
-                    <label>[B]$INFO[ListItem.Year][/B]</label>
-                    <font>Large</font>
-                    <textcolor>$VAR[FloorDiffuseVar]</textcolor>
-                    <visible>Container.Content(albums)</visible>
-                </control>
-                <control type="image">
-                    <posx>60</posx>
-                    <include>MediaFlagVars</include>
-                    <texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
-                    <visible>Container.Content(songs)</visible>
-                </control>
-                <control type="image">
-                    <posx>1640</posx>
-                    <width>200</width>
-                    <height>90</height>
-                    <include>MediaFlagVars</include>
-                    <texture fallback="rating0.png">$INFO[ListItem.StarRating]</texture>
                 </control>
             </control>
         </control>

@@ -227,53 +227,29 @@
                                 <height>72</height>
                                 <include>toast_back</include>
                             </control>
-                            <control type="group">
-                                <visible>!Control.hasFocus(54)</visible>
-                                <control type="label">
-                                    <posx>0</posx>
-                                    <width>768</width>
-                                    <height>72</height>
-                                    <font>Small</font>
-                                    <label>$INFO[ListItem.Label]</label>
-                                    <textcolor>White2</textcolor>
-                                    <textoffsetx>18</textoffsetx>
-                                </control>
-                                <control type="label">
-                                    <posx>778</posx>
-                                    <width>768</width>
-                                    <height>72</height>
-                                    <font>Small</font>
-                                    <align>right</align>
-                                    <label>$INFO[ListItem.Rating]</label>
-                                    <textcolor>grey</textcolor>
-                                    <textoffsetx>18</textoffsetx>
-                                </control>
-                            </control>
-                            <control type="group">
+                            <control type="image">
+                                <width>820</width>
+                                <height>72</height>
+                                <texture border="8">listselect_fo.png</texture>
                                 <visible>Control.HasFocus(54)</visible>
-                                <control type="image">
-                                    <width>820</width>
-                                    <height>72</height>
-                                    <texture border="8">listselect_fo.png</texture>
-                                </control>
-                                <control type="label">
-                                    <posx>0</posx>
-                                    <width>768</width>
-                                    <height>72</height>
-                                    <font>Small</font>
-                                    <label>$INFO[ListItem.Label]</label>
-                                    <textoffsetx>18</textoffsetx>
-                                    <scroll>true</scroll>
-                                </control>
-                                <control type="label">
-                                    <posx>778</posx>
-                                    <width>768</width>
-                                    <height>72</height>
-                                    <font>Small</font>
-                                    <align>right</align>
-                                    <label>$INFO[ListItem.Rating]</label>
-                                    <textoffsetx>18</textoffsetx>
-                                </control>
+                            </control>
+                            <control type="label">
+                                <posx>0</posx>
+                                <width>768</width>
+                                <height>72</height>
+                                <font>Small</font>
+                                <label>$INFO[ListItem.Label]</label>
+                                <textoffsetx>18</textoffsetx>
+                                <scroll>true</scroll>
+                            </control>
+                            <control type="label">
+                                <posx>778</posx>
+                                <width>768</width>
+                                <height>72</height>
+                                <font>Small</font>
+                                <align>right</align>
+                                <label>$INFO[ListItem.Rating]</label>
+                                <textoffsetx>18</textoffsetx>
                             </control>
                             <control type="image">
                                 <posx>755</posx>

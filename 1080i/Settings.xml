@@ -15,10 +15,10 @@
                     <posy>0</posy>
                     <width>960</width>
                     <height>1008</height>
-                    <onleft>700</onleft>
-                    <onright>600</onright>
-                    <onup>9010</onup>
-                    <ondown>9010</ondown>
+                    <onleft>9010</onleft>
+                    <onright>9010</onright>
+                    <onup>800</onup>
+                    <ondown>800</ondown>
                     <scrolltime>0</scrolltime>
                     <preloaditems>2</preloaditems>
                     <orientation>vertical</orientation>

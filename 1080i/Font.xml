@@ -103,6 +103,12 @@
             <linespacing>0.75</linespacing>
         </font>
         <font>
+            <name>Smaller</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>33</size>
+            <linespacing>0.75</linespacing>
+        </font>
+        <font>
             <name>Medium_Small</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
             <size>26</size>

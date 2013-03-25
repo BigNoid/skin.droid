@@ -5,42 +5,44 @@
 	<allowoverlay>yes</allowoverlay>
     <include>NotificationEffect</include>
     <controls>
-        <control type="image">
-            <posx>712r</posx>
-            <posy>0</posy>
-            <width>640</width>
-            <height>72</height>
-            <include>toast_back</include>
-        </control>
-        <control type="image">
-            <posx>771r</posx>
-            <posy>11</posy>
-            <width>48</width>
-            <height>48</height>
-            <texture>icons/sync.png</texture>
-            <animation effect="rotate" start="0" end="-360" center="auto" time="2000" loop="true" condition="true">conditional</animation>
-        </control>
-        <control type="label" id="30">
-            <posy>0</posy>
-            <posx>712r</posx>
-            <height>30</height>
-            <width>640</width>
-            <font>Small</font>
-            <textcolor>Blue</textcolor>
-            <aligny>center</aligny>
-            <label>-</label>
-            <textoffsetx>15</textoffsetx>
-        </control>
-        <control type="label" id="31">
-            <posy>33</posy>
-            <posx>712r</posx>
-            <height>35</height>
-            <width>640</width>
-            <font>Small</font>
-            <aligny>center</aligny>
-            <label>-</label>
-            <textoffsetx>15</textoffsetx>
+        <control type="group">
+            <animation effect="slide" end="0,-900" time="320" easing="inout" tween="circle" condition="Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(slideshow)">Conditional</animation>
+            <control type="image">
+                <posx>712r</posx>
+                <posy>2</posy>
+                <width>640</width>
+                <height>70</height>
+                <include>toast_back</include>
+            </control>
+            <control type="image">
+                <posx>771r</posx>
+                <posy>11</posy>
+                <width>48</width>
+                <height>48</height>
+                <texture>icons/sync.png</texture>
+                <animation effect="rotate" start="0" end="-360" center="auto" time="2000" loop="true" condition="true">conditional</animation>
+            </control>
+            <control type="label" id="30">
+                <posy>0</posy>
+                <posx>712r</posx>
+                <height>36</height>
+                <width>640</width>
+                <font>Smaller</font>
+                <textcolor>Blue</textcolor>
+                <aligny>center</aligny>
+                <label>-</label>
+                <textoffsetx>15</textoffsetx>
+            </control>
+            <control type="label" id="31">
+                <posy>33</posy>
+                <posx>712r</posx>
+                <height>36</height>
+                <width>640</width>
+                <font>Smaller</font>
+                <aligny>center</aligny>
+                <label>-</label>
+                <textoffsetx>15</textoffsetx>
+            </control>
         </control>
     </controls>
-
 </window>
