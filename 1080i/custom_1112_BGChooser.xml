@@ -50,7 +50,8 @@
                 <width>600</width>
                 <label>31004</label>
                 <onclick>Dialog.Close(1112)</onclick>
-                <onclick>Skin.SetString(DefaultBG,latestmovies)</onclick>
+                <onclick>Skin.ToggleSetting(Disable.Fanart)</onclick>
+                <selected>!Skin.HasSetting(Disable.Fanart)</selected>
             </control>
             <control type="button" id="9">
                 <description>Reset</description>

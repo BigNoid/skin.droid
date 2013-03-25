@@ -833,7 +833,7 @@
                 <height>90</height>
                 <font>Medium_Bold_Floor_Caps</font>
                 <label>$VAR[BreadcrumbsVar]$INFO[Container.FolderName]</label>
-                <label2>$INFO[Container.NumItems,, $LOCALIZE[31049]]</label2>
+                <label2>$INFO[Container.NumItems,, $LOCALIZE[31027]]</label2>
                 <aligny>top</aligny>
                 <textoffsety>28</textoffsety>
                 <textoffsetx>30</textoffsetx>
@@ -850,7 +850,7 @@
                 <height>90</height>
                 <font>Medium_Bold_Floor_Caps</font>
                 <label>$VAR[BreadcrumbsVar]$INFO[Container.FolderName]</label>
-                <label2>$INFO[Container.NumItems,, $LOCALIZE[31049]]</label2>
+                <label2>$INFO[Container.NumItems,, $LOCALIZE[31027]]</label2>
                 <textoffsetx>18</textoffsetx>
                 <disabledcolor>White2</disabledcolor>
                 <enable>no</enable>
