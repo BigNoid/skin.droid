@@ -92,6 +92,62 @@
         <control type="group">
             <visible>![[Control.isVisible(50) | Control.isVisible(51) | Control.isVisible(55)] + !Window.IsActive(home)]</visible>
             <include>VisibleChangeEffect</include>
+            <control type="fadelabel" id="6053">
+                <font>Small</font>
+                <width>1920</width>
+                <height>60</height>
+                <pauseatend>10000</pauseatend>
+                <scrollout>false</scrollout>
+                <label>$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.2.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.3.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.4.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.5.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.6.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.7.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.8.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.9.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.10.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.11.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.12.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.13.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.14.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.15.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.16.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.17.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.18.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.19.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomMovie.20.Art(fanart))]</label>
+                <visible>StringCompare(Skin.String(DefaultBG,randommovies))</visible>
+            </control>
+            <control type="fadelabel" id="6054">
+                <font>Small</font>
+                <width>1920</width>
+                <height>60</height>
+                <pauseatend>10000</pauseatend>
+                <scrollout>false</scrollout>
+                <label>$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.3.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.4.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.5.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.6.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.7.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.8.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.9.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.10.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.11.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.12.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.13.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.14.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.15.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.16.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.17.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.18.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.19.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RecentMovie.20.Art(fanart))]</label>
+                <visible>StringCompare(Skin.String(DefaultBG,latestmovies))</visible>
+            </control>
             <control type="multiimage">
                 <include>Dimensions_Fullscreen</include>
                 <fadetime>800</fadetime>
