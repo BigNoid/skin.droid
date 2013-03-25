@@ -15,9 +15,9 @@
     </variable>
 
     <variable name="RepeatButtonVar">
-        <value condition="!Playlist.IsRepeat + !Playlist.IsRepeatOne">osd/dark/repeat_nf.png</value>
-        <value condition="Playlist.IsRepeatOne">osd/dark/repeat_one_nf.png</value>
-        <value condition="Playlist.IsRepeat">osd/dark/repeat_all_nf.png</value>
+        <value condition="!Playlist.IsRepeat + !Playlist.IsRepeatOne">osd/repeat_nf.png</value>
+        <value condition="Playlist.IsRepeatOne">osd/repeat_one_nf.png</value>
+        <value condition="Playlist.IsRepeat">osd/repeat_all_nf.png</value>
     </variable>
 
     <variable name="RepeatButton2Var">

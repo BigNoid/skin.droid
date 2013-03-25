@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="400">
-	<defaultcontrol>3</defaultcontrol>
+    <defaultcontrol>20</defaultcontrol>
     <include>PopUpEffect</include>
     <controls>
         <include>GlobalOverlay</include>
@@ -9,16 +9,36 @@
             <posy>310</posy>
             <visible>!Window.IsActive(visualisation) + !Window.IsActive(karaoke)</visible>
             <control type="image">
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>824</width>
-                <height>460</height>
-                <texture border="18">dialogs/dialog_back_light.png</texture>
+                <posx>-9</posx>
+                <posy>-9</posy>
+                <width>842</width>
+                <height>478</height>
+                <texture border="4">dialogs/toast_back_blue.png</texture>
+                <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
+                <bordersize>21</bordersize>
             </control>
             <control type="image">
-                <posx>12</posx>
+                <posx>-9</posx>
+                <posy>-165</posy>
+                <width>842</width>
+                <height>553</height>
+                <texture border="4">dialogs/toast_back_blue.png</texture>
+                <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
+                <bordersize>21</bordersize>
+                <visible>Player.HasVideo</visible>
+            </control>
+            <control type="videowindow" id="2">
+                <description>Home window video</description>
+                <posx>14</posx>
+                <posy>-142</posy>
+                <width>796</width>
+                <height>448</height>
+                <visible>Player.HasVideo</visible>
+            </control>
+            <control type="image">
+                <posx>14</posx>
                 <posy>306</posy>
-                <width>800</width>
+                <width>796</width>
                 <height>2</height>
                 <texture>common/blue2.png</texture>
             </control>
@@ -30,30 +50,30 @@
                 <aspectratio align="center">scale</aspectratio>
                 <texture>$INFO[MusicPlayer.Cover]</texture>
             </control>
-                <control type="label">
-                    <posy>12</posy>
-                    <posx>306</posx>
-                    <height>98</height>
-                    <width>470</width>
-                    <font>Small</font>
-                    <textcolor>PanelBack</textcolor>
-                    <aligny>center</aligny>
-                    <label>$INFO[MusicPlayer.Title]</label>
-                    <textoffsetx>15</textoffsetx>
-                    <wrapmultiline>true</wrapmultiline>
-                </control>
-                <control type="label">
-                    <posy>110</posy>
-                    <posx>306</posx>
-                    <height>98</height>
-                    <width>470</width>
-                    <font>Small</font>
-                    <aligny>center</aligny>
-                    <textcolor>PanelBack</textcolor>
-                    <label>$INFO[MusicPlayer.Artist]</label>
-                    <textoffsetx>15</textoffsetx>
-                    <wrapmultiline>true</wrapmultiline>
-                </control>
+            <control type="label">
+                <posy>12</posy>
+                <posx>306</posx>
+                <height>98</height>
+                <width>470</width>
+                <font>Small</font>
+                <textcolor>White2</textcolor>
+                <aligny>center</aligny>
+                <label>$INFO[MusicPlayer.Title]</label>
+                <textoffsetx>15</textoffsetx>
+                <wrapmultiline>true</wrapmultiline>
+            </control>
+            <control type="label">
+                <posy>110</posy>
+                <posx>306</posx>
+                <height>98</height>
+                <width>470</width>
+                <font>Small</font>
+                <aligny>center</aligny>
+                <textcolor>White2</textcolor>
+                <label>$INFO[MusicPlayer.Artist]</label>
+                <textoffsetx>15</textoffsetx>
+                <wrapmultiline>true</wrapmultiline>
+            </control>
             <control type="label">
                 <posy>208</posy>
                 <posx>306</posx>
@@ -61,12 +81,12 @@
                 <width>470</width>
                 <font>Small</font>
                 <aligny>center</aligny>
-                <textcolor>PanelBack</textcolor>
+                <textcolor>White2</textcolor>
                 <label>$INFO[MusicPlayer.Album]</label>
                 <textoffsetx>15</textoffsetx>
                 <wrapmultiline>true</wrapmultiline>
             </control>
-            <control type="grouplist" id="600">
+            <control type="grouplist" id="601">
                 <posx>12</posx>
                 <posy>320</posy>
                 <width>800</width>
@@ -77,7 +97,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="4">settings/button_fo.png</texture>
+                    <texture border="8">listselect_fo.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(1)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -86,7 +106,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="4">settings/button_fo.png</texture>
+                    <texture border="8">listselect_fo.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(2)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -95,7 +115,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="4">settings/button_fo.png</texture>
+                    <texture border="8">listselect_fo.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(3)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -104,7 +124,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="4">settings/button_fo.png</texture>
+                    <texture border="8">listselect_fo.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(4)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -113,7 +133,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="4">settings/button_fo.png</texture>
+                    <texture border="8">listselect_fo.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(5)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -122,7 +142,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="4">settings/button_fo.png</texture>
+                    <texture border="8">listselect_fo.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(6)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -131,7 +151,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="4">settings/button_fo.png</texture>
+                    <texture border="8">listselect_fo.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(7)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -140,16 +160,16 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="4">settings/button_fo.png</texture>
+                    <texture border="8">listselect_fo.png</texture>
 
-                    <animation type="Conditional" reversible="false" condition="!Control.HasFocus(8)">
+                    <animation type="Conditional" reversible="false" condition="!Control.HasFocus(11)">
                         <effect type="fade" start="100" end="0" time="50" />
                     </animation>
                 </control>
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="4">settings/button_fo.png</texture>
+                    <texture border="8">listselect_fo.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(10)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -163,6 +183,8 @@
                 <height>136</height>
                 <itemgap>24</itemgap>
                 <align>center</align>
+                <ondown>20</ondown>
+                <onup>20</onup>
                 <orientation>horizontal</orientation>
                 <control type="button" id="1">
                     <description>Bookmarks</description>
@@ -170,8 +192,8 @@
                     <height>64</height>
                     <label>-</label>
                     <font>-</font>
-                    <texturefocus>osd/dark/previous_nf.png</texturefocus>
-                    <texturenofocus>osd/dark/previous_nf.png</texturenofocus>
+                    <texturefocus>osd/previous_nf.png</texturefocus>
+                    <texturenofocus>osd/previous_nf.png</texturenofocus>
                     <onclick>PlayerControl(Previous)</onclick>
                 </control>
                 <control type="button" id="2">
@@ -180,8 +202,8 @@
                     <height>64</height>
                     <label>-</label>
                     <font>-</font>
-                    <texturefocus>osd/dark/rew_nf.png</texturefocus>
-                    <texturenofocus>osd/dark/rew_nf.png</texturenofocus>
+                    <texturefocus>osd/rew_nf.png</texturefocus>
+                    <texturenofocus>osd/rew_nf.png</texturenofocus>
                     <onclick>PlayerControl(Rewind)</onclick>
                 </control>
                 <control type="togglebutton" id="3">
@@ -191,11 +213,11 @@
                     <label>31037</label>
                     <altlabel>208</altlabel>
                     <font>-</font>
-                    <texturefocus>osd/dark/play_nf.png</texturefocus>
-                    <texturenofocus>osd/dark/play_nf.png</texturenofocus>
+                    <texturefocus>osd/play_nf.png</texturefocus>
+                    <texturenofocus>osd/play_nf.png</texturenofocus>
                     <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-                    <alttexturefocus>osd/dark/pause_nf.png</alttexturefocus>
-                    <alttexturenofocus>osd/dark/pause_nf.png</alttexturenofocus>
+                    <alttexturefocus>osd/pause_nf.png</alttexturefocus>
+                    <alttexturenofocus>osd/pause_nf.png</alttexturenofocus>
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
                 <control type="button" id="4">
@@ -204,8 +226,8 @@
                     <height>64</height>
                     <label>-</label>
                     <font>-</font>
-                    <texturefocus>osd/dark/stop_nf.png</texturefocus>
-                    <texturenofocus>osd/dark/stop_nf.png</texturenofocus>
+                    <texturefocus>osd/stop_nf.png</texturefocus>
+                    <texturenofocus>osd/stop_nf.png</texturenofocus>
                     <onclick>PlayerControl(Stop)</onclick>
                 </control>
                 <control type="button" id="5">
@@ -214,8 +236,8 @@
                     <height>64</height>
                     <label>-</label>
                     <font>-</font>
-                    <texturefocus>osd/dark/ff_nf.png</texturefocus>
-                    <texturenofocus>osd/dark/ff_nf.png</texturenofocus>
+                    <texturefocus>osd/ff_nf.png</texturefocus>
+                    <texturenofocus>osd/ff_nf.png</texturenofocus>
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
                 <control type="button" id="6">
@@ -224,8 +246,8 @@
                     <height>64</height>
                     <label>-</label>
                     <font>-</font>
-                    <texturefocus>osd/dark/next_nf.png</texturefocus>
-                    <texturenofocus>osd/dark/next_nf.png</texturenofocus>
+                    <texturefocus>osd/next_nf.png</texturefocus>
+                    <texturenofocus>osd/next_nf.png</texturenofocus>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
                 <control type="togglebutton" id="7">
@@ -234,29 +256,31 @@
                     <height>64</height>
                     <label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
                     <font>-</font>
-                    <texturefocus>osd/dark/shuffle__off_nf.png</texturefocus>
-                    <texturenofocus>osd/dark/shuffle__off_nf.png</texturenofocus>
+                    <texturefocus>osd/shuffle__off_nf.png</texturefocus>
+                    <texturenofocus>osd/shuffle__off_nf.png</texturenofocus>
                     <usealttexture>Playlist.IsRandom</usealttexture>
-                    <alttexturefocus>osd/dark/shuffle_nf.png</alttexturefocus>
-                    <alttexturenofocus>osd/dark/shuffle_nf.png</alttexturenofocus>
+                    <alttexturefocus>osd/shuffle_nf.png</alttexturefocus>
+                    <alttexturenofocus>osd/shuffle_nf.png</alttexturenofocus>
                     <onclick>XBMC.PlayerControl(Random)</onclick>
                 </control>
-                <control type="group">
+                <control type="group" id="8">
                     <width>64</width>
                     <height>64</height>
-                    <control type="button" id="8">
+                    <control type="button" id="11">
                         <description>Repeat</description>
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>64</width>
                         <height>64</height>
                         <label>-</label>
+                        <onleft>7</onleft>
+                        <onright>10</onright>
                         <font>-</font>
                         <texturefocus>-</texturefocus>
                         <texturenofocus>-</texturenofocus>
                         <onclick>PlayerControl(Repeat)</onclick>
                     </control>
-                    <control type="image" id="9">
+                    <control type="image">
                         <description>Bookmarks</description>
                         <posx>0</posx>
                         <posy>0</posy>
@@ -272,8 +296,8 @@
                     <height>64</height>
                     <label>-</label>
                     <font>-</font>
-                    <texturefocus>osd/dark/fullscreen_nf.png</texturefocus>
-                    <texturenofocus>osd/dark/fullscreen_nf.png</texturenofocus>
+                    <texturefocus>osd/fullscreen_nf.png</texturefocus>
+                    <texturenofocus>osd/fullscreen_nf.png</texturenofocus>
                     <onclick>Dialog.Close(all,true)</onclick>
                     <onclick>ActivateWindow(visualisation)</onclick>
                 </control>
@@ -286,7 +310,7 @@
                 <font>Small</font>
                 <align>right</align>
                 <aligny>center</aligny>
-                <textcolor>PanelBack</textcolor>
+                <textcolor>White2</textcolor>
                 <label>$INFO[Player.Time]</label>
                 <textoffsetx>15</textoffsetx>
             </control>
@@ -296,18 +320,22 @@
                 <posy>404</posy>
                 <width>500</width>
                 <info>Player.Progress</info>
-                    </control>
-            <control type="slider">
+                <colordiffuse>Blue2</colordiffuse>
+            </control>
+            <control type="slider" id="20">
                 <description>Progressbar</description>
                 <posx>162</posx>
                 <posy>384</posy>
                 <height>66</height>
+                <onup>600</onup>
+                <ondown>600</ondown>
                 <width>500</width>
                 <texturesliderbar border="2">settings/texturebg_slider.png</texturesliderbar>
                 <textureslidernib>osd/slider_nf.png</textureslidernib>
                 <textureslidernibfocus>osd/slider.png</textureslidernibfocus>
                 <info>Player.Progress</info>
                 <action>seek</action>
+                <colordiffuse>Blue2</colordiffuse>
             </control>
             <control type="label">
                 <posy>400</posy>
@@ -317,7 +345,7 @@
                 <font>Small</font>
                 <align>right</align>
                 <aligny>center</aligny>
-                <textcolor>PanelBack</textcolor>
+                <textcolor>White2</textcolor>
                 <label>$INFO[Player.TimeRemaining]</label>
                 <textoffsetx>15</textoffsetx>
             </control>
