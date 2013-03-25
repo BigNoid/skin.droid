@@ -10,17 +10,11 @@
             <control type="group">
                 <posx>0</posx>
                 <posy>72</posy>
-                <control type="image">
-                    <posy>8r</posy>
-                    <width>960</width>
-                    <height>8</height>
-                    <texture border="3">dialogs/toast_back_blue.png</texture>
-                </control>
                 <control type="panel" id="800">
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>960</width>
-                    <height>1000</height>
+                    <height>1008</height>
                     <onleft>700</onleft>
                     <onright>600</onright>
                     <onup>9010</onup>
@@ -28,12 +22,12 @@
                     <scrolltime>0</scrolltime>
                     <preloaditems>2</preloaditems>
                     <orientation>vertical</orientation>
-                    <itemlayout width="960" height="100">
+                    <itemlayout width="960" height="100.8">
                         <control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
                             <width>960</width>
-                            <height>100</height>
+                            <height>100.8</height>
                             <texture border="3">dialogs/toast_back_blue.png</texture>
                         </control>
                         <control type="label">
@@ -44,18 +38,8 @@
                             <font>Medium_Caps3</font>
                             <info>ListItem.Label</info>
                             <textcolor>White2</textcolor>
-                            <textoffsetx>15</textoffsetx>
+                            <textoffsetx>30</textoffsetx>
                         </control>
-                        <!--<control type="label">
-                            <posy>60</posy>
-                            <posx>0</posx>
-                            <width>860</width>
-                            <height>40</height>
-                            <font>Medium_Caps</font>
-                            <info>ListItem.Label2</info>
-                            <textcolor>White2</textcolor>
-                            <textoffsetx>15</textoffsetx>
-                        </control>-->
                         <control type="image">
                             <posx>860</posx>
                             <posy>18</posy>
@@ -65,48 +49,67 @@
                             <colordiffuse>White2</colordiffuse>
                         </control>
                     </itemlayout>
-                    <focusedlayout width="960" height="100">
+                    <focusedlayout width="960" height="100.8">
                         <control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
                             <width>960</width>
-                            <height>100</height>
+                            <height>100.8</height>
                             <texture border="3">dialogs/toast_back_blue.png</texture>
                         </control>
-                        <control type="image">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>960</width>
-                            <height>100</height>
-                            <texture border="8">listselect_fo.png</texture>
+                        <control type="group">
+                            <visible>Control.HasFocus(800)</visible>
+                            <control type="image">
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width>960</width>
+                                <height>100</height>
+                                <texture border="8">listselect_fo.png</texture>
+                            </control>
+                            <control type="label">
+                                <posy>0</posy>
+                                <posx>0</posx>
+                                <width>860</width>
+                                <height>100</height>
+                                <font>Medium_Caps3</font>
+                                <info>ListItem.Label</info>
+                                <textoffsetx>30</textoffsetx>
+                            </control>
+                            <control type="image">
+                                <posx>860</posx>
+                                <posy>18</posy>
+                                <width>64</width>
+                                <height>64</height>
+                                <texture>$INFO[ListItem.Icon]</texture>
+                            </control>
                         </control>
-                        <control type="label">
-                            <posy>0</posy>
-                            <posx>0</posx>
-                            <width>860</width>
-                            <height>100</height>
-                            <font>Medium_Caps3</font>
-                            <info>ListItem.Label</info>
-                            <textcolor>White2</textcolor>
-                            <textoffsetx>15</textoffsetx>
-                        </control>
-                        <!--<control type="label">
-                            <posy>60</posy>
-                            <posx>0</posx>
-                            <width>860</width>
-                            <height>40</height>
-                            <font>Medium_Caps</font>
-                            <info>ListItem.Label2</info>
-                            <textcolor>White2</textcolor>
-                            <textoffsetx>15</textoffsetx>
-                        </control>-->
-                        <control type="image">
-                            <posx>860</posx>
-                            <posy>18</posy>
-                            <width>64</width>
-                            <height>64</height>
-                            <texture>$INFO[ListItem.Icon]</texture>
-                            <colordiffuse>White2</colordiffuse>
+                        <control type="group">
+                            <visible>!Control.HasFocus(800)</visible>
+                            <control type="image">
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width>960</width>
+                                <height>100</height>
+                                <texture border="8">listselect_fo.png</texture>
+                            </control>
+                            <control type="label">
+                                <posy>0</posy>
+                                <posx>0</posx>
+                                <width>860</width>
+                                <height>100</height>
+                                <font>Medium_Caps3</font>
+                                <info>ListItem.Label</info>
+                                <textcolor>White2</textcolor>
+                                <textoffsetx>30</textoffsetx>
+                            </control>
+                            <control type="image">
+                                <posx>860</posx>
+                                <posy>18</posy>
+                                <width>64</width>
+                                <height>64</height>
+                                <texture>$INFO[ListItem.Icon]</texture>
+                                <colordiffuse>White2</colordiffuse>
+                            </control>
                         </control>
                     </focusedlayout>
                     <content>
@@ -178,20 +181,20 @@
                 <posy>72</posy>
                 <control type="image">
                     <width>960</width>
-                    <height>508</height>
+                    <height>504</height>
                     <texture border="3">dialogs/toast_back_blue.png</texture>
                 </control>
                 <control type="image">
                     <width>960</width>
-                    <height>508</height>
+                    <height>504</height>
                     <aspectratio>scale</aspectratio>
                     <texture>special://skin/backgrounds/default_bg.jpg</texture>
                     <bordersize>2</bordersize>
                 </control>
                 <control type="image">
-                    <posy>508</posy>
+                    <posy>504</posy>
                     <width>960</width>
-                    <height>508</height>
+                    <height>504</height>
                     <texture border="3">dialogs/toast_back_blue.png</texture>
                 </control>
                 <control type="textbox">
