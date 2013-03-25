@@ -18,7 +18,7 @@
             <control type="image">
                 <posy>72</posy>
                 <width>960</width>
-                <height>936</height>
+                <height>864</height>
                 <include>toast_back</include>
             </control>
 
@@ -135,7 +135,7 @@
             <control type="image">
                 <posy>72</posy>
                 <width>960</width>
-                <height>936</height>
+                <height>864</height>
                 <include>toast_back</include>
             </control>
 
