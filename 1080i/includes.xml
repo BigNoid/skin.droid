@@ -93,9 +93,11 @@
             <visible>![[Control.isVisible(50) | Control.isVisible(51) | Control.isVisible(55)] + !Window.IsActive(home)]</visible>
             <include>VisibleChangeEffect</include>
             <control type="fadelabel" id="6053">
-                <width>1920</width>
+                <posy>-100</posy>
+                <width>3640</width>
                 <height>60</height>
-                <pauseatend>1000</pauseatend>
+                <textcolor>-</textcolor>
+                <pauseatend>10000</pauseatend>
                 <label>$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RandomMovie.2.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RandomMovie.3.Art(fanart))]</label>
@@ -116,11 +118,13 @@
                 <label>$INFO[Window(Home).Property(RandomMovie.18.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RandomMovie.19.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RandomMovie.20.Art(fanart))]</label>
-                <visible>StringCompare(Skin.String(DefaultBG),randommovies)</visible>
+                <visible>StringCompare(Skin.String(DefaultBG),2)</visible>
             </control>
             <control type="fadelabel" id="6054">
+                <posy>-100</posy>
                 <width>1920</width>
                 <height>60</height>
+                <textcolor>-</textcolor>
                 <pauseatend>10000</pauseatend>
                 <label>$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</label>
@@ -142,7 +146,7 @@
                 <label>$INFO[Window(Home).Property(RecentMovie.18.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RecentMovie.19.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RecentMovie.20.Art(fanart))]</label>
-                <visible>StringCompare(Skin.String(DefaultBG),latestmovies)</visible>
+                <visible>StringCompare(Skin.String(DefaultBG),1)</visible>
             </control>
             <control type="multiimage">
                 <include>Dimensions_Fullscreen</include>
