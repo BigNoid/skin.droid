@@ -28,5 +28,6 @@
             </control>
             <include>MediaMenuBottomButton</include>
         </control>
+
     </controls>
 </window>
