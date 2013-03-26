@@ -14,6 +14,7 @@
                 <effect type="fade" start="100" end="0" time="300" />
             </animation>
             <include>HomeItemsPanel</include>
+            <include condition="system.getbool(lookandfeel.enablerssfeeds)">HomeRSSFeed</include>
         </control>
         <include>NotificationCenter</include>
         <control type="grouplist" id="9000">
@@ -26,41 +27,6 @@
                 <include>MediaMenuButton</include>
             </control>
             <include>MediaMenuBottomButton</include>
-        </control>
-        <control type="group">
-            <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-            <animation type="WindowOpen" reversible="false">
-                <effect type="fade" start="0" end="100" time="300" />
-            </animation>
-            <animation type="WindowClose" reversible="false">
-                <effect type="fade" start="100" end="0" time="300" />
-            </animation>
-            <control type="rss" id="1">
-                <posx>100</posx>
-                <posy>1020</posy>
-                <width>1720</width>
-                <height>60</height>
-                <font>Small</font>
-                <textcolor>Floor</textcolor>
-                <headlinecolor>Floor</headlinecolor>
-                <titlecolor>FF3b647c</titlecolor>
-                <scrollspeed>50</scrollspeed>
-                <shadowcolor>FF686868</shadowcolor>
-                <urlset>1</urlset>
-            </control>
-            <control type="image">
-                <posx>610r</posx>
-                <posy>967</posy>
-                <width>610</width>
-                <height>113</height>
-                <texture>common/rss_fade_right.png</texture>
-            </control>
-            <control type="image">
-                <posy>967</posy>
-                <width>610</width>
-                <height>113</height>
-                <texture>common/rss_fade.png</texture>
-            </control>
         </control>
     </controls>
 </window>
