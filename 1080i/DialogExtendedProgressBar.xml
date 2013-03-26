@@ -24,18 +24,18 @@
             <control type="label" id="30">
                 <posy>0</posy>
                 <posx>712r</posx>
-                <height>36</height>
+                <height>32</height>
                 <width>640</width>
-                <font>Smaller</font>
+                <font>Smaller_Caps</font>
                 <textcolor>Blue</textcolor>
                 <aligny>center</aligny>
                 <label>-</label>
                 <textoffsetx>15</textoffsetx>
             </control>
             <control type="label" id="31">
-                <posy>33</posy>
+                <posy>32</posy>
                 <posx>712r</posx>
-                <height>36</height>
+                <height>32</height>
                 <width>640</width>
                 <font>Smaller</font>
                 <aligny>center</aligny>
