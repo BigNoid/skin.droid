@@ -29,6 +29,7 @@
 		<focusedcolor>White</focusedcolor>
 		<selectedcolor>White</selectedcolor>
 		<disabledcolor>Red</disabledcolor>
+        <scroll>true</scroll>
 		<scrollout>false</scrollout>
 		<pauseatend>2000</pauseatend>
 	</default>

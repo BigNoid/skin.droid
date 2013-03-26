@@ -93,11 +93,9 @@
             <visible>![[Control.isVisible(50) | Control.isVisible(51) | Control.isVisible(55)] + !Window.IsActive(home)]</visible>
             <include>VisibleChangeEffect</include>
             <control type="fadelabel" id="6053">
-                <font>Small</font>
                 <width>1920</width>
                 <height>60</height>
-                <pauseatend>10000</pauseatend>
-                <scrollout>false</scrollout>
+                <pauseatend>1000</pauseatend>
                 <label>$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RandomMovie.2.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RandomMovie.3.Art(fanart))]</label>
@@ -121,11 +119,9 @@
                 <visible>StringCompare(Skin.String(DefaultBG),randommovies)</visible>
             </control>
             <control type="fadelabel" id="6054">
-                <font>Small</font>
                 <width>1920</width>
                 <height>60</height>
                 <pauseatend>10000</pauseatend>
-                <scrollout>false</scrollout>
                 <label>$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RecentMovie.3.Art(fanart))]</label>
