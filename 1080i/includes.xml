@@ -161,6 +161,12 @@
                     <animation effect="slide" start="0,0" end="0,20" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
                     <include>Dimensions_Fullscreen</include>
                     <texture border="1">background/floor_back.png</texture>
+                    <animation type="WindowOpen" reversible="false">
+                        <effect type="fade" start="0" end="100" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" />
+                    </animation>
                 </control>
                 <control type="image">
                     <posx>185</posx>
