@@ -2,6 +2,7 @@
 <window type="dialog" id="1112">
     <defaultcontrol>10</defaultcontrol>
     <zorder>1</zorder>
+    <onunload>SetFocus(8000)</onunload>
     <controls>
         <control type="grouplist" id="10">
             <posx>-14</posx>
