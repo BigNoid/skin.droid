@@ -189,7 +189,7 @@
                 <animation effect="slide" start="0,128" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
                 <animation effect="slide" end="0,128" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
                 <animation effect="slide" start="0,128" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
-                <visible>!Window.IsVisible(videoosd)</visible>
+                <visible>!Window.IsVisible(videoosd) + !Player.DisplayAfterSeek</visible>
                 <include>FloorFlagsBack</include>
                 <control type="image">
                     <posx>1470</posx>
