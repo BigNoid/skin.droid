@@ -43,8 +43,8 @@
                 <width>480</width>
                 <height>864</height>
                 <itemgap>0</itemgap>
-                <onright>9002</onright>
-                <onleft>9002</onleft>
+                <onright>5</onright>
+                <onleft>5</onleft>
                 <onup>9001</onup>
                 <ondown>9001</ondown>
                 <control type="button" id="28">
