@@ -284,9 +284,9 @@
                         <textoffsetx>15</textoffsetx>
                     </control>
                     <control type="label">
-                        <posy>33</posy>
+                        <posy>35</posy>
                         <posx>72</posx>
-                        <height>36</height>
+                        <height>32</height>
                         <width>800</width>
                         <font>Smaller_Caps</font>
                         <aligny>center</aligny>
@@ -296,9 +296,9 @@
                         <visible>Player.HasAudio</visible>
                     </control>
                     <control type="label">
-                        <posy>33</posy>
+                        <posy>35</posy>
                         <posx>72</posx>
-                        <height>36</height>
+                        <height>32</height>
                         <width>800</width>
                         <font>Smaller_Caps</font>
                         <aligny>center</aligny>
@@ -308,9 +308,9 @@
                         <visible>Player.HasVideo + VideoPlayer.Content(episodes)</visible>
                     </control>
                     <control type="label">
-                        <posy>33</posy>
+                        <posy>35</posy>
                         <posx>72</posx>
-                        <height>36</height>
+                        <height>32</height>
                         <width>800</width>
                         <font>Smaller_Caps</font>
                         <aligny>center</aligny>
