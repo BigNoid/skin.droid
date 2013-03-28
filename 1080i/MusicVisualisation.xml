@@ -17,10 +17,6 @@
             <texture background="true">special://skin/backgrounds/speakergrill.jpg</texture>
             <visible>IsEmpty(Player.Art(fanart))</visible>
         </control>
-        <control type="visualisation" id="2">
-            <description>visualisation</description>
-            <include>Dimensions_Fullscreen</include>
-        </control>
         <control type="group">
             <animation effect="fade" time="600">VisibleChange</animation>
             <visible>IsEmpty(Player.Art(fanart))</visible>
@@ -237,6 +233,10 @@
                     </control>
                 </control>
             </control>
+        </control>
+        <control type="visualisation" id="2">
+            <description>visualisation</description>
+            <include>Dimensions_Fullscreen</include>
         </control>
         <control type="group">
             <control type="group">
