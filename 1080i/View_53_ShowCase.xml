@@ -197,12 +197,11 @@
                         <posx>8</posx>
                         <posy>40</posy>
                         <width>900</width>
-                        <height>200</height>
+                        <height>188</height>
                         <align>left</align>
                         <font>Plot</font>
                         <label>$VAR[MoviePlotVar]</label>
                         <pagecontrol>61</pagecontrol>
-                        <autoscroll>False</autoscroll>
                         <textcolor>White2</textcolor>
                     </control>
                 </control>
