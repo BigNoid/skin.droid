@@ -2,77 +2,99 @@
 <window id="2008">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-
-	<controls>
-
-		<include>GlobalOverlay</include>
-
-		<control type="group">
-			<posx>510</posx>
-			<posy>210</posy>
-
-			<control type="image">
-				<posx>-30</posx>
-				<posy>-30</posy>
-				<width>960</width>
-				<height>744</height>
-				<texture border="22">other_textures/ContentPanel.png</texture>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>38</posy>
-				<width>873</width>
-				<align>center</align>
-				<font>Medium</font>
-				<info>ListItem.Label</info>
-			</control>
-
-			<control type="list" id="450">
-				<posx>15</posx>
-				<posy>117</posy>
-				<width>870</width>
-				<height>552</height>
-				<onleft>450</onleft>
-				<onright>450</onright>
-				<onup>450</onup>
-				<ondown>450</ondown>
-				<itemlayout height="69">
-
-					<control type="image">
-						<width>870</width>
-						<height>66</height>
-						<texture border="2">other_textures/ButtonNF.png</texture>
-					</control>
-
-					<control type="label">
-						<posx>30</posx>
-						<width>810</width>
-						<info>ListItem.Label</info>
-					</control>
-
-				</itemlayout>
-
-				<focusedlayout height="69">
-
-					<control type="image">
-						<width>870</width>
-						<height>66</height>
-						<texture border="5">other_textures/ButtonFO.png</texture>
-					</control>
-
-					<control type="label">
-						<posx>30</posx>
-						<width>810</width>
-						<info>ListItem.Label</info>
-					</control>
-
-				</focusedlayout>
-
-			</control>
-
-		</control>
-
-	</controls>
-
+    <animation type="WindowClose" reversible="false">
+        <effect type="fade" start="100" end="0" time="100" />
+    </animation>
+    <controls>
+        <control type="image">
+            <posx>0</posx>
+            <posy>72</posy>
+            <width>600</width>
+            <height>400</height>
+            <include>toast_back</include>
+        </control>
+        <control type="list" id="450">
+            <posx>0</posx>
+            <posy>72</posy>
+            <width>600</width>
+            <height>400</height>
+            <onleft>450</onleft>
+            <onright>60</onright>
+            <onup>450</onup>
+            <ondown>450</ondown>
+            <pagecontrol>60</pagecontrol>
+            <viewtype label="535">list</viewtype>
+            <orientation>vertical</orientation>
+            <scrolltime tween="sine" easing="inout">200</scrolltime>
+            <itemlayout width="600" height="72">
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>600</width>
+                    <height>72</height>
+                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                </control>
+                <control type="label">
+                    <posy>0</posy>
+                    <posx>0</posx>
+                    <width>600</width>
+                    <height>72</height>
+                    <info>ListItem.Label</info>
+                    <textoffsetx>15</textoffsetx>
+                </control>
+            </itemlayout>
+            <focusedlayout width="600" height="72">
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>600</width>
+                    <height>72</height>
+                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                </control>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>600</width>
+                    <height>72</height>
+                    <texture border="8">listselect_fo.png</texture>
+                </control>
+                <control type="label">
+                    <posy>0</posy>
+                    <posx>0</posx>
+                    <width>600</width>
+                    <height>72</height>
+                    <info>ListItem.Label</info>
+                    <textoffsetx>15</textoffsetx>
+                </control>
+            </focusedlayout>
+        </control>
+        <control type="image">
+            <posx>0</posx>
+            <posy>400</posy>
+            <width>600</width>
+            <height>72</height>
+            <texture border="3">dialogs/toast_back_blue_mask.png</texture>
+        </control>
+        <control type="button" id="3111">
+            <description>Footer</description>
+            <posx>-14</posx>
+            <posy>472</posy>
+            <width>628</width>
+            <label>Favourites</label>
+            <onclick>-</onclick>
+            <aligny>top</aligny>
+            <textoffsety>6</textoffsety>
+            <texturefocus border="14,14,14,3">dialogs/context_bottom.png</texturefocus>
+            <texturenofocus border="14,14,14,3">dialogs/context_bottom.png</texturenofocus>
+            <disabledcolor>$VAR[ThemeColorVar]</disabledcolor>
+            <enable>no</enable>
+        </control>
+        <control type="image">
+            <posx>-21</posx>
+            <posy>51</posy>
+            <width>642</width>
+            <height>442</height>
+            <texture border="21">thumbs/thumb_shadow.png</texture>
+        </control>
+    </controls>
 </window>
