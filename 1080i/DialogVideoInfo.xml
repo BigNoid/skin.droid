@@ -5,6 +5,7 @@
     <onload>ClearProperty(MediaMenu,Home)</onload>
     <onunload>ClearProperty(VideoInfoMediaMenu,Home)</onunload>
     <onunload>ClearProperty(VideoInfoProperties,Home)</onunload>
+    <onunload>ClearProperty(FanartZoom,movieinformation)</onunload>
     <controls>
         <control type="group" id="9010">
             <control type="image">
@@ -569,15 +570,6 @@
                         <height>216</height>
                         <include>toast_back</include>
                     </control>
-                    <control type="image">
-                        <posx>936</posx>
-                        <width>384</width>
-                        <height>216</height>
-                        <aspectratio>scale</aspectratio>
-                        <texture>$INFO[ListItem.Art(fanart)]</texture>
-                        <bordersize>2</bordersize>
-                        <visible>!Container.Content(episodes) | IsEmpty(Control.GetLabel(4001))</visible>
-                    </control>
                     <control type="image" id="4001">
                         <posx>936</posx>
                         <width>384</width>
@@ -647,7 +639,7 @@
                         <onup>9010</onup>
                         <ondown>50</ondown>
                         <onleft>5000</onleft>
-                        <onright>50</onright>
+                        <onright>4002</onright>
                         <enable>!IsEmpty(ListItem.Director)</enable>
                     </control>
                     <control type="group">
@@ -1270,6 +1262,33 @@
                 </control>
                 <include>MediaMenuBottomButton</include>
             </control>
+            <control type="button" id="4002">
+                <posx>1536</posx>
+                <posy>162</posy>
+                <width>384</width>
+                <height>216</height>
+                <onup>9010</onup>
+                <ondown>50</ondown>
+                <onleft>13</onleft>
+                <onright>50</onright>
+                <onclick condition="IsEmpty(Window(movieinformation).Property(FanartZoom))">SetProperty(FanartZoom,True,movieinformation)</onclick>
+                <onclick condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">ClearProperty(FanartZoom,movieinformation)</onclick>
+                <onback condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">ClearProperty(FanartZoom,movieinformation)</onback>
+                <onback condition="IsEmpty(Window(movieinformation).Property(FanartZoom))">Dialog.Close(movieinformation)</onback>
+                <animation effect="zoom" start="1536,162,384,216" end="-10,-10,1938,1098" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
+            </control>
+            <control type="image">
+                <posx>1536</posx>
+                <posy>162</posy>
+                <width>384</width>
+                <height>216</height>
+                <aspectratio>scale</aspectratio>
+                <texture>$INFO[ListItem.Art(fanart)]</texture>
+                <bordersize>2</bordersize>
+                <visible>!Container.Content(episodes) | IsEmpty(Control.GetLabel(4001))</visible>
+                <animation effect="zoom" start="1536,162,384,216" end="-10,-10,1940,1100" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
+            </control>
+
         </control>
     </controls>
 </window>
