@@ -115,6 +115,15 @@
                 <include>MediaMenuButton</include>
                 <visible>Control.IsVisible(53) + system.getbool(input.enablemouse)</visible>
             </control>
+            <control type="radiobutton" id="4003">
+                <description>ShowCase InfoPanel Toggle</description>
+                <label>InfoPanel</label>
+                <height>72</height>
+                <include>MediaMenuButton</include>
+                <onclick>Skin.ToggleSetting(ShowCase.InfoPanel)</onclick>
+                <selected>Skin.HasSetting(ShowCase.InfoPanel)</selected>
+                <visible>Control.IsVisible(53) + Container.Content(movies)</visible>
+            </control>
             <include>MediaMenuBottomButton</include>
 
         </control>

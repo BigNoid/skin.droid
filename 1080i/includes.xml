@@ -156,6 +156,33 @@
                 <colordiffuse>$VAR[FanartDiffuseVar]</colordiffuse>
             </control>
             <control type="group">
+                <control type="group">
+                    <posy>132</posy>
+                    <posx>120</posx>
+                    <visible>Container.Content(movies) + Skin.HasSetting(ShowCase.InfoPanel)</visible>
+                    <animation type="WindowOpen" reversible="false">
+                        <effect type="fade" start="0" end="100" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" />
+                    </animation>
+                    <animation type="VisibleChange" reversible="false">
+                        <effect type="fade" start="0" end="100" time="300" />
+                    </animation>
+                    <control type="image">
+                        <posx>-21</posx>
+                        <posy>-21</posy>
+                        <width>1718</width>
+                        <height>864</height>
+                        <texture border="21">thumbs/thumb_shadow.png</texture>
+                    </control>
+                    <control type="image">
+                        <width>1676</width>
+                        <height>814</height>
+                        <texture border="25">views/showcase/infopanel.png</texture>
+                        <colordiffuse>Blue2</colordiffuse>
+                    </control>
+                </control>
                 <control type="image">
                     <posy>0</posy>
                     <animation effect="slide" start="0,0" end="0,20" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
