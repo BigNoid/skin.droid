@@ -300,4 +300,35 @@
         <value condition="IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),99)">   99 +</value>
         <value>$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
     </variable>
+
+    <variable name="CDCase1Var">
+        <value>$INFO[Window(home).Property(RecommendedAlbum.5.Art(thumb))]</value>
+    </variable>
+    <variable name="CDCase2Var">
+        <value>$INFO[Window(home).Property(RecommendedAlbum.9.Art(thumb))]</value>
+    </variable>
+    <variable name="CDCase3Var">
+        <value>$INFO[Window(home).Property(RecommendedAlbum.8.Art(thumb))]</value>
+    </variable>
+    <variable name="CDCase4Var">
+        <value>$INFO[Window(home).Property(RecommendedAlbum.7.Art(thumb))]</value>
+    </variable>
+    <variable name="CDCase5Var">
+        <value>$INFO[Window(home).Property(RecommendedAlbum.4.Art(thumb))]</value>
+    </variable>
+    <variable name="CDCase6Var">
+        <value>$INFO[Window(home).Property(RecommendedAlbum.6.Art(thumb))]</value>
+    </variable>
+    <variable name="CDCase7Var">
+        <value>$INFO[Window(home).Property(RecommendedAlbum.10.Art(thumb))]</value>
+    </variable>
+    <variable name="CDCase8Var">
+        <value>$INFO[Window(home).Property(RecommendedAlbum.3.Art(thumb))]</value>
+    </variable>
+    <variable name="CDCase9Var">
+        <value>$INFO[Window(home).Property(RecommendedAlbum.2.Art(thumb))]</value>
+    </variable>
+    <variable name="CDCase10Var">
+        <value>$INFO[Window(home).Property(RecommendedAlbum.1.Art(thumb))]</value>
+    </variable>
 </includes>

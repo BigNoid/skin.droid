@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2006">
-	<defaultcontrol always="true">-</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-	<controls>
+    <defaultcontrol always="true">-</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <controls>
         <control type="multiimage">
             <include>Dimensions_Fullscreen</include>
             <fadetime>800</fadetime>
@@ -10,11 +10,235 @@
             <imagepath background="true">$VAR[GlobalBackgroundVar]</imagepath>
             <colordiffuse>FanartDiffuse</colordiffuse>
         </control>
+        <control type="image">
+            <include>Dimensions_Fullscreen</include>
+            <fadetime>800</fadetime>
+            <randomize>true</randomize>
+            <texture background="true">special://skin/backgrounds/speakergrill.jpg</texture>
+            <visible>IsEmpty(Player.Art(fanart))</visible>
+        </control>
         <control type="visualisation" id="2">
-			<description>visualisation</description>
-			<include>Dimensions_Fullscreen</include>
-		</control>
-		<control type="group">
+            <description>visualisation</description>
+            <include>Dimensions_Fullscreen</include>
+        </control>
+        <control type="group">
+            <animation effect="fade" time="600">VisibleChange</animation>
+            <visible>IsEmpty(Player.Art(fanart))</visible>
+            <include>Animation_WindowFade250</include>
+            <control type="group">
+                <posx>-200</posx>
+                <control type="group">
+                    <posx>1120</posx>
+                    <posy>700</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="9" end="9" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase1Var]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">thumbs/boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>700</posx>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="65" end="65" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase2Var]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">thumbs/boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>430</posx>
+                    <posy>150</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="10" end="10" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase3Var]</texture>
+                        <fadetime>600</fadetime>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">thumbs/boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>1600</posx>
+                    <posy>200</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-20" end="-20" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase4Var]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">thumbs/boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>1000</posx>
+                    <posy>100</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="25" end="25" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase5Var]</texture>
+                        <fadetime>600</fadetime>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">thumbs/boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>1950</posx>
+                    <posy>-100</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="75" end="75" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase6Var]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">thumbs/boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>1700</posx>
+                    <posy>800</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="45" end="45" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase7Var]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">thumbs/boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>1470</posx>
+                    <posy>510</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-15" end="-15" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <fadetime>600</fadetime>
+                        <height>302</height>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase8Var]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">thumbs/boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>1050</posx>
+                    <posy>400</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase9Var]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">thumbs/boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>600</posx>
+                    <posy>400</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="3" end="3" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase10Var]</texture>
+                        <fadetime>600</fadetime>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">thumbs/boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+            </control>
+        </control>
+        <control type="group">
             <control type="group">
                 <animation effect="slide" start="0,-110" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
                 <animation effect="slide" start="0,-110" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
@@ -371,5 +595,5 @@
                 </control>
             </control>
         </control>
-	</controls>
+    </controls>
 </window>
