@@ -159,7 +159,7 @@
                 <control type="group">
                     <posy>132</posy>
                     <posx>120</posx>
-                    <visible>Container.Content(movies) + Skin.HasSetting(ShowCase.InfoPanel)</visible>
+                    <visible>Container.Content(movies) + Skin.HasSetting(ShowCase.InfoPanel) + Control.IsVisible(53)</visible>
                     <animation type="WindowOpen" reversible="false">
                         <effect type="fade" start="0" end="100" time="300" />
                     </animation>
