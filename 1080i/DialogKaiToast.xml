@@ -35,7 +35,7 @@
             <texture>icons/sym_def_app_icon.png</texture>
         </control>
         <control type="label" id="401">
-            <posy>0</posy>
+            <posy>4</posy>
             <posx>1032</posx>
             <height>32</height>
             <width>640</width>
@@ -46,7 +46,7 @@
             <textoffsetx>15</textoffsetx>
         </control>
         <control type="label" id="402">
-            <posy>32</posy>
+            <posy>35</posy>
             <posx>1032</posx>
             <height>32</height>
             <width>640</width>
