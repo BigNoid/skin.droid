@@ -131,14 +131,14 @@
                         <posx>416</posx>
                         <posy>25</posy>
                         <width>38</width>
-                        <height>446</height>
+                        <height>454</height>
                         <texture border="1">settings/side_shadow.png</texture>
                     </control>
                     <control type="image">
                         <posx>1274</posx>
                         <posy>24</posy>
                         <width>38</width>
-                        <height>447</height>
+                        <height>454</height>
                         <texture border="1" flipx="true">settings/side_shadow.png</texture>
                     </control>
                     <control type="image">
