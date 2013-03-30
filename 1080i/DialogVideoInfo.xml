@@ -570,15 +570,6 @@
                         <height>216</height>
                         <include>toast_back</include>
                     </control>
-                    <control type="image" id="4001">
-                        <posx>936</posx>
-                        <width>384</width>
-                        <height>216</height>
-                        <aspectratio>scale</aspectratio>
-                        <texture>$INFO[ListItem.Art(thumb)]</texture>
-                        <visible>Container.Content(episodes)</visible>
-                        <bordersize>2</bordersize>
-                    </control>
                     <control type="group">
                         <visible>Container.Content(episodes)</visible>
                         <control type="label">
@@ -1212,7 +1203,44 @@
                     </control>
                 </control>
             </control>
-            
+            <control type="button" id="4002">
+                <posx>1536</posx>
+                <posy>162</posy>
+                <width>384</width>
+                <height>216</height>
+                <onup>9010</onup>
+                <ondown>50</ondown>
+                <onleft>13</onleft>
+                <onright>50</onright>
+                <onclick condition="IsEmpty(Window(movieinformation).Property(FanartZoom))">SetProperty(FanartZoom,True,movieinformation)</onclick>
+                <onclick condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">ClearProperty(FanartZoom,movieinformation)</onclick>
+                <onback condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">ClearProperty(FanartZoom,movieinformation)</onback>
+                <onback condition="IsEmpty(Window(movieinformation).Property(FanartZoom))">Dialog.Close(movieinformation)</onback>
+                <animation effect="zoom" start="1536,162,384,216" end="-10,-10,1938,1098" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
+            </control>
+            <control type="image">
+                <posx>1536</posx>
+                <posy>162</posy>
+                <width>384</width>
+                <height>216</height>
+                <aspectratio>scale</aspectratio>
+                <texture>$INFO[ListItem.Art(thumb)]</texture>
+                <visible>Container.Content(episodes)</visible>
+                <bordersize>2</bordersize>
+            </control>
+            <control type="image">
+                <posx>1536</posx>
+                <posy>162</posy>
+                <width>384</width>
+                <height>216</height>
+                <aspectratio>scale</aspectratio>
+                <texture>$INFO[ListItem.Art(fanart)]</texture>
+                <bordersize>2</bordersize>
+                <visible>!Container.Content(episodes)</visible>
+                <animation effect="zoom" start="1536,162,384,216" end="-10,-10,1940,1100" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
+            </control>
+
+
             <control type="grouplist" id="9000">
                 <posx>1520</posx>
                 <posy>72</posy>
@@ -1261,32 +1289,6 @@
                     <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
                 </control>
                 <include>MediaMenuBottomButton</include>
-            </control>
-            <control type="button" id="4002">
-                <posx>1536</posx>
-                <posy>162</posy>
-                <width>384</width>
-                <height>216</height>
-                <onup>9010</onup>
-                <ondown>50</ondown>
-                <onleft>13</onleft>
-                <onright>50</onright>
-                <onclick condition="IsEmpty(Window(movieinformation).Property(FanartZoom))">SetProperty(FanartZoom,True,movieinformation)</onclick>
-                <onclick condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">ClearProperty(FanartZoom,movieinformation)</onclick>
-                <onback condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">ClearProperty(FanartZoom,movieinformation)</onback>
-                <onback condition="IsEmpty(Window(movieinformation).Property(FanartZoom))">Dialog.Close(movieinformation)</onback>
-                <animation effect="zoom" start="1536,162,384,216" end="-10,-10,1938,1098" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
-            </control>
-            <control type="image">
-                <posx>1536</posx>
-                <posy>162</posy>
-                <width>384</width>
-                <height>216</height>
-                <aspectratio>scale</aspectratio>
-                <texture>$INFO[ListItem.Art(fanart)]</texture>
-                <bordersize>2</bordersize>
-                <visible>!Container.Content(episodes) | IsEmpty(Control.GetLabel(4001))</visible>
-                <animation effect="zoom" start="1536,162,384,216" end="-10,-10,1940,1100" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
             </control>
 
         </control>
