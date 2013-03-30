@@ -7,14 +7,14 @@
         <control type="group">
             <animation effect="slide" end="0,-900" time="320" easing="inout" tween="circle" condition="Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(slideshow)">Conditional</animation>
             <control type="image">
-                <posx>712r</posx>
+                <posx>832r</posx>
                 <posy>2</posy>
                 <width>640</width>
                 <height>70</height>
                 <include>toast_back</include>
             </control>
             <control type="image">
-                <posx>771r</posx>
+                <posx>891r</posx>
                 <posy>11</posy>
                 <width>48</width>
                 <height>48</height>
@@ -22,10 +22,10 @@
                 <animation effect="rotate" start="0" end="-360" center="auto" time="2000" loop="true" condition="true">conditional</animation>
             </control>
             <control type="label" id="30">
-                <posy>0</posy>
-                <posx>712r</posx>
+                <posy>4</posy>
+                <posx>832r</posx>
                 <height>32</height>
-                <width>640</width>
+                <width>770</width>
                 <font>Smaller_Caps</font>
                 <textcolor>Blue</textcolor>
                 <aligny>center</aligny>
@@ -33,10 +33,10 @@
                 <textoffsetx>15</textoffsetx>
             </control>
             <control type="label" id="31">
-                <posy>32</posy>
-                <posx>712r</posx>
+                <posy>35</posy>
+                <posx>832r</posx>
                 <height>32</height>
-                <width>640</width>
+                <width>770</width>
                 <font>Smaller</font>
                 <aligny>center</aligny>
                 <label>-</label>
