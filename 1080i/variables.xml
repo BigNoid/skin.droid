@@ -7,7 +7,7 @@
 
     <variable name="GlobalBackgroundVar">
         <value condition="Player.hasMedia  + !IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[Player.Art(fanart)]</value>
-        <value condition="!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(Disable.Fanart)">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[ListItem.Art(fanart)]</value>
         <value condition="IntegerGreaterThan(Skin.String(DefaultBG),1)">$INFO[Control.GetLabel(6053)]</value>
         <value condition="IntegerGreaterThan(Skin.String(DefaultBG),0)">$INFO[Control.GetLabel(6054)]</value>
         <value condition="!IsEmpty(Skin.String(DefaultBG))">$INFO[Skin.String(DefaultBG)]</value>

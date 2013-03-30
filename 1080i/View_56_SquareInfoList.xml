@@ -76,6 +76,51 @@
                         <texture>$INFO[ListItem.Art(fanart)]</texture>
                     </control>
                     <control type="group">
+                        <visible>Container.Content(songs) | Container.Content(albums)</visible>
+                        <control type="button">
+                            <posx>1274</posx>
+                            <posy>300</posy>
+                            <width>534</width>
+                            <height>68</height>
+                            <onclick>-</onclick>
+                            <label>$LOCALIZE[515]</label>
+                            <label2>$INFO[ListItem.Genre]</label2>
+                            <disabledcolor>White2</disabledcolor>
+                            <enable>no</enable>
+                        </control>
+                        <control type="button">
+                            <posx>1274</posx>
+                            <posy>368</posy>
+                            <width>534</width>
+                            <height>68</height>
+                            <onclick>-</onclick>
+                            <label>$LOCALIZE[563]</label>
+                            <disabledcolor>White2</disabledcolor>
+                            <enable>no</enable>
+                        </control>
+                        <control type="image">
+                            <posx>1590</posx>
+                            <posy>377</posy>
+                            <width>200</width>
+                            <height>50</height>
+                            <colordiffuse>White2</colordiffuse>
+                            <include>MediaFlagVars</include>
+                            <texture fallback="rating0.png">$INFO[ListItem.StarRating]</texture>
+                        </control>
+                        <control type="button">
+                            <posx>1274</posx>
+                            <posy>436</posy>
+                            <width>534</width>
+                            <height>68</height>
+                            <onclick>-</onclick>
+                            <label>$LOCALIZE[345]</label>
+                            <label2>$INFO[ListItem.Year]</label2>
+                            <disabledcolor>White2</disabledcolor>
+                            <enable>no</enable>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <visible>![Container.Content(songs) | Container.Content(albums)]</visible>
                         <control type="textbox">
                             <description>Plot outline</description>
                             <posx>1292</posx>
