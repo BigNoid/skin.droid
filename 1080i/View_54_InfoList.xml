@@ -76,12 +76,20 @@
                     </control>
                     <control type="image">
                         <posy>0</posy>
-                        <posy>576</posy>
                         <width>548</width>
                         <height>308</height>
                         <aspectratio>scale</aspectratio>
                         <texture>$VAR[InfoListThumbVar]</texture>
                         <bordersize>2</bordersize>
+                        <visible>!Player.HasVideo</visible>
+                    </control>
+                    <control type="videowindow">
+                        <description>Home window video</description>
+                        <posy>2</posy>
+                        <posx>2</posx>
+                        <width>544</width>
+                        <height>304</height>
+                        <visible>Player.HasVideo</visible>
                     </control>
                     <control type="group">
                         <visible>!Skin.HasSetting(InfoList.NoPlot) | Container.Content(episodes)</visible>

@@ -345,7 +345,6 @@
         <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Studio]</value>
     </variable>
     <variable name="InfoListButton2Label2Var">
-        <value condition="Container.Content(movies)">-</value>
         <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</value>
     </variable>
     <variable name="InfoListButton3Label1Var">
