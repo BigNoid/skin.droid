@@ -331,4 +331,29 @@
     <variable name="CDCase10Var">
         <value>$INFO[Window(home).Property(RecommendedAlbum.1.Art(thumb))]</value>
     </variable>
+
+    <variable name="InfoList.NoPlotVar">
+        <value condition="Skin.HasSetting(InfoList.NoPlot)">$LOCALIZE[31009]</value>
+        <value>$LOCALIZE[203]</value>
+    </variable>
+
+    <variable name="InfoListButton1LabelVar">
+        <value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Genre]</value>
+    </variable>
+    <variable name="InfoListButton2Label1Var">
+        <value condition="Container.Content(movies)">$INFO[ListItem.Director]</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Studio]</value>
+    </variable>
+    <variable name="InfoListButton2Label2Var">
+        <value condition="Container.Content(movies)">-</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</value>
+    </variable>
+    <variable name="InfoListButton3Label1Var">
+        <value condition="Container.Content(movies)">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[31010]</value>
+    </variable>
+    <variable name="InfoListButton3Label2Var">
+        <value condition="Container.Content(movies)">$INFO[ListItem.Year]</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[Window(Home).Property(NextAired.NextDate)]</value>
+    </variable>
 </includes>

@@ -109,7 +109,7 @@
             </control>
             <control type="button" id="4002">
                 <description>ShowCaseWrap</description>
-                <label>Navigation help</label>
+                <label>31006</label>
                 <onclick>ClearProperty(MediaMenu,Home)</onclick>
                 <onclick>ActivateWindow(1114)</onclick>
                 <include>MediaMenuButton</include>
@@ -117,12 +117,21 @@
             </control>
             <control type="radiobutton" id="4003">
                 <description>ShowCase InfoPanel Toggle</description>
-                <label>InfoPanel</label>
+                <label>31007</label>
                 <height>72</height>
                 <include>MediaMenuButton</include>
                 <onclick>Skin.ToggleSetting(ShowCase.InfoPanel)</onclick>
                 <selected>Skin.HasSetting(ShowCase.InfoPanel)</selected>
                 <visible>Control.IsVisible(53) + Container.Content(movies)</visible>
+            </control>
+            <control type="button" id="4004">
+                <description>InfoList.Plot toggle</description>
+                <label>31008</label>
+                <label2>[COLOR Blue2]$VAR[InfoList.NoPlotVar][/COLOR]</label2>
+                <onclick>ClearProperty(MediaMenu,Home)</onclick>
+                <onclick>Skin.ToggleSetting(InfoList.NoPlot)</onclick>
+                <include>MediaMenuButton</include>
+                <visible>Control.IsVisible(54) + !Container.Content(episodes)</visible>
             </control>
             <include>MediaMenuBottomButton</include>
 

@@ -81,26 +81,66 @@
                         <height>308</height>
                         <aspectratio>scale</aspectratio>
                         <texture>$VAR[InfoListThumbVar]</texture>
+                        <bordersize>2</bordersize>
                     </control>
-                    <control type="textbox">
-                        <description>Plot outline</description>
-                        <posx>18</posx>
-                        <posy>318</posy>
-                        <width>516</width>
-                        <height>200</height>
-                        <align>left</align>
-                        <font>Plot</font>
-                        <label>$VAR[MoviePlotVar]</label>
-                        <pagecontrol>61</pagecontrol>
-                        <autoscroll>False</autoscroll>
-                        <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
+                    <control type="group">
+                        <visible>!Skin.HasSetting(InfoList.NoPlot) | Container.Content(episodes)</visible>
+                        <control type="textbox">
+                            <description>Plot outline</description>
+                            <posx>18</posx>
+                            <posy>318</posy>
+                            <width>516</width>
+                            <height>200</height>
+                            <align>left</align>
+                            <font>Plot</font>
+                            <label>$VAR[MoviePlotVar]</label>
+                            <pagecontrol>61</pagecontrol>
+                            <autoscroll>False</autoscroll>
+                            <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>446</posy>
+                            <width>548</width>
+                            <height>72</height>
+                            <texture border="3">dialogs/toast_back_blue_mask.png</texture>
+                        </control>
                     </control>
-                    <control type="image">
-                        <posx>0</posx>
-                        <posy>446</posy>
-                        <width>548</width>
-                        <height>72</height>
-                        <texture border="3">dialogs/toast_back_blue_mask.png</texture>
+                    <control type="group">
+                        <visible>Skin.HasSetting(InfoList.NoPlot) + !Container.Content(episodes)</visible>
+                        <posy>308</posy>
+                        <control type="button">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>548</width>
+                            <height>70</height>
+                            <onclick>-</onclick>
+                            <label>$VAR[InfoListButton1LabelVar]</label>
+                            <disabledcolor>White2</disabledcolor>
+                            <enable>no</enable>
+                        </control>
+                        <control type="button">
+                            <posx>0</posx>
+                            <posy>70</posy>
+                            <width>548</width>
+                            <height>70</height>
+                            <onclick>-</onclick>
+                            <label>$VAR[InfoListButton2Label1Var]</label>
+                            <label2>$VAR[InfoListButton2Label2Var]</label2>
+                            <disabledcolor>White2</disabledcolor>
+                            <enable>no</enable>
+                        </control>
+                        <control type="button">
+                            <posx>0</posx>
+                            <posy>140</posy>
+                            <width>548</width>
+                            <height>70</height>
+                            <onclick>-</onclick>
+                            <label>$VAR[InfoListButton3Label1Var]</label>
+                            <label2>$VAR[InfoListButton3Label2Var]</label2>
+                            <disabledcolor>White2</disabledcolor>
+                            <enable>no</enable>
+                        </control>
                     </control>
                     <control type="scrollbar" id="61">
                         <posx>0</posx>
