@@ -172,10 +172,10 @@
         <texturefocus border="8">dialogs/button_focus.png</texturefocus>
         <sliderwidth>230</sliderwidth>
 		<sliderheight>23</sliderheight>
-		<texturesliderbar>other_textures/OSD/slider_bg.png</texturesliderbar>
-		<textureslidernib border="2">other_textures/OSD/SliderNibNF.png</textureslidernib>
-		<textureslidernibfocus border="2">other_textures/OSD/SliderNibFO.png</textureslidernibfocus>
-		<font>Small</font>
+        <texturesliderbar>dialogs/slider/osd_slider_bg_2.png</texturesliderbar>
+        <textureslidernib border="2">dialogs/slider/osd_slider_nibNF.png</textureslidernib>
+        <textureslidernibfocus border="2">dialogs/slider/osd_slider_nib.png</textureslidernibfocus>
+        <font>Small</font>
 		<textcolor>White2</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>
@@ -204,9 +204,9 @@
 		<posy>0</posy>
 		<width>360</width>
 		<height>23</height>
-		<texturesliderbar>other_textures/OSD/slider_bg_2.png</texturesliderbar>
-		<textureslidernib border="2">other_textures/OSD/SliderNibNF.png</textureslidernib>
-		<textureslidernibfocus border="2">other_textures/OSD/SliderNibFO.png</textureslidernibfocus>
+		<texturesliderbar>dialogs/slider/osd_slider_bg_2.png</texturesliderbar>
+		<textureslidernib border="2">dialogs/slider/osd_slider_nibNF.png</textureslidernib>
+		<textureslidernibfocus border="2">dialogs/slider/osd_slider_nib.png</textureslidernibfocus>
         <pulseonselect>false</pulseonselect>
     </default>
 
