@@ -1227,6 +1227,7 @@
                 <texture>$INFO[ListItem.Art(thumb)]</texture>
                 <visible>Container.Content(episodes)</visible>
                 <bordersize>2</bordersize>
+                <animation effect="zoom" start="1536,162,384,216" end="-10,-10,1940,1100" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
             </control>
             <control type="image">
                 <posx>1536</posx>
