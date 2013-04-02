@@ -152,7 +152,15 @@ msgctxt "#31034"
 msgid "Press here for page up/down"
 msgstr ""
 
-#empty strings from id 31035 to 31041
+msgctxt "#31035"
+msgid "Set fanart path"
+msgstr ""
+
+msgctxt "#31036"
+msgid "Weather fanart"
+msgstr ""
+
+#empty strings from id 31036 to 31041
 
 msgctxt "#31042"
 msgid "[B]0[/B]"
