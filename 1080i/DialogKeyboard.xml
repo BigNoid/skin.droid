@@ -103,7 +103,10 @@
                 <control type="button" id="8">
                     <description>BACKSPACE button</description>
                     <width>160</width>
-                    <label>BACK</label>
+                    <label>←</label>
+                    <font>Keyboard</font>
+                    <aligny>top</aligny>
+                    <textoffsety>-20</textoffsety>
                     <texturenofocus border="10">keyboard/key_medium_nf.png</texturenofocus>
                     <include>KeyboardSmall</include>
                 </control>
@@ -170,7 +173,10 @@
                 <control type="button" id="8">
                     <description>BACKSPACE button</description>
                     <width>160</width>
-                    <label>BACK</label>
+                    <label>←</label>
+                    <font>Keyboard</font>
+                    <aligny>top</aligny>
+                    <textoffsety>-20</textoffsety>
                     <texturenofocus border="10">keyboard/key_medium_nf.png</texturenofocus>
                     <include>KeyboardSmall</include>
                 </control>
@@ -317,14 +323,20 @@
                 </control>
                 <control type="button" id="305">
                     <description>previous button</description>
-                    <label>&lt;</label>
+                    <label>◄</label>
+                    <aligny>top</aligny>
+                    <textoffsety>-20</textoffsety>
+                    <font>Keyboard</font>
                     <texturenofocus border="10">keyboard/key_medium_nf.png</texturenofocus>
                     <width>254</width>
                     <include>KeyboardSmall</include>
                 </control>
                 <control type="button" id="306">
                     <description>next button</description>
-                    <label>&gt;</label>
+                    <label>►</label>
+                    <aligny>top</aligny>
+                    <textoffsety>-20</textoffsety>
+                    <font>Keyboard</font>
                     <texturenofocus border="10">keyboard/key_medium_nf.png</texturenofocus>
                     <width>254</width>
                     <include>KeyboardSmall</include>

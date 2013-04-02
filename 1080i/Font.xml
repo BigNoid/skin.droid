@@ -131,51 +131,11 @@
             <filename>RobotoCondensed-Regular.ttf</filename>
             <size>30</size>
         </font>
+        <font>
+            <name>Keyboard</name>
+            <filename>Arial.ttf</filename>
+            <size>90</size>
+        </font>
 
     </fontset>
-    <fontset id="Regular" unicode="true">
-
-		<font>
-			<name>Home</name>
-			<filename>Roboto-Regular.ttf</filename>
-			<size>96</size>
-		</font>
-        <font>
-            <name>Clock</name>
-            <filename>Roboto-Regular.ttf</filename>
-            <size>60</size>
-        </font>
-
-        <font>
-			<name>Large</name>
-			<filename>Roboto-Regular.ttf</filename>
-			<size>48</size>
-		</font>
-		
-		<font>
-			<name>Medium</name>
-			<filename>Roboto-Regular.ttf</filename>
-			<size>39</size>
-		</font>
-        <font>
-            <name>Medium_Caps</name>
-            <filename>Roboto-Regular.ttf</filename>
-            <size>39</size>
-            <style>uppercase</style>
-        </font>
-
-        <font>
-			<name>Small</name>
-			<filename>Roboto-Regular.ttf</filename>
-			<size>30</size>
-		</font>
-
-		<!-- Required for system -->
-		<font>
-			<name>font13</name>
-			<filename>Roboto-Regular.ttf</filename>
-			<size>30</size>
-		</font>
-
-	</fontset>
 </fonts>
