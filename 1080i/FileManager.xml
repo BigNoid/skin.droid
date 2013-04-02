@@ -104,7 +104,7 @@
                 <label>-</label>
                 <disabledcolor>Blue2</disabledcolor>
                 <enable>no</enable>
-                <heigth>54</heigth>
+                <height>54</height>
                 <align>right</align>
                 <aligny>top</aligny>
             </control>
@@ -200,7 +200,7 @@
             <control type="button" id="13">
                 <posy>144r</posy>
                 <width>960</width>
-                <heigth>54</heigth>
+                <height>54</height>
                 <label>-</label>
                 <align>right</align>
                 <disabledcolor>Blue2</disabledcolor>

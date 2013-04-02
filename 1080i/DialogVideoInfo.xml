@@ -44,7 +44,7 @@
                     <height>48</height>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>-</texturefocus>
-                    <onclick>-</onclick>
+                    <onclick>noop</onclick>
                     <enable>no</enable>
                 </control>
                 <control type="group">
@@ -160,7 +160,7 @@
                     <height>48</height>
                     <texturenofocus>icons/mute.png</texturenofocus>
                     <texturefocus>-</texturefocus>
-                    <onclick>-</onclick>
+                    <onclick>noop</onclick>
                     <enable>no</enable>
                     <animation effect="slide" start="0,0" end="0,6" time="0" condition="true">Conditional</animation>
                     <visible>Window.IsActive(mutebug)</visible>
@@ -841,7 +841,6 @@
                         <aspectratio>keep</aspectratio>
                         <bordersize>2</bordersize>
                         <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
-                        <bordersize>2</bordersize>
                     </control>
                 </control>
                 <control type="group">
@@ -904,7 +903,6 @@
                         <texturesliderbackground>-</texturesliderbackground>
                         <texturesliderbar>-</texturesliderbar>
                         <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
-                        <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                 </control>
             </control>
@@ -1067,8 +1065,7 @@
                         <width>240</width>
                         <height>30</height>
                         <align>center</align>
-                        <label>next episode</label>
-                        <label>[LOWERCASE]$LOCALIZE[20416][/LOWERCASE]</label>
+                        <label>[LOWERCASE]$LOCALIZE[31010][/LOWERCASE]</label>
                         <font>Medium_Small</font>
                         <textcolor>White2</textcolor>
                     </control>
@@ -1275,15 +1272,15 @@
                 </control>
                 <control type="button" id="9002">
                     <description>Manual artwork</description>
-                    <label>Artwork: Manual</label>
+                    <label>31025</label>
                     <include>MediaMenuButton</include>
                     <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
                     <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
                 </control>
                 <control type="button" id="9003">
-                    <description>Manual artwork</description>
-                    <label>Artwork: Automatic</label>
+                    <description>Automatic artwork</description>
+                    <label>31026</label>
                     <include>MediaMenuButton</include>
                     <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>

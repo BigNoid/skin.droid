@@ -106,7 +106,7 @@
                     <height>48</height>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>-</texturefocus>
-                    <onclick>-</onclick>
+                    <onclick>noop</onclick>
                     <enable>no</enable>
                 </control>
                 <control type="group">
@@ -222,7 +222,7 @@
                     <height>48</height>
                     <texturenofocus>icons/mute.png</texturenofocus>
                     <texturefocus>-</texturefocus>
-                    <onclick>-</onclick>
+                    <onclick>noop</onclick>
                     <enable>no</enable>
                     <animation effect="slide" start="0,0" end="0,6" time="0" condition="true">Conditional</animation>
                     <visible>Window.IsActive(mutebug)</visible>

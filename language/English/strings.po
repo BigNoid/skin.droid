@@ -64,7 +64,29 @@ msgctxt "#31012"
 msgid "Random fanart"
 msgstr ""
 
-#empty strings from id 31013 to 31018
+msgctxt "#31013"
+msgid "Recently added"
+msgstr ""
+
+msgctxt "#31014"
+msgid "TV Guide"
+msgstr ""
+
+msgctxt "#31015"
+msgid "Apps"
+msgstr ""
+
+msgctxt "#31016"
+msgid "Media menu"
+msgstr ""
+
+msgctxt "#31017"
+msgid "Shutdown menu"
+msgstr ""
+
+msgctxt "#31018"
+msgid "Context menu"
+msgstr ""
 
 msgctxt "#31019"
 msgid "Open playlist"
@@ -82,7 +104,21 @@ msgctxt "#31022"
 msgid "System music files"
 msgstr ""
 
-#empty strings from id 31023 to 31026
+msgctxt "#31023"
+msgid "Rate down"
+msgstr ""
+
+msgctxt "#31024"
+msgid "Rate up"
+msgstr ""
+
+msgctxt "#31025"
+msgid "Artwork: Manual"
+msgstr ""
+
+msgctxt "#31026"
+msgid "Artwork: Automatic"
+msgstr ""
 
 msgctxt "#31027"
 msgid "Items"
@@ -108,7 +144,15 @@ msgctxt "#31032"
 msgid "Visualization Presets"
 msgstr ""
 
-#empty strings from id 31033 to 31041
+msgctxt "#31033"
+msgid "Press here to navigate left/right"
+msgstr ""
+
+msgctxt "#31034"
+msgid "Press here for page up/down"
+msgstr ""
+
+#empty strings from id 31035 to 31041
 
 msgctxt "#31042"
 msgid "[B]0[/B]"

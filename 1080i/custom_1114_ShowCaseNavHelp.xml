@@ -66,7 +66,7 @@
                 <height>200</height>
                 <font>Medium_Caps3</font>
                 <align>center</align>
-                <label>Press here to navigate left/right</label>
+                <label>31033</label>
                 <textcolor>White2</textcolor>
                 <textoffsetx>15</textoffsetx>
             </control>
@@ -77,7 +77,7 @@
                 <height>200</height>
                 <font>Medium_Caps3</font>
                 <align>center</align>
-                <label>Press here for page up/down</label>
+                <label>31034</label>
                 <textcolor>White2</textcolor>
                 <textoffsetx>15</textoffsetx>
             </control>

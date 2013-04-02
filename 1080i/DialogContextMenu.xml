@@ -25,25 +25,24 @@
             <width>414</width>
             <height>1080</height>
             <itemgap>0</itemgap>
-            <align>top</align>
             <control type="button" id="1000">
                 <description>Buttons</description>
                 <texturefocus border="14,0,14,0">dialogs/shutdown_focus.png</texturefocus>
                 <texturenofocus border="14,0,14,2">dialogs/shutdown_nofocus.png</texturenofocus>
                 <width>414</width>
-                    </control>
+            </control>
             <control type="button" id="3111">
                 <description>Exit XBMC button</description>
                 <width>414</width>
-                <label>Context menu</label>
-                <onclick>-</onclick>
+                <label>31018</label>
+                <onclick>noop</onclick>
                 <aligny>top</aligny>
                 <textoffsety>6</textoffsety>
                 <texturefocus border="14,14,14,3">dialogs/context_bottom.png</texturefocus>
                 <texturenofocus border="14,14,14,3">dialogs/context_bottom.png</texturenofocus>
                 <disabledcolor>$VAR[ThemeColorVar]</disabledcolor>
                 <enable>no</enable>
-                    </control>
+            </control>
         </control>
         <control type="image" id="999">
             <description>top image</description>

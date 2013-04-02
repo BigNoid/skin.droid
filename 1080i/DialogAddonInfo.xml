@@ -266,7 +266,6 @@
                         <texturesliderbackground>-</texturesliderbackground>
                         <texturesliderbar>-</texturesliderbar>
                         <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
-                        <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                 </control>
 

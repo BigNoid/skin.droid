@@ -305,7 +305,6 @@
                         <texturesliderbackground>-</texturesliderbackground>
                         <texturesliderbar>-</texturesliderbar>
                         <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
-                        <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                 </control>
             </control>
@@ -321,7 +320,7 @@
                         <posy></posy>
                         <width>300</width>
                         <height>90</height>
-                        <label>Rate down</label>
+                        <label>31023</label>
                         <align>center</align>
                         <font>Medium_Bold_Floor_Caps</font>
                         <onclick>DecreaseRating</onclick>
@@ -337,7 +336,7 @@
                         <posy>0</posy>
                         <width>300</width>
                         <height>90</height>
-                        <label>Rate up</label>
+                        <label>31024</label>
                         <align>center</align>
                         <font>Medium_Bold_Floor_Caps</font>
                         <onclick>IncreaseRating</onclick>

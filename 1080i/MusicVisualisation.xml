@@ -13,14 +13,12 @@
         <control type="image">
             <include>Dimensions_Fullscreen</include>
             <fadetime>800</fadetime>
-            <randomize>true</randomize>
             <texture background="true">special://skin/backgrounds/speakergrill.jpg</texture>
             <visible>IsEmpty(Player.Art(fanart))</visible>
         </control>
         <control type="group">
             <animation effect="fade" time="600">VisibleChange</animation>
             <visible>IsEmpty(Player.Art(fanart))</visible>
-            <include>Animation_WindowFade250</include>
             <control type="group">
                 <posx>-200</posx>
                 <control type="group">
@@ -285,7 +283,7 @@
                         <height>48</height>
                         <texturenofocus>-</texturenofocus>
                         <texturefocus>-</texturefocus>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                         <enable>no</enable>
                     </control>
                     <control type="button">
@@ -294,7 +292,7 @@
                         <width>1280</width>
                         <height>72</height>
                         <font>Medium_Caps</font>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                         <label>$INFO[MusicPlayer.TrackNumber,,: ]$INFO[Player.Title]</label>
                         <disabledcolor>White2</disabledcolor>
                         <enable>no</enable>
@@ -313,7 +311,7 @@
                         <width min="10" max="700">auto</width>
                         <height>72</height>
                         <font>Medium_Caps</font>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                         <align>right</align>
                         <label>$INFO[MusicPlayer.Artist]</label>
                         <disabledcolor>White2</disabledcolor>
@@ -337,7 +335,7 @@
                         <height>48</height>
                         <texturenofocus>-</texturenofocus>
                         <texturefocus>-</texturefocus>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                         <enable>no</enable>
                     </control>
                 </control>

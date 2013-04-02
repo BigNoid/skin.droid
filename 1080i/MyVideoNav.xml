@@ -40,7 +40,6 @@
             <control type="radiobutton" id="7">
                 <description>Stack</description>
                 <label>14000</label>
-                <altlabel>14001</altlabel>
                 <include>MediaMenuButton</include>
                 <visible>Control.IsEnabled(7)</visible>
             </control>

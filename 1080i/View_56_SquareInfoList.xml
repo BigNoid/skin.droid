@@ -82,7 +82,7 @@
                             <posy>300</posy>
                             <width>534</width>
                             <height>68</height>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <label>$LOCALIZE[515]</label>
                             <label2>$INFO[ListItem.Genre]</label2>
                             <disabledcolor>White2</disabledcolor>
@@ -93,7 +93,7 @@
                             <posy>368</posy>
                             <width>534</width>
                             <height>68</height>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <label>$LOCALIZE[563]</label>
                             <disabledcolor>White2</disabledcolor>
                             <enable>no</enable>
@@ -112,7 +112,7 @@
                             <posy>436</posy>
                             <width>534</width>
                             <height>68</height>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <label>$LOCALIZE[345]</label>
                             <label2>$INFO[ListItem.Year]</label2>
                             <disabledcolor>White2</disabledcolor>
@@ -152,7 +152,6 @@
                             <texturesliderbackground>-</texturesliderbackground>
                             <texturesliderbar>-</texturesliderbar>
                             <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
-                            <texturesliderbackground border="3">-</texturesliderbackground>
                         </control>
                     </control>
                     <control type="image">
@@ -278,7 +277,6 @@
                         <texturesliderbackground>-</texturesliderbackground>
                         <texturesliderbar>-</texturesliderbar>
                         <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
-                        <texturesliderbackground border="3">-</texturesliderbackground>
                     </control>
                     <!--<control type="image">
                         <posx>454</posx>

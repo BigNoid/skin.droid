@@ -15,7 +15,6 @@
             <onup>3110</onup>
             <ondown>3110</ondown>
             <orientation>vertical</orientation>
-            <align>top</align>
             <control type="button" id="1">
                 <description>Single image</description>
                 <width>600</width>
@@ -57,7 +56,7 @@
                 <description>Heading label</description>
                 <width>614</width>
                 <label>21389</label>
-                <onclick>-</onclick>
+                <onclick>noop</onclick>
                 <aligny>top</aligny>
                 <textoffsety>6</textoffsety>
                 <texturefocus border="14,14,14,3">dialogs/context_bottom.png</texturefocus>

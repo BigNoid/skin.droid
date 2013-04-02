@@ -101,7 +101,7 @@
                         <height>48</height>
                         <texturenofocus>-</texturenofocus>
                         <texturefocus>-</texturefocus>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                         <enable>no</enable>
                     </control>
                     <control type="button">
@@ -110,7 +110,7 @@
                         <width>1280</width>
                         <height>72</height>
                         <font>Medium_Caps</font>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                         <label>$INFO[Player.Title]</label>
                         <disabledcolor>White2</disabledcolor>
                         <enable>no</enable>
@@ -122,7 +122,7 @@
                         <width>1280</width>
                         <height>72</height>
                         <font>Medium_Caps</font>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                         <label>$VAR[VideoSeasonVar,S]$VAR[VideoEpisodeVar,E, - ]$INFO[Player.Title]</label>
                         <disabledcolor>White2</disabledcolor>
                         <enable>no</enable>
@@ -142,7 +142,7 @@
                         <width>400</width>
                         <height>72</height>
                         <font>Medium_Caps</font>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                         <align>right</align>
                         <label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
                         <disabledcolor>White2</disabledcolor>
@@ -167,7 +167,7 @@
                         <height>48</height>
                         <texturenofocus>-</texturenofocus>
                         <texturefocus>-</texturefocus>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                         <enable>no</enable>
                     </control>
                 </control>

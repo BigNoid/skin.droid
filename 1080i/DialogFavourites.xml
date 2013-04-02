@@ -84,8 +84,8 @@
             <posx>-14</posx>
             <posy>472</posy>
             <width>628</width>
-            <label>Favourites</label>
-            <onclick>-</onclick>
+            <label>1036</label>
+            <onclick>noop</onclick>
             <aligny>top</aligny>
             <textoffsety>6</textoffsety>
             <texturefocus border="14,14,14,3">dialogs/context_bottom.png</texturefocus>
