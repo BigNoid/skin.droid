@@ -192,6 +192,7 @@
                     <width>612</width>
                     <height>918</height>
                     <texture background="true">$VAR[InfoPosterThumbVar]</texture>
+                    <aspectratio>scale</aspectratio>
                     <bordersize>2</bordersize>
                 </control>
             </control>
