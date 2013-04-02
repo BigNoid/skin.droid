@@ -840,14 +840,14 @@
                             <visible>Container(800).HasFocus(2)</visible>
                         </item>
                         <item>
-                            <label>1</label>
+                            <label>2</label>
                             <icon>home/icons/DefaultMusicSongs.png</icon>
                             <onclick condition="Library.HasContent(Music)">ActivateWindow(MusicLibrary,root,return)</onclick>
                             <onclick condition="!Library.HasContent(Music)">ActivateWindow(MusicFiles,root,return)</onclick>
                             <visible>Container(800).HasFocus(3)</visible>
                         </item>
                         <item>
-                            <label>2</label>
+                            <label>1</label>
                             <icon>home/icons/DefaultPicture.png</icon>
                             <onclick>ActivateWindow(Pictures)</onclick>
                             <visible>Container(800).HasFocus(3)</visible>
