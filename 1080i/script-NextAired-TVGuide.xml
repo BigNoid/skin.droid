@@ -1350,7 +1350,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true">$INFO[Container(200).ListItem.Property(Fanart)]</texture>
+                        <texture background="true">$INFO[Container(200).ListItem.Property(Art(fanart))]</texture>
                         <visible>![Control.IsVisible(2001) + !stringcompare(Control.GetLabel(2001),empty.png)]</visible>
                     </control>
                     <control type="image" id="2001">
@@ -1359,7 +1359,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true" fallback="empty.png">$INFO[Container(200).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true" fallback="empty.png">$INFO[Container(200).ListItem.Property(Art(landscape))]</texture>
                         <visible>!IsEmpty(Window(Home).Property(TVGuide.PreviewThumbs))</visible>
                     </control>
                 </control>
@@ -1460,7 +1460,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true">$INFO[Container(201).ListItem.Property(Fanart)]</texture>
+                        <texture background="true">$INFO[Container(201).ListItem.Property(Art(fanart))]</texture>
                         <visible>![Control.IsVisible(2011) + !stringcompare(Control.GetLabel(2011),empty.png)]</visible>
                     </control>
                     <control type="image" id="2011">
@@ -1469,7 +1469,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true" fallback="empty.png">$INFO[Container(201).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true" fallback="empty.png">$INFO[Container(201).ListItem.Property(Art(landscape))]</texture>
                         <visible>!IsEmpty(Window(Home).Property(TVGuide.PreviewThumbs))</visible>
                     </control>
                 </control>
@@ -1570,7 +1570,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true">$INFO[Container(202).ListItem.Property(Fanart)]</texture>
+                        <texture background="true">$INFO[Container(202).ListItem.Property(Art(fanart))]</texture>
                         <visible>![Control.IsVisible(2021) + !stringcompare(Control.GetLabel(2021),empty.png)]</visible>
                     </control>
                     <control type="image" id="2021">
@@ -1579,7 +1579,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true" fallback="empty.png">$INFO[Container(202).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true" fallback="empty.png">$INFO[Container(202).ListItem.Property(Art(landscape))]</texture>
                         <visible>!IsEmpty(Window(Home).Property(TVGuide.PreviewThumbs))</visible>
                     </control>
                 </control>
@@ -1680,7 +1680,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true">$INFO[Container(203).ListItem.Property(Fanart)]</texture>
+                        <texture background="true">$INFO[Container(203).ListItem.Property(Art(fanart))]</texture>
                         <visible>![Control.IsVisible(2031) + !stringcompare(Control.GetLabel(2031),empty.png)]</visible>
                     </control>
                     <control type="image" id="2031">
@@ -1689,7 +1689,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true" fallback="empty.png">$INFO[Container(203).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true" fallback="empty.png">$INFO[Container(203).ListItem.Property(Art(landscape))]</texture>
                         <visible>!IsEmpty(Window(Home).Property(TVGuide.PreviewThumbs))</visible>
                     </control>
                 </control>
@@ -1790,7 +1790,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true">$INFO[Container(204).ListItem.Property(Fanart)]</texture>
+                        <texture background="true">$INFO[Container(204).ListItem.Property(Art(fanart))]</texture>
                         <visible>![Control.IsVisible(2041) + !stringcompare(Control.GetLabel(2041),empty.png)]</visible>
                     </control>
                     <control type="image" id="2041">
@@ -1799,7 +1799,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true" fallback="empty.png">$INFO[Container(204).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true" fallback="empty.png">$INFO[Container(204).ListItem.Property(Art(landscape))]</texture>
                         <visible>!IsEmpty(Window(Home).Property(TVGuide.PreviewThumbs))</visible>
                     </control>
                 </control>
@@ -1900,7 +1900,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true">$INFO[Container(205).ListItem.Property(Fanart)]</texture>
+                        <texture background="true">$INFO[Container(205).ListItem.Property(Art(fanart))]</texture>
                         <visible>![Control.IsVisible(2051) + !stringcompare(Control.GetLabel(2051),empty.png)]</visible>
                     </control>
                     <control type="image" id="2051">
@@ -1909,7 +1909,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true" fallback="empty.png">$INFO[Container(205).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true" fallback="empty.png">$INFO[Container(205).ListItem.Property(Art(landscape))]</texture>
                         <visible>!IsEmpty(Window(Home).Property(TVGuide.PreviewThumbs))</visible>
                     </control>
                 </control>
@@ -2010,7 +2010,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true">$INFO[Container(206).ListItem.Property(Fanart)]</texture>
+                        <texture background="true">$INFO[Container(206).ListItem.Property(Art(fanart))]</texture>
                         <visible>![Control.IsVisible(2061) + !stringcompare(Control.GetLabel(2061),empty.png)]</visible>
                     </control>
                     <control type="image" id="2061">
@@ -2019,7 +2019,7 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>600</fadetime>
                         <bordersize>2</bordersize>
-                        <texture background="true" fallback="empty.png">$INFO[Container(206).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true" fallback="empty.png">$INFO[Container(206).ListItem.Property(Art(landscape))]</texture>
                         <visible>!IsEmpty(Window(Home).Property(TVGuide.PreviewThumbs))</visible>
                     </control>
                 </control>
