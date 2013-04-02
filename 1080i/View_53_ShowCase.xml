@@ -25,36 +25,6 @@
                 <posy>152</posy>
                 <posx>120</posx>
                 <width>1700</width>
-                <!--<control type="image">
-                    <posx>930</posx>
-                    <width>746</width>
-                    <height>424</height>
-                    <aspectratio>stretch</aspectratio>
-                    <texture background="true">$VAR[LandscapeThumbVar]</texture>
-                    <bordersize>4</bordersize>
-                </control>
-                <control type="image">
-                    <posx>4</posx>
-                    <posy>382</posy>
-                    <width>1668</width>
-                    <height>38</height>
-                    <texture border="1" flipy="true">settings/bottom_shadow.png</texture>
-                </control>
-                <control type="image">
-                    <posy>4</posy>
-                    <posx>895</posx>
-                    <width>38</width>
-                    <height>416</height>
-                    <texture border="1" >settings/side_shadow.png</texture>
-                </control>
-                --><!--<control type="image">
-                    <posx>930</posx>
-                    <width>746</width>
-                    <height>424</height>
-                    <aspectratio>stretch</aspectratio>
-                    <texture border="20" flipy="true">thumbs/banner_shadow_in.png</texture>
-                    <bordersize>4</bordersize>
-                </control>-->
                 <control type="image">
                     <posx>4</posx>
                     <posy>92</posy>
