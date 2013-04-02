@@ -25,7 +25,7 @@
                 <posy>152</posy>
                 <posx>120</posx>
                 <width>1700</width>
-                <control type="image">
+                <!--<control type="image">
                     <posx>930</posx>
                     <width>746</width>
                     <height>424</height>
@@ -35,55 +35,29 @@
                 </control>
                 <control type="image">
                     <posx>4</posx>
+                    <posy>382</posy>
+                    <width>1668</width>
+                    <height>38</height>
+                    <texture border="1" flipy="true">settings/bottom_shadow.png</texture>
+                </control>
+                <control type="image">
+                    <posy>4</posy>
+                    <posx>895</posx>
+                    <width>38</width>
+                    <height>416</height>
+                    <texture border="1" >settings/side_shadow.png</texture>
+                </control>
+                --><!--<control type="image">
+                    <posx>930</posx>
+                    <width>746</width>
+                    <height>424</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture border="20" flipy="true">thumbs/banner_shadow_in.png</texture>
+                    <bordersize>4</bordersize>
+                </control>-->
+                <control type="image">
+                    <posx>4</posx>
                     <posy>92</posy>
-                    <width>930</width>
-                    <height>1</height>
-                    <texture border="1">common/white.png</texture>
-                    <colordiffuse>0fFFFFFF</colordiffuse>
-                </control>
-                <control type="image">
-                    <posx>4</posx>
-                    <posy>93</posy>
-                    <width>930</width>
-                    <height>1</height>
-                    <texture border="1">common/black.png</texture>
-                    <colordiffuse>0fFFFFFF</colordiffuse>
-                </control>
-                <control type="image">
-                    <posx>4</posx>
-                    <posy>182</posy>
-                    <width>930</width>
-                    <height>1</height>
-                    <texture border="1">common/white.png</texture>
-                    <colordiffuse>0fFFFFFF</colordiffuse>
-                </control>
-                <control type="image">
-                    <posx>4</posx>
-                    <posy>183</posy>
-                    <width>930</width>
-                    <height>1</height>
-                    <texture border="1">common/black.png</texture>
-                    <colordiffuse>0fFFFFFF</colordiffuse>
-                </control>
-                <control type="image">
-                    <posy>2</posy>
-                    <posx>450</posx>
-                    <width>1</width>
-                    <height>180</height>
-                    <texture border="1">common/white.png</texture>
-                    <colordiffuse>0fFFFFFF</colordiffuse>
-                </control>
-                <control type="image">
-                    <posy>2</posy>
-                    <posx>451</posx>
-                    <width>1</width>
-                    <height>180</height>
-                    <texture border="1">common/black.png</texture>
-                    <colordiffuse>0fFFFFFF</colordiffuse>
-                </control>
-                <control type="image">
-                    <posx>4</posx>
-                    <posy>420</posy>
                     <width>1668</width>
                     <height>1</height>
                     <texture border="1">common/white.png</texture>
@@ -91,7 +65,87 @@
                 </control>
                 <control type="image">
                     <posx>4</posx>
-                    <posy>421</posy>
+                    <posy>93</posy>
+                    <width>1668</width>
+                    <height>1</height>
+                    <texture border="1">common/black.png</texture>
+                    <colordiffuse>0fFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posx>4</posx>
+                    <posy>182</posy>
+                    <width>1668</width>
+                    <height>1</height>
+                    <texture border="1">common/white.png</texture>
+                    <colordiffuse>0fFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posx>4</posx>
+                    <posy>183</posy>
+                    <width>1668</width>
+                    <height>1</height>
+                    <texture border="1">common/black.png</texture>
+                    <colordiffuse>0fFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posy>2</posy>
+                    <posx>838</posx>
+                    <width>1</width>
+                    <height>180</height>
+                    <texture border="1">common/white.png</texture>
+                    <colordiffuse>0fFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posy>2</posy>
+                    <posx>839</posx>
+                    <width>1</width>
+                    <height>180</height>
+                    <texture border="1">common/black.png</texture>
+                    <colordiffuse>0fFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posy>93</posy>
+                    <posx>417</posx>
+                    <width>1</width>
+                    <height>89</height>
+                    <texture border="1">common/white.png</texture>
+                    <colordiffuse>0fFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posy>93</posy>
+                    <posx>418</posx>
+                    <width>1</width>
+                    <height>89</height>
+                    <texture border="1">common/black.png</texture>
+                    <colordiffuse>0fFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posy>93</posy>
+                    <posx>1251</posx>
+                    <width>1</width>
+                    <height>89</height>
+                    <texture border="1">common/white.png</texture>
+                    <colordiffuse>0fFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posy>93</posy>
+                    <posx>1252</posx>
+                    <width>1</width>
+                    <height>89</height>
+                    <texture border="1">common/black.png</texture>
+                    <colordiffuse>0fFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posx>4</posx>
+                    <posy>423</posy>
+                    <width>1668</width>
+                    <height>1</height>
+                    <texture border="1">common/white.png</texture>
+                    <colordiffuse>0fFFFFFF</colordiffuse>
+                </control>
+                <control type="image">
+                    <posx>4</posx>
+                    <posy>424</posy>
                     <width>1668</width>
                     <height>1</height>
                     <texture border="1">common/black.png</texture>
@@ -101,40 +155,44 @@
                     <posy>10</posy>
                     <posx>10</posx>
                     <control type="label">
-                        <width>440</width>
+                        <width>834</width>
                         <height>30</height>
                         <font>Small</font>
                         <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
                         <label>$LOCALIZE[20339]:</label>
                         <textoffsetx>8</textoffsetx>
                     </control>
                     <control type="label">
                         <posy>40</posy>
-                        <width>440</width>
+                        <width>834</width>
                         <height>30</height>
                         <font>Small</font>
                         <label>$INFO[ListItem.Director]</label>
                         <textcolor>White2</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
                         <scroll>true</scroll>
                         <textoffsetx>8</textoffsetx>
                     </control>
                     <control type="label">
-                        <posx>450</posx>
-                        <width>450</width>
+                        <posx>838</posx>
+                        <width>834</width>
                         <height>30</height>
                         <font>Small</font>
                         <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
                         <label>$LOCALIZE[20417]:</label>
                         <textoffsetx>8</textoffsetx>
                     </control>
                     <control type="label">
-                        <posx>450</posx>
+                        <posx>838</posx>
                         <posy>40</posy>
-                        <width>450</width>
+                        <width>834</width>
                         <height>30</height>
                         <font>Small</font>
                         <label>$INFO[ListItem.Writer]</label>
                         <textcolor>White2</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
                         <textoffsetx>8</textoffsetx>
                         <scroll>true</scroll>
                     </control>
@@ -143,40 +201,90 @@
                     <posy>100</posy>
                     <posx>10</posx>
                     <control type="label">
-                        <width>450</width>
+                        <width>417</width>
                         <height>30</height>
                         <font>Small</font>
                         <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
                         <label>$LOCALIZE[563]:</label>
                         <textoffsetx>8</textoffsetx>
                     </control>
                     <control type="label">
                         <posy>40</posy>
-                        <width>450</width>
+                        <width>417</width>
                         <height>30</height>
                         <font>Small</font>
                         <label>$INFO[ListItem.RatingAndVotes]$INFO[ListItem.Top250, #]</label>
                         <textcolor>White2</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
                         <textoffsetx>8</textoffsetx>
                         <scroll>true</scroll>
                     </control>
                     <control type="label">
-                        <posx>450</posx>
+                        <posx>417</posx>
                         <width>450</width>
                         <height>30</height>
                         <font>Small</font>
                         <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
                         <label>$LOCALIZE[180]:</label>
                         <textoffsetx>8</textoffsetx>
                     </control>
                     <control type="label">
-                        <posx>450</posx>
+                        <posx>417</posx>
                         <posy>40</posy>
-                        <width>450</width>
+                        <width>417</width>
                         <height>30</height>
                         <font>Small</font>
                         <label>$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
                         <textcolor>White2</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
+                        <scroll>true</scroll>
+                        <textoffsetx>8</textoffsetx>
+                    </control>
+                </control>
+                <control type="group">
+                    <posy>100</posy>
+                    <posx>848</posx>
+                    <control type="label">
+                        <width>407</width>
+                        <height>30</height>
+                        <font>Small</font>
+                        <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
+                        <label>$LOCALIZE[345]:</label>
+                        <textoffsetx>8</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posy>40</posy>
+                        <width>407</width>
+                        <height>30</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Year]$INFO[ListItem.DateAdded,  (,)]</label>
+                        <textcolor>White2</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
+                        <textoffsetx>8</textoffsetx>
+                        <scroll>true</scroll>
+                    </control>
+                    <control type="label">
+                        <posx>417</posx>
+                        <width>407</width>
+                        <height>30</height>
+                        <font>Small</font>
+                        <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
+                        <label>$LOCALIZE[574]:</label>
+                        <textoffsetx>8</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>417</posx>
+                        <posy>40</posy>
+                        <width>407</width>
+                        <height>30</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Country]</label>
+                        <textcolor>White2</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
                         <scroll>true</scroll>
                         <textoffsetx>8</textoffsetx>
                     </control>
@@ -189,6 +297,7 @@
                         <height>30</height>
                         <font>Small</font>
                         <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
                         <label>$LOCALIZE[203]:</label>
                         <textoffsetx>8</textoffsetx>
                     </control>
@@ -196,13 +305,14 @@
                         <description>Plot outline</description>
                         <posx>8</posx>
                         <posy>40</posy>
-                        <width>900</width>
-                        <height>188</height>
+                        <width>1648</width>
+                        <height>192</height>
                         <align>left</align>
                         <font>Plot</font>
                         <label>$VAR[MoviePlotVar]</label>
                         <pagecontrol>61</pagecontrol>
                         <textcolor>White2</textcolor>
+                        <shadowcolor>ff1c303c</shadowcolor>
                     </control>
                 </control>
             </control>
@@ -592,7 +702,7 @@
                     <align>center</align>
                     <font>Medium_Bold_Floor_Caps</font>
                     <textcolor>Floor</textcolor>
-                    <shadowcolor>FF686768</shadowcolor>
+                    <shadowcolor>88686768</shadowcolor>
                     <scroll>true</scroll>
                     <label>$INFO[ListItem.Label]</label>
                     <textoffsety>-2</textoffsety>
