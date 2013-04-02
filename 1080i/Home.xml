@@ -2,6 +2,7 @@
 <window id="0">
     <defaultcontrol always="true">8000</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
+    <onunload>ClearProperty(MediaMenu,Home)</onunload>
     <controls>
         <include>GlobalBackground</include>
         <control type="group">

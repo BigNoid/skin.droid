@@ -3,6 +3,7 @@
     <defaultcontrol allways="true">6</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <views>50</views>
+    <onunload>ClearProperty(MediaMenu,Home)</onunload>
     <controls>
         <include>NotificationCenter</include>
         <control type="group">

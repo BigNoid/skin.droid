@@ -2,6 +2,7 @@
 <window id="2600">
 	<defaultcontrol always="true">2</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+    <onunload>ClearProperty(MediaMenu,Home)</onunload>
     <controls>
         <control type="group">
             <control type="label" id="223">
@@ -1062,6 +1063,22 @@
                 <include>MediaMenuButton</include>
             </control>
             <include>MediaMenuBottomButton</include>
+        </control>
+        <control type="button">
+            <posy>90r</posy>
+            <width>1920</width>
+            <height>90</height>
+            <font>Medium_Bold_Floor_Caps</font>
+            <label>$LOCALIZE[31037]</label>
+            <label2>$INFO[Window(Weather).Property(WeatherProvider)]</label2>
+            <aligny>top</aligny>
+            <textoffsety>28</textoffsety>
+            <textoffsetx>30</textoffsetx>
+            <texturenofocus border="18">-</texturenofocus>
+            <disabledcolor>Floor</disabledcolor>
+            <enable>no</enable>
+            <visible>![Control.IsVisible(50) | Control.IsVisible(51)  | Control.IsVisible(55)]</visible>
+            <include>WindowEffect</include>
         </control>
 
     </controls>

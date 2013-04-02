@@ -4,6 +4,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<views>50,51,52,53,54,55</views>
     <onload>RunScript(script.tv.show.next.aired,backend=True)</onload>
+    <onunload>ClearProperty(MediaMenu,Home)</onunload>
     <controls>
         <include>GlobalBackground</include>
         <include>NotificationCenter</include>
