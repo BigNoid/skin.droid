@@ -60,7 +60,11 @@ msgctxt "#31011"
 msgid "Network"
 msgstr ""
 
-#empty strings from id 31012 to 31018
+msgctxt "#31012"
+msgid "Random fanart"
+msgstr ""
+
+#empty strings from id 31013 to 31018
 
 msgctxt "#31019"
 msgid "Open playlist"

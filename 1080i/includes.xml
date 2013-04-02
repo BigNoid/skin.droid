@@ -118,34 +118,82 @@
                 <label>$INFO[Window(Home).Property(RandomMovie.18.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RandomMovie.19.Art(fanart))]</label>
                 <label>$INFO[Window(Home).Property(RandomMovie.20.Art(fanart))]</label>
-                <visible>StringCompare(Skin.String(DefaultBG),2)</visible>
+                <visible>StringCompare(Skin.String(DefaultBG),1)</visible>
             </control>
             <control type="fadelabel" id="6054">
+                <posy>-100</posy>
+                <width>3640</width>
+                <height>60</height>
+                <textcolor>-</textcolor>
+                <pauseatend>10000</pauseatend>
+                <label>$INFO[Window(Home).Property(RandomAlbum.1.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.2.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.3.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.4.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.5.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.6.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.7.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.8.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.9.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.10.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.11.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.12.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.13.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.14.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.15.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.16.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.17.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.18.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.19.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomAlbum.20.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.1.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.2.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.3.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.4.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.5.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.6.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.7.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.8.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.9.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.10.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.11.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.12.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.13.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.14.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.15.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.16.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.17.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.18.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.19.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomArtist.20.Art(fanart))]</label>
+                <visible>StringCompare(Skin.String(DefaultBG),1)</visible>
+            </control>
+            <control type="fadelabel" id="6055">
                 <posy>-100</posy>
                 <width>1920</width>
                 <height>60</height>
                 <textcolor>-</textcolor>
                 <pauseatend>10000</pauseatend>
-                <label>$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.3.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.4.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.5.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.6.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.7.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.8.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.9.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.10.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.11.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.12.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.13.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.14.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.15.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.16.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.17.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.18.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.19.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.20.Art(fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.2.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.3.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.4.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.5.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.6.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.7.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.8.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.9.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.10.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.11.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.12.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.13.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.14.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.15.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.16.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.17.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.18.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.19.Art(tvshow.fanart))]</label>
+                <label>$INFO[Window(Home).Property(RandomEpisode.20.Art(tvshow.fanart))]</label>
                 <visible>StringCompare(Skin.String(DefaultBG),1)</visible>
             </control>
             <control type="multiimage">

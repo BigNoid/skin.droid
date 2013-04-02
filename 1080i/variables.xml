@@ -8,8 +8,9 @@
     <variable name="GlobalBackgroundVar">
         <value condition="Player.hasMedia  + !IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[Player.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[ListItem.Art(fanart)]</value>
-        <value condition="IntegerGreaterThan(Skin.String(DefaultBG),1)">$INFO[Control.GetLabel(6053)]</value>
-        <value condition="IntegerGreaterThan(Skin.String(DefaultBG),0)">$INFO[Control.GetLabel(6054)]</value>
+        <value condition="StringCompare(Skin.String(DefaultBG),1) + [Container(800).HasFocus(3) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)]">$INFO[Control.GetLabel(6054)]</value>
+        <value condition="StringCompare(Skin.String(DefaultBG),1) + [Container(800).HasFocus(2) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">$INFO[Control.GetLabel(6055)]</value>
+        <value condition="StringCompare(Skin.String(DefaultBG),1)">$INFO[Control.GetLabel(6053)]</value>
         <value condition="!IsEmpty(Skin.String(DefaultBG))">$INFO[Skin.String(DefaultBG)]</value>
         <value>special://skin/backgrounds/default_bg.jpg</value>
     </variable>

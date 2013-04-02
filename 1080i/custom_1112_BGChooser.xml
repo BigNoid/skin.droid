@@ -31,17 +31,9 @@
                 <onclick>Skin.SetPath(DefaultBG)</onclick>
             </control>
             <control type="radiobutton" id="3">
-                <description>Random movies</description>
+                <description>Random fanart</description>
                 <width>600</width>
-                <label>31002</label>
-                <onclick>Dialog.Close(1112)</onclick>
-                <onclick>Skin.SetString(DefaultBG,2)</onclick>
-                <selected>StringCompare(Skin.String(DefaultBG),2)</selected>
-            </control>
-            <control type="radiobutton" id="4">
-                <description>Latest movies</description>
-                <width>600</width>
-                <label>31003</label>
+                <label>31012</label>
                 <onclick>Dialog.Close(1112)</onclick>
                 <onclick>Skin.SetString(DefaultBG,1)</onclick>
                 <selected>StringCompare(Skin.String(DefaultBG),1)</selected>
