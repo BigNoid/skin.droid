@@ -1321,7 +1321,14 @@
                     </focusedlayout>
                 </control>
 			</control>
-			<control type="grouplist">
+            <control type="image">
+                <posx>1420</posx>
+                <posy>72</posy>
+                <width>500</width>
+                <height>1008</height>
+                <include>toast_back</include>
+            </control>
+            <control type="grouplist">
 				<description>Additional show info</description>
                 <posx>1420</posx>
                 <posy>72</posy>
@@ -1430,13 +1437,6 @@
                     <disabledcolor>White2</disabledcolor>
                     <enable>no</enable>
                 </control>
-            </control>
-            <control type="image">
-                <posx>1420</posx>
-                <posy>72</posy>
-                <width>500</width>
-                <height>1008</height>
-                <include>toast_back</include>
             </control>
             <control type="grouplist">
                 <description>Additional show info</description>
