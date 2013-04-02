@@ -7,14 +7,7 @@
         <control type="group">
             <animation effect="slide" end="0,-900" time="320" easing="inout" tween="circle" condition="Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(slideshow)">Conditional</animation>
             <control type="image">
-                <posx>832r</posx>
-                <posy>2</posy>
-                <width>640</width>
-                <height>70</height>
-                <include>toast_back</include>
-            </control>
-            <control type="image">
-                <posx>891r</posx>
+                <posx>790</posx>
                 <posy>11</posy>
                 <width>48</width>
                 <height>48</height>
@@ -23,9 +16,9 @@
             </control>
             <control type="label" id="30">
                 <posy>4</posy>
-                <posx>832r</posx>
+                <posx>840</posx>
                 <height>32</height>
-                <width>770</width>
+                <width>990</width>
                 <font>Smaller_Caps</font>
                 <textcolor>Blue</textcolor>
                 <aligny>center</aligny>
@@ -34,9 +27,9 @@
             </control>
             <control type="label" id="31">
                 <posy>35</posy>
-                <posx>832r</posx>
+                <posx>840</posx>
                 <height>32</height>
-                <width>770</width>
+                <width>990</width>
                 <font>Smaller</font>
                 <aligny>center</aligny>
                 <label>-</label>
