@@ -287,34 +287,38 @@
     </variable>
 
     <variable name="CDCase1Var">
-        <value>$INFO[Window(home).Property(RecommendedAlbum.5.Art(thumb))]</value>
+        <value>$INFO[Window(home).Property(RandomAlbum.5.Art(thumb))]</value>
     </variable>
     <variable name="CDCase2Var">
-        <value>$INFO[Window(home).Property(RecommendedAlbum.9.Art(thumb))]</value>
+        <value>$INFO[Window(home).Property(RandomAlbum.9.Art(thumb))]</value>
     </variable>
     <variable name="CDCase3Var">
-        <value>$INFO[Window(home).Property(RecommendedAlbum.8.Art(thumb))]</value>
+        <value>$INFO[Window(home).Property(RandomAlbum.8.Art(thumb))]</value>
     </variable>
     <variable name="CDCase4Var">
-        <value>$INFO[Window(home).Property(RecommendedAlbum.7.Art(thumb))]</value>
+        <value>$INFO[Window(home).Property(RandomAlbum.7.Art(thumb))]</value>
     </variable>
     <variable name="CDCase5Var">
-        <value>$INFO[Window(home).Property(RecommendedAlbum.4.Art(thumb))]</value>
+        <value>$INFO[Window(home).Property(RandomAlbum.4.Art(thumb))]</value>
     </variable>
     <variable name="CDCase6Var">
-        <value>$INFO[Window(home).Property(RecommendedAlbum.6.Art(thumb))]</value>
+        <value>$INFO[Window(home).Property(RandomAlbum.6.Art(thumb))]</value>
     </variable>
     <variable name="CDCase7Var">
-        <value>$INFO[Window(home).Property(RecommendedAlbum.10.Art(thumb))]</value>
+        <value>$INFO[Window(home).Property(RandomAlbum.10.Art(thumb))]</value>
     </variable>
     <variable name="CDCase8Var">
-        <value>$INFO[Window(home).Property(RecommendedAlbum.3.Art(thumb))]</value>
+        <value condition="!IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+        <value condition="!IsEmpty(Control.GetLabel(6056))">$INFO[Control.GetLabel(6056)]</value>
+        <value>$INFO[Window(home).Property(RandomAlbum.3.Art(thumb))]</value>
     </variable>
     <variable name="CDCase9Var">
-        <value>$INFO[Window(home).Property(RecommendedAlbum.2.Art(thumb))]</value>
+        <value condition="!IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
+        <value>$INFO[Window(home).Property(RandomAlbum.2.Art(thumb))]</value>
     </variable>
     <variable name="CDCase10Var">
-        <value>$INFO[Window(home).Property(RecommendedAlbum.1.Art(thumb))]</value>
+        <value condition="!IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
+        <value>$INFO[Window(home).Property(RandomAlbum.1.Art(thumb))]</value>
     </variable>
 
     <variable name="InfoList.NoPlotVar">
