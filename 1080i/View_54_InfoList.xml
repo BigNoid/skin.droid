@@ -213,7 +213,7 @@
                         <pagecontrol>60</pagecontrol>
                         <viewtype label="InfoList">list</viewtype>
                         <orientation>vertical</orientation>
-                        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes)</visible>
+                        <visible>!Container.Content(addons)</visible>
                         <scrolltime tween="sine" easing="inout">200</scrolltime>
                         <itemlayout width="820" height="72">
                             <control type="image">
