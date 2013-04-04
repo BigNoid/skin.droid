@@ -279,6 +279,7 @@
             <animation type="WindowClose" reversible="false">
                 <effect type="fade" start="100" end="0" time="500" />
             </animation>
+            <visible>!Window.IsVisible(script-XBMC-Subtitles-main.xml)</visible>
             <control type="group">
                 <posx>867</posx>
                 <posy>447</posy>
