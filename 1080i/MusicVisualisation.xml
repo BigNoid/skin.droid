@@ -56,10 +56,12 @@
             <fadetime>800</fadetime>
             <texture background="true">special://skin/backgrounds/speakergrill.jpg</texture>
             <!--<visible>IsEmpty(Player.Art(fanart))</visible>-->
+            <include>WindowEffect</include>
         </control>
         <control type="group">
             <animation effect="fade" time="600">VisibleChange</animation>
             <!--<visible>IsEmpty(Player.Art(fanart))</visible>-->
+            <include>WindowEffect</include>
             <control type="group">
                 <posx>-200</posx>
                 <control type="group">
@@ -387,6 +389,7 @@
         <control type="visualisation" id="2">
             <description>visualisation</description>
             <include>Dimensions_Fullscreen</include>
+            <include>WindowEffect</include>
         </control>
         <control type="group">
             <control type="group">
