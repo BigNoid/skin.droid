@@ -8,9 +8,9 @@
             <animation effect="slide" start="0" end="120" time="200" tween="cubic" easing="out">WindowClose</animation>
             <control type="image">
                 <posx>1803</posx>
-                <posy>231</posy>
+                <posy>183</posy>
                 <width>138</width>
-                <height>618</height>
+                <height>714</height>
                 <texture border="21">thumbs/thumb_shadow.png</texture>
             </control>
             <control type="grouplist" id="100">
@@ -112,7 +112,7 @@
                         <onleft>14</onleft>
                         <onright>101</onright>
                         <onup>3</onup>
-                        <ondown>6</ondown>
+                        <ondown>18</ondown>
                     </control>
                     <control type="image">
                         <posx>16</posx>
@@ -120,6 +120,29 @@
                         <width>64</width>
                         <height>64</height>
                         <texture>icons/lyrics.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <width>96</width>
+                    <height>96</height>
+                    <control type="button" id="18">
+                        <description>Toggle Info</description>
+                        <width>96</width>
+                        <height>96</height>
+                        <label>31038</label>
+                        <font>-</font>
+                        <onclick>Info</onclick>
+                        <onleft>14</onleft>
+                        <onright>101</onright>
+                        <onup>4</onup>
+                        <ondown>6</ondown>
+                    </control>
+                    <control type="image">
+                        <posx>16</posx>
+                        <posy>16</posy>
+                        <width>64</width>
+                        <height>64</height>
+                        <texture>icons/info.png</texture>
                     </control>
                 </control>
                 <control type="group">
@@ -134,7 +157,7 @@
                         <onclick>PlayerControl(Random)</onclick>
                         <onleft>14</onleft>
                         <onright>101</onright>
-                        <onup>4</onup>
+                        <onup>18</onup>
                         <ondown>7</ondown>
                     </control>
                     <control type="image">

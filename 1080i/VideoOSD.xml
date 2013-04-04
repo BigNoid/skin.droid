@@ -10,12 +10,11 @@
                 <animation effect="slide" start="0" end="-120" time="500" tween="cubic" easing="out" delay="200" condition="Window.IsVisible(videobookmarks)">Conditional</animation>
                 <animation effect="slide" start="-120" end="0" time="200" tween="cubic" easing="out">WindowOpen</animation>
                 <animation effect="slide" start="0" end="-120" time="200" tween="cubic" easing="out">WindowClose</animation>
-                <visible>Player.ChapterCount</visible>
                 <control type="image">
                     <posx>-21</posx>
-                    <posy>423</posy>
+                    <posy>375</posy>
                     <width>138</width>
-                    <height>234</height>
+                    <height>330</height>
                     <texture border="21">thumbs/thumb_shadow.png</texture>
                 </control>
                 <control type="grouplist" id="101">
@@ -70,6 +69,29 @@
                             <width>64</width>
                             <height>64</height>
                             <texture>osd/previous_nf.png</texture>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <width>96</width>
+                        <height>96</height>
+                        <control type="button" id="15">
+                            <description>Stop</description>
+                            <width>96</width>
+                            <height>96</height>
+                            <label>31038</label>
+                            <font>-</font>
+                            <onclick>PlayerControl(Stop)</onclick>
+                            <onleft>14</onleft>
+                            <onright>100</onright>
+                            <onup>17</onup>
+                            <ondown>16</ondown>
+                        </control>
+                        <control type="image">
+                            <posx>16</posx>
+                            <posy>16</posy>
+                            <width>64</width>
+                            <height>64</height>
+                            <texture>osd/stop_nf.png</texture>
                         </control>
                     </control>
                 </control>
@@ -210,7 +232,7 @@
                             <onleft>14</onleft>
                             <onright>101</onright>
                             <onup>4</onup>
-                            <ondown>15</ondown>
+                            <ondown>18</ondown>
                         </control>
                         <control type="image">
                             <posx>16</posx>
@@ -226,13 +248,13 @@
                     <control type="group">
                         <width>96</width>
                         <height>96</height>
-                        <control type="button" id="15">
-                            <description>Stop</description>
+                        <control type="button" id="18">
+                            <description>Toggle Info</description>
                             <width>96</width>
                             <height>96</height>
                             <label>31038</label>
                             <font>-</font>
-                            <onclick>PlayerControl(Stop)</onclick>
+                            <onclick>Info</onclick>
                             <onleft>14</onleft>
                             <onright>101</onright>
                             <onup>6</onup>
@@ -243,7 +265,7 @@
                             <posy>16</posy>
                             <width>64</width>
                             <height>64</height>
-                            <texture>osd/stop_nf.png</texture>
+                            <texture>icons/info.png</texture>
                         </control>
                     </control>
                 </control>
@@ -301,12 +323,14 @@
                 <width>1920</width>
                 <height>280</height>
                 <texture>views/landscape/shade.png</texture>
+                <visible>!Player.ShowInfo</visible>
             </control>
 
 
             <control type="group">
                 <posx>0</posx>
                 <posy>96r</posy>
+                <visible>!Player.ShowInfo</visible>
                 <control type="label">
                     <posx>256</posx>
                     <posy>0</posy>
@@ -367,6 +391,5 @@
                 </control>
             </control>
         </control>
-
     </controls>
 </window>
