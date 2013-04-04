@@ -2,6 +2,7 @@
 <window id="135">
 	<defaultcontrol always="true">14</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+    <onunload>ClearProperty(FanartZoom,songinformation)</onunload>
     <include>DialogEffect</include>
     <controls>
 		<control type="group">
@@ -25,7 +26,7 @@
                 <width>600</width>
                 <height>318</height>
                 <onleft>15</onleft>
-                <onright>14</onright>
+                <onright>4002</onright>
                 <onup>9000</onup>
                 <ondown>9000</ondown>
                 <itemgap>0</itemgap>
@@ -237,14 +238,6 @@
                         <height>342</height>
                         <include>toast_back</include>
                     </control>
-                    <control type="image">
-                        <posx>720</posx>
-                        <width>600</width>
-                        <height>342</height>
-                        <aspectratio>scale</aspectratio>
-                        <texture>$INFO[ListItem.Art(fanart)]</texture>
-                        <bordersize>2</bordersize>
-                    </control>
                 </control>
                 <control type="group">
                     <posy>720</posy>
@@ -280,7 +273,7 @@
                         <posx>264</posx>
                         <posy>10</posy>
                         <width>1000</width>
-                        <height>120</height>
+                        <height>192</height>
                         <align>left</align>
                         <font>Plot</font>
                         <label>$INFO[ListItem.Comment]</label>
@@ -299,8 +292,9 @@
                         <posx>256</posx>
                         <width>1064</width>
                         <height>198</height>
-                        <onleft>50</onleft>
-                        <onright>5000</onright>
+                        <onup>4002</onup>
+                        <onleft>9000</onleft>
+                        <onright>9000</onright>
                         <showonepage>false</showonepage>
                         <texturesliderbackground>-</texturesliderbackground>
                         <texturesliderbar>-</texturesliderbar>
@@ -308,7 +302,6 @@
                     </control>
                 </control>
             </control>
-
             <control type="group" id="6051">
                 <posx>0</posx>
                 <posy>90r</posy>
@@ -456,6 +449,31 @@
                     <texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
                     <visible>!IsEmpty(ListItem.FileExtension)</visible>
                 </control>
+            </control>
+            <control type="button" id="4002">
+                <posx>1320</posx>
+                <posy>450</posy>
+                <width>600</width>
+                <height>342</height>
+                <onup>6051</onup>
+                <ondown>61</ondown>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <onclick condition="IsEmpty(Window(songinformation).Property(FanartZoom))">SetProperty(FanartZoom,True,songinformation)</onclick>
+                <onclick condition="!IsEmpty(Window(songinformation).Property(FanartZoom))">ClearProperty(FanartZoom,songinformation)</onclick>
+                <onback condition="!IsEmpty(Window(songinformation).Property(FanartZoom))">ClearProperty(FanartZoom,songinformation)</onback>
+                <onback condition="IsEmpty(Window(songinformation).Property(FanartZoom))">Dialog.Close(songinformation)</onback>
+                <animation effect="zoom" start="1320,450,600,342" end="-10,-10,1940,1100" time="640" tween="cubic" condition="!IsEmpty(Window(songinformation).Property(FanartZoom))">Conditional</animation>
+            </control>
+            <control type="image">
+                <posx>1320</posx>
+                <posy>450</posy>
+                <width>600</width>
+                <height>342</height>
+                <aspectratio>scale</aspectratio>
+                <texture>$INFO[ListItem.Art(fanart)]</texture>
+                <bordersize>2</bordersize>
+                <animation effect="zoom" start="1320,450,600,342" end="-10,-10,1940,1100" time="640" tween="cubic" condition="!IsEmpty(Window(songinformation).Property(FanartZoom))">Conditional</animation>
             </control>
 		</control>
 	</controls>
