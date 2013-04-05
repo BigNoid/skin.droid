@@ -1236,12 +1236,24 @@
                     <effect type="zoom" start="100" end="50" center="auto" easing="in" tween="cubic" time="200" />
                     <effect type="fade" start="100" end="0" time="200"/>
                 </animation>
+                <control type="button" id="9004">
+                    <description>Cinema Experience</description>
+                    <label>31038</label>
+                    <include>MediaMenuButton</include>
+                    <onclick>Playlist.Clear</onclick>
+                    <onclick>Dialog.Close(MovieInformation)</onclick>
+                    <onclick>RunScript(script.cinema.experience)</onclick>
+                    <onclick>ClearProperty(VideoInfoMediaMenu,Home)</onclick>
+                    <onclick>SetFocus(5000)</onclick>
+                    <visible>Container.Content(Movies) + system.hasaddon(script.cinema.experience) + !SubString(Container.FolderPath,plugin)</visible>
+                </control>
                 <control type="button" id="9001">
                     <description>Edit library</description>
                     <label>21435</label>
                     <include>MediaMenuButton</include>
                     <onclick>ActivateWindow(1111)</onclick>
                     <onclick>ClearProperty(VideoInfoMediaMenu,Home)</onclick>
+                    <onclick>SetFocus(5000)</onclick>
                     <visible>System.HasAddon(script.libraryeditor) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
                 </control>
                 <control type="button" id="9002">
@@ -1251,6 +1263,7 @@
                     <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick>ClearProperty(VideoInfoMediaMenu,Home)</onclick>
+                    <onclick>SetFocus(5000)</onclick>
                     <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
                 </control>
                 <control type="button" id="9003">
@@ -1260,6 +1273,7 @@
                     <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick>ClearProperty(VideoInfoMediaMenu,Home)</onclick>
+                    <onclick>SetFocus(5000)</onclick>
                     <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
                 </control>
                 <include>MediaMenuBottomButton</include>

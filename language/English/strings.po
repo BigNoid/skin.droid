@@ -164,7 +164,11 @@ msgctxt "#31037"
 msgid "Powered by"
 msgstr ""
 
-#empty strings from id 31038 to 31041
+msgctxt "#31038"
+msgid "Cinema experience"
+msgstr ""
+
+#empty strings from id 31039 to 31041
 
 msgctxt "#31042"
 msgid "[B]0[/B]"
