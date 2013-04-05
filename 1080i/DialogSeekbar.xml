@@ -228,11 +228,16 @@
                 <height>254</height>
                 <aspectratio aligny="bottom">keep</aspectratio>
                 <texture background="true">$VAR[PlayerArtworkVar]</texture>
+                <visible>[Player.ShowInfo | Player.Paused] + !Window.IsVisible(script-XBMC-Subtitles-main.xml)</visible>
+                <visible>!Player.DisplayAfterSeek</visible>
                 <animation type="WindowOpen" reversible="false">
                     <effect type="fade" start="0" end="100" time="200" />
                 </animation>
                 <animation type="WindowClose" reversible="false">
                     <effect type="fade" start="100" end="0" time="200" />
+                </animation>
+                <animation type="VisibleChange" reversible="false">
+                    <effect type="fade" start="0" end="100" time="200" />
                 </animation>
             </control>
             <control type="image">
