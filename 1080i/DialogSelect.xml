@@ -64,6 +64,7 @@
                 <disabledcolor>Blue2</disabledcolor>
                 <textcolor>grey</textcolor>
                 <label>13406</label>
+                <label2>$INFO[Control.GetLabel(2)]</label2>
                 <textoffsetx>30</textoffsetx>
                 <enable>no</enable>
             </control>
@@ -109,55 +110,33 @@
                     </control>
                 </itemlayout>
                 <focusedlayout height="72" width="1368">
-                    <control type="group">
+                    <control type="image">
+                        <width>1368</width>
+                        <height>72</height>
+                        <include>toast_back</include>
                         <visible>!Control.HasFocus(3)</visible>
-                        <control type="image">
-                            <width>1368</width>
-                            <height>72</height>
-                            <include>toast_back</include>
-                        </control>
-                        <control type="label">
-                            <width>1368</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <textoffsetx>30</textoffsetx>
-                            <textcolor>White2</textcolor>
-                        </control>
-                        <control type="label">
-                            <posx>1368</posx>
-                            <width>1368</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <align>right</align>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <textoffsetx>30</textoffsetx>
-                            <textcolor>White2</textcolor>
-                        </control>
                     </control>
-                    <control type="group">
+                    <control type="image">
+                        <width>1368</width>
+                        <height>72</height>
+                        <texture border="8">dialogs/button_focus.png</texture>
                         <visible>Control.HasFocus(3)</visible>
-                        <control type="image">
-                            <width>1368</width>
-                            <height>72</height>
-                            <texture border="8">dialogs/button_focus.png</texture>
-                        </control>
-                        <control type="label">
-                            <width>1368</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <textoffsetx>30</textoffsetx>
-                        </control>
-                        <control type="label">
-                            <posx>1368</posx>
-                            <width>1368</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <align>right</align>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <textoffsetx>30</textoffsetx>
-                        </control>
+                    </control>
+                    <control type="label">
+                        <width>1368</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textoffsetx>30</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>1368</posx>
+                        <width>1368</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textoffsetx>30</textoffsetx>
                     </control>
                 </focusedlayout>
             </control>
@@ -196,67 +175,45 @@
                     </control>
                 </itemlayout>
                 <focusedlayout height="72" width="1368">
-                    <control type="group">
+                    <control type="image">
+                        <width>1368</width>
+                        <height>72</height>
+                        <include>toast_back</include>
                         <visible>!Control.HasFocus(6)</visible>
-                        <control type="image">
-                            <width>1368</width>
-                            <height>72</height>
-                            <include>toast_back</include>
-                        </control>
-                        <control type="label">
-                            <width>1368</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <textoffsetx>30</textoffsetx>
-                            <textcolor>White2</textcolor>
-                        </control>
-                        <control type="label">
-                            <posx>1368</posx>
-                            <width>1368</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <align>right</align>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <textoffsetx>30</textoffsetx>
-                            <textcolor>White2</textcolor>
-                        </control>
                     </control>
-                    <control type="group">
+                    <control type="image">
+                        <width>1368</width>
+                        <height>72</height>
+                        <texture border="8">dialogs/button_focus.png</texture>
                         <visible>Control.HasFocus(6)</visible>
-                        <control type="image">
-                            <width>1368</width>
-                            <height>72</height>
-                            <texture border="8">dialogs/button_focus.png</texture>
-                        </control>
-                        <control type="label">
-                            <width>1368</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <textoffsetx>30</textoffsetx>
-                        </control>
-                        <control type="label">
-                            <posx>1368</posx>
-                            <width>1368</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <align>right</align>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <textoffsetx>30</textoffsetx>
-                        </control>
+                    </control>
+                    <control type="label">
+                        <width>1368</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textoffsetx>30</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>1368</posx>
+                        <width>1368</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textoffsetx>30</textoffsetx>
                     </control>
                 </focusedlayout>
             </control>
 
-			<control type="label" id="2">
+			<!--<control type="label" id="2">
 				<description>Number Of Files</description>
 				<posx>705</posx>
 				<posy>120</posy>
 				<width>300</width>
 				<align>center</align>
 				<label>-</label>
-			</control>
+			</control>-->
             <control type="group">
                 <control type="button">
                     <posx>72r</posx>

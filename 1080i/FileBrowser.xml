@@ -257,7 +257,18 @@
                     <include>toast_back</include>
                 </control>
             </control>
-            <include>FloorFlagsBack</include>
+            <control type="button">
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
+                <height>90</height>
+                <font>Medium_Bold_Floor_Caps</font>
+                <label>$INFO[System.CurrentWindow]</label>
+                <label2>$INFO[Container(450).NumItems,, $LOCALIZE[31027]]</label2>
+                <textoffsetx>18</textoffsetx>
+                <disabledcolor>White2</disabledcolor>
+                <enable>no</enable>
+            </control>
         </control>
 	</controls>
 </window>
