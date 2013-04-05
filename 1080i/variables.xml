@@ -333,7 +333,7 @@
         <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Studio]</value>
     </variable>
     <variable name="InfoListButton2Label2Var">
-        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes)] [LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</value>
     </variable>
     <variable name="InfoListButton3Label1Var">
         <value condition="Container.Content(movies)">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
@@ -341,6 +341,7 @@
     </variable>
     <variable name="InfoListButton3Label2Var">
         <value condition="Container.Content(movies)">$INFO[ListItem.Year]</value>
-        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[Window(Home).Property(NextAired.NextDate)]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$INFO[Window(Home).Property(NextAired.NextDate)]</value>
+        <value>N/A</value>
     </variable>
 </includes>
