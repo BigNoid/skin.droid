@@ -344,4 +344,9 @@
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$INFO[Window(Home).Property(NextAired.NextDate)]</value>
         <value>N/A</value>
     </variable>
+
+    <variable name="TimeRemainingVar">
+        <value condition="Player.HasDuration">$INFO[Player.TimeRemaining,- ]</value>
+        <value>∞</value>
+    </variable>
 </includes>

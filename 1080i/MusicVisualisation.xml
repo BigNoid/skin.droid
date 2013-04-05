@@ -431,7 +431,7 @@
                         <label>$INFO[Player.Time]</label>
                         <textoffsetx>15</textoffsetx>
                     </control>
-                    <!--<control type="button">
+                    <control type="button">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>32</width>
@@ -440,17 +440,18 @@
                         <texturefocus>-</texturefocus>
                         <onclick>noop</onclick>
                         <enable>no</enable>
-                    </control>-->
+                    </control>
                     <control type="button">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>1540</width>
+                        <width>1508</width>
                         <height>72</height>
                         <font>Medium_Caps</font>
                         <onclick>noop</onclick>
                         <label>$INFO[MusicPlayer.TrackNumber,,: ]$INFO[Player.Title]</label>
                         <label2>$INFO[MusicPlayer.Artist]</label2>
                         <disabledcolor>White2</disabledcolor>
+                        <textoffsetx>15</textoffsetx>
                         <enable>no</enable>
                     </control>
                     <control type="image">
@@ -469,7 +470,7 @@
                         <align>right</align>
                         <aligny>center</aligny>
                         <textcolor>White2</textcolor>
-                        <label>$INFO[Player.TimeRemaining,- ]</label>
+                        <label>$VAR[TimeRemainingVar]</label>
                         <textoffsetx>15</textoffsetx>
                     </control>
                 </control>

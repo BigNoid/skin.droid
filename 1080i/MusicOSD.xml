@@ -359,6 +359,7 @@
                     <width>256</width>
                     <height>96</height>
                     <align>right</align>
+                    <font>Medium_Caps3</font>
                     <label>$INFO[Player.Time]</label>
                     <textoffsetx>8</textoffsetx>
                 </control>
@@ -369,6 +370,7 @@
                     <height>96</height>
                     <label>$INFO[Player.Duration]</label>
                     <textoffsetx>8</textoffsetx>
+                    <font>Medium_Caps3</font>
                 </control>
                 <control type="progress">
                     <description>Progress Bar</description>

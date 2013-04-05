@@ -306,7 +306,7 @@
                 <posy>400</posy>
                 <posx>162</posx>
                 <height>23</height>
-                <width>150</width>
+                <width>160</width>
                 <font>Small</font>
                 <align>right</align>
                 <aligny>center</aligny>
@@ -339,11 +339,11 @@
             </control>
             <control type="label">
                 <posy>400</posy>
-                <posx>772</posx>
+                <posx>660</posx>
                 <height>23</height>
-                <width>150</width>
+                <width>160</width>
                 <font>Small</font>
-                <align>right</align>
+                <align>left</align>
                 <aligny>center</aligny>
                 <textcolor>White2</textcolor>
                 <label>$INFO[Player.TimeRemaining]</label>

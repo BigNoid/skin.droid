@@ -349,7 +349,7 @@
                     <width>1680</width>
                     <height>96</height>
                     <font>Medium_Caps3</font>
-                    <label>$INFO[Player.TimeRemaining,- ]</label>
+                    <label>$VAR[TimeRemainingVar]</label>
                     <textcolor>White2</textcolor>
                     <textoffsetx>30</textoffsetx>
                 </control>
