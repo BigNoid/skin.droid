@@ -37,7 +37,7 @@
                             <onclick>SkipNext</onclick>
                             <onleft>100</onleft>
                             <onright>14</onright>
-                            <onup>17</onup>
+                            <onup>15</onup>
                             <ondown>17</ondown>
                         </control>
                         <control type="image">
@@ -61,7 +61,7 @@
                             <onleft>100</onleft>
                             <onright>14</onright>
                             <onup>16</onup>
-                            <ondown>16</ondown>
+                            <ondown>15</ondown>
                         </control>
                         <control type="image">
                             <posx>16</posx>
@@ -81,8 +81,8 @@
                             <label>31038</label>
                             <font>-</font>
                             <onclick>PlayerControl(Stop)</onclick>
-                            <onleft>14</onleft>
-                            <onright>100</onright>
+                            <onleft>100</onleft>
+                            <onright>14</onright>
                             <onup>17</onup>
                             <ondown>16</ondown>
                         </control>
@@ -132,7 +132,7 @@
                             <onclick>ActivateWindow(videobookmarks)</onclick>
                             <onleft>14</onleft>
                             <onright>101</onright>
-                            <onup>6</onup>
+                            <onup>18</onup>
                             <ondown>2</ondown>
                         </control>
                         <control type="image">
