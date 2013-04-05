@@ -33,7 +33,7 @@
                 <itemgap>0</itemgap>
                 <onup>9000</onup>
                 <ondown>9000</ondown>
-                <onright>5</onright>
+                <onright>4</onright>
                 <onleft>5</onleft>
                 <orientation>vertical</orientation>
                 <control type="button" id="6">
@@ -194,6 +194,17 @@
 
             <control type="radiobutton" id="8">
                 <description>radioButton</description>
+            </control>
+            <control type="button">
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
+                <height>90</height>
+                <font>Medium_Bold_Floor_Caps</font>
+                <label>$INFO[System.CurrentWindow]</label>
+                <textoffsetx>18</textoffsetx>
+                <disabledcolor>White2</disabledcolor>
+                <enable>no</enable>
             </control>
         </control>
     </controls>
