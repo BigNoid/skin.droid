@@ -1019,8 +1019,7 @@
                         <item id="3">
                             <label>2</label>
                             <icon>home/icons/DefaultMusicSongs.png</icon>
-                            <onclick condition="Library.HasContent(Music)">ActivateWindow(MusicLibrary,root,return)</onclick>
-                            <onclick condition="!Library.HasContent(Music)">ActivateWindow(MusicFiles,root,return)</onclick>
+                            <onclick>ActivateWindow(Music)</onclick>
                         </item>
                     </content>
                 </control>
