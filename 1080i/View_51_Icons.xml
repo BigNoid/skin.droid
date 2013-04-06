@@ -131,7 +131,7 @@
                         <autoscroll delay="1000" time="AutoScrollTime" repeat="8001">True</autoscroll>
                     </control>
                 </focusedlayout>
-                <itemlayout width="308" height="459" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]">
+                <itemlayout width="308" height="459" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | [Window.IsActive(videos) + Container.Content(genres)]]">
                     <control type="image">
                         <width>308</width>
                         <height>459</height>
@@ -155,7 +155,7 @@
                         <bordersize>2</bordersize>
                     </control>
                 </itemlayout>
-                <focusedlayout width="308" height="459" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]">
+                <focusedlayout width="308" height="459" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | [Window.IsActive(videos) + Container.Content(genres)]]">
                     <control type="image">
                         <width>308</width>
                         <height>459</height>

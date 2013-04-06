@@ -3,6 +3,7 @@
     <variable name="GlobalBackgroundVar">
         <value condition="Player.hasMedia  + !IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[Player.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="Window.IsActive(videos) + Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/videos/fanart/,.jpg]</value>
         <value condition="StringCompare(Skin.String(DefaultBG),1) + [Container(800).HasFocus(3) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)]">$INFO[Control.GetLabel(6054)]</value>
         <value condition="StringCompare(Skin.String(DefaultBG),1) + [Container(800).HasFocus(2) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">$INFO[Control.GetLabel(6055)]</value>
         <value condition="StringCompare(Skin.String(DefaultBG),1)">$INFO[Control.GetLabel(6053)]</value>
@@ -34,9 +35,11 @@
     <variable name="LandscapeThumbVar">
         <value condition="Container.Content(episodes)">$INFO[ListItem.Art(thumb)]</value>
         <value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
-        <value>$INFO[ListItem.Art(fanart)]</value>
+        <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+        <value>$INFO[ListItem.Icon]</value>
     </variable>
     <variable name="InfoListThumbVar">
+        <value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/videos/fanart/,.jpg]</value>
         <value condition="Container.Content(episodes)">$INFO[ListItem.Art(thumb)]</value>
         <value>$INFO[ListItem.Art(fanart)]</value>
     </variable>
@@ -45,6 +48,7 @@
         <value>$INFO[ListItem.Icon]</value>
     </variable>
     <variable name="PosterThumbVar">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem.Label,..)">$INFO[ListItem.Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>
@@ -52,6 +56,7 @@
         <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
         <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>
 
@@ -276,7 +281,7 @@
         <value condition="Container.Content(tvshows) | Container.Content(seasons) | StringCompare(Container.FolderPath,videodb://5/)">$LOCALIZE[20343]: </value>
         <value condition="Container.Content(episodes) + !StringCompare(Container.FolderName,ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle]: </value>
         <value condition="SubString(Container.FolderPath,videodb://2/,left) + !StringCompare(Container.FolderName,$LOCALIZE[20343])">$LOCALIZE[20343]: </value>
-        <value condition="SubString(Container.FolderPath,videodb://1/,left) + !StringCompare(Container.FolderName,$LOCALIZE[20342])">$LOCALIZE[20343]: </value>
+        <value condition="SubString(Container.FolderPath,videodb://1/,left) + !StringCompare(Container.FolderName,$LOCALIZE[20342])">$LOCALIZE[20342]: </value>
         <value condition="!IsEmpty(Container.FolderName)">$INFO[System.CurrentWindow]: </value>
         <value>$INFO[System.CurrentWindow]</value>
     </variable>
@@ -342,7 +347,7 @@
     <variable name="InfoListButton3Label2Var">
         <value condition="Container.Content(movies)">$INFO[ListItem.Year]</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$INFO[Window(Home).Property(NextAired.NextDate)]</value>
-        <value>N/A</value>
+        <!--<value>N/A</value>-->
     </variable>
 
     <variable name="TimeRemainingVar">

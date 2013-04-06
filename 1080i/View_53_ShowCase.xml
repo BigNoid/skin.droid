@@ -787,7 +787,7 @@
         <onright>53</onright>
         <onup>9010</onup>
         <ondown>61</ondown>
-        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)</visible>
+        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(genres)</visible>
         <viewtype label="ShowCase">bigwrap</viewtype>
         <pagecontrol>61</pagecontrol>
         <scrolltime tween="quadratic">300</scrolltime>
@@ -1074,70 +1074,87 @@
 
 
     <variable name="ShowcaseItem-7Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(-7).Label,..)">$INFO[ListItem(-7).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(-7).Art(poster))">$INFO[ListItem(-7).Art(poster)]</value>
         <value>$INFO[ListItem(-7).Icon]</value>
     </variable>
     <variable name="ShowcaseItem-6Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(-6).Label,..)">$INFO[ListItem(-6).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(-6).Art(poster))">$INFO[ListItem(-6).Art(poster)]</value>
         <value>$INFO[ListItem(-6).Icon]</value>
     </variable>
     <variable name="ShowcaseItem-5Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(-5).Label,..)">$INFO[ListItem(-5).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(-5).Art(poster))">$INFO[ListItem(-5).Art(poster)]</value>
         <value>$INFO[ListItem(-5).Icon]</value>
     </variable>
     <variable name="ShowcaseItem-4Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(-4).Label,..)">$INFO[ListItem(-4).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(-4).Art(poster))">$INFO[ListItem(-4).Art(poster)]</value>
         <value>$INFO[ListItem(-4).Icon]</value>
     </variable>
     <variable name="ShowcaseItem-3Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(-3).Label,..)">$INFO[ListItem(-3).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(-3).Art(poster))">$INFO[ListItem(-3).Art(poster)]</value>
         <value>$INFO[ListItem(-3).Icon]</value>
     </variable>
     <variable name="ShowcaseItem-2Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(-2).Label,..)">$INFO[ListItem(-2).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(-2).Art(poster))">$INFO[ListItem(-2).Art(poster)]</value>
         <value>$INFO[ListItem(-2).Icon]</value>
     </variable>
     <variable name="ShowcaseItem-1Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(-1).Label,..)">$INFO[ListItem(-1).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(-1).Art(poster))">$INFO[ListItem(-1).Art(poster)]</value>
         <value>$INFO[ListItem(-1).Icon]</value>
     </variable>
     <variable name="ShowcaseItem0Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem.Label,..)">$INFO[ListItem.Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>
     <variable name="ShowcaseItem1Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(1).Label,..)">$INFO[ListItem(1).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(1).Art(poster))">$INFO[ListItem(1).Art(poster)]</value>
         <value>$INFO[ListItem(1).Icon]</value>
     </variable>
     <variable name="ShowcaseItem2Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(2).Label,..)">$INFO[ListItem(2).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(2).Art(poster))">$INFO[ListItem(2).Art(poster)]</value>
         <value>$INFO[ListItem(2).Icon]</value>
     </variable>
     <variable name="ShowcaseItem3Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(3).Label,..)">$INFO[ListItem(3).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(3).Art(poster))">$INFO[ListItem(3).Art(poster)]</value>
         <value>$INFO[ListItem(3).Icon]</value>
     </variable>
     <variable name="ShowcaseItem4Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(4).Label,..)">$INFO[ListItem(4).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(4).Art(poster))">$INFO[ListItem(4).Art(poster)]</value>
         <value>$INFO[ListItem(4).Icon]</value>
     </variable>
     <variable name="ShowcaseItem5Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(5).Label,..)">$INFO[ListItem(5).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(5).Art(poster))">$INFO[ListItem(5).Art(poster)]</value>
         <value>$INFO[ListItem(5).Icon]</value>
     </variable>
     <variable name="ShowcaseItem6Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(6).Label,..)">$INFO[ListItem(6).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(6).Art(poster))">$INFO[ListItem(6).Art(poster)]</value>
         <value>$INFO[ListItem(6).Icon]</value>
     </variable>
     <variable name="ShowcaseItem7Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(7).Label,..)">$INFO[ListItem(7).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(7).Art(poster))">$INFO[ListItem(7).Art(poster)]</value>
         <value>$INFO[ListItem(7).Icon]</value>
     </variable>
     <variable name="ShowcaseItem8Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(8).Label,..)">$INFO[ListItem(8).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(8).Art(poster))">$INFO[ListItem(8).Art(poster)]</value>
         <value>$INFO[ListItem(8).Icon]</value>
     </variable>
     <variable name="ShowcaseItem9Var">
+        <value condition="Container.Content(genres) + !StringCompare(ListItem(9).Label,..)">$INFO[ListItem(9).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(9).Art(poster))">$INFO[ListItem(9).Art(poster)]</value>
         <value>$INFO[ListItem(9).Icon]</value>
     </variable>
