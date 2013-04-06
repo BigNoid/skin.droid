@@ -14,6 +14,27 @@
                     <height>342</height>
                     <texture border="21">thumbs/thumb_shadow.png</texture>
                 </control>
+                <control type="image">
+                    <posx>21</posx>
+                    <posy>362</posy>
+                    <width>600</width>
+                    <height>100</height>
+                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                </control>
+                <control type="image">
+                    <posx>21</posx>
+                    <posy>462</posy>
+                    <width>600</width>
+                    <height>100</height>
+                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                </control>
+                <control type="image">
+                    <posx>21</posx>
+                    <posy>562</posy>
+                    <width>600</width>
+                    <height>100</height>
+                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                </control>
                 <control type="panel" id="700">
                     <posx>21</posx>
                     <posy>362</posy>
@@ -35,13 +56,6 @@
                                 <animation type="Unfocus">
                                     <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
                                 </animation>
-                                <control type="image">
-                                    <posx>0</posx>
-                                    <posy>0</posy>
-                                    <width>600</width>
-                                    <height>100</height>
-                                    <texture border="3">dialogs/toast_back_blue.png</texture>
-                                </control>
                                 <control type="label">
                                     <posy>0</posy>
                                     <posx>0</posx>
@@ -77,13 +91,6 @@
                     <focusedlayout width="600" height="100">
                         <control type="group">
                             <control type="group">
-                                <control type="image">
-                                    <posx>0</posx>
-                                    <posy>0</posy>
-                                    <width>600</width>
-                                    <height>100</height>
-                                    <texture border="3">dialogs/toast_back_blue.png</texture>
-                                </control>
                                 <control type="image">
                                     <posx>0</posx>
                                     <posy>0</posy>
@@ -200,6 +207,27 @@
                     <height>342</height>
                     <texture border="21">thumbs/thumb_shadow.png</texture>
                 </control>
+                <control type="image">
+                    <posx>21</posx>
+                    <posy>362</posy>
+                    <width>600</width>
+                    <height>100</height>
+                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                </control>
+                <control type="image">
+                    <posx>21</posx>
+                    <posy>462</posy>
+                    <width>600</width>
+                    <height>100</height>
+                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                </control>
+                <control type="image">
+                    <posx>21</posx>
+                    <posy>562</posy>
+                    <width>600</width>
+                    <height>100</height>
+                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                </control>
                 <control type="panel" id="600">
                     <posx>21</posx>
                     <posy>362</posy>
@@ -221,13 +249,6 @@
                                 <animation type="Unfocus">
                                     <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
                                 </animation>
-                                <control type="image">
-                                    <posx>0</posx>
-                                    <posy>0</posy>
-                                    <width>600</width>
-                                    <height>100</height>
-                                    <texture border="3">dialogs/toast_back_blue.png</texture>
-                                </control>
                                 <control type="label">
                                     <posy>0</posy>
                                     <posx>0</posx>
@@ -264,13 +285,6 @@
                     <focusedlayout width="600" height="100">
                         <control type="group">
                             <control type="group">
-                                <control type="image">
-                                    <posx>0</posx>
-                                    <posy>0</posy>
-                                    <width>600</width>
-                                    <height>100</height>
-                                    <texture border="3">dialogs/toast_back_blue.png</texture>
-                                </control>
                                 <control type="image">
                                     <posx>0</posx>
                                     <posy>0</posy>
@@ -878,20 +892,27 @@
                     <height>387</height>
                     <texture border="21">thumbs/thumb_shadow.png</texture>
                 </control>
-                <!--<control type="image">
-                    <posx>-17</posx>
-                    <posy>383</posy>
-                    <width>38</width>
-                    <height>298</height>
-                    <texture border="1">settings/side_shadow.png</texture>
+                <control type="image">
+                    <posx>21</posx>
+                    <posy>362</posy>
+                    <width>700</width>
+                    <height>115</height>
+                    <texture border="3">dialogs/toast_back_blue.png</texture>
                 </control>
                 <control type="image">
-                    <posx>721</posx>
-                    <posy>383</posy>
-                    <width>38</width>
-                    <height>298</height>
-                    <texture border="1" flipx="true">settings/side_shadow.png</texture>
-                </control>-->
+                    <posx>21</posx>
+                    <posy>477</posy>
+                    <width>700</width>
+                    <height>115</height>
+                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                </control>
+                <control type="image">
+                    <posx>21</posx>
+                    <posy>592</posy>
+                    <width>700</width>
+                    <height>115</height>
+                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                </control>
                 <control type="panel" id="800">
                     <posx>21</posx>
                     <posy>362</posy>
@@ -913,13 +934,6 @@
                                 <animation type="Unfocus">
                                     <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
                                 </animation>
-                                <control type="image">
-                                    <posx>0</posx>
-                                    <posy>0</posy>
-                                    <width>700</width>
-                                    <height>115</height>
-                                    <texture border="3">dialogs/toast_back_blue.png</texture>
-                                </control>
                                 <control type="label">
                                     <posy>0</posy>
                                     <posx>0</posx>
@@ -962,13 +976,6 @@
                                     <height>100</height>
                                     <texture border="4">settings/button_fo.png</texture>
                                 </control>-->
-                                <control type="image">
-                                    <posx>0</posx>
-                                    <posy>0</posy>
-                                    <width>700</width>
-                                    <height>115</height>
-                                    <texture border="3">dialogs/toast_back_blue.png</texture>
-                                </control>
                                 <control type="image">
                                     <posx>0</posx>
                                     <posy>0</posy>
