@@ -541,7 +541,7 @@
                             <posx>72</posx>
                             <height>32</height>
                             <width>800</width>
-                            <font>Small_Caps</font>
+                            <font>Smaller_Caps</font>
                             <aligny>center</aligny>
                             <textcolor>White2</textcolor>
                             <label>$INFO[VideoPlayer.Tagline]</label>
