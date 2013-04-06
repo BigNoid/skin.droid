@@ -237,8 +237,6 @@ msgctxt "#31409"
 msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check XBMC revision number"
 msgstr ""
 
-#empty strings from id 31410 to 314009
-
-msgctxt "#314010"
+msgctxt "#31410"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr ""
