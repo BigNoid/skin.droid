@@ -636,6 +636,7 @@
             </control>
             <control type="group">
                 <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+                <posx>15</posx>
                 <animation effect="slide" start="0,-80" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
                 <control type="label">
                     <posy>4</posy>

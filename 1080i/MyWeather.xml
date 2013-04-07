@@ -248,6 +248,16 @@
                 <orientation>horizontal</orientation>
                 <onleft>11121</onleft>
                 <onright>11121</onright>
+                <control type="button">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>15</width>
+                    <height>48</height>
+                    <texturenofocus>-</texturenofocus>
+                    <texturefocus>-</texturefocus>
+                    <onclick>noop</onclick>
+                    <enable>no</enable>
+                </control>
                 <control type="label" id="11112">
                     <posy>0</posy>
                     <posx>0</posx>
@@ -257,12 +267,11 @@
                     <aligny>center</aligny>
                     <textcolor>White2</textcolor>
                     <label>$INFO[System.Time]</label>
-                    <textoffsetx>15</textoffsetx>
                 </control>
-                <control type="button" id="11114">
+                <control type="button">
                     <posx>0</posx>
                     <posy>0</posy>
-                    <width>32</width>
+                    <width>15</width>
                     <height>48</height>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>-</texturefocus>
