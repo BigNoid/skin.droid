@@ -26,6 +26,16 @@
                 <orientation>horizontal</orientation>
                 <onleft>11121</onleft>
                 <onright>11121</onright>
+                <control type="button">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>15</width>
+                    <height>48</height>
+                    <texturenofocus>-</texturenofocus>
+                    <texturefocus>-</texturefocus>
+                    <onclick>noop</onclick>
+                    <enable>no</enable>
+                </control>
                 <control type="label" id="11112">
                     <posy>0</posy>
                     <posx>0</posx>
@@ -35,12 +45,11 @@
                     <aligny>center</aligny>
                     <textcolor>White2</textcolor>
                     <label>$INFO[System.Time]</label>
-                    <textoffsetx>15</textoffsetx>
                 </control>
-                <control type="button" id="11114">
+                <control type="button">
                     <posx>0</posx>
                     <posy>0</posy>
-                    <width>32</width>
+                    <width>15</width>
                     <height>48</height>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>-</texturefocus>
@@ -428,7 +437,7 @@
                     <height>90</height>
                     <font>Medium_Caps2</font>
                     <label>$INFO[ListItem.Title]</label>
-                    <label2>$INFO[ListItem.Top250,$LOCALIZE[13409] # , ]</label2>
+                    <label2>$INFO[ListItem.Top250, # , ]</label2>
                     <textoffsetx>8</textoffsetx>
                     <disabledcolor>White2</disabledcolor>
                     <enable>no</enable>
@@ -1077,7 +1086,7 @@
                         <width>240</width>
                         <height>30</height>
                         <align>center</align>
-                        <label>[LOWERCASE]$LOCALIZE[563][/LOWERCASE]</label>
+                        <label>[LOWERCASE]$VAR[RatingAndVotesVar][/LOWERCASE]</label>
                         <font>Medium_Small</font>
                         <textcolor>White2</textcolor>
                     </control>

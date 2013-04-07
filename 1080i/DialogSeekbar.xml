@@ -265,41 +265,36 @@
                 <height>38</height>
                 <texture border="1" flipy="true">settings/bottom_shadow.png</texture>
             </control>
-            <control type="grouplist">
-                <posx>52</posx>
+            <control type="group">
+                <posx>0</posx>
                 <posy>90r</posy>
-                <width>1816</width>
+                <width>1920</width>
                 <align>center</align>
-                <orientation>horizontal</orientation>
-                <itemgap>104</itemgap>
                 <control type="label">
                     <posx>0</posx>
                     <posy>0</posy>
-                    <width>135</width>
+                    <width>240</width>
                     <height>90</height>
                     <align>center</align>
                     <label>[B]$INFO[VideoPlayer.VideoResolution][/B]</label>
                     <font>Large</font>
                     <textcolor>White2</textcolor>
-                    <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
                 </control>
                 <control type="label">
-                    <posx>0</posx>
+                    <posx>240</posx>
                     <posy>0</posy>
-                    <width>135</width>
+                    <width>240</width>
                     <height>90</height>
                     <align>center</align>
                     <label>[B]$INFO[VideoPlayer.VideoAspect,,:1][/B]</label>
                     <font>Large</font>
                     <textcolor>White2</textcolor>
-                    <visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
-                    <width>135</width>
+                    <posx>480</posx>
                     <control type="label">
                         <posy>2</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>60</height>
                         <align>center</align>
                         <label>[B]$INFO[VideoPlayer.AudioChannels][/B]</label>
@@ -308,7 +303,7 @@
                     </control>
                     <control type="label">
                         <posy>52</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>30</height>
                         <align>center</align>
                         <label>[LOWERCASE]$LOCALIZE[19019][/LOWERCASE]</label>
@@ -317,13 +312,13 @@
                     </control>
                 </control>
                 <control type="image">
+                    <posx>772</posx>
                     <colordiffuse>White2</colordiffuse>
                     <include>MediaFlagVars</include>
                     <texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
-                    <visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
                 </control>
                 <control type="group">
-                    <width>135</width>
+                    <posx>1012</posx>
                     <control type="image" id="800011">
                         <colordiffuse>White2</colordiffuse>
                         <include>MediaFlagVars</include>
@@ -343,22 +338,22 @@
                     </control>
                 </control>
                 <control type="group">
-                    <width>135</width>
+                    <posx>1200</posx>
                     <control type="label">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>90</height>
                         <align>center</align>
                         <label>[B]$INFO[VideoPlayer.Year][/B]</label>
                         <font>Large</font>
                         <textcolor>White2</textcolor>
-                        <visible>VideoPlayer.Content(movies)</visible>
+                        <visible>!VideoPlayer.Content(episodes)</visible>
                     </control>
                     <control type="label">
-                        <posx>-40</posx>
+                        <posx>0</posx>
                         <posy>2</posy>
-                        <width>215</width>
+                        <width>240</width>
                         <height>60</height>
                         <align>center</align>
                         <label>[B]$INFO[VideoPlayer.Premiered][/B]</label>
@@ -368,8 +363,8 @@
                     </control>
                     <control type="label">
                         <posy>52</posy>
-                        <width>135</width>
-                        <height>30</height>i
+                        <width>240</width>
+                        <height>30</height>
                         <align>center</align>
                         <label>[LOWERCASE]$LOCALIZE[20416][/LOWERCASE]</label>
                         <font>Medium_Small</font>
@@ -378,11 +373,11 @@
                     </control>
                 </control>
                 <control type="group">
-                    <width>135</width>
+                    <posx>1440</posx>
                     <control type="label">
-                        <posx>-30</posx>
+                        <posx>0</posx>
                         <posy>2</posy>
-                        <width>195</width>
+                        <width>240</width>
                         <height>60</height>
                         <align>center</align>
                         <label>[B]$INFO[Player.Duration][/B]</label>
@@ -391,21 +386,36 @@
                     </control>
                     <control type="label">
                         <posy>52</posy>
-                        <width>135</width>
+                        <width>240</width>
                         <height>30</height>
                         <align>center</align>
-                        <label>[LOWERCASE]$LOCALIZE[180][/LOWERCASE]</label>
+                        <label>[LOWERCASE]$LOCALIZE[12391][/LOWERCASE]</label>
                         <font>Medium_Small</font>
                         <textcolor>White2</textcolor>
                     </control>
                 </control>
-                <control type="image">
-                    <colordiffuse>White2</colordiffuse>
-                    <include>MediaFlagVars</include>
-                    <texture fallback="flags/stars/0.0.png">$INFO[VideoPlayer.Rating,flags/stars/,.png]</texture>
-                    <animation type="Conditional" reversible="false" condition="true">
-                        <effect type="zoom" start="100" end="130" center="auto" easing="in" tween="cubic" time="0" />
-                    </animation>
+                <control type="group">
+                    <posx>1680</posx>
+                    <visible>!IsEmpty(VideoPlayer.Rating)</visible>
+                    <control type="label">
+                        <posx>0</posx>
+                        <posy>2</posy>
+                        <width>240</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label>[B]$INFO[VideoPlayer.Rating][/B]</label>
+                        <font>Large</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                    <control type="label">
+                        <posy>52</posy>
+                        <width>240</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <label>[LOWERCASE]$VAR[VideoRatingAndVotesVar][/LOWERCASE]</label>
+                        <font>Medium_Small</font>
+                        <textcolor>White2</textcolor>
+                    </control>
                 </control>
             </control>
         </control>

@@ -354,4 +354,13 @@
         <value condition="Player.HasDuration">$INFO[Player.TimeRemaining,- ]</value>
         <value>∞</value>
     </variable>
+
+    <variable name="RatingAndVotesVar">
+        <value condition="IsEmpty(ListItem.Votes)">$LOCALIZE[563]</value>
+        <value>$INFO[ListItem.Votes,, $LOCALIZE[31039]]</value>
+    </variable>
+    <variable name="VideoRatingAndVotesVar">
+        <value condition="IsEmpty(VideoPlayer.Votes)">$LOCALIZE[563]</value>
+        <value>$INFO[VideoPlayer.Votes,, $LOCALIZE[31039]]</value>
+    </variable>
 </includes>
