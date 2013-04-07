@@ -20,19 +20,20 @@
                         <texture border="40">shadow.png</texture>
                     </control>
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
                         <width>504</width>
                         <height>504</height>
                         <include>toast_back</include>
                     </control>
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
                         <width>504</width>
                         <height>504</height>
                         <aspectratio>scale</aspectratio>
                         <texture background="true">$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="image">
+                        <width>504</width>
+                        <height>504</height>
+                        <texture flipx="true">dialogs/panel_overlay.png</texture>
                     </control>
                     <control type="image">
                         <posx>0</posx>
@@ -159,6 +160,13 @@
                     </control>
                     <control type="image">
                         <posx>1274</posx>
+                        <posy>0</posy>
+                        <width>534</width>
+                        <height>504</height>
+                        <texture>dialogs/panel_overlay.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>1274</posx>
                         <posy>504</posy>
                         <width>534</width>
                         <height>119</height>
@@ -193,7 +201,7 @@
                         <posy>0</posy>
                         <width>820</width>
                         <height>504</height>
-                        <include>toast_back</include>
+                        <texture>views/infolist56/list_back.png</texture>
                     </control>
                     <control type="list" id="56">
                         <posx>454</posx>
@@ -211,11 +219,11 @@
                         <visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes)]</visible>
                         <scrolltime tween="cubic" easing="out">500</scrolltime>
                         <itemlayout width="820" height="72">
-                            <control type="image">
+                            <!--<control type="image">
                                 <width>820</width>
                                 <height>72</height>
                                 <include>toast_back</include>
-                            </control>
+                            </control>-->
                             <control type="label">
                                 <posx>0</posx>
                                 <width>820</width>
@@ -237,11 +245,11 @@
                             </control>
                         </itemlayout>
                         <focusedlayout width="820" height="72">
-                            <control type="image">
+                            <!--<control type="image">
                                 <width>820</width>
                                 <height>72</height>
                                 <include>toast_back</include>
-                            </control>
+                            </control>-->
                             <control type="image">
                                 <width>820</width>
                                 <height>72</height>

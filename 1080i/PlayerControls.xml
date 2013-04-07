@@ -8,83 +8,89 @@
             <posx>548</posx>
             <posy>310</posy>
             <visible>!Window.IsActive(visualisation) + !Window.IsActive(karaoke)</visible>
-            <control type="image">
-                <posx>-9</posx>
-                <posy>-9</posy>
-                <width>842</width>
-                <height>478</height>
-                <texture border="4">dialogs/toast_back_blue.png</texture>
-                <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
-                <bordersize>21</bordersize>
+            <control type="group">
+                <visible>!Player.HasVideo</visible>
+                <control type="image">
+                    <posx>-9</posx>
+                    <posy>-9</posy>
+                    <width>842</width>
+                    <height>478</height>
+                    <texture border="4">dialogs/toast_back_blue.png</texture>
+                    <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
+                    <bordersize>21</bordersize>
+                </control>
+                <control type="image">
+                    <posx>12</posx>
+                    <posy>12</posy>
+                    <width>294</width>
+                    <height>294</height>
+                    <bordersize>2</bordersize>
+                    <aspectratio align="center">scale</aspectratio>
+                    <texture>$INFO[MusicPlayer.Cover]</texture>
+                </control>
+                <control type="label">
+                    <posy>12</posy>
+                    <posx>306</posx>
+                    <height>98</height>
+                    <width>470</width>
+                    <font>Small</font>
+                    <textcolor>White2</textcolor>
+                    <aligny>center</aligny>
+                    <label>$INFO[MusicPlayer.Title]</label>
+                    <textoffsetx>15</textoffsetx>
+                    <wrapmultiline>true</wrapmultiline>
+                </control>
+                <control type="label">
+                    <posy>110</posy>
+                    <posx>306</posx>
+                    <height>98</height>
+                    <width>470</width>
+                    <font>Small</font>
+                    <aligny>center</aligny>
+                    <textcolor>White2</textcolor>
+                    <label>$INFO[MusicPlayer.Artist]</label>
+                    <textoffsetx>15</textoffsetx>
+                    <wrapmultiline>true</wrapmultiline>
+                </control>
+                <control type="label">
+                    <posy>208</posy>
+                    <posx>306</posx>
+                    <height>98</height>
+                    <width>470</width>
+                    <font>Small</font>
+                    <aligny>center</aligny>
+                    <textcolor>White2</textcolor>
+                    <label>$INFO[MusicPlayer.Album]</label>
+                    <textoffsetx>15</textoffsetx>
+                    <wrapmultiline>true</wrapmultiline>
+                </control>
             </control>
-            <control type="image">
-                <posx>-9</posx>
-                <posy>-165</posy>
-                <width>842</width>
-                <height>553</height>
-                <texture border="4">dialogs/toast_back_blue.png</texture>
-                <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
-                <bordersize>21</bordersize>
+            <control type="group">
                 <visible>Player.HasVideo</visible>
-            </control>
-            <control type="videowindow" id="2">
-                <description>Home window video</description>
-                <posx>14</posx>
-                <posy>-142</posy>
-                <width>796</width>
-                <height>448</height>
-                <visible>Player.HasVideo</visible>
+                <control type="image">
+                    <posx>-9</posx>
+                    <posy>-165</posy>
+                    <width>842</width>
+                    <height>633</height>
+                    <texture border="4">dialogs/toast_back_blue.png</texture>
+                    <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
+                    <bordersize>21</bordersize>
+                </control>
+                <control type="videowindow" id="2">
+                    <description>Home window video</description>
+                    <posx>14</posx>
+                    <posy>-142</posy>
+                    <width>796</width>
+                    <height>448</height>
+                    <visible>Player.HasVideo</visible>
+                </control>
             </control>
             <control type="image">
-                <posx>14</posx>
+                <posx>13</posx>
                 <posy>306</posy>
-                <width>796</width>
+                <width>798</width>
                 <height>2</height>
                 <texture>common/blue2.png</texture>
-            </control>
-            <control type="image">
-                <posx>12</posx>
-                <posy>12</posy>
-                <width>294</width>
-                <height>294</height>
-                <aspectratio align="center">scale</aspectratio>
-                <texture>$INFO[MusicPlayer.Cover]</texture>
-            </control>
-            <control type="label">
-                <posy>12</posy>
-                <posx>306</posx>
-                <height>98</height>
-                <width>470</width>
-                <font>Small</font>
-                <textcolor>White2</textcolor>
-                <aligny>center</aligny>
-                <label>$INFO[MusicPlayer.Title]</label>
-                <textoffsetx>15</textoffsetx>
-                <wrapmultiline>true</wrapmultiline>
-            </control>
-            <control type="label">
-                <posy>110</posy>
-                <posx>306</posx>
-                <height>98</height>
-                <width>470</width>
-                <font>Small</font>
-                <aligny>center</aligny>
-                <textcolor>White2</textcolor>
-                <label>$INFO[MusicPlayer.Artist]</label>
-                <textoffsetx>15</textoffsetx>
-                <wrapmultiline>true</wrapmultiline>
-            </control>
-            <control type="label">
-                <posy>208</posy>
-                <posx>306</posx>
-                <height>98</height>
-                <width>470</width>
-                <font>Small</font>
-                <aligny>center</aligny>
-                <textcolor>White2</textcolor>
-                <label>$INFO[MusicPlayer.Album]</label>
-                <textoffsetx>15</textoffsetx>
-                <wrapmultiline>true</wrapmultiline>
             </control>
             <control type="grouplist" id="601">
                 <posx>12</posx>
@@ -299,7 +305,7 @@
                     <texturefocus>osd/fullscreen_nf.png</texturefocus>
                     <texturenofocus>osd/fullscreen_nf.png</texturenofocus>
                     <onclick>Dialog.Close(all,true)</onclick>
-                    <onclick>ActivateWindow(visualisation)</onclick>
+                    <onclick>Fullscreen</onclick>
                 </control>
             </control>
             <control type="label">

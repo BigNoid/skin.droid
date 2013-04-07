@@ -35,6 +35,13 @@
                         <aspectratio>scale</aspectratio>
                         <texture background="true">$VAR[InfoPosterThumbVar]</texture>
                     </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>346</width>
+                        <height>518</height>
+                        <texture flipx="true">dialogs/panel_overlay.png</texture>
+                    </control>
                     <!--<control type="image">
                         <posx>0</posx>
                         <posy>576</posy>
@@ -80,7 +87,7 @@
                         <height>308</height>
                         <aspectratio>scale</aspectratio>
                         <texture>$VAR[InfoListThumbVar]</texture>
-                        <bordersize>2</bordersize>
+                        <bordersize>0</bordersize>
                         <visible>!Player.HasVideo</visible>
                     </control>
                     <control type="videowindow">
@@ -166,6 +173,12 @@
                         </control>
                     </control>
                     <control type="image">
+                        <posy>0</posy>
+                        <width>548</width>
+                        <height>518</height>
+                        <texture>dialogs/panel_overlay.png</texture>
+                    </control>
+                    <control type="image">
                         <posx>0</posx>
                         <posy>518</posy>
                         <width>548</width>
@@ -201,7 +214,7 @@
                         <posy>0</posy>
                         <width>820</width>
                         <height>576</height>
-                        <include>toast_back</include>
+                        <texture>views/infolist54/list_back.png</texture>
                     </control>
                     <control type="list" id="54">
                         <posx>384</posx>
@@ -220,11 +233,11 @@
                         <visible>!Container.Content(addons)</visible>
                         <scrolltime tween="cubic" easing="out">500</scrolltime>
                         <itemlayout width="820" height="72">
-                            <control type="image">
+                            <!--<control type="image">
                                 <width>820</width>
                                 <height>72</height>
                                 <include>toast_back</include>
-                            </control>
+                            </control>-->
                             <control type="label">
                                 <posx>0</posx>
                                 <width>768</width>
@@ -273,11 +286,11 @@
                             </control>
                         </itemlayout>
                         <focusedlayout width="820" height="72">
-                            <control type="image">
+                            <!--<control type="image">
                                 <width>820</width>
                                 <height>72</height>
                                 <include>toast_back</include>
-                            </control>
+                            </control>-->
                             <control type="image">
                                 <width>820</width>
                                 <height>72</height>

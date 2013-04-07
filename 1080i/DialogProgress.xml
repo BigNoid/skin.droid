@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="101">
-	<defaultcontrol always="true">10</defaultcontrol>
+	<defaultcontrol always="true">4000</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<include>GlobalOverlay</include>
+        <control type="button" id="4000">
+            <include>HiddenButton</include>
+            <onup>10</onup>
+            <ondown>10</ondown>
+            <onleft>10</onleft>
+            <onright>10</onright>
+            <onclick>SetFocus(10)</onclick>
+        </control>
+        <include>GlobalOverlay</include>
 		<control type="group">
             <posx>540</posx>
             <posy>324</posy>
@@ -17,8 +25,8 @@
             <control type="label" id="1">
                 <description>Heading</description>
                 <posx>0</posx>
-                <posy>12</posy>
-                <height>60</height>
+                <posy>0</posy>
+                <height>72</height>
                 <label>-</label>
                 <width>840</width>
                 <textcolor>Blue2</textcolor>

@@ -2119,6 +2119,7 @@
                 <onright>ClearProperty(TVGuide.SaturdayList,Home)</onright>
                 <onright>ClearProperty(TVGuide.SundayList,Home)</onright>
                 <include>MediaMenuButton</include>
+                <onclick>ClearProperty(MediaMenu,Home)</onclick>
             </control>
             <include>MediaMenuBottomButton</include>
         </control>
