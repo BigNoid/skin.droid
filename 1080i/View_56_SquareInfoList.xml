@@ -87,6 +87,7 @@
                             <label2>$INFO[ListItem.Genre]</label2>
                             <disabledcolor>White2</disabledcolor>
                             <enable>no</enable>
+                            <textoffsetx>15</textoffsetx>
                         </control>
                         <control type="button">
                             <posx>1274</posx>
@@ -97,9 +98,10 @@
                             <label>$LOCALIZE[563]</label>
                             <disabledcolor>White2</disabledcolor>
                             <enable>no</enable>
+                            <textoffsetx>15</textoffsetx>
                         </control>
                         <control type="image">
-                            <posx>1590</posx>
+                            <posx>1605</posx>
                             <posy>377</posy>
                             <width>200</width>
                             <height>50</height>
@@ -117,6 +119,7 @@
                             <label2>$INFO[ListItem.Year]</label2>
                             <disabledcolor>White2</disabledcolor>
                             <enable>no</enable>
+                            <textoffsetx>15</textoffsetx>
                         </control>
                     </control>
                     <control type="group">
@@ -124,7 +127,7 @@
                         <control type="textbox">
                             <description>Plot outline</description>
                             <posx>1292</posx>
-                            <posy>320</posy>
+                            <posy>310</posy>
                             <width>498</width>
                             <height>180</height>
                             <align>left</align>
@@ -206,7 +209,7 @@
                         <viewtype label="InfoList">list</viewtype>
                         <orientation>vertical</orientation>
                         <visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-                        <scrolltime tween="sine" easing="inout">200</scrolltime>
+                        <scrolltime tween="cubic" easing="out">200</scrolltime>
                         <itemlayout width="820" height="72">
                             <control type="image">
                                 <width>820</width>
@@ -239,13 +242,13 @@
                                 <height>72</height>
                                 <include>toast_back</include>
                             </control>
-                            <control type="group">
+                            <control type="image">
+                                <width>820</width>
+                                <height>72</height>
+                                <texture border="8">listselect_fo.png</texture>
                                 <visible>Control.HasFocus(56)</visible>
-                                <control type="image">
-                                    <width>820</width>
-                                    <height>72</height>
-                                    <texture border="8">listselect_fo.png</texture>
-                                </control>
+                                <animation effect="slide" start="0,72" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(56).OnPrevious">focus</animation>
+                                <animation effect="slide" start="0,-72" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(56).OnNext">focus</animation>
                             </control>
                             <control type="label">
                                 <posx>0</posx>

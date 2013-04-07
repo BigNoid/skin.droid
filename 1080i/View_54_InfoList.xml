@@ -113,6 +113,18 @@
                             <height>72</height>
                             <texture border="3">dialogs/toast_back_blue_mask.png</texture>
                         </control>
+                        <control type="scrollbar" id="61">
+                            <posx>0</posx>
+                            <posy>308</posy>
+                            <width>548</width>
+                            <height>210</height>
+                            <onleft>54</onleft>
+                            <onright>9010</onright>
+                            <showonepage>false</showonepage>
+                            <texturesliderbackground>-</texturesliderbackground>
+                            <texturesliderbar>-</texturesliderbar>
+                            <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+                        </control>
                     </control>
                     <control type="group">
                         <visible>Skin.HasSetting(InfoList.NoPlot) + !Container.Content(episodes)</visible>
@@ -126,6 +138,7 @@
                             <label>$VAR[InfoListButton1LabelVar]</label>
                             <disabledcolor>White2</disabledcolor>
                             <enable>no</enable>
+                            <textoffsetx>15</textoffsetx>
                         </control>
                         <control type="button">
                             <posx>0</posx>
@@ -137,6 +150,7 @@
                             <label2>$VAR[InfoListButton2Label2Var]</label2>
                             <disabledcolor>White2</disabledcolor>
                             <enable>no</enable>
+                            <textoffsetx>15</textoffsetx>
                         </control>
                         <control type="button">
                             <posx>0</posx>
@@ -148,19 +162,8 @@
                             <label2>$VAR[InfoListButton3Label2Var]</label2>
                             <disabledcolor>White2</disabledcolor>
                             <enable>no</enable>
+                            <textoffsetx>15</textoffsetx>
                         </control>
-                    </control>
-                    <control type="scrollbar" id="61">
-                        <posx>0</posx>
-                        <posy>308</posy>
-                        <width>548</width>
-                        <height>210</height>
-                        <onleft>54</onleft>
-                        <onright>9010</onright>
-                        <showonepage>false</showonepage>
-                        <texturesliderbackground>-</texturesliderbackground>
-                        <texturesliderbar>-</texturesliderbar>
-                        <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
                     </control>
                     <control type="image">
                         <posx>0</posx>
@@ -206,7 +209,8 @@
                         <width>820</width>
                         <height>576</height>
                         <onleft>60</onleft>
-                        <onright>61</onright>
+                        <onright condition="!Skin.HasSetting(InfoList.NoPlot) | Container.Content(episodes)">61</onright>
+                        <onright condition="Skin.HasSetting(InfoList.NoPlot) + !Container.Content(episodes)">9010</onright>
                         <onup>54</onup>
                         <ondown>54</ondown>
                         <movement>5</movement>
@@ -279,6 +283,8 @@
                                 <height>72</height>
                                 <texture border="8">listselect_fo.png</texture>
                                 <visible>Control.HasFocus(54)</visible>
+                                <animation effect="slide" start="0,72" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(54).OnPrevious">focus</animation>
+                                <animation effect="slide" start="0,-72" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(54).OnNext">focus</animation>
                             </control>
                             <control type="label">
                                 <posx>0</posx>
