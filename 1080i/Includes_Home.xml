@@ -47,10 +47,10 @@
                     <posy>362</posy>
                     <width>600</width>
                     <height>620</height>
-                    <onleft>600</onleft>
+                    <onleft>9010</onleft>
                     <onright>800</onright>
-                    <onup>9010</onup>
-                    <ondown>9010</ondown>
+                    <onup>700</onup>
+                    <ondown>700</ondown>
                     <scrolltime>0</scrolltime>
                     <preloaditems>2</preloaditems>
                     <orientation>vertical</orientation>
@@ -248,9 +248,9 @@
                     <width>600</width>
                     <height>300</height>
                     <onleft>800</onleft>
-                    <onright>600</onright>
-                    <onup>9010</onup>
-                    <ondown>9010</ondown>
+                    <onright>9010</onright>
+                    <onup>600</onup>
+                    <ondown>600</ondown>
                     <scrolltime>0</scrolltime>
                     <preloaditems>2</preloaditems>
                     <orientation>vertical</orientation>
@@ -941,8 +941,8 @@
                     <height>345</height>
                     <onleft>700</onleft>
                     <onright>600</onright>
-                    <onup>9010</onup>
-                    <ondown>9010</ondown>
+                    <onup>800</onup>
+                    <ondown>800</ondown>
                     <scrolltime>0</scrolltime>
                     <preloaditems>2</preloaditems>
                     <orientation>vertical</orientation>
