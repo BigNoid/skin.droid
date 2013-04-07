@@ -218,7 +218,7 @@
                         <viewtype label="InfoList">list</viewtype>
                         <orientation>vertical</orientation>
                         <visible>!Container.Content(addons)</visible>
-                        <scrolltime tween="sine" easing="inout">200</scrolltime>
+                        <scrolltime tween="cubic" easing="out">500</scrolltime>
                         <itemlayout width="820" height="72">
                             <control type="image">
                                 <width>820</width>
@@ -283,8 +283,8 @@
                                 <height>72</height>
                                 <texture border="8">listselect_fo.png</texture>
                                 <visible>Control.HasFocus(54)</visible>
-                                <animation effect="slide" start="0,72" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(54).OnPrevious">focus</animation>
-                                <animation effect="slide" start="0,-72" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(54).OnNext">focus</animation>
+                                <animation effect="slide" start="0,72" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(54).OnPrevious">focus</animation>
+                                <animation effect="slide" start="0,-72" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(54).OnNext">focus</animation>
                             </control>
                             <control type="label">
                                 <posx>0</posx>
