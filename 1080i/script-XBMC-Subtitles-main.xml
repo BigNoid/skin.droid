@@ -358,6 +358,13 @@
                         </control>
                     </itemlayout>
                     <focusedlayout width="480" height="72">
+                        <control type="button">
+                            <!-- Gives error in log: WARNING: Trying to add unsupported control type 1 -->
+                            <width>480</width>
+                            <height>72</height>
+                            <include>HiddenButton</include>
+                            <onunfocus>ClearProperty(SubSettings,Home)</onunfocus>
+                        </control>
                         <control type="image">
                             <width>480</width>
                             <height>72</height>
