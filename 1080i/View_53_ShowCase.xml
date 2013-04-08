@@ -286,7 +286,7 @@
                     </control>
                 </control>
             </control>
-            
+
             <control type="group">
                 <camera x="960" y="810" />
                 <control type="group" id="6001">
@@ -390,6 +390,7 @@
                                 <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
                                 <include>MovieShowcaseThumb</include>
                             </control>
+                            <include>MovieShowcaseGloss</include>
                             <control type="image">
                                 <include>WatchedOverlayShowCase</include>
                                 <texture>$VAR[IconOverlay-1Var]</texture>
@@ -503,6 +504,7 @@
                                 <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
                                 <include>MovieShowcaseThumb</include>
                             </control>
+                            <include>MovieShowcaseGloss</include>
                             <control type="image">
                                 <include>WatchedOverlayShowCase</include>
                                 <texture>$VAR[IconOverlay1Var]</texture>
@@ -810,6 +812,18 @@
         <bordersize>21</bordersize>
     </include>
 
+    <include name="MovieShowcaseGloss">
+        <control type="image">
+            <posx>-4</posx>
+            <posy>-11</posy>
+            <width>304</width>
+            <height>426</height>
+            <fadetime>0</fadetime>
+            <texture diffuse="thumbs/thumb_mask.png">views/showcase/thumb_glass.png</texture>
+            <bordersize>21</bordersize>
+        </control>
+    </include>
+
     <include name="MovieShowcaseThumbReflection">
         <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
         <fadetime>0</fadetime>
@@ -835,6 +849,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-7Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay-7Var]</texture>
@@ -849,6 +864,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-6Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay-6Var]</texture>
@@ -865,6 +881,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-5Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay-5Var]</texture>
@@ -881,6 +898,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-4Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay-4Var]</texture>
@@ -897,6 +915,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-3Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay-3Var]</texture>
@@ -913,6 +932,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-2Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay-2Var]</texture>
@@ -929,6 +949,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay-1Var]</texture>
@@ -945,6 +966,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem0Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay0Var]</texture>
@@ -959,6 +981,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay1Var]</texture>
@@ -976,6 +999,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem2Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay2Var]</texture>
@@ -993,6 +1017,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem3Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay3Var]</texture>
@@ -1010,6 +1035,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem4Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay4Var]</texture>
@@ -1027,6 +1053,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem5Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay5Var]</texture>
@@ -1044,6 +1071,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem6Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay6Var]</texture>
@@ -1061,6 +1089,7 @@
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem7Var]</texture>
             <include>MovieShowcaseThumb</include>
         </control>
+        <include>MovieShowcaseGloss</include>
         <control type="image">
             <include>WatchedOverlayShowCase</include>
             <texture>$VAR[IconOverlay7Var]</texture>
