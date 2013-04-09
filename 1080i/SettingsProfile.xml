@@ -64,34 +64,16 @@
                     </control>
 				</itemlayout>
                 <focusedlayout height="72" width="1440">
-                    <control type="group">
-                        <visible>!Control.HasFocus(2)</visible>
                         <control type="image">
                             <width>1440</width>
                             <height>72</height>
                             <include>toast_back</include>
                         </control>
-                        <control type="label">
-                            <width>1440</width>
-                            <info>ListItem.Label</info>
-                            <textcolor>White2</textcolor>
-                            <textoffsetx>30</textoffsetx>
-                        </control>
-                        <control type="label">
-                            <posx>1440</posx>
-                            <width>1440</width>
-                            <align>right</align>
-                            <info>ListItem.Label2</info>
-                            <textcolor>White2</textcolor>
-                            <textoffsetx>30</textoffsetx>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <visible>Control.HasFocus(2)</visible>
                         <control type="image">
                             <width>1440</width>
                             <height>72</height>
                             <texture border="8">dialogs/button_focus.png</texture>
+                            <visible>Control.HasFocus(2)</visible>
                         </control>
                         <control type="label">
                             <width>1440</width>
@@ -105,7 +87,6 @@
                             <info>ListItem.Label2</info>
                             <textoffsetx>30</textoffsetx>
                         </control>
-                    </control>
 				</focusedlayout>
 			</control>
         </control>

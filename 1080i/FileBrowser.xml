@@ -140,38 +140,16 @@
                     </control>
                 </itemlayout>
                 <focusedlayout height="72" width="1368">
-                    <control type="group">
-                        <visible>!Control.HasFocus(450)</visible>
                         <control type="image">
                             <width>1368</width>
                             <height>72</height>
                             <include>toast_back</include>
                         </control>
-                        <control type="label">
-                            <width>1368</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <textoffsetx>30</textoffsetx>
-                            <textcolor>White2</textcolor>
-                        </control>
-                        <control type="label">
-                            <posx>1368</posx>
-                            <width>1368</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <textoffsetx>30</textoffsetx>
-                            <align>right</align>
-                            <textcolor>grey</textcolor>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <visible>Control.HasFocus(450)</visible>
                         <control type="image">
                             <width>1368</width>
                             <height>72</height>
-                            <texture border="8">dialogs/button_focus.png</texture>
+                            <texture border="8">listselect_fo.png</texture>
+                            <visible>Control.HasFocus(450)</visible>
                         </control>
                         <control type="label">
                             <width>1368</width>
@@ -189,7 +167,6 @@
                             <textoffsetx>30</textoffsetx>
                             <align>right</align>
                         </control>
-                    </control>
                 </focusedlayout>
 			</control>
             <control type="group">
@@ -198,9 +175,6 @@
                     <posy>72</posy>
                     <width>72</width>
                     <height>72</height>
-                    <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-                    <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-                    <include>HiddenButton</include>
                     <onclick>pageup(60)</onclick>
                 </control>
                 <control type="button">
@@ -208,9 +182,6 @@
                     <posy>918</posy>
                     <width>72</width>
                     <height>72</height>
-                    <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-                    <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-                    <include>HiddenButton</include>
                     <onclick>pagedown(60)</onclick>
                 </control>
                 <control type="image">

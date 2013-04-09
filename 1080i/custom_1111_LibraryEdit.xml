@@ -67,13 +67,12 @@
                     <width>1064</width>
                     <height>72</height>
                     <include>toast_back</include>
-                    <visible>!Control.HasFocus(7000)</visible>
                 </control>
                 <control type="image">
                     <posx>256</posx>
                     <width>1064</width>
                     <height>72</height>
-                    <texture border="8">dialogs/button_focus.png</texture>
+                    <texture border="8">listselect_fo.png</texture>
                     <visible>Control.HasFocus(7000)</visible>
                 </control>
                 <control type="label">

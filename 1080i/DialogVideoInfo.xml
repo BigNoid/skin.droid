@@ -296,7 +296,7 @@
                     <control type="button" id="6">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>72</width>
+                        <width>90</width>
                         <height>72</height>
                         <onup>50</onup>
                         <ondown>13</ondown>
@@ -721,12 +721,11 @@
                                 <width>844</width>
                                 <height>72</height>
                                 <include>toast_back</include>
-                                <visible>!Control.HasFocus(50)</visible>
                             </control>
                             <control type="image">
                                 <width>844</width>
                                 <height>72</height>
-                                <texture border="8">dialogs/button_focus.png</texture>
+                                <texture border="8">listselect_fo.png</texture>
                                             <visible>Control.HasFocus(50)</visible>
                             </control>
                             <control type="label">

@@ -87,13 +87,13 @@
                     </control>
                 </itemlayout>
                 <focusedlayout height="72" width="1368">
-                    <control type="group">
-                        <visible>!Control.HasFocus(20)</visible>
                         <control type="image">
                             <width>1368</width>
                             <height>72</height>
                             <include>toast_back</include>
                         </control>
+                    <control type="group">
+                        <visible>!Control.HasFocus(20)</visible>
                         <control type="label">
                             <width>1368</width>
                             <height>72</height>
@@ -118,7 +118,7 @@
                         <control type="image">
                             <width>1368</width>
                             <height>72</height>
-                            <texture border="8">dialogs/button_focus.png</texture>
+                            <texture border="8">listselect_fo.png</texture>
                         </control>
                         <control type="label">
                             <width>1368</width>
@@ -145,9 +145,6 @@
                     <posy>72</posy>
                     <width>72</width>
                     <height>72</height>
-                    <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-                    <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-                    <include>HiddenButton</include>
                     <onclick>pageup(60)</onclick>
                 </control>
                 <control type="button">
@@ -155,9 +152,6 @@
                     <posy>918</posy>
                     <width>72</width>
                     <height>72</height>
-                    <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-                    <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-                    <include>HiddenButton</include>
                     <onclick>pagedown(60)</onclick>
                 </control>
                 <control type="image">

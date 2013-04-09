@@ -64,12 +64,11 @@
                             <width>960</width>
                             <height>72</height>
                             <include>toast_back</include>
-                            <visible>!Control.HasFocus(50)</visible>
                         </control>
                         <control type="image">
                             <width>960</width>
                             <height>72</height>
-                            <texture border="8">dialogs/button_focus.png</texture>
+                            <texture border="8">listselect_fo.png</texture>
                             <visible>Control.HasFocus(50)</visible>
                         </control>
                         <control type="label">
@@ -147,12 +146,11 @@
                             <width>960</width>
                             <height>72</height>
                             <include>toast_back</include>
-                            <visible>!Control.HasFocus(100)</visible>
                         </control>
                         <control type="image">
                             <width>960</width>
                             <height>72</height>
-                            <texture border="8">dialogs/button_focus.png</texture>
+                            <texture border="8">listselect_fo.png</texture>
                             <visible>Control.HasFocus(100)</visible>
                         </control>
                         <control type="label">

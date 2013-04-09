@@ -86,14 +86,13 @@
                     <control type="image">
                         <width>1236</width>
                         <height>72</height>
-                        <texture border="4">dialogs/button_focus.png</texture>
-                        <visible>Control.hasFocus(50)</visible>
+                        <texture border="3">dialogs/toast_back_blue.png</texture>
                     </control>
                     <control type="image">
                         <width>1236</width>
                         <height>72</height>
-                        <texture border="3">dialogs/toast_back_blue.png</texture>
-                        <visible>!Control.hasFocus(50)</visible>
+                        <texture border="8">listselect_fo.png</texture>
+                        <visible>Control.HasFocus(50)</visible>
                     </control>
                     <control type="label">
                         <posx>0</posx>
@@ -324,14 +323,13 @@
                     <control type="image">
                         <width>950</width>
                         <height>72</height>
-                        <texture border="4">dialogs/button_focus.png</texture>
-                        <visible>Control.hasFocus(50)</visible>
+                        <texture border="3">dialogs/toast_back_blue.png</texture>
                     </control>
                     <control type="image">
                         <width>950</width>
                         <height>72</height>
-                        <texture border="3">dialogs/toast_back_blue.png</texture>
-                        <visible>!Control.hasFocus(50)</visible>
+                        <texture border="8">listselect_fo.png</texture>
+                        <visible>Control.HasFocus(50)</visible>
                     </control>
                     <control type="label">
                         <posx>0</posx>
@@ -364,9 +362,6 @@
                 <posy>72</posy>
                 <width>72</width>
                 <height>72</height>
-                <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-                <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-                <include>HiddenButton</include>
                 <onclick>pageup(60)</onclick>
             </control>
             <control type="button">
@@ -374,9 +369,6 @@
                 <posy>1008</posy>
                 <width>72</width>
                 <height>72</height>
-                <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-                <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-                <include>HiddenButton</include>
                 <onclick>pagedown(60)</onclick>
             </control>
             <control type="image">

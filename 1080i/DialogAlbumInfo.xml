@@ -386,13 +386,13 @@
                     </control>
                 </itemlayout>
                 <focusedlayout width="600" height="72">
-                    <control type="group">
-                        <visible>!Control.HasFocus(50)</visible>
                         <control type="image">
                             <width>600</width>
                             <height>72</height>
                             <include>toast_back</include>
                         </control>
+                    <control type="group">
+                        <visible>!Control.HasFocus(50)</visible>
                         <control type="label">
                             <width>600</width>
                             <height>72</height>
@@ -413,11 +413,11 @@
                         </control>
                     </control>
                     <control type="group">
-                        <visible>Control.HasFocus(50)</visible>
                         <control type="image">
                             <width>600</width>
                             <height>72</height>
-                            <texture border="8">dialogs/button_focus.png</texture>
+                            <texture border="8">listselect_fo.png</texture>
+                            <visible>Control.HasFocus(50)</visible>
                         </control>
                         <control type="label">
                             <width>600</width>

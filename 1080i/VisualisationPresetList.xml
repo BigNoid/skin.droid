@@ -66,38 +66,16 @@
                     </control>
                 </itemlayout>
 				<focusedlayout height="72">
-                    <control type="group">
-                        <visible>!Control.HasFocus(2)</visible>
                         <control type="image">
                             <width>888</width>
                             <height>72</height>
                             <include>toast_back</include>
                         </control>
-                        <control type="label">
-                            <width>888</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <textoffsetx>30</textoffsetx>
-                            <textcolor>White2</textcolor>
-                        </control>
-                        <control type="label">
-                            <posx>888</posx>
-                            <width>888</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <align>right</align>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <textoffsetx>30</textoffsetx>
-                            <textcolor>White2</textcolor>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <visible>Control.HasFocus(2)</visible>
                         <control type="image">
                             <width>888</width>
                             <height>72</height>
-                            <texture border="8">dialogs/button_focus.png</texture>
+                            <texture border="8">listselect_fo.png</texture>
+                            <visible>Control.HasFocus(2)</visible>
                         </control>
                         <control type="label">
                             <width>888</width>
@@ -115,7 +93,6 @@
                             <label>$INFO[ListItem.Label2]</label>
                             <textoffsetx>30</textoffsetx>
                         </control>
-                    </control>
                 </focusedlayout>
 			</control>
 
@@ -124,9 +101,6 @@
                 <posy>72</posy>
                 <width>72</width>
                 <height>72</height>
-                <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-                <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-                <include>HiddenButton</include>
                 <onclick>pageup(60)</onclick>
             </control>
             <control type="button">
@@ -134,9 +108,6 @@
                 <posy>1008</posy>
                 <width>72</width>
                 <height>72</height>
-                <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-                <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-                <include>HiddenButton</include>
                 <onclick>pagedown(60)</onclick>
             </control>
             <control type="image">

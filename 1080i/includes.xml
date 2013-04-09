@@ -599,9 +599,6 @@
                 <posy>0</posy>
                 <width>90</width>
                 <height>72</height>
-                <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-                <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-                <include>HiddenButton</include>
                 <onclick>ActivateWindow(PlayerControls)</onclick>
             </control>
             <control type="button">
@@ -609,9 +606,6 @@
                 <posy>0</posy>
                 <width>800</width>
                 <height>72</height>
-                <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-                <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-                <include>HiddenButton</include>
                 <onclick>ActivateWindow(musicplaylist)</onclick>
             </control>
             <control type="image">
@@ -826,9 +820,6 @@
             <posy>72</posy>
             <width>72</width>
             <height>72</height>
-            <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-            <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-            <include>HiddenButton</include>
             <onclick>pageup(60)</onclick>
             </control>
         <control type="button">
@@ -836,9 +827,6 @@
             <posy>918</posy>
             <width>72</width>
             <height>72</height>
-            <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-            <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-            <include>HiddenButton</include>
             <onclick>pagedown(60)</onclick>
             </control>
         <control type="image">
@@ -976,4 +964,9 @@
         </control>
     </include>
 
+    <include name="DialogBack">
+        <texture border="4">dialogs/toast_back_blue.png</texture>
+        <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
+        <bordersize>21</bordersize>
+    </include>
 </includes>
