@@ -343,12 +343,12 @@
                     <enable>no</enable>
                 </control>
                 <control type="group">
-                    <width>72</width>
+                    <width>90</width>
                     <height>72</height>
                     <control type="button" id="11115">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>72</width>
+                        <width>90</width>
                         <height>72</height>
                         <onclick>$VAR[NotificationSettingsButtonActionVar]</onclick>
                         <onleft>11121</onleft>
@@ -356,7 +356,7 @@
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
                     </control>
                     <control type="image">
-                        <posx>12</posx>
+                        <posx>21</posx>
                         <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
@@ -364,12 +364,12 @@
                     </control>
                 </control>
                 <control type="group">
-                    <width>72</width>
+                    <width>90</width>
                     <height>72</height>
                     <control type="button" id="11116">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>72</width>
+                        <width>90</width>
                         <height>72</height>
                         <onclick>ActivateWindow(favourites)</onclick>
                         <onleft>11115</onleft>
@@ -377,7 +377,7 @@
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
                     </control>
                     <control type="image">
-                        <posx>12</posx>
+                        <posx>21</posx>
                         <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
@@ -385,12 +385,12 @@
                     </control>
                 </control>
                 <control type="group">
-                    <width>72</width>
+                    <width>90</width>
                     <height>72</height>
                     <control type="button" id="11117">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>72</width>
+                        <width>90</width>
                         <height>72</height>
                         <onclick>RunScript(script.globalsearch)</onclick>
                         <onleft>11116</onleft>
@@ -398,7 +398,7 @@
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
                     </control>
                     <control type="image">
-                        <posx>12</posx>
+                        <posx>21</posx>
                         <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
@@ -406,12 +406,12 @@
                     </control>
                 </control>
                 <control type="group">
-                    <width>72</width>
+                    <width>90</width>
                     <height>72</height>
                     <control type="button" id="11118">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>72</width>
+                        <width>90</width>
                         <height>72</height>
                         <onclick>ActivateWindow(shutdownmenu)</onclick>
                         <onleft>11117</onleft>
@@ -419,7 +419,7 @@
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
                     </control>
                     <control type="image">
-                        <posx>12</posx>
+                        <posx>21</posx>
                         <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
@@ -427,13 +427,13 @@
                     </control>
                 </control>
                 <control type="group">
-                    <width>72</width>
+                    <width>90</width>
                     <height>72</height>
                     <visible>!Window.IsActive(home)</visible>
                     <control type="button" id="11119">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>72</width>
+                        <width>90</width>
                         <height>72</height>
                         <onclick>Dialog.Close(all,true)</onclick>
                         <onclick>ActivateWindow(home)</onclick>
@@ -443,7 +443,7 @@
                         <visible>!Window.IsActive(home)</visible>
                     </control>
                     <control type="image">
-                        <posx>12</posx>
+                        <posx>21</posx>
                         <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
@@ -511,7 +511,7 @@
                     <visible>Window.IsVisible(busydialog)</visible>
                     <control type="image">
                         <description>Busy animation</description>
-                        <posx>12</posx>
+                        <posx>21</posx>
                         <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
@@ -531,12 +531,12 @@
                     </control>
                 </control>
                 <control type="group">
-                    <width>72</width>
+                    <width>90</width>
                     <height>72</height>
                     <control type="button" id="11122">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>72</width>
+                        <width>90</width>
                         <height>72</height>
                         <onclick condition="IsEmpty(Window(Home).property(MediaMenu))">SetProperty(MediaMenu,True,Home)</onclick>
                         <onclick condition="IsEmpty(Window(Home).property(MediaMenu))">SetFocus(9000)</onclick>
@@ -547,7 +547,7 @@
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
                     </control>
                     <control type="image">
-                        <posx>12</posx>
+                        <posx>21</posx>
                         <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
@@ -597,7 +597,7 @@
             <control type="button">
                 <posx>0</posx>
                 <posy>0</posy>
-                <width>72</width>
+                <width>90</width>
                 <height>72</height>
                 <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
                 <texturefocus border="8">dialogs/button_focus.png</texturefocus>
@@ -605,7 +605,7 @@
                 <onclick>ActivateWindow(PlayerControls)</onclick>
             </control>
             <control type="button">
-                <posx>72</posx>
+                <posx>90</posx>
                 <posy>0</posy>
                 <width>800</width>
                 <height>72</height>
@@ -616,7 +616,7 @@
             </control>
             <control type="image">
                 <description>Now Playing - Paused</description>
-                <posx>12</posx>
+                <posx>21</posx>
                 <posy>12</posy>
                 <width>48</width>
                 <height>48</height>
@@ -626,7 +626,7 @@
             </control>
             <control type="image">
                 <description>Now Playing - Play</description>
-                <posx>12</posx>
+                <posx>21</posx>
                 <posy>12</posy>
                 <width>48</width>
                 <height>48</height>
@@ -636,7 +636,7 @@
             </control>
             <control type="group">
                 <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
-                <posx>15</posx>
+                <posx>33</posx>
                 <animation effect="slide" start="0,-80" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
                 <control type="label">
                     <posy>4</posy>
