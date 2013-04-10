@@ -149,6 +149,7 @@
                 <onright>60</onright>
                 <onup>6</onup>
 				<ondown>6</ondown>
+                <pagecontrol>60</pagecontrol>
                 <itemlayout height="72" width="1368">
                     <control type="image">
                         <width>1368</width>
