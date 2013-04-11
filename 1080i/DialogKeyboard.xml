@@ -260,7 +260,7 @@
                 <control type="radiobutton" id="302">
                     <description>SHIFT button</description>
                     <width>390</width>
-                    <label>Shift</label>
+                    <label>20178</label>
                     <include>KeyboardRadio</include>
                 </control>
                 <control type="button" id="90">
