@@ -325,10 +325,10 @@
         <value>$INFO[Player.Art(thumb)]</value>
     </variable>
 
-    <!--<variable name="InfoList.NoPlotVar">
+    <variable name="InfoList.NoPlotVar">
         <value condition="Skin.HasSetting(InfoList.NoPlot)">$LOCALIZE[31009]</value>
         <value>$LOCALIZE[203]</value>
-    </variable>-->
+    </variable>
 
     <variable name="InfoListButton1LabelVar">
         <value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Genre]</value>
