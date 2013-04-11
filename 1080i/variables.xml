@@ -342,11 +342,13 @@
     </variable>
     <variable name="InfoListButton3Label1Var">
         <value condition="Container.Content(movies)">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
-        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[31010]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]  + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$LOCALIZE[31010]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]  + IsEmpty(Window(Home).Property(NextAired.NextDate))">$LOCALIZE[20416]</value>
     </variable>
     <variable name="InfoListButton3Label2Var">
         <value condition="Container.Content(movies)">$INFO[ListItem.Year]</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$INFO[Window(Home).Property(NextAired.NextDate)]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(Window(Home).Property(NextAired.NextDate))">$INFO[ListItem.Premiered]</value>
         <!--<value>N/A</value>-->
     </variable>
 
