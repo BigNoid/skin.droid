@@ -789,7 +789,7 @@
         <onright>53</onright>
         <onup>9010</onup>
         <ondown>61</ondown>
-        <visible>!Container.Content(addons)</visible>
+        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(genres) | Container.Content(sets)</visible>
         <viewtype label="ShowCase">bigwrap</viewtype>
         <pagecontrol>61</pagecontrol>
         <scrolltime tween="quadratic">300</scrolltime>
