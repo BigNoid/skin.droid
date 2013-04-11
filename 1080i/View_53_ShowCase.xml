@@ -1177,7 +1177,7 @@
         <value condition="!IsEmpty(ListItem(7).Art(poster))">$INFO[ListItem(7).Art(poster)]</value>
         <value>$INFO[ListItem(7).Icon]</value>
     </variable>
-    <variable name="ShowcaseItem8Var">
+    <!--<variable name="ShowcaseItem8Var">
         <value condition="Container.Content(genres) + !StringCompare(ListItem(8).Label,..)">$INFO[ListItem(8).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(8).Art(poster))">$INFO[ListItem(8).Art(poster)]</value>
         <value>$INFO[ListItem(8).Icon]</value>
@@ -1186,6 +1186,6 @@
         <value condition="Container.Content(genres) + !StringCompare(ListItem(9).Label,..)">$INFO[ListItem(9).Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem(9).Art(poster))">$INFO[ListItem(9).Art(poster)]</value>
         <value>$INFO[ListItem(9).Icon]</value>
-    </variable>
+    </variable>-->
 
 </includes>
