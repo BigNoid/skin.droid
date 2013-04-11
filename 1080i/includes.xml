@@ -511,7 +511,7 @@
                     <visible>Window.IsVisible(busydialog)</visible>
                     <control type="image">
                         <description>Busy animation</description>
-                        <posx>21</posx>
+                        <posx>12</posx>
                         <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
