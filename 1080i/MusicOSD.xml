@@ -351,7 +351,7 @@
 
             <control type="group">
                 <posx>0</posx>
-                <posy>96r</posy>
+                <posy>984</posy>
                 <visible>!Player.ShowInfo</visible>
                 <control type="label">
                     <posx>256</posx>
