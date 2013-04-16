@@ -59,7 +59,7 @@
             <animation effect="slide" start="0,-110" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
             <animation effect="slide" start="0,-110" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
             <animation effect="slide" end="0,-110" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
-            <visible>[Player.ShowInfo | Player.Paused] + !Window.IsVisible(script-XBMC-Subtitles-main.xml)</visible>
+            <visible>[Player.ShowInfo | Player.Paused] + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsActive(videoosd)</visible>
             <control type="image">
                 <posx>0</posx>
                 <posy>72</posy>
@@ -236,7 +236,7 @@
             <animation effect="slide" start="0,128" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
             <animation effect="slide" end="0,128" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
             <animation effect="slide" start="0,128" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
-            <visible>[Player.ShowInfo | Player.Paused] + !Window.IsVisible(script-XBMC-Subtitles-main.xml)</visible>
+            <visible>[Player.ShowInfo | Player.Paused] + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsActive(videoosd)</visible>
             <visible>!Player.DisplayAfterSeek</visible>
             <include>FloorFlagsBack</include>
             <control type="image">
@@ -246,7 +246,7 @@
                 <height>254</height>
                 <aspectratio aligny="bottom">keep</aspectratio>
                 <texture background="true">$VAR[PlayerArtworkVar]</texture>
-                <visible>[Player.ShowInfo | Player.Paused] + !Window.IsVisible(script-XBMC-Subtitles-main.xml)</visible>
+                <visible>[Player.ShowInfo | Player.Paused] + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsActive(videoosd)</visible>
                 <visible>!Player.DisplayAfterSeek</visible>
                 <animation type="WindowOpen" reversible="false">
                     <effect type="fade" start="0" end="100" time="200" />
@@ -254,8 +254,11 @@
                 <animation type="WindowClose" reversible="false">
                     <effect type="fade" start="100" end="0" time="200" />
                 </animation>
-                <animation type="VisibleChange" reversible="false">
+                <animation type="Visible" reversible="false">
                     <effect type="fade" start="0" end="100" time="200" />
+                </animation>
+                <animation type="Hidden" reversible="false">
+                    <effect type="fade" start="100" end="0" time="100" />
                 </animation>
             </control>
             <control type="image">
