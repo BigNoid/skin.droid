@@ -5,6 +5,7 @@
 - Fixed subtitle screen losing focus.
 - Fixed misaligned busy icon.
 - Fixed misaligned mute icon.
+- Fixed wrong uppercasing of special characters - thx Mikebzh44.
 
 [B]0.0.7[/B]
 - Updated language files from Transifex
