@@ -153,7 +153,7 @@
                             <label>$LOCALIZE[24001]</label>
                             <label2>31411</label2>
                             <icon>home/icons/DefaultAddon.png</icon>
-                            <onclick>ActivateWindow(profiles)</onclick>
+                            <onclick>ActivateWindow(addonbrowser)</onclick>
                         </item>
                         <item id="7">
                             <label>$LOCALIZE[13200]</label>
