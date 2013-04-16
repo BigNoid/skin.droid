@@ -314,10 +314,10 @@
                     <texturenofocus>osd/bg_play_large.png</texturenofocus>
                     <colordiffuse>Blue2</colordiffuse>
                     <onclick>PlayerControl(Play)</onclick>
-                    <onleft>100</onleft>
+                    <onleft>101</onleft>
                     <onright>100</onright>
                     <onup>100</onup>
-                    <ondown>401</ondown>
+                    <ondown>101</ondown>
                 </control>
                 <control type="image">
                     <posx>0</posx>
