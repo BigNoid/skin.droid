@@ -353,7 +353,7 @@
     </variable>
 
     <variable name="TimeRemainingVar">
-        <value condition="Player.HasDuration">$INFO[Player.TimeRemaining,- ]</value>
+        <value condition="Player.HasDuration">$INFO[Player.TimeRemaining,-]</value>
         <value>∞</value>
     </variable>
 
