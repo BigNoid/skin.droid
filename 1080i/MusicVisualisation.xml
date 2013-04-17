@@ -424,7 +424,7 @@
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>250</width>
-                        <height>67</height>
+                        <height>72</height>
                         <font>Clock</font>
                         <align>left</align>
                         <label>$INFO[Player.Time]</label>
@@ -449,7 +449,7 @@
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>250</width>
-                        <height>67</height>
+                        <height>72</height>
                         <font>Clock</font>
                         <align>right</align>
                         <label>$VAR[TimeRemainingVar]</label>

@@ -88,7 +88,7 @@
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>225</width>
-                    <height>67</height>
+                    <height>72</height>
                     <font>Clock</font>
                     <align>center</align>
                     <label>$INFO[System.Time]</label>
@@ -126,7 +126,7 @@
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>225</width>
-                    <height>67</height>
+                    <height>72</height>
                     <font>Clock</font>
                     <align>center</align>
                     <label>$INFO[Player.FinishTime]</label>
@@ -149,7 +149,7 @@
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>160</width>
-                    <height>67</height>
+                    <height>72</height>
                     <font>Clock</font>
                     <align>center</align>
                     <label>$INFO[System.Time]</label>
@@ -187,7 +187,7 @@
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>160</width>
-                    <height>67</height>
+                    <height>72</height>
                     <font>Clock</font>
                     <align>center</align>
                     <label>$INFO[Player.FinishTime]</label>
