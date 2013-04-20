@@ -67,7 +67,8 @@
                         <onclick>ActivateWindow(settings)</onclick>
                         <onleft>11121</onleft>
                         <onright>11116</onright>
-                        <ondown>13</ondown>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                     </control>
                     <control type="image">
                         <posx>21</posx>
@@ -88,7 +89,8 @@
                         <onclick>ActivateWindow(favourites)</onclick>
                         <onleft>11115</onleft>
                         <onright>11117</onright>
-                        <ondown>13</ondown>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                     </control>
                     <control type="image">
                         <posx>21</posx>
@@ -109,7 +111,8 @@
                         <onclick>RunScript(script.globalsearch)</onclick>
                         <onleft>11116</onleft>
                         <onright>11118</onright>
-                        <ondown>13</ondown>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                     </control>
                     <control type="image">
                         <posx>21</posx>
@@ -130,7 +133,8 @@
                         <onclick>ActivateWindow(shutdownmenu)</onclick>
                         <onleft>11117</onleft>
                         <onright>11119</onright>
-                        <ondown>13</ondown>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                     </control>
                     <control type="image">
                         <posx>21</posx>
@@ -152,7 +156,8 @@
                         <onclick>ActivateWindow(home)</onclick>
                         <onleft>11117</onleft>
                         <onright>8</onright>
-                        <ondown>13</ondown>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                     </control>
                     <control type="image">
                         <posx>21</posx>
@@ -209,7 +214,8 @@
                 <itemgap>0</itemgap>
                 <align>right</align>
                 <onup>50</onup>
-                <ondown>13</ondown>
+                <ondown condition="Control.IsEnabled(13)">13</ondown>
+                <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                 <onright>5000</onright>
                 <onleft>5000</onleft>
                 <orientation>horizontal</orientation>
@@ -255,7 +261,8 @@
                         <width>90</width>
                         <height>72</height>
                         <onup>50</onup>
-                        <ondown>13</ondown>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                         <onright>9</onright>
                         <onleft>11119</onleft>
                     </control>
@@ -280,7 +287,8 @@
                         <width>90</width>
                         <height>72</height>
                         <onup>50</onup>
-                        <ondown>13</ondown>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                         <onright>6</onright>
                         <onleft>8</onleft>
                     </control>
@@ -307,7 +315,8 @@
                         <width>90</width>
                         <height>72</height>
                         <onup>50</onup>
-                        <ondown>13</ondown>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                         <onright>11</onright>
                         <onleft>9</onleft>
                     </control>
@@ -329,7 +338,8 @@
                         <width>90</width>
                         <height>72</height>
                         <onup>50</onup>
-                        <ondown>13</ondown>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                         <onright>10</onright>
                         <onleft>6</onleft>
                         <enable>!IsEmpty(ListItem.Trailer)</enable>
@@ -354,7 +364,8 @@
                         <width>90</width>
                         <height>72</height>
                         <onup>50</onup>
-                        <ondown>13</ondown>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                         <onright>11121</onright>
                         <onleft>11</onleft>
                     </control>
@@ -379,7 +390,8 @@
                         <onclick condition="!IsEmpty(Window(Home).property(VideoInfoMediaMenu))">ClearProperty(VideoInfoMediaMenu,Home)</onclick>
                         <onleft>10</onleft>
                         <onright>11115</onright>
-                        <ondown>13</ondown>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                     </control>
                     <control type="image">
                         <posx>21</posx>
@@ -705,7 +717,8 @@
                         <height>216</height>
                         <onup>50</onup>
                         <ondown>50</ondown>
-                        <onleft>13</onleft>
+                        <onleft condition="Control.IsEnabled(13)">13</onleft>
+                        <onleft condition="!Control.IsEnabled(13)">4002</onleft>
                         <onright>70</onright>
                         <orientation>vertical</orientation>
                         <scrolltime tween="quadratic">200</scrolltime>
