@@ -344,68 +344,8 @@
                 <height>280</height>
                 <texture>views/landscape/shade.png</texture>
             </control>
-
-
-            <control type="group">
-                <posx>0</posx>
-                <posy>984</posy>
-                <control type="label">
-                    <posx>256</posx>
-                    <posy>0</posy>
-                    <width>256</width>
-                    <height>96</height>
-                    <align>right</align>
-                    <font>Medium_Caps3</font>
-                    <label>$INFO[Player.Time]</label>
-                    <textoffsetx>8</textoffsetx>
-                </control>
-                <control type="label">
-                    <posx>1664</posx>
-                    <posy>0</posy>
-                    <width>1680</width>
-                    <height>96</height>
-                    <label>$INFO[Player.Duration]</label>
-                    <textoffsetx>8</textoffsetx>
-                    <font>Medium_Caps3</font>
-                </control>
-                <control type="progress">
-                    <description>Progress Bar</description>
-                    <posx>260</posx>
-                    <posy>40</posy>
-                    <width>1400</width>
-                    <info>Player.ProgressCache</info>
-                    <visible>true</visible>
-                    <midtexture border="1">common/texturesliderbar.png</midtexture>
-                    <righttexture border="1">common/texturesliderbar.png</righttexture>
-                </control>
-                <control type="progress" id="23">
-                    <description>Progress Bar</description>
-                    <posx>260</posx>
-                    <posy>40</posy>
-                    <width>1400</width>
-                    <info>Player.Progress</info>
-                    <visible>true</visible>
-                    <texturebg border="2">settings/texturebg_cache.png</texturebg>
-                    <righttexture border="0,0,26,0">-</righttexture>
-                    <colordiffuse>Blue2</colordiffuse>
-                </control>
-                <control type="slider" id="24">
-                    <description>Seekbar</description>
-                    <posx>260</posx>
-                    <posy>20</posy>
-                    <width>1400</width>
-                    <height>66</height>
-                    <texturesliderbar border="2">settings/texturebg_slider.png</texturesliderbar>
-                    <textureslidernib>osd/slider_nf.png</textureslidernib>
-                    <textureslidernibfocus>osd/slider.png</textureslidernibfocus>
-                    <controloffsetx>0</controloffsetx>
-                    <controloffsety>0</controloffsety>
-                    <action>seek</action>
-                    <info>player.progress</info>
-                    <visible>true</visible>
-                    <colordiffuse>Blue2</colordiffuse>
-                </control>
-            </control>
+			
+			<include>SliderControl</include>
         </control>
     </controls>
 </window>
