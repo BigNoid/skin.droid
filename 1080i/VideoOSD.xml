@@ -271,6 +271,8 @@
                 </control>
 			</control>
 		</control>
+		
+		<include>SliderControl</include>
 
         <control type="group">
             <animation type="WindowOpen" reversible="false">
