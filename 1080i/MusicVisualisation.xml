@@ -497,7 +497,7 @@
                     <posy>0</posy>
                     <width>186</width>
                     <height>186</height>
-                    <texture>osd/btn_pause.png</texture>
+                    <texture>osd/btn_play.png</texture>
                 </control>
             </control>
 

@@ -324,7 +324,7 @@
                     <posy>0</posy>
                     <width>186</width>
                     <height>186</height>
-                    <texture>osd/btn_play.png</texture>
+                    <texture>osd/btn_pause.png</texture>
                     <visible>!Player.Paused</visible>
                 </control>
                 <control type="image">
@@ -332,7 +332,7 @@
                     <posy>0</posy>
                     <width>186</width>
                     <height>186</height>
-                    <texture>osd/btn_pause.png</texture>
+                    <texture>osd/btn_play.png</texture>
                     <visible>Player.Paused</visible>
                 </control>
             </control>
