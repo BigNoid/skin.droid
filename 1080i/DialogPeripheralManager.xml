@@ -118,7 +118,7 @@
                         <control type="image">
                             <width>1368</width>
                             <height>72</height>
-                            <texture border="8">listselect_fo.png</texture>
+                            <texture>dialogs/listitem_focus.png</texture>
                         </control>
                         <control type="label">
                             <width>1368</width>

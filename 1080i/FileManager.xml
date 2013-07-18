@@ -75,7 +75,7 @@
                     <control type="image">
                         <width>960</width>
                         <height>72</height>
-                        <texture border="8">listselect_fo.png</texture>
+                        <texture>dialogs/listitem_focus.png</texture>
                         <visible>Control.HasFocus(20)</visible>
                     </control>
                     <control type="label">
@@ -174,7 +174,7 @@
                     <control type="image">
                         <width>960</width>
                         <height>72</height>
-                        <texture border="8">listselect_fo.png</texture>
+                        <texture>dialogs/listitem_focus.png</texture>
                         <visible>Control.HasFocus(21)</visible>
                     </control>
                     <control type="label">

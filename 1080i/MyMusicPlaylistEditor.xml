@@ -3,7 +3,7 @@
     <defaultcontrol allways="true">6</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <views>50</views>
-    <onunload>ClearProperty(MediaMenu,Home)</onunload>
+    <include>MediaMenuReset</include>
     <controls>
         <include>NotificationCenter</include>
         <control type="group">
@@ -68,7 +68,7 @@
                         <control type="image">
                             <width>960</width>
                             <height>72</height>
-                            <texture border="8">listselect_fo.png</texture>
+                            <texture>dialogs/listitem_focus.png</texture>
                             <visible>Control.HasFocus(50)</visible>
                         </control>
                         <control type="label">
@@ -150,7 +150,7 @@
                         <control type="image">
                             <width>960</width>
                             <height>72</height>
-                            <texture border="8">listselect_fo.png</texture>
+                            <texture>dialogs/listitem_focus.png</texture>
                             <visible>Control.HasFocus(100)</visible>
                         </control>
                         <control type="label">
@@ -172,26 +172,29 @@
                     </focusedlayout>
                 </control>
             </control>
-            <control type="grouplist" id="9000">
-                <include>MediaMenuGrouplist</include>
-                <control type="button" id="6">
-                    <description>Open Button</description>
-                    <label>31019</label>
-                    <include>MediaMenuButton</include>
-                </control>
-                <control type="button" id="7">
-                    <description>Save Button</description>
-                    <label>31020</label>
-                    <include>MediaMenuButton</include>
-                </control>
-                <control type="button" id="8">
-                    <description>Clear button</description>
-                    <label>31021</label>
-                    <include>MediaMenuButton</include>
-                </control>
-                <include>MediaMenuBottomButton</include>
-            </control>
             <include>BreadcrumbsLabel</include>
+            <control type="group" id="9999">
+                <include>MediaMenuOverlay</include>
+	        	<control type="grouplist">
+		            <include>MediaMenuGrouplist</include>
+	                <control type="button" id="6">
+	                    <description>Open Button</description>
+	                    <label>31019</label>
+	                    <include>MediaMenuButton</include>
+	                </control>
+	                <control type="button" id="7">
+	                    <description>Save Button</description>
+	                    <label>31020</label>
+	                    <include>MediaMenuButton</include>
+	                </control>
+	                <control type="button" id="8">
+	                    <description>Clear button</description>
+	                    <label>31021</label>
+	                    <include>MediaMenuButton</include>
+	                </control>
+	                <include>MediaMenuBottomButton</include>
+	            </control>
+           </control>
         </control>
     </controls>
 </window>

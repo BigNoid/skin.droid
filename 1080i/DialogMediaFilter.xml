@@ -25,7 +25,6 @@
                 <width>914</width>
                 <height>546</height>
                 <include>toast_back</include>
-                <texture border="3">dialogs/toast_back_blue.png</texture>
                 <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
                 <bordersize>21</bordersize>
             </control>

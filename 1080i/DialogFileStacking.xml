@@ -32,7 +32,7 @@
                     <posy>0</posy>
                     <width>600</width>
                     <height>72</height>
-                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                    <texture>dialogs/listitem_nofocus.png</texture>
                 </control>
                 <control type="label">
                     <posy>0</posy>
@@ -49,14 +49,14 @@
                     <posy>0</posy>
                     <width>600</width>
                     <height>72</height>
-                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                    <texture>dialogs/listitem_nofocus.png</texture>
                 </control>
                 <control type="image">
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>600</width>
                     <height>72</height>
-                    <texture border="8">listselect_fo.png</texture>
+                    <texture>dialogs/listitem_focus.png</texture>
                 </control>
                 <control type="label">
                     <posy>0</posy>
@@ -84,8 +84,8 @@
             <onclick>noop</onclick>
             <aligny>top</aligny>
             <textoffsety>6</textoffsety>
-            <texturefocus border="14,14,14,3">dialogs/context_bottom.png</texturefocus>
-            <texturenofocus border="14,14,14,3">dialogs/context_bottom.png</texturenofocus>
+            <texturefocus border="14,14,14,3">dialogs/contextmenu_bottom.png</texturefocus>
+            <texturenofocus border="14,14,14,3">dialogs/contextmenu_bottom.png</texturenofocus>
             <disabledcolor>$VAR[ThemeColorVar]</disabledcolor>
             <enable>no</enable>
         </control>
