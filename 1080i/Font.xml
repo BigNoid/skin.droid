@@ -102,7 +102,6 @@
             <name>Smaller</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
             <size>31</size>
-            <linespacing>0.75</linespacing>
         </font>
         <font>
             <name>Medium_Small</name>
@@ -120,6 +119,11 @@
             <filename>RobotoCondensed-Uppercase.ttf</filename>
             <size>22</size>
             <style>uppercase</style>
+        </font>
+        <font>
+            <name>Normal</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>30</size>
         </font>
         <!-- Required for system -->
         <font>

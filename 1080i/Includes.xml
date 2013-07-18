@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <!-- Included non-default/custom XML files -->
-    <include file="defaults.xml" />
-    <include file="variables.xml" />
+    <include file="Defaults.xml" />
+    <include file="Variables.xml" />
     <include file="Includes_Home.xml" />
+    <include file="Includes_PVR.xml" />
     <include file="View_50_List.xml" />
     <include file="View_51_Icons.xml" />
     <include file="View_52_ThumbWrap.xml" />
@@ -70,7 +71,6 @@
     </include>
 
     <include name="GlobalOverlay">
-
         <control type="image">
             <posx>0</posx>
             <posy>72</posy>
@@ -85,12 +85,11 @@
                 <effect type="fade" start="100" end="0" time="200" />
             </animation>
         </control>
-
     </include>
 
     <include name="GlobalBackground">
         <control type="group">
-            <visible>![[Control.isVisible(50) | Control.isVisible(51) | Control.isVisible(55)] + !Window.IsActive(home)]</visible>
+            <!-- <visible>![[Control.isVisible(50) | Control.isVisible(51) | Control.isVisible(55)] + !Window.IsActive(home)]</visible> -->
             <include>VisibleChangeEffect</include>
             <control type="fadelabel" id="6053">
                 <posy>-100</posy>
@@ -230,6 +229,7 @@
                         <texture border="25">views/showcase/infopanel.png</texture>
                     </control>
                 </control>
+                <!-- 
                 <control type="image">
                     <posy>0</posy>
                     <animation effect="slide" start="0,0" end="0,20" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
@@ -269,6 +269,7 @@
                     <height>219</height>
                     <texture>background/bottom_fade.png</texture>
                 </control>
+                 -->
             </control>
         </control>
     </include>
@@ -292,8 +293,8 @@
                 <posy>0</posy>
                 <width>1920</width>
                 <height>72</height>
-                <texture border="3">dialogs/toast_back_blue.png</texture>
-                    </control>
+                <texture border="3">dialogs/background_topbar.png</texture>
+            </control>
             <control type="image">
                 <posx>0</posx>
                 <posy>72</posy>
@@ -305,7 +306,7 @@
                 <posx>0</posx>
                 <posy>0</posy>
                 <width>1920</width>
-                <height>72</height>
+                <height>68</height>
                 <align>left</align>
                 <aligny>center</aligny>
                 <itemgap>0</itemgap>
@@ -344,20 +345,21 @@
                 </control>
                 <control type="group">
                     <width>90</width>
-                    <height>72</height>
+                    <height>68</height>
                     <control type="button" id="11115">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
-                        <height>72</height>
+                        <height>68</height>
                         <onclick>$VAR[NotificationSettingsButtonActionVar]</onclick>
                         <onleft>11121</onleft>
                         <onright>11116</onright>
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
+                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>12</posy>
+                        <posy>9</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/settings_nf.png</texture>
@@ -365,20 +367,21 @@
                 </control>
                 <control type="group">
                     <width>90</width>
-                    <height>72</height>
+                    <height>68</height>
                     <control type="button" id="11116">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
-                        <height>72</height>
+                        <height>68</height>
                         <onclick>ActivateWindow(favourites)</onclick>
                         <onleft>11115</onleft>
                         <onright>11117</onright>
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
+                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>12</posy>
+                        <posy>9</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/fav_nf.png</texture>
@@ -386,20 +389,21 @@
                 </control>
                 <control type="group">
                     <width>90</width>
-                    <height>72</height>
+                    <height>68</height>
                     <control type="button" id="11117">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
-                        <height>72</height>
+                        <height>68</height>
                         <onclick>RunScript(script.globalsearch)</onclick>
                         <onleft>11116</onleft>
                         <onright>11118</onright>
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
+                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>12</posy>
+                        <posy>9</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/search_nf.png</texture>
@@ -407,20 +411,21 @@
                 </control>
                 <control type="group">
                     <width>90</width>
-                    <height>72</height>
+                    <height>68</height>
                     <control type="button" id="11118">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
-                        <height>72</height>
+                        <height>68</height>
                         <onclick>ActivateWindow(shutdownmenu)</onclick>
                         <onleft>11117</onleft>
                         <onright>11119</onright>
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
+                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>12</posy>
+                        <posy>9</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/power_nf.png</texture>
@@ -428,23 +433,26 @@
                 </control>
                 <control type="group">
                     <width>90</width>
-                    <height>72</height>
+                    <height>68</height>
                     <visible>!Window.IsActive(home)</visible>
                     <include>NotificationVisibilityEffect</include>
                     <control type="button" id="11119">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
-                        <height>72</height>
+                        <height>68</height>
                         <onclick>Dialog.Close(all,true)</onclick>
                         <onclick>ActivateWindow(home)</onclick>
+                        <onright condition="Window.IsActive(movieinformation)">9</onright>
+                        <onright condition="Window.IsActive(weather)">2</onright>
                         <onleft>11117</onleft>
                         <onright>11121</onright>
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
+                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>12</posy>
+                        <posy>9</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/home.png</texture>
@@ -452,20 +460,21 @@
                 </control>
                 <control type="group">
                     <width>90</width>
-                    <height>72</height>
+                    <height>68</height>
                     <visible>Window.IsActive(mutebug)</visible>
                     <include>NotificationVisibilityEffect</include>
                     <control type="button" id="11120">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
-                        <height>72</height>
+                        <height>68</height>
                         <onclick>noop</onclick>
                         <enable>no</enable>
+                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>12</posy>
+                        <posy>9</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/mute.png</texture>
@@ -476,7 +485,7 @@
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>2</width>
-                    <height>72</height>
+                    <height>68</height>
                     <texture>dialogs/toast_back_blue_border.png</texture>
                 </control>
                 <control type="label" id="11112">
@@ -507,7 +516,7 @@
                 <control type="label">
                     <description>Busy label</description>
                     <width min="100" max="450">auto</width>
-                    <height>72</height>
+                    <height>68</height>
                     <aligny>center</aligny>
                     <label>$LOCALIZE[20186]...</label>
                     <textcolor>White2</textcolor>
@@ -515,12 +524,12 @@
                 </control>
                 <control type="group">
                     <width>72</width>
-                    <height>72</height>
+                    <height>68</height>
                     <visible>Window.IsVisible(busydialog)</visible>
                     <control type="image">
                         <description>Busy animation</description>
                         <posx>12</posx>
-                        <posy>12</posy>
+                        <posy>9</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>dialogs/busy_in.png</texture>
@@ -530,7 +539,7 @@
                     <control type="image">
                         <description>Busy animation</description>
                         <posx>12</posx>
-                        <posy>12</posy>
+                        <posy>9</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>dialogs/busy_out.png</texture>
@@ -539,24 +548,29 @@
                     </control>
                 </control>
                 <control type="group">
+                	<description>Media Menu Button</description>
                     <width>90</width>
-                    <height>72</height>
+                    <height>68</height>
+                    <visible>Control.IsVisible(9999)</visible>
                     <control type="button" id="11122">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
-                        <height>72</height>
+                        <height>68</height>
                         <onclick condition="IsEmpty(Window(Home).property(MediaMenu))">SetProperty(MediaMenu,True,Home)</onclick>
-                        <onclick condition="IsEmpty(Window(Home).property(MediaMenu))">SetFocus(9000)</onclick>
+                        <onclick condition="IsEmpty(Window(Home).property(MediaMenu))">SetFocus(9999)</onclick>
                         <onclick condition="!IsEmpty(Window(Home).property(MediaMenu))">ClearProperty(MediaMenu,Home)</onclick>
+                        <onleft condition="Window.IsActive(movieinformation)">10</onleft>
+                        <onleft condition="Window.IsActive(weather)">2</onleft>
                         <onleft condition="Window.IsActive(home)">11118</onleft>
                         <onleft condition="!Window.IsActive(home)">11119</onleft>
                         <onright>11115</onright>
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
+                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>12</posy>
+                        <posy>9</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/menu_nf.png</texture>
@@ -600,26 +614,26 @@
     <include name="NotificationNowPlaying">
         <control type="group">
             <width>900</width>
-            <height>72</height>
+            <height>68</height>
             <visible>Player.HasMedia</visible>
             <control type="button">
                 <posx>0</posx>
                 <posy>0</posy>
                 <width>90</width>
-                <height>72</height>
+                <height>68</height>
                 <onclick>ActivateWindow(PlayerControls)</onclick>
             </control>
             <control type="button">
                 <posx>90</posx>
                 <posy>0</posy>
                 <width>800</width>
-                <height>72</height>
+                <height>68</height>
                 <onclick>ActivateWindow(musicplaylist)</onclick>
             </control>
             <control type="image">
                 <description>Now Playing - Paused</description>
                 <posx>21</posx>
-                <posy>12</posy>
+                <posy>9</posy>
                 <width>48</width>
                 <height>48</height>
                 <texture>osd/pause_nf.png</texture>
@@ -629,7 +643,7 @@
             <control type="image">
                 <description>Now Playing - Play</description>
                 <posx>21</posx>
-                <posy>12</posy>
+                <posy>9</posy>
                 <width>48</width>
                 <height>48</height>
                 <texture>osd/play_nf.png</texture>
@@ -734,7 +748,7 @@
     </include>
 
     <include name="MediaMenuGrouplist">
-        <posx>1520</posx>
+        <posx>1510</posx>
         <posy>72</posy>
         <width>414</width>
         <height>900</height>
@@ -743,8 +757,8 @@
         <onleft>50</onleft>
         <onright>ClearProperty(MediaMenu,Home)</onright>
         <onright>50</onright>
-        <onup>9000</onup>
-        <ondown>9000</ondown>
+        <onup>9999</onup>
+        <ondown>9999</ondown>
         <onback>ClearProperty(MediaMenu,Home)</onback>
         <onback>50</onback>
         <orientation>vertical</orientation>
@@ -757,27 +771,45 @@
             <effect type="fade" start="100" end="0" time="200"/>
         </animation>
     </include>
-
+    
+    <include name="MediaMenuReset">
+    	<onunload>ClearProperty(MediaMenu,Home)</onunload>
+    </include>
+    
+    <include name="MediaMenuOverlay">
+    	<control type="button">
+    		<description>Touch Overlay</description>
+        	<posy>0</posy>
+        	<posx>0</posx>
+        	<width>1920</width>
+        	<height>1080</height>
+        	<include>NoTextureButton</include>
+        	<onclick>ClearProperty(MediaMenu,Home)</onclick>
+        	<visible>!IsEmpty(Window(Home).Property(MediaMenu))</visible>
+       	</control>
+    </include>
+    
     <include name="MediaMenuButton">
         <width>414</width>
         <align>left</align>
-        <texturefocus border="14,0,14,0">dialogs/shutdown_focus.png</texturefocus>
-        <texturenofocus border="14,0,14,2">dialogs/shutdown_nofocus.png</texturenofocus>
-        <alttexturefocus border="14,0,14,0">dialogs/shutdown_focus.png</alttexturefocus>
-        <alttexturenofocus border="14,0,14,2">dialogs/shutdown_nofocus.png</alttexturenofocus>
         <radioposx>340</radioposx>
+        <texturefocus border="14,0,14,0">dialogs/contextmenu_focus.png</texturefocus>
+        <texturenofocus border="14,0,14,2">dialogs/contextmenu_nofocus.png</texturenofocus>
+        <alttexturefocus border="14,0,14,0">dialogs/contextmenu_focus.png</alttexturefocus>
+        <alttexturenofocus border="14,0,14,2">dialogs/contextmenu_nofocus.png</alttexturenofocus>
+        <onclick>ClearProperty(MediaMenu,Home)</onclick>
     </include>
 
     <include name="MediaMenuBottomButton">
         <control type="button" id="9001">
             <description>Viewtype settings</description>
-            <width>600</width>
+            <width>414</width>
             <label>31016</label>
             <onclick>noop</onclick>
             <aligny>top</aligny>
             <textoffsety>6</textoffsety>
-            <texturefocus border="14,14,14,3">dialogs/context_bottom.png</texturefocus>
-            <texturenofocus border="14,14,14,3">dialogs/context_bottom.png</texturenofocus>
+            <texturefocus border="14,14,14,3">dialogs/contextmenu_bottom.png</texturefocus>
+            <texturenofocus border="14,14,14,3">dialogs/contextmenu_bottom.png</texturenofocus>
             <disabledcolor>$VAR[ThemeColorVar]</disabledcolor>
             <enable>no</enable>
             </control>
@@ -821,57 +853,7 @@
     <include name="toast_back">
         <texture border="3">dialogs/toast_back_blue.png</texture>
     </include>
-
-    <include name="SideScrollbar">
-        <control type="button">
-            <posx>72r</posx>
-            <posy>72</posy>
-            <width>72</width>
-            <height>72</height>
-            <onclick>pageup(60)</onclick>
-            </control>
-        <control type="button">
-            <posx>72r</posx>
-            <posy>918</posy>
-            <width>72</width>
-            <height>72</height>
-            <onclick>pagedown(60)</onclick>
-            </control>
-        <control type="image">
-            <posx>58r</posx>
-            <posy>88</posy>
-            <width>40</width>
-            <height>40</height>
-            <aspectratio>keep</aspectratio>
-            <texture flipy="true">arrowdown.png</texture>
-        </control>
-        <control type="image">
-            <posx>58r</posx>
-            <posy>934</posy>
-            <width>40</width>
-            <height>40</height>
-            <aspectratio>keep</aspectratio>
-            <texture>arrowdown.png</texture>
-        </control>
-        <control type="image">
-            <posx>72r</posx>
-            <posy>144</posy>
-            <width>72</width>
-            <height>774</height>
-            <include>toast_back</include>
-        </control>
-        <control type="scrollbar" id="60">
-            <posx>58r</posx>
-            <posy>144</posy>
-            <height>774</height>
-            <width>40</width>
-            <onleft>50</onleft>
-            <onright>9000</onright>
-            <texturesliderbackground border="3">dialogs/toast_back_blue.png</texturesliderbackground>
-            <animation effect="fade" start="100" end="50" time="400" condition="!Control.HasFocus(60)">Conditional</animation>
-        </control>
-    </include>
-
+    
     <include name="FloorFlagsBack">
         <control type="grouplist">
             <posx>0</posx>
@@ -926,26 +908,41 @@
     <include name="BreadcrumbsLabel">
         <control type="group">
             <visible>!Control.IsVisible(53)</visible>
-            <control type="button">
-                <posy>90r</posy>
-                <width>1920</width>
+            <control type="button" id="14000">
+            	<posx>20</posx>
+                <posy>75r</posy>
+                <width>1890</width>
                 <height>90</height>
                 <font>Medium_Bold_Floor_Caps</font>
                 <label>$VAR[BreadcrumbsVar]$INFO[Container.FolderName]</label>
                 <label2>$INFO[Container.NumItems,, $LOCALIZE[31027]]</label2>
                 <aligny>top</aligny>
                 <textoffsety>28</textoffsety>
-                <textoffsetx>30</textoffsetx>
+                <textoffsetx>18</textoffsetx>
                 <texturenofocus border="18">-</texturenofocus>
-                <disabledcolor>Floor</disabledcolor>
+                <disabledcolor>White2</disabledcolor>
                 <enable>no</enable>
                 <visible>![Control.IsVisible(50) | Control.IsVisible(51)  | Control.IsVisible(55)]</visible>
                 <include>WindowEffect</include>
             </control>
-            <control type="button">
-                <posx>0</posx>
-                <posy>90r</posy>
-                <width>1920</width>
+            <control type="button" id="14001">
+                <posx>20</posx>
+                <posy>75r</posy>
+                <width>1890</width>
+                <height>90</height>
+                <font>Medium_Bold_Floor_Caps</font>
+                <label>$VAR[BreadcrumbsVar]$INFO[Control.GetLabel(29)]$INFO[Control.GetLabel(30), - ]</label>
+                <label2>$INFO[Container.NumItems,, $LOCALIZE[31027]]</label2>
+                <textoffsetx>18</textoffsetx>
+                <disabledcolor>White2</disabledcolor>
+                <enable>no</enable>
+                <visible>Container.Content(livetv) | Window.IsActive(tv)</visible>
+                <include>WindowEffect</include>
+            </control>
+            <control type="button" id="14002">
+                <posx>20</posx>
+                <posy>75r</posy>
+                <width>1890</width>
                 <height>90</height>
                 <font>Medium_Bold_Floor_Caps</font>
                 <label>$VAR[BreadcrumbsVar]$INFO[Container.FolderName]</label>
@@ -953,27 +950,27 @@
                 <textoffsetx>18</textoffsetx>
                 <disabledcolor>White2</disabledcolor>
                 <enable>no</enable>
-                <visible>[Control.IsVisible(50) | Control.IsVisible(51)  | Control.IsVisible(55)]</visible>
+                <visible>[Control.IsVisible(50) | Control.IsVisible(51)  | Control.IsVisible(55)] + ![Container.Content(livetv) | Window.IsActive(tv) | Control.IsVisible(14003)]</visible>
                 <include>WindowEffect</include>
             </control>
-            <control type="button">
-                <posx>0</posx>
-                <posy>90r</posy>
-                <width>1920</width>
+            <control type="button" id="14003">
+                <posx>20</posx>
+                <posy>75r</posy>
+                <width>1890</width>
                 <height>90</height>
-                <font>Medium_Caps2</font>
+                <font>Medium_Bold_Floor_Caps</font>
                 <label>$INFO[ListItem.Label]</label>
                 <label2>$INFO[ListItem.Label2]</label2>
-                <textoffsetx>30</textoffsetx>
+                <textoffsetx>18</textoffsetx>
                 <disabledcolor>White2</disabledcolor>
                 <enable>no</enable>
-                <visible>[[Control.IsVisible(51) + !Container.COntent(episodes)] | Control.IsVisible(55)] + !System.IdleTime(10)</visible>
+                <visible>[[Control.IsVisible(51) + !Container.Content(episodes)] | Control.IsVisible(55)] + !System.IdleTime(10)</visible>
             </control>
         </control>
     </include>
 
     <include name="DialogBack">
-        <texture border="4">dialogs/toast_back_blue.png</texture>
+        <texture border="4">dialogs/background_grey.png</texture>
         <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
         <bordersize>21</bordersize>
     </include>
@@ -1064,5 +1061,36 @@
 	            <colordiffuse>Blue2</colordiffuse>
 	        </control>
 	    </control>
+	</include>
+	
+    <include name="ShutdownMenuButton">
+		<texturefocus border="14,0,14,2">dialogs/shutdown_focus.png</texturefocus>
+		<texturenofocus border="14,0,14,2">dialogs/shutdown_nofocus.png</texturenofocus>
+    </include>
+    
+    <include name="VideoOSDButton">
+    	<width>96</width>
+		<height>96</height>
+		<font>-</font>
+    	<texturenofocus border="3" flipx="true">dialogs/toast_back_blue.png</texturenofocus>
+    	<texturefocus>dialogs/listitem_focus.png</texturefocus>
+    </include>
+    
+    <include name="NoTextureButton">
+    	<texturenofocus></texturenofocus>
+    	<texturefocus></texturefocus>
+    </include>
+    
+    <include name="DefaultButton">
+       	<texturenofocus></texturenofocus>
+       	<texturefocus>dialogs/button_focus.png</texturefocus>
+    </include>
+    
+    <include name="TouchOverlay">
+    	<posy>0</posy>
+       	<posx>0</posx>
+       	<width>1920</width>
+       	<height>1080</height>
+       	<include>NoTextureButton</include>
     </include>
 </includes>

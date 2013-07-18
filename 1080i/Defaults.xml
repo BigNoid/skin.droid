@@ -11,7 +11,7 @@
 		<font>Small</font>
 		<textcolor>White</textcolor>
 		<focusedcolor>White</focusedcolor>
-		<selectedcolor>selected</selectedcolor>
+		<selectedcolor>Selected</selectedcolor>
 		<disabledcolor>Red</disabledcolor>
 		<scrollspeed>20</scrollspeed>
 	</default>
@@ -69,8 +69,8 @@
 		<textcolor>White2</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>
-        <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-        <texturefocus border="8">dialogs/button_focus.png</texturefocus>
+        <texturenofocus>dialogs/button_nofocus.png</texturenofocus>
+        <texturefocus>dialogs/button_focus.png</texturefocus>
         <pulseonselect>false</pulseonselect>
     </default>
 
@@ -85,10 +85,10 @@
 		<textcolor>White2</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>
-        <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-        <texturefocus border="8">dialogs/button_focus.png</texturefocus>
-        <alttexturenofocus border="3">dialogs/toast_back_blue.png</alttexturenofocus>
-		<alttexturefocus border="8">dialogs/button_focus.png</alttexturefocus>
+		<texturenofocus>dialogs/button_nofocus.png</texturenofocus>
+        <texturefocus>dialogs/button_focus.png</texturefocus>
+        <alttexturenofocus>dialogs/button_nofocus.png</alttexturenofocus>
+        <alttexturefocus>dialogs/button_focus.png</alttexturefocus>
 		<align>left</align>
 		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
@@ -108,8 +108,8 @@
 		<disabledcolor>Disabled</disabledcolor>
 		<radiowidth>48</radiowidth>
 		<radioheight>48</radioheight>
-        <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-        <texturefocus border="8">dialogs/button_focus.png</texturefocus>
+		<texturenofocus>dialogs/button_nofocus.png</texturenofocus>
+        <texturefocus>dialogs/button_focus.png</texturefocus>
         <textureradiofocus>settings/btn_radio_on_holo_dark.png</textureradiofocus>
 		<textureradionofocus>settings/btn_radio_off_holo_dark.png</textureradionofocus>
 		<textoffsetx>30</textoffsetx>
@@ -125,8 +125,8 @@
 		<font>Small</font>
 		<spinwidth>64</spinwidth>
 		<spinheight>64</spinheight>
-        <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-        <texturefocus border="8">dialogs/button_focus.png</texturefocus>
+		<texturenofocus>dialogs/button_nofocus.png</texturenofocus>
+        <texturefocus>dialogs/button_focus.png</texturefocus>
         <textureup>settings/textureup.png</textureup>
         <texturedown>settings/texturedown.png</texturedown>
         <textureupfocus>settings/textureupfocus.png</textureupfocus>
@@ -148,6 +148,8 @@
 		<width>23</width>
 		<spinwidth>48</spinwidth>
 		<spinheight>48</spinheight>
+		<texturenofocus>dialogs/button_nofocus.png</texturenofocus>
+        <texturefocus>dialogs/button_focus.png</texturefocus>
 		<textureup>settings/textureup.png</textureup>
 		<texturedown>settings/texturedown.png</texturedown>
 		<textureupfocus>settings/textureupfocus.png</textureupfocus>
@@ -168,7 +170,7 @@
 		<posy>0</posy>
 		<height>72</height>
 		<width>450</width>
-        <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
+        <texturenofocus border="3">dialogs/button_nofocus.png</texturenofocus>
         <texturefocus border="8">dialogs/button_focus.png</texturefocus>
         <sliderwidth>230</sliderwidth>
 		<sliderheight>23</sliderheight>
@@ -231,17 +233,17 @@
         <posx>0</posx>
         <posy>0</posy>
         <width>344</width>
-        <height>72</height>
+        <height>60</height>
         <align>left</align>
         <aligny>center</aligny>
         <font>Small</font>
         <label>-</label>
-        <textoffsetx>30</textoffsetx>
+        <textoffsetx>20</textoffsetx>
         <textcolor>White2</textcolor>
         <focusedcolor>White</focusedcolor>
         <disabledcolor>Disabled</disabledcolor>
-        <texturenofocus border="3">dialogs/toast_back_blue.png</texturenofocus>
-        <texturefocus border="8">dialogs/button_focus.png</texturefocus>
+        <texturenofocus border="6,0,6,8">dialogs/background_edit.png</texturenofocus>
+        <texturefocus border="6,0,6,8">dialogs/background_edit.png</texturefocus>
         <pulseonselect>false</pulseonselect>
     </default>
 

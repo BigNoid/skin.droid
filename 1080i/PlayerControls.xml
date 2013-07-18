@@ -4,6 +4,10 @@
     <include>PopUpEffect</include>
     <controls>
         <include>GlobalOverlay</include>
+        <control type="button">
+	    	<include>TouchOverlay</include>
+	       	<onclick>Dialog.Close(playercontrols)</onclick>
+	   	</control>
         <control type="group">
             <posx>548</posx>
             <posy>310</posy>
@@ -15,7 +19,7 @@
                     <posy>-9</posy>
                     <width>842</width>
                     <height>478</height>
-                    <texture border="4">dialogs/toast_back_blue.png</texture>
+                    <texture border="4">dialogs/background_grey.png</texture>
                     <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
                     <bordersize>21</bordersize>
                 </control>
@@ -72,7 +76,7 @@
                     <posy>-165</posy>
                     <width>842</width>
                     <height>633</height>
-                    <texture border="4">dialogs/toast_back_blue.png</texture>
+                    <texture border="4">dialogs/background_grey.png</texture>
                     <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
                     <bordersize>21</bordersize>
                 </control>
@@ -103,7 +107,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="8">listselect_fo.png</texture>
+                    <texture>dialogs/listitem_focus.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(1)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -112,7 +116,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="8">listselect_fo.png</texture>
+                    <texture>dialogs/listitem_focus.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(2)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -121,7 +125,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="8">listselect_fo.png</texture>
+                    <texture>dialogs/listitem_focus.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(3)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -130,7 +134,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="8">listselect_fo.png</texture>
+                    <texture>dialogs/listitem_focus.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(4)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -139,7 +143,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="8">listselect_fo.png</texture>
+                    <texture>dialogs/listitem_focus.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(5)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -148,7 +152,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="8">listselect_fo.png</texture>
+                    <texture>dialogs/listitem_focus.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(6)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -157,7 +161,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="8">listselect_fo.png</texture>
+                    <texture>dialogs/listitem_focus.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(7)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -166,7 +170,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="8">listselect_fo.png</texture>
+                    <texture>dialogs/listitem_focus.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(11)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -175,7 +179,7 @@
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
-                    <texture border="8">listselect_fo.png</texture>
+                    <texture>dialogs/listitem_focus.png</texture>
 
                     <animation type="Conditional" reversible="false" condition="!Control.HasFocus(10)">
                         <effect type="fade" start="100" end="0" time="50" />
@@ -235,6 +239,7 @@
                     <texturefocus>osd/stop_nf.png</texturefocus>
                     <texturenofocus>osd/stop_nf.png</texturenofocus>
                     <onclick>PlayerControl(Stop)</onclick>
+                    <onclick>Dialog.Close(playercontrols)</onclick>
                 </control>
                 <control type="button" id="5">
                     <description>Bookmarks</description>

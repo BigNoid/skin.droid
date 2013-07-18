@@ -277,6 +277,7 @@
     </variable>
 
     <variable name="BreadcrumbsVar">
+    	<value condition="Container.Content(livetv) | Window.IsActive(tv)">$LOCALIZE[19020]: </value>
         <value condition="Container.Content(movies)">$LOCALIZE[20342]: </value>
         <value condition="Container.Content(tvshows) | Container.Content(seasons) | StringCompare(Container.FolderPath,videodb://5/)">$LOCALIZE[20343]: </value>
         <value condition="Container.Content(episodes) + !StringCompare(Container.FolderName,ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle]: </value>
