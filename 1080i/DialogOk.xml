@@ -3,6 +3,11 @@
 	<defaultcontrol always="true">4000</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
+		<include>GlobalOverlay</include>
+		<control type="button">
+	    	<include>TouchOverlay</include>
+	       	<onclick>Dialog.Close(okdialog)</onclick>
+	   	</control>
         <control type="button" id="4000">
             <include>HiddenButton</include>
             <onup>10</onup>
@@ -11,7 +16,6 @@
             <onright>10</onright>
             <onclick>SendClick(2002,10)</onclick>
         </control>
-        <include>GlobalOverlay</include>
 		<control type="group">
             <posx>540</posx>
             <posy>324</posy>
@@ -20,7 +24,7 @@
                 <posy>-21</posy>
                 <width>858</width>
                 <height>482</height>
-                <texture border="4">dialogs/toast_back_blue.png</texture>
+                <texture border="4">dialogs/background_grey.png</texture>
                 <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
                 <bordersize>21</bordersize>
             </control>
@@ -68,17 +72,28 @@
                 <height>89</height>
                 <wrapmultiline>true</wrapmultiline>
             </control>
-            <control type="button" id="10">
-				<description>Ok</description>
-				<posx>12</posx>
-				<posy>368</posy>
-				<width>816</width>
-				<label>186</label>
-                <align>center</align>
-				<onleft>10</onleft>
-				<onright>10</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
+            <control type="group">
+            	<description>Button Bar</description>
+            	<posx>12</posx>
+            	<posy>368</posy>
+            	<control type="image">
+	            	<description>Line</description>
+	                <height>1</height>
+	                <width>816</width>
+	            	<texture>common/grey.png</texture>
+	            </control>
+            	<control type="button" id="10">
+					<description>Ok</description>
+					<posy>1</posy>
+					<width>816</width>
+					<label>186</label>
+	                <align>center</align>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>10</onup>
+					<ondown>10</ondown>
+					<include>DefaultButton</include>
+	            </control>
             </control>
         </control>
 	</controls>

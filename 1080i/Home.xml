@@ -2,7 +2,7 @@
 <window id="0">
     <defaultcontrol always="true">8000</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <onunload>ClearProperty(MediaMenu,Home)</onunload>
+    <include>MediaMenuReset</include>
     <controls>
         <include>GlobalBackground</include>
         <control type="group">
@@ -14,21 +14,23 @@
                 <effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="cubic" time="300" />
                 <effect type="fade" start="100" end="0" time="300" />
             </animation>
-            <include>HomeItemsPanel</include>
             <include condition="system.getbool(lookandfeel.enablerssfeeds)">HomeRSSFeed</include>
+            <include>HomeItemsPanel</include>
         </control>
         <include>NotificationCenter</include>
-        <control type="grouplist" id="9000">
-            <include>MediaMenuGrouplist</include>
-            <control type="button" id="1">
-                <description>Set background</description>
-                <label>33070</label>
-                <onclick>ClearProperty(MediaMenu,Home)</onclick>
-                <onclick>ActivateWindow(1112)</onclick>
-                <include>MediaMenuButton</include>
+        <control type="group" id="9999">
+            <include>MediaMenuOverlay</include>
+        	<control type="grouplist">
+	            <include>MediaMenuGrouplist</include>
+	            <control type="button" id="1">
+	                <description>Set background</description>
+	                <label>33070</label>
+	                <onclick>ClearProperty(MediaMenu,Home)</onclick>
+	                <onclick>ActivateWindow(1112)</onclick>
+	                <include>MediaMenuButton</include>
+	            </control>
+	            <include>MediaMenuBottomButton</include>
             </control>
-            <include>MediaMenuBottomButton</include>
         </control>
-
     </controls>
 </window>

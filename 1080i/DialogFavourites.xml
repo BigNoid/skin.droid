@@ -5,9 +5,21 @@
     <include>PopUpEffect</include>
     <controls>
         <include>GlobalOverlay</include>
+        <control type="button">
+	    	<include>TouchOverlay</include>
+	       	<onclick>Dialog.Close(favourites)</onclick>
+	   	</control>
         <control type="group">
             <posx>320</posx>
             <posy>180</posy>
+            <control type="button">
+            	<description>Inhibit Overlay Close Action</description>
+            	<posx>-21</posx>
+                <posy>-21</posy>
+                <width>1322</width>
+                <height>762</height>
+                <include>NoTextureButton</include>
+            </control>
             <control type="image">
                 <posx>-21</posx>
                 <posy>-21</posy>
@@ -16,7 +28,7 @@
                 <include>DialogBack</include>
             </control>
             <control type="button">
-                <description>Footer</description>
+                <description>Header</description>
                 <posx>0</posx>
                 <posy>0</posy>
                 <width>1280</width>
@@ -28,9 +40,17 @@
                 <disabledcolor>$VAR[ThemeColorVar]</disabledcolor>
                 <enable>no</enable>
             </control>
-            <control type="list" id="450">
+            <control type="image">
+            	<description>Header Line</description>
                 <posx>0</posx>
                 <posy>72</posy>
+                <width>1280</width>
+                <height>2</height>
+                <texture>common/blue2.png</texture>
+            </control>
+            <control type="list" id="450">
+                <posx>0</posx>
+                <posy>74</posy>
                 <width>1280</width>
                 <height>576</height>
                 <onleft>450</onleft>
@@ -47,7 +67,7 @@
                         <posy>0</posy>
                         <width>1280</width>
                         <height>72</height>
-                        <include>toast_back</include>
+                        <texture>dialogs/listitem_nofocus.png</texture>
                     </control>
                     <control type="label">
                         <posy>0</posy>
@@ -65,7 +85,7 @@
                         <posy>0</posy>
                         <width>1280</width>
                         <height>72</height>
-                        <texture border="4">listselect_fo.png</texture>
+                        <texture>dialogs/listitem_focus.png</texture>
                     </control>
                     <control type="label">
                         <posy>0</posy>
@@ -78,21 +98,14 @@
                 </focusedlayout>
             </control>
             <control type="scrollbar" id="60">
-                <posx>1274</posx>
+                <posx>1272</posx>
                 <posy>72</posy>
                 <height>576</height>
                 <width>6</width>
                 <onleft>450</onleft>
                 <onright>450</onright>
-                <showonepage>false</showonepage>
+                <showonepage>true</showonepage>
                 <animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-            </control>
-            <control type="image">
-                <posx>0</posx>
-                <posy>72</posy>
-                <width>1280</width>
-                <height>2</height>
-                <texture>common/blue2.png</texture>
             </control>
             <control type="button">
                 <description>Footer</description>
@@ -102,6 +115,7 @@
                 <height>72</height>
                 <label>$INFO[Container.NumItems,, $LOCALIZE[31027]]</label>
                 <label2>$INFO[Container.CurrentPage]$INFO[Container.NumPages,/]</label2>
+                <include>NoTextureButton</include>
                 <onclick>noop</onclick>
                 <disabledcolor>Blue2</disabledcolor>
                 <enable>no</enable>

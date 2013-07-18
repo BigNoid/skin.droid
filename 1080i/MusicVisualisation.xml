@@ -409,7 +409,7 @@
                     <posy>0</posy>
                     <width>1920</width>
                     <height>72</height>
-                    <texture border="3">dialogs/toast_back_blue.png</texture>
+                    <texture>dialogs/listitem_nofocus.png</texture>
                 </control>
                 <control type="grouplist">
                     <posx>0</posx>

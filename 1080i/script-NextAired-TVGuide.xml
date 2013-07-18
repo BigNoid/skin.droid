@@ -6,6 +6,7 @@
     <onload>ClearProperty(TVGuide.FridayList,Home)</onload>
     <onload>ClearProperty(TVGuide.SaturdayList,Home)</onload>
     <onload>ClearProperty(TVGuide.SundayList,Home)</onload>
+    <include>MediaMenuReset</include>
     <allowoverlay>no</allowoverlay>
 	<controls>
         <include>NotificationCenter</include>
@@ -2099,29 +2100,32 @@
                 </control>
             </control>
 		</control>
-        <control type="grouplist" id="9000">
-            <include>MediaMenuGrouplist</include>
-            <control type="button" id="8">
-                <description>Settings</description>
-                <label>5</label>
-                <onleft>ClearProperty(TVGuide.MondayList,Home)</onleft>
-                <onleft>ClearProperty(TVGuide.TuesdayList,Home)</onleft>
-                <onleft>ClearProperty(TVGuide.WednesdayList,Home)</onleft>
-                <onleft>ClearProperty(TVGuide.ThursdayList,Home)</onleft>
-                <onleft>ClearProperty(TVGuide.FridayList,Home)</onleft>
-                <onleft>ClearProperty(TVGuide.SaturdayList,Home)</onleft>
-                <onleft>ClearProperty(TVGuide.SundayList,Home)</onleft>
-                <onright>ClearProperty(TVGuide.MondayList,Home)</onright>
-                <onright>ClearProperty(TVGuide.TuesdayList,Home)</onright>
-                <onright>ClearProperty(TVGuide.WednesdayList,Home)</onright>
-                <onright>ClearProperty(TVGuide.ThursdayList,Home)</onright>
-                <onright>ClearProperty(TVGuide.FridayList,Home)</onright>
-                <onright>ClearProperty(TVGuide.SaturdayList,Home)</onright>
-                <onright>ClearProperty(TVGuide.SundayList,Home)</onright>
-                <include>MediaMenuButton</include>
-                <onclick>ClearProperty(MediaMenu,Home)</onclick>
+        <control type="group" id="9999">
+            <include>MediaMenuOverlay</include>
+        	<control type="grouplist">
+	            <include>MediaMenuGrouplist</include>
+	            <control type="button" id="8">
+	                <description>Settings</description>
+	                <label>5</label>
+	                <onleft>ClearProperty(TVGuide.MondayList,Home)</onleft>
+	                <onleft>ClearProperty(TVGuide.TuesdayList,Home)</onleft>
+	                <onleft>ClearProperty(TVGuide.WednesdayList,Home)</onleft>
+	                <onleft>ClearProperty(TVGuide.ThursdayList,Home)</onleft>
+	                <onleft>ClearProperty(TVGuide.FridayList,Home)</onleft>
+	                <onleft>ClearProperty(TVGuide.SaturdayList,Home)</onleft>
+	                <onleft>ClearProperty(TVGuide.SundayList,Home)</onleft>
+	                <onright>ClearProperty(TVGuide.MondayList,Home)</onright>
+	                <onright>ClearProperty(TVGuide.TuesdayList,Home)</onright>
+	                <onright>ClearProperty(TVGuide.WednesdayList,Home)</onright>
+	                <onright>ClearProperty(TVGuide.ThursdayList,Home)</onright>
+	                <onright>ClearProperty(TVGuide.FridayList,Home)</onright>
+	                <onright>ClearProperty(TVGuide.SaturdayList,Home)</onright>
+	                <onright>ClearProperty(TVGuide.SundayList,Home)</onright>
+	                <include>MediaMenuButton</include>
+	                <onclick>ClearProperty(MediaMenu,Home)</onclick>
+	            </control>
+	            <include>MediaMenuBottomButton</include>
             </control>
-            <include>MediaMenuBottomButton</include>
         </control>
     </controls>
 </window>

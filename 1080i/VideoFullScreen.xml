@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2005">
 	<defaultcontrol>-</defaultcontrol>
+	<onload>Dialog.Close(all,true)</onload>
 	<controls>
         <control type="group">
             <animation effect="slide" start="0,0" end="0,72" time="200" tween="cubic" easing="out" condition="Player.Paused | Player.ShowInfo">Conditional</animation>
