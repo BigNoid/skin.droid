@@ -102,9 +102,9 @@
 					<animation effect="slide" start="0" end="120" time="200" tween="cubic" easing="out">WindowClose</animation>
 					<control type="image">
 						<posx>1803</posx>
-						<posy>231</posy>
-						<width>138</width>
-						<height>618</height>
+	                    <posy>231</posy>
+	                    <width>138</width>
+	                    <height>618</height>
 						<texture border="21">thumbs/thumb_shadow.png</texture>
 					</control>
 					<control type="grouplist" id="100">
@@ -116,7 +116,6 @@
 						<orientation>vertical</orientation>
 						<align>center</align>
 						<control type="group">
-							<visible>!VideoPlayer.Content(LiveTV)</visible>
 							<width>96</width>
 							<height>96</height>
 							<control type="button" id="1">
@@ -128,6 +127,7 @@
 								<onright>101</onright>
 								<onup>18</onup>
 								<ondown>2</ondown>
+								<enable>!VideoPlayer.Content(LiveTV)</enable>
 							</control>
 							<control type="image">
 								<posx>16</posx>
@@ -135,6 +135,16 @@
 								<width>64</width>
 								<height>64</height>
 								<texture>icons/bookmark.png</texture>
+								<visible>!VideoPlayer.Content(LiveTV)</visible>
+							</control>
+							<control type="image">
+								<posx>16</posx>
+								<posy>16</posy>
+								<width>64</width>
+								<height>64</height>
+								<texture>icons/bookmark.png</texture>
+								<colordiffuse>77FFFFFF</colordiffuse>
+								<visible>VideoPlayer.Content(LiveTV)</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -247,29 +257,7 @@
 								<posy>16</posy>
 								<width>64</width>
 								<height>64</height>
-								<texture>icons/channel.png</texture>
-							</control>
-						</control>
-						<control type="group">
-							<visible>VideoPlayer.Content(LiveTV)</visible>
-							<width>96</width>
-							<height>96</height>
-							<control type="button" id="20">
-								<description>OSD Guide</description>
-								<include>VideoOSDButton</include>
-								<label>31038</label>
-								<onclick>ActivateWindow(pvrosdguide)</onclick>
-								<onleft>14</onleft>
-								<onright>101</onright>
-								<onup>19</onup>
-								<ondown>18</ondown>
-							</control>
-							<control type="image">
-								<posx>16</posx>
-								<posy>16</posy>
-								<width>64</width>
-								<height>64</height>
-								<texture>icons/epg.png</texture>
+								<texture>icons/channel_list.png</texture>
 							</control>
 						</control>
 						<control type="group">
@@ -284,6 +272,7 @@
 								<onright>101</onright>
 								<onup>19</onup>
 								<ondown>1</ondown>
+								<onclick condition="VideoPlayer.Content(LiveTV)">ActivateWindow(pvrosdguide)</onclick>
 							</control>
 							<control type="image">
 								<posx>16</posx>
@@ -296,9 +285,6 @@
 					</control>
 				</control>
 			</control>
-
-			<include>SliderControl</include>
-
 			<control type="group">
 				<animation type="WindowOpen" reversible="false">
 					<effect type="fade" start="0" end="100" time="500" />
@@ -345,6 +331,7 @@
 					</control>
 				</control>
 			</control>
+			<include>SliderControl</include>
 		</control>
 	</controls>
 </window>
