@@ -189,7 +189,7 @@
                         <label>$LOCALIZE[130]</label>
                         <label2>31409</label2>
                         <icon>icons/info.png</icon>
-                        <onclick>activatewindow(systeminfo)</onclick>
+                        <onclick>ActivateWindow(systeminfo)</onclick>
                     </item>
                 </content>
             </control>

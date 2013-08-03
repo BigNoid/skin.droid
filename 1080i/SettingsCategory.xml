@@ -2,7 +2,6 @@
 <window id="12">
 	<defaultcontrol always="true">3</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<previouswindow>Settings</previouswindow>
 	<include>MediaMenuReset</include>
 	<controls>
 		<include>GlobalBackground</include>
@@ -85,55 +84,55 @@
 	            <control type="button">
 				   	<description>Appearance Settings</description>
 				   	<label>$LOCALIZE[480]</label>
-				   	<onclick>ActivateWindow(appearancesettings)</onclick>
+				   	<onclick>ReplaceWindow(appearancesettings)</onclick>
 				   	<include>MediaMenuButton</include>
 				</control>
 				<control type="button">
 				   	<description>Videos Settings</description>
 				   	<label>$LOCALIZE[10006]</label>
-				   	<onclick>ActivateWindow(videossettings)</onclick>
+				   	<onclick>ReplaceWindow(videossettings)</onclick>
 				   	<include>MediaMenuButton</include>
 				</control>
 				<control type="button">
 				   	<description>PVR Settings</description>
 				   	<label>$LOCALIZE[31100]</label>
-				   	<onclick>ActivateWindow(pvrsettings)</onclick>
+				   	<onclick>ReplaceWindow(pvrsettings)</onclick>
 				   	<include>MediaMenuButton</include>
 				</control>
 				<control type="button">
 				   	<description>Music Settings</description>
 				   	<label>$LOCALIZE[2]</label>
-				   	<onclick>ActivateWindow(musicsettings)</onclick>
+				   	<onclick>ReplaceWindow(musicsettings)</onclick>
 				   	<include>MediaMenuButton</include>
 				</control>
 				<control type="button">
 				   	<description>Pictures Settings</description>
 				   	<label>$LOCALIZE[1]</label>
-				   	<onclick>ActivateWindow(picturessettings)</onclick>
+				   	<onclick>ReplaceWindow(picturessettings)</onclick>
 				   	<include>MediaMenuButton</include>
 				</control>
 				<control type="button">
 				   	<description>Service Settings</description>
 				   	<label>$LOCALIZE[14036]</label>
-				   	<onclick>ActivateWindow(servicesettings)</onclick>
+				   	<onclick>ReplaceWindow(servicesettings)</onclick>
 				   	<include>MediaMenuButton</include>
 				</control>
 				<control type="button">
 				   	<description>Profiles</description>
 				   	<label>$LOCALIZE[13200]</label>
-				   	<onclick>ActivateWindow(profiles)</onclick>
+				   	<onclick>ReplaceWindow(profiles)</onclick>
 				   	<include>MediaMenuButton</include>
 				</control>
 				<control type="button">
 				   	<description>System Info</description>
 				   	<label>$LOCALIZE[13000]</label>
-				   	<onclick>ActivateWindow(systemsettings)</onclick>
+				   	<onclick>ReplaceWindow(systemsettings)</onclick>
 				   	<include>MediaMenuButton</include>
 				</control>
 				<control type="button">
 				   	<description>System Info</description>
 				   	<label>$LOCALIZE[130]</label>
-				   	<onclick>ActivateWindow(systeminfo)</onclick>
+				   	<onclick>ReplaceWindow(systeminfo)</onclick>
 				   	<include>MediaMenuButton</include>
 				</control>
 	            <include>MediaMenuBottomButton</include>
