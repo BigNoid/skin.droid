@@ -481,13 +481,6 @@
                     </control>
                 </control>
                 <include>NotificationNowPlaying</include>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>2</width>
-                    <height>68</height>
-                    <texture>dialogs/toast_back_blue_border.png</texture>
-                </control>
                 <control type="label" id="11112">
                     <posy>0</posy>
                     <posx>0</posx>
