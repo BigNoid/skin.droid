@@ -2,6 +2,7 @@
 <window id="2901">
 	<defaultcontrol>4</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<onload condition="Player.ShowInfo">Action(Info)</onload>
 	<controls>
 		<control type="button">
 			<include>TouchOverlay</include>
@@ -272,11 +273,12 @@
 								<description>Toggle Info</description>
 								<include>VideoOSDButton</include>
 								<label>31038</label>
-								<onclick>Info</onclick>
 								<onleft>14</onleft>
 								<onright>101</onright>
 								<onup>19</onup>
 								<ondown>1</ondown>
+								<onclick condition="!VideoPlayer.Content(LiveTV)">Action(info)</onclick>
+								<onclick condition="!VideoPlayer.Content(LiveTV)">Dialog.Close(videoosd)</onclick>
 								<onclick condition="VideoPlayer.Content(LiveTV)">ActivateWindow(pvrosdguide)</onclick>
 							</control>
 							<control type="image">
