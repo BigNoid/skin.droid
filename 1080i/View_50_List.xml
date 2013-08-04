@@ -191,6 +191,58 @@
                     <aspectratio aligny="center">keep</aspectratio>
                     <bordersize>2</bordersize>
                     <align>center</align>
+                    <visible>!Container.Content(episodes) | StringCompare(Container(50).ListItem.Label,..)</visible>
+                </control>
+                <control type="group">
+                	<description>Episode info</description>
+                	<visible>Container.Content(episodes) + !StringCompare(Container(50).ListItem.Label,..)</visible>
+                	<control type="image">
+	                    <posy>20</posy>
+	                    <posx>20</posx>
+	                    <width>828</width>
+	                    <height>118</height>
+	                    <aspectratio>scale</aspectratio>
+	                    <texture background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
+	                    <bordersize>2</bordersize>
+	                </control>
+	                <control type="label">
+						<description>Empty Plot</description>
+						<visible>IsEmpty(Container(50).ListItem.Plot)</visible>
+						<posx>30</posx>
+						<posy>300</posy>
+						<width>806</width>
+						<height>72</height>
+						<font>Medium_Caps3</font>
+						<label>$LOCALIZE[19055]</label>
+						<textcolor>White</textcolor>
+						<shadowcolor>22000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+	                <control type="textbox">
+	                    <description>Plot</description>
+	                    <posx>20</posx>
+	                    <posy>160</posy>
+	                    <width>828</width>
+	                    <height>370</height>
+	                    <align>left</align>
+	                    <font>Smaller</font>
+	                    <textcolor>White2</textcolor>
+	                    <label>$VAR[VideoInfoPlotVar]</label>
+	                    <autoscroll delay="13000" time="3000" repeat="13000">True</autoscroll>
+	                </control>
+	                <control type="image">
+	                	<posx>20</posx>
+	                	<posy>580</posy>
+	                    <width>312</width>
+	                    <height>242</height>
+	                    <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
+	                    <aspectratio>scale</aspectratio>
+	                    <aspectratio aligny="center">keep</aspectratio>
+	                    <bordersize>2</bordersize>
+	                    <align>center</align>
+	                </control>
                 </control>
                 <control type="label">
                     <description>Total Time</description>
@@ -213,54 +265,6 @@
                     <label>$INFO[Container(50).CurrentPage]$INFO[Container(50).NumPages,/]</label>
                     <textcolor>$VAR[ThemeColorVar]</textcolor>
                     <textoffsetx>18</textoffsetx>
-                </control>
-            </control>
-            <control type="group">
-                <visible>Container.Content(episodes)</visible>
-                <posx>992</posx>
-                <posy>72</posy>
-                <control type="image">
-                    <width>612</width>
-                    <height>342</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="image">
-                    <width>612</width>
-                    <height>342</height>
-                    <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
-                    <aspectratio>scale</aspectratio>
-                    <bordersize>2</bordersize>
-                </control>
-                <control type="image">
-                    <posy>342</posy>
-                    <width>612</width>
-                    <height>458</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="textbox">
-                    <description>Plot outline</description>
-                    <posx>30</posx>
-                    <posy>352</posy>
-                    <width>540</width>
-                    <height>448</height>
-                    <align>left</align>
-                    <font>Plot</font>
-                    <textcolor>White2</textcolor>
-                    <label>$VAR[VideoInfoPlotVar]</label>
-                </control>
-                <control type="image">
-                    <posy>800</posy>
-                    <width>612</width>
-                    <height>118</height>
-                    <include>toast_back</include>
-                </control>
-                <control type="image">
-                    <posy>800</posy>
-                    <width>612</width>
-                    <height>118</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
-                    <bordersize>2</bordersize>
                 </control>
             </control>
         </control>
