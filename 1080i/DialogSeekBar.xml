@@ -59,21 +59,14 @@
 			<animation effect="slide" start="0,-110" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,-110" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
 			<animation effect="slide" end="0,-110" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
-			<visible>[Player.Seeking | Player.Paused] + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsActive(videoosd)</visible>
+			<visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsActive(videoosd)</visible>
 			<control type="image">
-				<posx>0</posx>
-				<posy>72</posy>
-				<width>1920</width>
-				<height>38</height>
-				<texture border="1">settings/bottom_shadow.png</texture>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1920</width>
-				<height>72</height>
-				<texture border="3">dialogs/toast_back_blue.png</texture>
-			</control>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1920</width>
+                <height>72</height>
+                <texture border="3">dialogs/background_topbar.png</texture>
+            </control>
 			<control type="grouplist">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -237,15 +230,10 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>[!Player.Paused + Player.DisplayAfterSeek] + !Window.IsActive(VideoOSD)</visible>
-			<include>SliderControl</include>
-		</control>
-		<control type="group">
 			<animation effect="slide" start="0,128" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
 			<animation effect="slide" end="0,128" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="0,128" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
-			<visible>[Player.ShowInfo | Player.Paused] + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsActive(videoosd)</visible>
-			<visible>!Control.IsVisible(4010)</visible>
+			<visible>[Player.ShowInfo | Player.Paused] + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsActive(videoosd) + !Control.IsVisible(4010)</visible>
 			<include>FloorFlagsBack</include>
 			<control type="image">
 				<posx>1470</posx>
@@ -254,7 +242,6 @@
 				<height>254</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<texture background="true">$VAR[PlayerArtworkVar]</texture>
-				<visible>[Player.ShowInfo | Player.Paused] + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsActive(videoosd)</visible>
 				<visible>!Player.DisplayAfterSeek</visible>
 				<animation type="WindowOpen" reversible="false">
 					<effect type="fade" start="0" end="100" time="200" />
