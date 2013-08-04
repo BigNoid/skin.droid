@@ -196,7 +196,21 @@
                 <control type="group">
                 	<description>Episode info</description>
                 	<visible>Container.Content(episodes) + !StringCompare(Container(50).ListItem.Label,..)</visible>
+                	<control type="label">
+						<description>Label</description>
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>806</width>
+						<height>72</height>
+						<font>Medium_Caps3</font>
+						<label>$INFO[Container(50).ListItem.Label]</label>
+						<textcolor>White</textcolor>
+						<scroll>false</scroll>
+						<aligny>center</aligny>
+						<visible>IsEmpty(ListItem.Art(tvshow.banner))</visible>
+					</control>
                 	<control type="image">
+                		<description>TV show banner</description>
 	                    <posy>20</posy>
 	                    <posx>20</posx>
 	                    <width>828</width>
@@ -204,6 +218,7 @@
 	                    <aspectratio>scale</aspectratio>
 	                    <texture background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
 	                    <bordersize>2</bordersize>
+	                    <visible>!IsEmpty(ListItem.Art(tvshow.banner))</visible>
 	                </control>
 	                <control type="label">
 						<description>Empty Plot</description>
@@ -231,6 +246,7 @@
 	                    <textcolor>White2</textcolor>
 	                    <label>$VAR[VideoInfoPlotVar]</label>
 	                    <autoscroll delay="13000" time="3000" repeat="13000">True</autoscroll>
+	                    <animation effect="slide" start="0,0" end="0,-60" reversible="true" condition="IsEmpty(ListItem.Art(tvshow.banner))">Conditional</animation>
 	                </control>
 	                <control type="image">
 	                	<posx>20</posx>
