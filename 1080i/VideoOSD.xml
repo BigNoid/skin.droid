@@ -36,6 +36,38 @@
 						<control type="group">
 							<width>96</width>
 							<height>96</height>
+							<control type="button" id="13">
+								<description>Forward</description>
+								<include>VideoOSDButton</include>
+								<label>298</label>
+								<onclick>PlayerControl(forward)</onclick>
+								<onleft>100</onleft>
+								<onright>14</onright>
+								<onup>15</onup>
+								<ondown>17</ondown>
+								<enable>Player.SeekEnabled</enable>
+							</control>
+							<control type="image">
+								<posx>16</posx>
+								<posy>16</posy>
+								<width>64</width>
+								<height>64</height>
+								<texture>osd/ff_nf.png</texture>
+								<visible>Player.SeekEnabled</visible>
+							</control>
+							<control type="image">
+								<posx>16</posx>
+								<posy>16</posy>
+								<width>64</width>
+								<height>64</height>
+								<texture>osd/ff_nf.png</texture>
+								<colordiffuse>77FFFFFF</colordiffuse>
+								<visible>!Player.SeekEnabled</visible>
+							</control>
+						</control>
+						<control type="group">
+							<width>96</width>
+							<height>96</height>
 							<control type="button" id="16">
 								<description>Skip Next</description>
 								<include>VideoOSDButton</include>
@@ -52,27 +84,6 @@
 								<width>64</width>
 								<height>64</height>
 								<texture>osd/next_nf.png</texture>
-							</control>
-						</control>
-						<control type="group">
-							<width>96</width>
-							<height>96</height>
-							<control type="button" id="17">
-								<description>Skip Previous</description>
-								<include>VideoOSDButton</include>
-								<label>13396</label>
-								<onclick>SkipPrevious</onclick>
-								<onleft>100</onleft>
-								<onright>14</onright>
-								<onup>16</onup>
-								<ondown>15</ondown>
-							</control>
-							<control type="image">
-								<posx>16</posx>
-								<posy>16</posy>
-								<width>64</width>
-								<height>64</height>
-								<texture>osd/previous_nf.png</texture>
 							</control>
 						</control>
 						<control type="group">
@@ -96,6 +107,59 @@
 								<texture>osd/stop_nf.png</texture>
 							</control>
 						</control>
+						<control type="group">
+							<width>96</width>
+							<height>96</height>
+							<control type="button" id="17">
+								<description>Skip Previous</description>
+								<include>VideoOSDButton</include>
+								<label>13396</label>
+								<onclick>SkipPrevious</onclick>
+								<onleft>100</onleft>
+								<onright>14</onright>
+								<onup>16</onup>
+								<ondown>15</ondown>
+								<enable>Player.SeekEnabled</enable>
+							</control>
+							<control type="image">
+								<posx>16</posx>
+								<posy>16</posy>
+								<width>64</width>
+								<height>64</height>
+								<texture>osd/previous_nf.png</texture>
+								<visible>Player.SeekEnabled</visible>
+							</control>
+							<control type="image">
+								<posx>16</posx>
+								<posy>16</posy>
+								<width>64</width>
+								<height>64</height>
+								<texture>osd/previous_nf.png</texture>
+								<colordiffuse>77FFFFFF</colordiffuse>
+								<visible>!Player.SeekEnabled</visible>
+							</control>
+						</control>
+						<control type="group">
+							<width>96</width>
+							<height>96</height>
+							<control type="button" id="12">
+								<description>Forward</description>
+								<include>VideoOSDButton</include>
+								<label>298</label>
+								<onclick>PlayerControl(rewind)</onclick>
+								<onleft>100</onleft>
+								<onright>14</onright>
+								<onup>15</onup>
+								<ondown>17</ondown>
+							</control>
+							<control type="image">
+								<posx>16</posx>
+								<posy>16</posy>
+								<width>64</width>
+								<height>64</height>
+								<texture>osd/rew_nf.png</texture>
+							</control>
+						</control>
 					</control>
 				</control>
 			</control>
@@ -108,9 +172,9 @@
 					<animation effect="slide" start="0" end="120" time="200" tween="cubic" easing="out">WindowClose</animation>
 					<control type="image">
 						<posx>1803</posx>
-	                    <posy>231</posy>
-	                    <width>138</width>
-	                    <height>618</height>
+						<posy>231</posy>
+						<width>138</width>
+						<height>618</height>
 						<texture border="21">thumbs/thumb_shadow.png</texture>
 					</control>
 					<control type="grouplist" id="100">
