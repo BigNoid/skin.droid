@@ -43,8 +43,8 @@
 								<onclick>PlayerControl(forward)</onclick>
 								<onleft>100</onleft>
 								<onright>14</onright>
-								<onup>15</onup>
-								<ondown>17</ondown>
+								<onup>12</onup>
+								<ondown>16</ondown>
 								<enable>Player.SeekEnabled</enable>
 							</control>
 							<control type="image">
@@ -75,8 +75,8 @@
 								<onclick>SkipNext</onclick>
 								<onleft>100</onleft>
 								<onright>14</onright>
-								<onup>15</onup>
-								<ondown>17</ondown>
+								<onup>13</onup>
+								<ondown>15</ondown>
 							</control>
 							<control type="image">
 								<posx>16</posx>
@@ -96,8 +96,8 @@
 								<onclick>PlayerControl(Stop)</onclick>
 								<onleft>100</onleft>
 								<onright>14</onright>
-								<onup>17</onup>
-								<ondown>16</ondown>
+								<onup>16</onup>
+								<ondown>17</ondown>
 							</control>
 							<control type="image">
 								<posx>16</posx>
@@ -117,8 +117,8 @@
 								<onclick>SkipPrevious</onclick>
 								<onleft>100</onleft>
 								<onright>14</onright>
-								<onup>16</onup>
-								<ondown>15</ondown>
+								<onup>15</onup>
+								<ondown>12</ondown>
 								<enable>Player.SeekEnabled</enable>
 							</control>
 							<control type="image">
@@ -149,8 +149,8 @@
 								<onclick>PlayerControl(rewind)</onclick>
 								<onleft>100</onleft>
 								<onright>14</onright>
-								<onup>15</onup>
-								<ondown>17</ondown>
+								<onup>17</onup>
+								<ondown>13</ondown>
 							</control>
 							<control type="image">
 								<posx>16</posx>
@@ -295,7 +295,7 @@
 								<onleft>14</onleft>
 								<onright>101</onright>
 								<onup>4</onup>
-								<ondown>19</ondown>
+								<ondown>18</ondown>
 							</control>
 							<control type="image">
 								<posx>16</posx>
@@ -312,15 +312,15 @@
 							<visible>VideoPlayer.Content(LiveTV)</visible>
 							<width>96</width>
 							<height>96</height>
-							<control type="button" id="19">
+							<control type="button" id="6">
 								<description>Channels</description>
 								<include>VideoOSDButton</include>
 								<label>31038</label>
 								<onclick>ActivateWindow(pvrosdchannels)</onclick>
 								<onleft>14</onleft>
 								<onright>101</onright>
-								<onup>6</onup>
-								<ondown>20</ondown>
+								<onup>4</onup>
+								<ondown>18</ondown>
 							</control>
 							<control type="image">
 								<posx>16</posx>
@@ -339,7 +339,7 @@
 								<label>31038</label>
 								<onleft>14</onleft>
 								<onright>101</onright>
-								<onup>19</onup>
+								<onup>6</onup>
 								<ondown>1</ondown>
 								<onclick condition="!VideoPlayer.Content(LiveTV)">Action(info)</onclick>
 								<onclick condition="!VideoPlayer.Content(LiveTV)">Dialog.Close(videoosd)</onclick>
