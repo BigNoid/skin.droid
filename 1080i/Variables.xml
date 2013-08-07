@@ -198,7 +198,8 @@
         <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,12)">overlays/progress/12.5.png</value>
         <value>$INFO[ListItem.Overlay,overlays/progress/]</value>
     </variable>-->
-    <variable name="OverlayVar">
+    
+    <variable name="ListItem.Overlay">
         <value condition="ListItem.IsResumable">overlays/list/resumable.png</value>
         <value>$INFO[ListItem.Overlay,overlays/list/]</value>
     </variable>

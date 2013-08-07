@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="View_50_List">
-        <control type="group">
-            <visible>Control.IsVisible(50)</visible>
-            <posx>0</posx>
-            <posy>72</posy>
-            <animation type="VisibleChange" reversible="false">
-                <effect type="zoom" start="200" end="100" center="960,540" easing="out" tween="cubic" time="300" />
-                <effect type="fade" start="0" end="100" time="300" />
-            </animation>
-            <control type="image">
+	<include name="View_50_List">
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<posx>0</posx>
+			<posy>72</posy>
+			<animation type="VisibleChange" reversible="false">
+				<effect type="zoom" start="200" end="100" center="960,540" easing="out" tween="cubic" time="300" />
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+			<control type="image">
 				<posx>30</posx>
 				<posy>40</posy>
 				<width>992</width>
@@ -17,135 +17,149 @@
 				<texture>dialogs/background_dark.png</texture>
 				<colordiffuse>BBFFFFFF</colordiffuse>
 			</control>
-            <control type="list" id="50">
-                <posx>30</posx>
+			<control type="list" id="50">
+				<posx>30</posx>
 				<posy>40</posy>
 				<width>992</width>
 				<height>899</height>
-                <onleft>9010</onleft>
-                <onright>60</onright>
-                <onup>50</onup>
-                <ondown>50</ondown>
-                <pagecontrol>60</pagecontrol>
-                <viewtype label="535">list</viewtype>
-                <orientation>vertical</orientation>
-                <scrolltime tween="sine" easing="inout">200</scrolltime>
-                <itemlayout width="992" height="72">
-                    <control type="image">
-                        <width>992</width>
-                        <height>72</height>
-                        <texture>dialogs/listitem_nofocus.png</texture>
-                    </control>
-                    <control type="label">
-                        <posx>0</posx>
-                        <width>986</width>
-                        <height>72</height>
-                        <font>Small</font>
-                        <label>$INFO[ListItem.Label]</label>
-                        <textcolor>White2</textcolor>
-                        <textoffsetx>18</textoffsetx>
-                    </control>
-                    <control type="label">
-                        <posx>992</posx>
-                        <posy>0</posy>
-                        <width>986</width>
-                        <height>72</height>
-                        <font>Small</font>
-                        <align>right</align>
-                        <label>$INFO[ListItem.Label2]</label>
-                        <textcolor>grey</textcolor>
-                        <textoffsetx>18</textoffsetx>
-                        <animation effect="slide" start="0" end="-50" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
-                    </control>
-                    <control type="image">
-                        <posx>1172</posx>
-                        <posy>4</posy>
-                        <width>64</width>
-                        <height>64</height>
-                        <texture>$VAR[OverlayVar]</texture>
-                    </control>
-                    <control type="image">
-                        <posx>1172</posx>
-                        <posy>4</posy>
-                        <width>64</width>
-                        <height>64</height>
-                        <texture>overlays/list/OverlayUnWatched.png</texture>
-                        <visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
-                    </control>
-                    <control type="label">
-                        <posx>1204</posx>
-                        <posy>10</posy>
-                        <width>98</width>
-                        <height>48</height>
-                        <font>Medium_Small_Caps</font>
-                        <align>center</align>
-                        <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-                        <textcolor>grey</textcolor>
-                        <textoffsetx>18</textoffsetx>
-                        <visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="992" height="72">
-                    <control type="image">
-                        <width>992</width>
-                        <height>72</height>
-                        <texture>dialogs/listitem_nofocus.png</texture>
-                    </control>
-                    <control type="image">
-                        <width>992</width>
-                        <height>72</height>
-                        <texture>dialogs/listitem_focus.png</texture>
-                        <visible>Control.HasFocus(50)</visible>
-                    </control>
-                    <control type="label">
-                        <posx>0</posx>
-                        <width>986</width>
-                        <height>72</height>
-                        <font>Small</font>
-                        <label>$INFO[ListItem.Label]</label>
-                        <textoffsetx>18</textoffsetx>
-                        <scroll>yes</scroll>
-                    </control>
-                    <control type="label">
-                        <posx>992</posx>
-                        <posy>0</posy>
-                        <width>986</width>
-                        <height>72</height>
-                        <font>Small</font>
-                        <align>right</align>
-                        <label>$INFO[ListItem.Label2]</label>
-                        <textoffsetx>18</textoffsetx>
-                        <animation effect="slide" start="0" end="-50" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
-                    </control>
-                    <control type="image">
-                        <posx>1172</posx>
-                        <posy>4</posy>
-                        <width>64</width>
-                        <height>64</height>
-                        <texture>$VAR[OverlayVar]</texture>
-                    </control>
-                    <control type="image">
-                        <posx>1172</posx>
-                        <posy>4</posy>
-                        <width>64</width>
-                        <height>64</height>
-                        <texture>overlays/list/OverlayUnWatched.png</texture>
-                        <visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
-                    </control>
-                    <control type="label">
-                        <posx>1204</posx>
-                        <posy>10</posy>
-                        <width>98</width>
-                        <height>48</height>
-                        <font>Medium_Small_Caps</font>
-                        <align>center</align>
-                        <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-                        <textcolor>grey</textcolor>
-                        <textoffsetx>18</textoffsetx>
-                        <visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
-                    </control>
-                </focusedlayout>
-            </control>
+				<onleft>9010</onleft>
+				<onright>60</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="535">list</viewtype>
+				<orientation>vertical</orientation>
+				<scrolltime tween="sine" easing="inout">200</scrolltime>
+				<itemlayout width="992" height="72">
+					<control type="image">
+						<width>992</width>
+						<height>72</height>
+						<texture>dialogs/listitem_nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<width>986</width>
+						<height>72</height>
+						<font>Small</font>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>White2</textcolor>
+						<textoffsetx>18</textoffsetx>
+					</control>
+					<control type="label">
+						<posx>992</posx>
+						<posy>0</posy>
+						<width>992</width>
+						<height>72</height>
+						<font>Smaller</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>grey</textcolor>
+						<textoffsetx>18</textoffsetx>
+						<animation effect="slide" start="0" end="-50" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
+					</control>
+					<control type="image">
+						<posx>928</posx>
+						<posy>5</posy>
+						<width>64</width>
+						<height>64</height>
+						<texture>$VAR[ListItem.Overlay]</texture>
+					</control>
+					<control type="group">
+						<description>Unwatched episodes</description>
+						<posx>928</posx>
+						<posy>0</posy>
+						<control type="image">
+							<posx>0</posx>
+							<posy>4</posy>
+							<width>64</width>
+							<height>64</height>
+							<texture>overlays/list/OverlayUnWatched.png</texture>
+							<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>0</posy>
+							<width>64</width>
+							<height>70</height>
+							<font>Medium_Small_Caps</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+							<textcolor>grey</textcolor>
+							<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="992" height="72">
+					<control type="image">
+						<width>992</width>
+						<height>72</height>
+						<texture>dialogs/listitem_nofocus.png</texture>
+					</control>
+					<control type="image">
+						<width>992</width>
+						<height>72</height>
+						<texture>dialogs/listitem_focus.png</texture>
+						<visible>Control.HasFocus(50)</visible>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<width>986</width>
+						<height>72</height>
+						<font>Small</font>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<textoffsetx>18</textoffsetx>
+						<scroll>yes</scroll>
+					</control>
+					<control type="label">
+						<posx>992</posx>
+						<posy>0</posy>
+						<width>986</width>
+						<height>72</height>
+						<font>Smaller</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<textoffsetx>18</textoffsetx>
+						<animation effect="slide" start="0" end="-50" reversible="true" condition="!IsEmpty(ListItem.Overlay)">Conditional</animation>
+					</control>
+					<control type="image">
+						<posx>928</posx>
+						<posy>5</posy>
+						<width>64</width>
+						<height>64</height>
+						<texture>$VAR[ListItem.Overlay]</texture>
+					</control>
+					<control type="group">
+						<description>Unwatched episodes</description>
+						<posx>928</posx>
+						<posy>0</posy>
+						<control type="image">
+							<posx>0</posx>
+							<posy>5</posy>
+							<width>64</width>
+							<height>64</height>
+							<texture>overlays/list/OverlayUnWatched.png</texture>
+							<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>0</posy>
+							<width>64</width>
+							<height>70</height>
+							<font>Medium_Small_Caps</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+							<textcolor>grey</textcolor>
+							<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
 			<control type="scrollbar" id="60">
 				<description>Scrollbar</description>
 				<posx>1016</posx>
@@ -161,21 +175,21 @@
 				<animation effect="fade" start="65" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<!-- Scrollbar visibility controls -->
-	        <control type="image" id="9773">
-	            <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
-	        </control>
-	        <control type="image" id="9772">
-	            <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-	            <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-	            <visible>Control.HasFocus(60) | !Control.IsVisible(9773)</visible>
-	        </control>
-	        <control type="image" id="9772">
-	            <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-	            <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
-	            <visible>!Control.HasFocus(60) + [Container(50).Scrolling | Container(50).OnScrollNext | Container(50).OnScrollPrevious]</visible>
-	        </control>
-            <control type="group">
-                <posx>1022</posx>
+			<control type="image" id="9773">
+				<animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
+			</control>
+			<control type="image" id="9772">
+				<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+				<visible>Control.HasFocus(60) | !Control.IsVisible(9773)</visible>
+			</control>
+			<control type="image" id="9772">
+				<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
+				<visible>!Control.HasFocus(60) + [Container(50).Scrolling | Container(50).OnScrollNext | Container(50).OnScrollPrevious]</visible>
+			</control>
+			<control type="group">
+				<posx>1022</posx>
 				<posy>40</posy>
 				<control type="image">
 					<width>868</width>
@@ -183,20 +197,20 @@
 					<texture>dialogs/background_grey.png</texture>
 					<colordiffuse>EFFFFFFF</colordiffuse>
 				</control>
-                <control type="image">
-                	<posx>200</posx>
-                    <width>468</width>
-                    <height>899</height>
-                    <texture background="true">$VAR[PosterThumbVar]</texture>
-                    <aspectratio aligny="center">keep</aspectratio>
-                    <bordersize>2</bordersize>
-                    <align>center</align>
-                    <visible>!Container.Content(episodes) | StringCompare(Container(50).ListItem.Label,..)</visible>
-                </control>
-                <control type="group">
-                	<description>Episode info</description>
-                	<visible>Container.Content(episodes) + !StringCompare(Container(50).ListItem.Label,..)</visible>
-                	<control type="label">
+				<control type="image">
+					<posx>200</posx>
+					<width>468</width>
+					<height>899</height>
+					<texture background="true">$VAR[PosterThumbVar]</texture>
+					<aspectratio aligny="center">keep</aspectratio>
+					<bordersize>2</bordersize>
+					<align>center</align>
+					<visible>!Container.Content(episodes) | StringCompare(Container(50).ListItem.Label,..)</visible>
+				</control>
+				<control type="group">
+					<description>Episode info</description>
+					<visible>Container.Content(episodes) + !StringCompare(Container(50).ListItem.Label,..)</visible>
+					<control type="label">
 						<description>Label</description>
 						<posx>20</posx>
 						<posy>20</posy>
@@ -209,18 +223,18 @@
 						<aligny>center</aligny>
 						<visible>IsEmpty(ListItem.Art(tvshow.banner))</visible>
 					</control>
-                	<control type="image">
-                		<description>TV show banner</description>
-	                    <posy>20</posy>
-	                    <posx>20</posx>
-	                    <width>828</width>
-	                    <height>118</height>
-	                    <aspectratio>scale</aspectratio>
-	                    <texture background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
-	                    <bordersize>2</bordersize>
-	                    <visible>!IsEmpty(ListItem.Art(tvshow.banner))</visible>
-	                </control>
-	                <control type="label">
+					<control type="image">
+						<description>TV show banner</description>
+						<posy>20</posy>
+						<posx>20</posx>
+						<width>828</width>
+						<height>118</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
+						<bordersize>2</bordersize>
+						<visible>!IsEmpty(ListItem.Art(tvshow.banner))</visible>
+					</control>
+					<control type="label">
 						<description>Empty Plot</description>
 						<visible>IsEmpty(Container(50).ListItem.Plot)</visible>
 						<posx>30</posx>
@@ -235,67 +249,67 @@
 						<align>center</align>
 						<aligny>center</aligny>
 					</control>
-	                <control type="textbox">
-	                    <description>Plot</description>
-	                    <posx>20</posx>
-	                    <posy>160</posy>
-	                    <width>828</width>
-	                    <height>370</height>
-	                    <align>left</align>
-	                    <font>Smaller</font>
-	                    <textcolor>White2</textcolor>
-	                    <label>$VAR[VideoInfoPlotVar]</label>
-	                    <autoscroll delay="13000" time="3000" repeat="13000">True</autoscroll>
-	                    <animation effect="slide" start="0,0" end="0,-60" reversible="true" condition="IsEmpty(ListItem.Art(tvshow.banner))">Conditional</animation>
-	                </control>
-	                <control type="image">
-	                	<posx>20</posx>
-	                	<posy>580</posy>
-	                    <width>312</width>
-	                    <height>242</height>
-	                    <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
-	                    <aspectratio>scale</aspectratio>
-	                    <aspectratio aligny="center">keep</aspectratio>
-	                    <bordersize>2</bordersize>
-	                    <align>center</align>
-	                </control>
-                </control>
-                <control type="label">
-                    <description>Total Time</description>
-                    <posx>868</posx>
-                    <posy>839</posy>
-                    <height>54</height>
-                    <width>838</width>
-                    <label>$INFO[Container(50).TotalTime]</label>
-                    <textcolor>$VAR[ThemeColorVar]</textcolor>
-                    <textoffsetx>18</textoffsetx>
-                    <visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
-                    <align>right</align>
-                </control>
-                <control type="label">
-                    <description>Page Info</description>
-                    <posx>0</posx>
-                    <posy>839</posy>
-                    <height>54</height>
-                    <width>838</width>
-                    <label>$INFO[Container(50).CurrentPage]$INFO[Container(50).NumPages,/]</label>
-                    <textcolor>$VAR[ThemeColorVar]</textcolor>
-                    <textoffsetx>18</textoffsetx>
-                </control>
-            </control>
-        </control>
-    </include>
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>20</posx>
+						<posy>160</posy>
+						<width>828</width>
+						<height>370</height>
+						<align>left</align>
+						<font>Smaller</font>
+						<textcolor>White2</textcolor>
+						<label>$VAR[VideoInfoPlotVar]</label>
+						<autoscroll delay="13000" time="3000" repeat="13000">True</autoscroll>
+						<animation effect="slide" start="0,0" end="0,-60" reversible="true" condition="IsEmpty(ListItem.Art(tvshow.banner))">Conditional</animation>
+					</control>
+					<control type="image">
+						<posx>20</posx>
+						<posy>580</posy>
+						<width>312</width>
+						<height>242</height>
+						<texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
+						<aspectratio>scale</aspectratio>
+						<aspectratio aligny="center">keep</aspectratio>
+						<bordersize>2</bordersize>
+						<align>center</align>
+					</control>
+				</control>
+				<control type="label">
+					<description>Total Time</description>
+					<posx>868</posx>
+					<posy>839</posy>
+					<height>54</height>
+					<width>838</width>
+					<label>$INFO[Container(50).TotalTime]</label>
+					<textcolor>$VAR[ThemeColorVar]</textcolor>
+					<textoffsetx>18</textoffsetx>
+					<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<description>Page Info</description>
+					<posx>0</posx>
+					<posy>839</posy>
+					<height>54</height>
+					<width>838</width>
+					<label>$INFO[Container(50).CurrentPage]$INFO[Container(50).NumPages,/]</label>
+					<textcolor>$VAR[ThemeColorVar]</textcolor>
+					<textoffsetx>18</textoffsetx>
+				</control>
+			</control>
+		</control>
+	</include>
 
-    <include name="View_50_PictureList">
-        <control type="group">
-            <visible>Control.IsVisible(50)</visible>
-            <posx>0</posx>
-            <posy>72</posy>
-            <animation type="VisibleChange" reversible="false">
-                <effect type="zoom" start="200" end="100" center="960,540" easing="out" tween="cubic" time="300" />
-                <effect type="fade" start="0" end="100" time="300" />
-            </animation>
-            <control type="image">
+	<include name="View_50_PictureList">
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<posx>0</posx>
+			<posy>72</posy>
+			<animation type="VisibleChange" reversible="false">
+				<effect type="zoom" start="200" end="100" center="960,540" easing="out" tween="cubic" time="300" />
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+			<control type="image">
 				<posx>30</posx>
 				<posy>40</posy>
 				<width>992</width>
@@ -303,79 +317,79 @@
 				<texture>dialogs/background_dark.png</texture>
 				<colordiffuse>BBFFFFFF</colordiffuse>
 			</control>
-            <control type="list" id="50">
-                <posx>30</posx>
+			<control type="list" id="50">
+				<posx>30</posx>
 				<posy>40</posy>
 				<width>992</width>
 				<height>899</height>
-                <onleft>9010</onleft>
-                <onright>60</onright>
-                <onup>50</onup>
-                <ondown>50</ondown>
-                <pagecontrol>60</pagecontrol>
-                <viewtype label="535">list</viewtype>
-                <orientation>vertical</orientation>
-                <scrolltime tween="sine" easing="inout">200</scrolltime>
-                <itemlayout width="992" height="72">
-                    <control type="image">
-                        <width>992</width>
-                        <height>72</height>
-                        <texture>dialogs/listitem_nofocus.png</texture>
-                    </control>
-                    <control type="label">
-                        <posx>0</posx>
-                        <width>986</width>
-                        <height>72</height>
-                        <font>Small</font>
-                        <label>$INFO[ListItem.Label]</label>
-                        <textcolor>White2</textcolor>
-                        <textoffsetx>18</textoffsetx>
-                    </control>
-                    <control type="label">
-                        <posx>992</posx>
-                        <posy>0</posy>
-                        <width>986</width>
-                        <height>72</height>
-                        <font>Small</font>
-                        <align>right</align>
-                        <label>$INFO[ListItem.Label2]</label>
-                        <textcolor>grey</textcolor>
-                        <textoffsetx>18</textoffsetx>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="992" height="72">
-                	<control type="image">
-                        <width>992</width>
-                        <height>72</height>
-                        <texture>dialogs/listitem_nofocus.png</texture>
-                    </control>
-                    <control type="image">
-                        <width>992</width>
-                        <height>72</height>
-                        <texture>dialogs/listitem_focus.png</texture>
-                        <visible>Control.HasFocus(50)</visible>
-                    </control>
-                    <control type="label">
-                        <posx>0</posx>
-                        <width>986</width>
-                        <height>72</height>
-                        <font>Small</font>
-                        <label>$INFO[ListItem.Label]</label>
-                        <textoffsetx>18</textoffsetx>
-                    </control>
-                    <control type="label">
-                        <posx>992</posx>
-                        <posy>0</posy>
-                        <width>986</width>
-                        <height>72</height>
-                        <font>Small</font>
-                        <align>right</align>
-                        <label>$INFO[ListItem.Label2]</label>
-                        <textoffsetx>18</textoffsetx>
-                    </control>
-                </focusedlayout>
-            </control>
-            <control type="scrollbar" id="60">
+				<onleft>9010</onleft>
+				<onright>60</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="535">list</viewtype>
+				<orientation>vertical</orientation>
+				<scrolltime tween="sine" easing="inout">200</scrolltime>
+				<itemlayout width="992" height="72">
+					<control type="image">
+						<width>992</width>
+						<height>72</height>
+						<texture>dialogs/listitem_nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<width>986</width>
+						<height>72</height>
+						<font>Small</font>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>White2</textcolor>
+						<textoffsetx>18</textoffsetx>
+					</control>
+					<control type="label">
+						<posx>992</posx>
+						<posy>0</posy>
+						<width>986</width>
+						<height>72</height>
+						<font>Small</font>
+						<align>right</align>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>grey</textcolor>
+						<textoffsetx>18</textoffsetx>
+					</control>
+				</itemlayout>
+				<focusedlayout width="992" height="72">
+					<control type="image">
+						<width>992</width>
+						<height>72</height>
+						<texture>dialogs/listitem_nofocus.png</texture>
+					</control>
+					<control type="image">
+						<width>992</width>
+						<height>72</height>
+						<texture>dialogs/listitem_focus.png</texture>
+						<visible>Control.HasFocus(50)</visible>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<width>986</width>
+						<height>72</height>
+						<font>Small</font>
+						<label>$INFO[ListItem.Label]</label>
+						<textoffsetx>18</textoffsetx>
+					</control>
+					<control type="label">
+						<posx>992</posx>
+						<posy>0</posy>
+						<width>986</width>
+						<height>72</height>
+						<font>Small</font>
+						<align>right</align>
+						<label>$INFO[ListItem.Label2]</label>
+						<textoffsetx>18</textoffsetx>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
 				<description>Scrollbar</description>
 				<posx>1016</posx>
 				<posy>40</posy>
@@ -390,21 +404,21 @@
 				<animation effect="fade" start="65" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<!-- Scrollbar visibility controls -->
-	        <control type="image" id="9773">
-	            <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
-	        </control>
-	        <control type="image" id="9772">
-	            <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-	            <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-	            <visible>Control.HasFocus(60) | !Control.IsVisible(9773)</visible>
-	        </control>
-	        <control type="image" id="9772">
-	            <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-	            <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
-	            <visible>!Control.HasFocus(60) + [Container(50).Scrolling | Container(50).OnScrollNext | Container(50).OnScrollPrevious]</visible>
-	        </control>
-            <control type="group">
-            	<posx>1022</posx>
+			<control type="image" id="9773">
+				<animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
+			</control>
+			<control type="image" id="9772">
+				<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+				<visible>Control.HasFocus(60) | !Control.IsVisible(9773)</visible>
+			</control>
+			<control type="image" id="9772">
+				<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
+				<visible>!Control.HasFocus(60) + [Container(50).Scrolling | Container(50).OnScrollNext | Container(50).OnScrollPrevious]</visible>
+			</control>
+			<control type="group">
+				<posx>1022</posx>
 				<posy>40</posy>
 				<control type="image">
 					<width>868</width>
@@ -412,16 +426,16 @@
 					<texture>dialogs/background_grey.png</texture>
 					<colordiffuse>EFFFFFFF</colordiffuse>
 				</control>
-                <control type="image">
-                	<posx>200</posx>
-                    <width>468</width>
-                    <height>899</height>
-                    <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
-                    <aspectratio aligny="center">keep</aspectratio>
-                    <bordersize>2</bordersize>
-                    <align>center</align>
-                </control>
-            </control>
-        </control>
-    </include>
+				<control type="image">
+					<posx>200</posx>
+					<width>468</width>
+					<height>899</height>
+					<texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
+					<aspectratio aligny="center">keep</aspectratio>
+					<bordersize>2</bordersize>
+					<align>center</align>
+				</control>
+			</control>
+		</control>
+	</include>
 </includes>
