@@ -607,20 +607,20 @@
     <include name="NotificationNowPlaying">
         <control type="group">
             <width>900</width>
-            <height>68</height>
+            <height>69</height>
             <visible>Player.HasMedia</visible>
             <control type="button">
                 <posx>0</posx>
                 <posy>0</posy>
                 <width>90</width>
-                <height>68</height>
+                <height>69</height>
                 <onclick>ActivateWindow(PlayerControls)</onclick>
             </control>
             <control type="button">
                 <posx>90</posx>
                 <posy>0</posy>
                 <width>800</width>
-                <height>68</height>
+                <height>69</height>
                 <onclick>ActivateWindow(musicplaylist)</onclick>
             </control>
             <control type="image">
@@ -648,47 +648,36 @@
                 <posx>33</posx>
                 <animation effect="slide" start="0,-80" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
                 <control type="label">
-                    <posy>4</posy>
+                    <posy>6</posy>
                     <posx>72</posx>
                     <height>32</height>
                     <width min="10" max="800">auto</width>
-                    <font>Smaller_Caps</font>
+                    <font>Small_Caps</font>
                     <textcolor>$VAR[ThemeColorVar]</textcolor>
                     <aligny>center</aligny>
                     <label>$INFO[Player.Title]</label>
+                    <visible>!IsEmpty(Control.GetLabel(11200))</visible>
                 </control>
                 <control type="label">
-                    <posy>35</posy>
+                    <posy>17</posy>
                     <posx>72</posx>
                     <height>32</height>
                     <width min="10" max="800">auto</width>
-                    <font>Smaller_Caps</font>
+                    <font>Small_Caps</font>
+                    <textcolor>$VAR[ThemeColorVar]</textcolor>
                     <aligny>center</aligny>
-                    <textcolor>White2</textcolor>
-                    <label>$INFO[MusicPlayer.Artist]</label>
-                    <visible>Player.HasAudio</visible>
+                    <label>$INFO[Player.Title]</label>
+                    <visible>IsEmpty(Control.GetLabel(11200))</visible>
                 </control>
-                <control type="label">
-                    <posy>35</posy>
+                <control type="label" id="11200">
+                    <posy>36</posy>
                     <posx>72</posx>
                     <height>32</height>
                     <width min="10" max="800">auto</width>
-                    <font>Smaller_Caps</font>
+                    <font>Medium_Small_Caps</font>
                     <aligny>center</aligny>
                     <textcolor>White2</textcolor>
-                    <label>$INFO[VideoPlayer.TvShowTitle]</label>
-                    <visible>Player.HasVideo + VideoPlayer.Content(episodes)</visible>
-                </control>
-                <control type="label">
-                    <posy>35</posy>
-                    <posx>72</posx>
-                    <height>32</height>
-                    <width min="10" max="800">auto</width>
-                    <font>Smaller_Caps</font>
-                    <aligny>center</aligny>
-                    <textcolor>White2</textcolor>
-                    <label>$INFO[VideoPlayer.Tagline]</label>
-                    <visible>Player.HasVideo + VideoPlayer.Content(movies)</visible>
+                    <label>$VAR[NotificationNowPlaying.Label2]</label>
                 </control>
             </control>
         </control>

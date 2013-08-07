@@ -86,6 +86,13 @@
         <value condition="Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) | Window.IsActive(systeminfo)">SetFocus(6000)</value>
         <value>SetFocus(50)</value>
     </variable>
+    
+    <variable name="NotificationNowPlaying.Label2">
+    	<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]</value>
+    	<value condition="Player.HasVideo + VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
+    	<value condition="Player.HasVideo + VideoPlayer.Content(movies)">$INFO[VideoPlayer.Tagline]</value>
+    	<value></value>
+    </variable>
    
     <variable name="ListItemSeasonVar">
         <value condition="!IntegerGreaterThan(ListItem.Season,9)">$INFO[ListItem.Season,0]</value>
