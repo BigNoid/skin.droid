@@ -616,13 +616,6 @@
                 <height>69</height>
                 <onclick>ActivateWindow(PlayerControls)</onclick>
             </control>
-            <control type="button">
-                <posx>90</posx>
-                <posy>0</posy>
-                <width>800</width>
-                <height>69</height>
-                <onclick>ActivateWindow(musicplaylist)</onclick>
-            </control>
             <control type="image">
                 <description>Now Playing - Paused</description>
                 <posx>21</posx>
@@ -642,6 +635,14 @@
                 <texture>osd/play_nf.png</texture>
                 <include>NotificationVisibilityEffect</include>
                 <visible>!Player.Paused</visible>
+            </control>
+            <control type="button">
+                <posx>90</posx>
+                <posy>0</posy>
+                <width>800</width>
+                <height>69</height>
+                <onclick>ActivateWindow(musicplaylist)</onclick>
+                <enable>Player.HasAudio</enable>
             </control>
             <control type="group">
                 <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
