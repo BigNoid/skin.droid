@@ -1,106 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="122">
-	<defaultcontrol always="true">2</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
-	<include>DialogEffect</include>
-	<controls>
-		<control type="button">
-			<include>TouchOverlay</include>
-			<onclick>Dialog.Close(visualisationpresetlist)</onclick>
-		</control>
-		<control type="group">
-			<posx>30</posx>
-			<posy>52</posy>
-			<control type="image">
-				<width>860</width>
-				<height>955</height>
-				<texture>dialogs/background_grey.png</texture>
-				<colordiffuse>FAFFFFFF</colordiffuse>
-			</control>
-			<control type="label">
-				<description>Header Label</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>960</width>
-				<height>72</height>
-				<label>31032</label>
-				<font>Medium</font>
-				<textcolor>$VAR[ThemeColorVar]</textcolor>
-				<textoffsetx>30</textoffsetx>
-			</control>
-			<control type="image">
-				<description>Header Line</description>
-				<posx>0</posx>
-				<posy>76</posy>
-				<width>860</width>
-				<height>2</height>
-				<texture>common/blue2.png</texture>
-			</control>
-			<control type="list" id="2">
-				<description>Preset List</description>
-				<posx>0</posx>
-				<posy>80</posy>
-				<width>860</width>
-				<height>864</height>
-				<onleft>60</onleft>
-				<onright>60</onright>
-				<onup>2</onup>
-				<ondown>2</ondown>
-				<pagecontrol>60</pagecontrol>
-				<itemlayout height="72">
-					<control type="image">
-						<width>860</width>
-						<height>72</height>
-						<texture>dialogs/listitem_nofocus.png</texture>
-					</control>
-					<control type="label">
-						<width>860</width>
-						<height>72</height>
-						<font>Small</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textoffsetx>30</textoffsetx>
-						<textcolor>White2</textcolor>
-					</control>
-					<control type="label">
-						<posx>860</posx>
-						<width>860</width>
-						<height>72</height>
-						<font>Small</font>
-						<align>right</align>
-						<label>$INFO[ListItem.Label2]</label>
-						<textoffsetx>30</textoffsetx>
-					</control>
-				</itemlayout>
-				<focusedlayout height="72">
-					<control type="image">
-						<width>860</width>
-						<height>72</height>
-						<texture>dialogs/listitem_nofocus.png</texture>
-					</control>
-					<control type="image">
-						<width>860</width>
-						<height>72</height>
-						<texture>dialogs/listitem_focus.png</texture>
-						<visible>Control.HasFocus(2)</visible>
-					</control>
-					<control type="label">
-						<width>860</width>
-						<height>72</height>
-						<font>Small</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textoffsetx>30</textoffsetx>
-					</control>
-					<control type="label">
-						<posx>860</posx>
-						<width>860</width>
-						<height>72</height>
-						<font>Small</font>
-						<align>right</align>
-						<label>$INFO[ListItem.Label2]</label>
-						<textoffsetx>30</textoffsetx>
-					</control>
-				</focusedlayout>
-			</control>
-		</control>
-	</controls>
+    <defaultcontrol always="true">2</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <include>DialogEffect</include>
+    <controls>
+        <control type="button">
+            <include>TouchOverlay</include>
+            <onclick>Dialog.Close(visualisationpresetlist)</onclick>
+        </control>
+        <control type="group">
+            <posx>30</posx>
+            <posy>52</posy>
+            <control type="image">
+                <width>860</width>
+                <height>955</height>
+                <texture>dialogs/background_grey.png</texture>
+                <colordiffuse>FAFFFFFF</colordiffuse>
+            </control>
+            <control type="label">
+                <description>Header Label</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>960</width>
+                <height>72</height>
+                <label>31032</label>
+                <font>Medium</font>
+                <textcolor>$VAR[ThemeColorVar]</textcolor>
+                <textoffsetx>30</textoffsetx>
+            </control>
+            <control type="image">
+                <description>Header Line</description>
+                <posx>0</posx>
+                <posy>76</posy>
+                <width>860</width>
+                <height>2</height>
+                <texture>common/blue2.png</texture>
+            </control>
+            <control type="list" id="2">
+                <description>Preset List</description>
+                <posx>0</posx>
+                <posy>80</posy>
+                <width>860</width>
+                <height>864</height>
+                <onleft>60</onleft>
+                <onright>60</onright>
+                <onup>2</onup>
+                <ondown>2</ondown>
+                <pagecontrol>60</pagecontrol>
+                <itemlayout height="72">
+                    <control type="image">
+                        <width>860</width>
+                        <height>72</height>
+                        <texture>dialogs/listitem_nofocus.png</texture>
+                    </control>
+                    <control type="label">
+                        <width>860</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textoffsetx>30</textoffsetx>
+                        <textcolor>White2</textcolor>
+                    </control>
+                    <control type="label">
+                        <posx>860</posx>
+                        <width>860</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textoffsetx>30</textoffsetx>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="72">
+                    <control type="image">
+                        <width>860</width>
+                        <height>72</height>
+                        <texture>dialogs/listitem_nofocus.png</texture>
+                    </control>
+                    <control type="image">
+                        <width>860</width>
+                        <height>72</height>
+                        <texture>dialogs/listitem_focus.png</texture>
+                        <visible>Control.HasFocus(2)</visible>
+                    </control>
+                    <control type="label">
+                        <width>860</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textoffsetx>30</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>860</posx>
+                        <width>860</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textoffsetx>30</textoffsetx>
+                    </control>
+                </focusedlayout>
+            </control>
+        </control>
+    </controls>
 </window>

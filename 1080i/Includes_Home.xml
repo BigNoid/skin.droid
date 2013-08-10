@@ -22,13 +22,13 @@
                     <orientation>vertical</orientation>
                     <itemlayout width="600" height="100">
                         <control type="group">
-                        	<control type="image">
-			                    <posx>0</posx>
-			                    <posy>0</posy>
-			                    <width>600</width>
-			                    <height>100</height>
-			                    <texture border="3">dialogs/toast_back_blue.png</texture>
-			                </control>
+                            <control type="image">
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width>600</width>
+                                <height>100</height>
+                                <texture border="3">dialogs/toast_back_blue.png</texture>
+                            </control>
                             <control type="group">
                                 <animation type="Focus">
                                     <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -70,13 +70,13 @@
                     </itemlayout>
                     <focusedlayout width="600" height="100">
                         <control type="group">
-                        	<control type="image">
-			                    <posx>0</posx>
-			                    <posy>0</posy>
-			                    <width>600</width>
-			                    <height>100</height>
-			                    <texture border="3">dialogs/toast_back_blue.png</texture>
-			                </control>
+                            <control type="image">
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width>600</width>
+                                <height>100</height>
+                                <texture border="3">dialogs/toast_back_blue.png</texture>
+                            </control>
                             <control type="group">
                                 <control type="image">
                                     <posx>0</posx>
@@ -115,15 +115,15 @@
                         </control>
                     </focusedlayout>
                     <content>
-                    	<item>
-                    		<description>Movies: Movies</description>
+                        <item>
+                            <description>Movies: Movies</description>
                             <label>20342</label>
                             <icon>home/icons/DefaultMovies.png</icon>
                             <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
                         </item>
                         <item>
-                        	<description>Movies: Library</description>
+                            <description>Movies: Library</description>
                             <label>14022</label>
                             <label2>$INFO[Window(Home).Property(Movies.Count)]</label2>
                             <icon>-</icon>
@@ -131,28 +131,28 @@
                             <visible>Container(800).HasFocus(1)</visible>
                         </item>
                         <item>
-                    		<description>Movies: Recently Added</description>
+                            <description>Movies: Recently Added</description>
                             <label>$LOCALIZE[31013]</label>
                             <icon>home/icons/DefaultRecentlyAddedMovies.png</icon>
                             <onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
                         </item>
                         <item>
-                        	<description>Movies: Video Addons</description>
+                            <description>Movies: Video Addons</description>
                             <label>10006</label>
                             <icon>home/icons/DefaultAddonVideo.png</icon>
                             <onclick>ActivateWindow(Videos,root)</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
                         </item>
                         <item>
-                        	<description>Movies: Addons</description>
+                            <description>Movies: Addons</description>
                             <label>24001</label>
                             <icon>home/icons/DefaultAddon.png</icon>
                             <onclick>ActivateWindow(Videos,Addons,return)</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
                         </item>
-                    	<!-- 
-                    	<item>
+                        <!--
+                            <item>
                             <label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentMovie.1.Rating)]</label2>
                             <property name="Director">$INFO[Window(Home).Property(RecentMovie.1.Director)]</property>
@@ -179,8 +179,8 @@
                             <property name="Plot">$INFO[Window(Home).Property(RecentMovie.1.Plot)]</property>
                             <onclick>$INFO[Window(Home).Property(RecentMovie.1.Play)]</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecentMovie.2.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentMovie.2.Rating)]</label2>
                             <property name="Director">$INFO[Window(Home).Property(RecentMovie.2.Director)]</property>
@@ -207,8 +207,8 @@
                             <property name="Plot">$INFO[Window(Home).Property(RecentMovie.2.Plot)]</property>
                             <onclick>$INFO[Window(Home).Property(RecentMovie.2.Play)]</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecentMovie.3.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentMovie.3.Rating)]</label2>
                             <property name="Director">$INFO[Window(Home).Property(RecentMovie.3.Director)]</property>
@@ -235,8 +235,8 @@
                             <property name="Plot">$INFO[Window(Home).Property(RecentMovie.3.Plot)]</property>
                             <onclick>$INFO[Window(Home).Property(RecentMovie.3.Play)]</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecentMovie.4.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentMovie.4.Rating)]</label2>
                             <property name="Director">$INFO[Window(Home).Property(RecentMovie.4.Director)]</property>
@@ -263,8 +263,8 @@
                             <property name="Plot">$INFO[Window(Home).Property(RecentMovie.4.Plot)]</property>
                             <onclick>$INFO[Window(Home).Property(RecentMovie.4.Play)]</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecentMovie.5.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentMovie.5.Rating)]</label2>
                             <property name="Director">$INFO[Window(Home).Property(RecentMovie.5.Director)]</property>
@@ -291,8 +291,8 @@
                             <property name="Plot">$INFO[Window(Home).Property(RecentMovie.5.Plot)]</property>
                             <onclick>$INFO[Window(Home).Property(RecentMovie.5.Play)]</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecentMovie.6.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentMovie.6.Rating)]</label2>
                             <property name="Director">$INFO[Window(Home).Property(RecentMovie.6.Director)]</property>
@@ -319,8 +319,8 @@
                             <property name="Plot">$INFO[Window(Home).Property(RecentMovie.6.Plot)]</property>
                             <onclick>$INFO[Window(Home).Property(RecentMovie.6.Play)]</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecentMovie.7.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentMovie.7.Rating)]</label2>
                             <property name="Director">$INFO[Window(Home).Property(RecentMovie.7.Director)]</property>
@@ -347,8 +347,8 @@
                             <property name="Plot">$INFO[Window(Home).Property(RecentMovie.7.Plot)]</property>
                             <onclick>$INFO[Window(Home).Property(RecentMovie.7.Play)]</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecentMovie.8.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentMovie.8.Rating)]</label2>
                             <property name="Director">$INFO[Window(Home).Property(RecentMovie.8.Director)]</property>
@@ -375,8 +375,8 @@
                             <property name="Plot">$INFO[Window(Home).Property(RecentMovie.8.Plot)]</property>
                             <onclick>$INFO[Window(Home).Property(RecentMovie.8.Play)]</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecentMovie.9.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentMovie.9.Rating)]</label2>
                             <property name="Director">$INFO[Window(Home).Property(RecentMovie.9.Director)]</property>
@@ -403,8 +403,8 @@
                             <property name="Plot">$INFO[Window(Home).Property(RecentMovie.9.Plot)]</property>
                             <onclick>$INFO[Window(Home).Property(RecentMovie.9.Play)]</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecentMovie.10.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentMovie.10.Rating)]</label2>
                             <property name="Director">$INFO[Window(Home).Property(RecentMovie.10.Director)]</property>
@@ -431,24 +431,24 @@
                             <property name="Plot">$INFO[Window(Home).Property(RecentMovie.10.Plot)]</property>
                             <onclick>$INFO[Window(Home).Property(RecentMovie.10.Play)]</onclick>
                             <visible>Container(800).HasFocus(1)</visible>
-                        </item>
-                         -->
+                            </item>
+                        -->
                         <item>
-                        	<description>TV Shows: TV Shows</description>
+                            <description>TV Shows: TV Shows</description>
                             <label>20343</label>
                             <icon>home/icons/DefaultTVShows.png</icon>
                             <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
                             <visible>Container(800).HasFocus(2)</visible>
                         </item>
                         <item>
-                        	<description>TV Shows: Recently Added</description>
+                            <description>TV Shows: Recently Added</description>
                             <label>$LOCALIZE[31013]</label>
                             <icon>home/icons/DefaultRecentlyAddedEpisodes.png</icon>
                             <onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
                             <visible>Container(800).HasFocus(2)</visible>
                         </item>
                         <item>
-                        	<description>TV Shows: Library</description>
+                            <description>TV Shows: Library</description>
                             <label>14022</label>
                             <label2>$INFO[Window(Home).Property(TVShows.Count)]</label2>
                             <icon>-</icon>
@@ -456,15 +456,15 @@
                             <visible>Container(800).HasFocus(2)</visible>
                         </item>
                         <item>
-                        	<description>TV Shows: TV Guide</description>
+                            <description>TV Shows: TV Guide</description>
                             <label>31014</label>
                             <icon>home/icons/DefaultTVGuide.png</icon>
                             <onclick condition="System.HasAddon(script.tv.show.next.aired)">RunAddon(script.tv.show.next.aired)</onclick>
                             <onclick condition="!System.HasAddon(script.tv.show.next.aired)">ActivateWindow(Videos,InProgressTVShows,return)</onclick>
                             <visible>Container(800).HasFocus(2)</visible>
                         </item>
-                        <!-- 
-                        <item>
+                        <!--
+                            <item>
                             <label>$INFO[Window(Home).Property(RecommendedEpisode.1.TVShowTitle)]</label>
                             <label2>$INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)]</label2>
                             <property name="Premiered">$INFO[Window(Home).Property(RecommendedEpisode.1.Premiered)]</property>
@@ -488,8 +488,8 @@
                             <onclick>$INFO[Window(Home).Property(RecommendedEpisode.1.Play)]</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</thumb>
                             <visible>Container(800).HasFocus(2)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecommendedEpisode.2.TVShowTitle)]</label>
                             <label2>$INFO[Window(Home).Property(RecommendedEpisode.2.EpisodeNo)]</label2>
                             <property name="Premiered">$INFO[Window(Home).Property(RecommendedEpisode.2.Premiered)]</property>
@@ -513,8 +513,8 @@
                             <onclick>$INFO[Window(Home).Property(RecommendedEpisode.2.Play)]</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</thumb>
                             <visible>Container(800).HasFocus(2)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecommendedEpisode.3.TVShowTitle)]</label>
                             <label2>$INFO[Window(Home).Property(RecommendedEpisode.3.EpisodeNo)]</label2>
                             <property name="Premiered">$INFO[Window(Home).Property(RecommendedEpisode.3.Premiered)]</property>
@@ -538,8 +538,8 @@
                             <onclick>$INFO[Window(Home).Property(RecommendedEpisode.3.Play)]</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(thumb))]</thumb>
                             <visible>Container(800).HasFocus(2)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecommendedEpisode.4.TVShowTitle)]</label>
                             <label2>$INFO[Window(Home).Property(RecommendedEpisode.4.EpisodeNo)]</label2>
                             <property name="Premiered">$INFO[Window(Home).Property(RecommendedEpisode.4.Premiered)]</property>
@@ -563,8 +563,8 @@
                             <onclick>$INFO[Window(Home).Property(RecommendedEpisode.4.Play)]</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(thumb))]</thumb>
                             <visible>Container(800).HasFocus(2)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecommendedEpisode.5.TVShowTitle)]</label>
                             <label2>$INFO[Window(Home).Property(RecommendedEpisode.5.EpisodeNo)]</label2>
                             <property name="Premiered">$INFO[Window(Home).Property(RecommendedEpisode.5.Premiered)]</property>
@@ -588,8 +588,8 @@
                             <onclick>$INFO[Window(Home).Property(RecommendedEpisode.5.Play)]</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(thumb))]</thumb>
                             <visible>Container(800).HasFocus(2)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecommendedEpisode.6.TVShowTitle)]</label>
                             <label2>$INFO[Window(Home).Property(RecommendedEpisode.6.EpisodeNo)]</label2>
                             <property name="Premiered">$INFO[Window(Home).Property(RecommendedEpisode.6.Premiered)]</property>
@@ -613,8 +613,8 @@
                             <onclick>$INFO[Window(Home).Property(RecommendedEpisode.6.Play)]</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(thumb))]</thumb>
                             <visible>Container(800).HasFocus(2)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecommendedEpisode.7.TVShowTitle)]</label>
                             <label2>$INFO[Window(Home).Property(RecommendedEpisode.7.EpisodeNo)]</label2>
                             <property name="Premiered">$INFO[Window(Home).Property(RecommendedEpisode.7.Premiered)]</property>
@@ -638,8 +638,8 @@
                             <onclick>$INFO[Window(Home).Property(RecommendedEpisode.7.Play)]</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(thumb))]</thumb>
                             <visible>Container(800).HasFocus(2)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecommendedEpisode.8.TVShowTitle)]</label>
                             <label2>$INFO[Window(Home).Property(RecommendedEpisode.8.EpisodeNo)]</label2>
                             <property name="Premiered">$INFO[Window(Home).Property(RecommendedEpisode.8.Premiered)]</property>
@@ -663,8 +663,8 @@
                             <onclick>$INFO[Window(Home).Property(RecommendedEpisode.8.Play)]</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(thumb))]</thumb>
                             <visible>Container(800).HasFocus(2)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecommendedEpisode.9.TVShowTitle)]</label>
                             <label2>$INFO[Window(Home).Property(RecommendedEpisode.9.EpisodeNo)]</label2>
                             <property name="Premiered">$INFO[Window(Home).Property(RecommendedEpisode.9.Premiered)]</property>
@@ -688,8 +688,8 @@
                             <onclick>$INFO[Window(Home).Property(RecommendedEpisode.9.Play)]</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(thumb))]</thumb>
                             <visible>Container(800).HasFocus(2)</visible>
-                        </item>
-                        <item>
+                            </item>
+                            <item>
                             <label>$INFO[Window(Home).Property(RecommendedEpisode.10.TVShowTitle)]</label>
                             <label2>$INFO[Window(Home).Property(RecommendedEpisode.10.EpisodeNo)]</label2>
                             <property name="Premiered">$INFO[Window(Home).Property(RecommendedEpisode.10.Premiered)]</property>
@@ -713,24 +713,24 @@
                             <onclick>$INFO[Window(Home).Property(RecommendedEpisode.10.Play)]</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(thumb))]</thumb>
                             <visible>Container(800).HasFocus(2)</visible>
-                        </item>
-                         -->
-                         <item>
-                         	<description>Music: Music</description>
+                            </item>
+                        -->
+                        <item>
+                            <description>Music: Music</description>
                             <label>2</label>
                             <icon>home/icons/DefaultMusicSongs.png</icon>
                             <onclick>ActivateWindow(Music)</onclick>
                             <visible>Container(800).HasFocus(3)</visible>
                         </item>
                         <item>
-                        	<description>Music: Music Addons</description>
+                            <description>Music: Music Addons</description>
                             <label>1038</label>
                             <icon>home/icons/DefaultAddonMusic.png</icon>
                             <onclick>ActivateWindow(Music,Addons,return)</onclick>
                             <visible>Container(800).HasFocus(3)</visible>
                         </item>
                         <item>
-                        	<description>Live TV: Live TV</description>
+                            <description>Live TV: Live TV</description>
                             <label>31100</label>
                             <icon>home/icons/DefaultTVShows.png</icon>
                             <onclick>ActivateWindow(PVR)</onclick>
@@ -739,7 +739,7 @@
                             <visible>Container(800).HasFocus(4)</visible>
                         </item>
                         <item>
-                        	<description>Live TV: EPG</description>
+                            <description>Live TV: EPG</description>
                             <label>$LOCALIZE[19222]</label>
                             <icon>home/icons/DefaultEpg.png</icon>
                             <onclick>ActivateWindow(PVR)</onclick>
@@ -748,7 +748,7 @@
                             <visible>Container(800).HasFocus(4)</visible>
                         </item>
                         <item>
-                        	<description>Live TV: Recording</description>
+                            <description>Live TV: Recording</description>
                             <label>19163</label>
                             <icon>home/icons/DefaultRecordings.png</icon>
                             <onclick>ActivateWindow(PVR)</onclick>
@@ -757,7 +757,7 @@
                             <visible>Container(800).HasFocus(4)</visible>
                         </item>
                         <item>
-                        	<description>Live TV: Timer</description>
+                            <description>Live TV: Timer</description>
                             <label>19040</label>
                             <icon>home/icons/DefaultTimer.png</icon>
                             <onclick>ActivateWindow(PVR)</onclick>
@@ -766,7 +766,7 @@
                             <visible>Container(800).HasFocus(4)</visible>
                         </item>
                         <item>
-                        	<description>Live TV: Search</description>
+                            <description>Live TV: Search</description>
                             <label>137</label>
                             <icon>home/icons/DefaultSearch.png</icon>
                             <onclick>ActivateWindow(PVR)</onclick>
@@ -775,21 +775,21 @@
                             <visible>Container(800).HasFocus(4)</visible>
                         </item>
                         <item>
-                        	<description>Pictures: Pictures</description>
+                            <description>Pictures: Pictures</description>
                             <label>1</label>
                             <icon>home/icons/DefaultPicture.png</icon>
                             <onclick>ActivateWindow(Pictures)</onclick>
                             <visible>Container(800).HasFocus(5)</visible>
                         </item>
                         <item>
-                        	<description>Misc: Weather</description>
+                            <description>Misc: Weather</description>
                             <label>8</label>
                             <icon>home/icons/DefaultAddonWeather.png</icon>
                             <onclick>ActivateWindow(Weather,return)</onclick>
                             <visible>Container(800).HasFocus(6)</visible>
                         </item>
                         <item>
-                        	<description>Misc: Apps</description>
+                            <description>Misc: Apps</description>
                             <label>31015</label>
                             <icon>home/icons/DefaultAddonProgram.png</icon>
                             <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
@@ -797,7 +797,7 @@
                             <visible>Container(800).HasFocus(6)</visible>
                         </item>
                         <item>
-                        	<description>Misc: Addons</description>
+                            <description>Misc: Addons</description>
                             <label>24001</label>
                             <icon>home/icons/DefaultAddon.png</icon>
                             <onclick>ActivateWindow(AddonBrowser)</onclick>
@@ -814,7 +814,7 @@
                 </control>
             </control>
             <control type="group">
-				<description>Main Menu</description>
+                <description>Main Menu</description>
                 <posx>0</posx>
                 <posy>0</posy>
                 <control type="panel" id="800">
@@ -831,13 +831,13 @@
                     <orientation>vertical</orientation>
                     <itemlayout width="700" height="115">
                         <control type="group">
-                        	<control type="image">
-	                    		<posx>0</posx>
-	                    		<posy>0</posy>
-			                    <width>700</width>
-			                    <height>115</height>
-			                    <texture border="3">dialogs/toast_back_blue.png</texture>
-			                </control>
+                            <control type="image">
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width>700</width>
+                                <height>115</height>
+                                <texture border="3">dialogs/toast_back_blue.png</texture>
+                            </control>
                             <control type="group">
                                 <animation type="Focus">
                                     <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -879,13 +879,13 @@
                     </itemlayout>
                     <focusedlayout width="700" height="115">
                         <control type="group">
-                        	<control type="image">
-	                    		<posx>0</posx>
-	                    		<posy>0</posy>
-			                    <width>700</width>
-			                    <height>115</height>
-			                    <texture border="3">dialogs/toast_back_blue.png</texture>
-			                </control>
+                            <control type="image">
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width>700</width>
+                                <height>115</height>
+                                <texture border="3">dialogs/toast_back_blue.png</texture>
+                            </control>
                             <control type="group">
                                 <control type="image">
                                     <posx>0</posx>
@@ -957,13 +957,13 @@
                     </content>
                 </control>
                 <control type="image">
-	            	<description>height = item count * item height</description>
-					<posx>21</posx>
-	                <posy>21</posy>
-	                <width>700</width>
-	                <height>690</height>
-	                <texture>dialogs/panel_overlay.png</texture>
-	            </control>
+                    <description>height = item count * item height</description>
+                    <posx>21</posx>
+                    <posy>21</posy>
+                    <width>700</width>
+                    <height>690</height>
+                    <texture>dialogs/panel_overlay.png</texture>
+                </control>
                 <control type="image">
                     <posx>0</posx>
                     <posy>0</posy>

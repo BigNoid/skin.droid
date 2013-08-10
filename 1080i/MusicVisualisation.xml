@@ -55,12 +55,12 @@
             <include>Dimensions_Fullscreen</include>
             <fadetime>800</fadetime>
             <texture background="true">special://skin/backgrounds/speakergrill.jpg</texture>
-            <!--<visible>IsEmpty(Player.Art(fanart))</visible>-->
+            <!--<visible>IsEmpty(Player.Art(fanart))</visible> -->
             <include>WindowEffect</include>
         </control>
         <control type="group">
             <animation effect="fade" time="600">VisibleChange</animation>
-            <!--<visible>IsEmpty(Player.Art(fanart))</visible>-->
+            <!--<visible>IsEmpty(Player.Art(fanart))</visible> -->
             <include>WindowEffect</include>
             <control type="group">
                 <posx>-200</posx>
@@ -237,7 +237,7 @@
                     <control type="image">
                         <width>375</width>
                         <height>342</height>
-                        <!--<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>-->
+                        <!--<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture> -->
                         <texture background="true">thumbs/boxes/cd_shadow_light.png</texture>
                     </control>
                     <control type="grouplist">
@@ -359,7 +359,7 @@
                     <control type="image">
                         <width>375</width>
                         <height>342</height>
-                        <!--<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>-->
+                        <!--<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture> -->
                         <texture background="true">thumbs/boxes/cd_shadow_light.png</texture>
                     </control>
                 </control>

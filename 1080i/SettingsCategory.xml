@@ -1,155 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="12">
-	<defaultcontrol always="true">3</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
-	<include>MediaMenuReset</include>
-	<controls>
-		<include>GlobalBackground</include>
-		<include>NotificationCenter</include>
-		<control type="group" id="6000">
-			<include>WindowEffect</include>
-			<posy>72</posy>
-			<control type="image">
-				<posx>30</posx>
-				<posy>40</posy>
-				<width>480</width>
-				<height>923</height>
-				<texture>dialogs/background_dark.png</texture>
-				<colordiffuse>BBFFFFFF</colordiffuse>
-			</control>
-			<control type="grouplist" id="3">
-				<description>Button Area</description>
-				<posx>30</posx>
-				<posy>70</posy>
-				<width>480</width>
-				<height>899</height>
-				<itemgap>0</itemgap>
-				<onleft>9000</onleft>
-				<onright>5</onright>
-				<onup>3</onup>
-				<ondown>3</ondown>
-			</control>
-			<control type="group">
-				<posx>510</posx>
-				<posy>40</posy>
-				<control type="image">
-					<posy>0</posy>
-					<width>1380</width>
-					<height>923</height>
-					<texture border="3">dialogs/background_grey.png</texture>
-					<colordiffuse>EFFFFFFF</colordiffuse>
-				</control>
-				<control type="grouplist" id="5">
-					<description>Control Area</description>
-					<posx>30</posx>
-					<posy>30</posy>
-					<width>1300</width>
-					<height>864</height>
-					<itemgap>0</itemgap>
-					<onleft>3</onleft>
-					<onright>9010</onright>
-					<onup>5</onup>
-					<ondown>5</ondown>
-					<orientation>vertical</orientation>
-					<pagecontrol>60</pagecontrol>
-				</control>
-			</control>
-			<control type="button" id="7">
-				<description>Default Button</description>
-				<width>1300</width>
-				<align>left</align>
-			</control>
-			<control type="radiobutton" id="8">
-				<description>Default Radio Button</description>
-				<radioposx>1222</radioposx>
-				<width>1300</width>
-				<align>left</align>
-			</control>
-			<control type="spincontrolex" id="9">
-				<description>Default Spin Control</description>
-				<width>1300</width>
-				<align>left</align>
-			</control>
-			<control type="button" id="10">
-				<description>Default Category Button</description>
-				<width>480</width>
-				<align>left</align>
-			</control>
-		</control>
-		<control type="group" id="9999">
-			<desription>Menu</desription>
-			<include>MediaMenuOverlay</include>
-			<control type="grouplist">
-				<include>MediaMenuGrouplist</include>
-				<control type="button">
-					<description>Appearance Settings</description>
-					<label>$LOCALIZE[480]</label>
-					<onclick>ReplaceWindow(appearancesettings)</onclick>
-					<include>MediaMenuButton</include>
-				</control>
-				<control type="button">
-					<description>Videos Settings</description>
-					<label>$LOCALIZE[10006]</label>
-					<onclick>ReplaceWindow(videossettings)</onclick>
-					<include>MediaMenuButton</include>
-				</control>
-				<control type="button">
-					<description>PVR Settings</description>
-					<label>$LOCALIZE[31100]</label>
-					<onclick>ReplaceWindow(pvrsettings)</onclick>
-					<include>MediaMenuButton</include>
-				</control>
-				<control type="button">
-					<description>Music Settings</description>
-					<label>$LOCALIZE[2]</label>
-					<onclick>ReplaceWindow(musicsettings)</onclick>
-					<include>MediaMenuButton</include>
-				</control>
-				<control type="button">
-					<description>Pictures Settings</description>
-					<label>$LOCALIZE[1]</label>
-					<onclick>ReplaceWindow(picturessettings)</onclick>
-					<include>MediaMenuButton</include>
-				</control>
-				<control type="button">
-					<description>Service Settings</description>
-					<label>$LOCALIZE[14036]</label>
-					<onclick>ReplaceWindow(servicesettings)</onclick>
-					<include>MediaMenuButton</include>
-				</control>
-				<control type="button">
-					<description>Profiles</description>
-					<label>$LOCALIZE[13200]</label>
-					<onclick>ReplaceWindow(profiles)</onclick>
-					<include>MediaMenuButton</include>
-				</control>
-				<control type="button">
-					<description>System Info</description>
-					<label>$LOCALIZE[13000]</label>
-					<onclick>ReplaceWindow(systemsettings)</onclick>
-					<include>MediaMenuButton</include>
-				</control>
-				<control type="button">
-					<description>System Info</description>
-					<label>$LOCALIZE[130]</label>
-					<onclick>ReplaceWindow(systeminfo)</onclick>
-					<include>MediaMenuButton</include>
-				</control>
-				<control type="button" id="20">
-					<description>Setting level button</description>
-					<label>10037</label>
-					<onclick>SettingsLevelChange</onclick>
-					<include>MediaMenuButton</include>
-					<onclick>SetProperty(MediaMenu,True,Home)</onclick>
-				</control>
-				<control type="button" id="21">
-					<description>Reset button</description>
-					<label>10035</label>
-					<onclick>SettingsReset</onclick>
-					<include>MediaMenuButton</include>
-				</control>
-				<include>MediaMenuBottomButton</include>
-			</control>
-		</control>
-	</controls>
+    <defaultcontrol always="true">3</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <include>MediaMenuReset</include>
+    <controls>
+        <include>GlobalBackground</include>
+        <include>NotificationCenter</include>
+        <control type="group" id="6000">
+            <include>WindowEffect</include>
+            <posy>72</posy>
+            <control type="image">
+                <posx>30</posx>
+                <posy>40</posy>
+                <width>480</width>
+                <height>923</height>
+                <texture>dialogs/background_dark.png</texture>
+                <colordiffuse>BBFFFFFF</colordiffuse>
+            </control>
+            <control type="grouplist" id="3">
+                <description>Button Area</description>
+                <posx>30</posx>
+                <posy>70</posy>
+                <width>480</width>
+                <height>899</height>
+                <itemgap>0</itemgap>
+                <onleft>9000</onleft>
+                <onright>5</onright>
+                <onup>3</onup>
+                <ondown>3</ondown>
+            </control>
+            <control type="group">
+                <posx>510</posx>
+                <posy>40</posy>
+                <control type="image">
+                    <posy>0</posy>
+                    <width>1380</width>
+                    <height>923</height>
+                    <texture border="3">dialogs/background_grey.png</texture>
+                    <colordiffuse>EFFFFFFF</colordiffuse>
+                </control>
+                <control type="grouplist" id="5">
+                    <description>Control Area</description>
+                    <posx>30</posx>
+                    <posy>30</posy>
+                    <width>1300</width>
+                    <height>864</height>
+                    <itemgap>0</itemgap>
+                    <onleft>3</onleft>
+                    <onright>9010</onright>
+                    <onup>5</onup>
+                    <ondown>5</ondown>
+                    <orientation>vertical</orientation>
+                    <pagecontrol>60</pagecontrol>
+                </control>
+            </control>
+            <control type="button" id="7">
+                <description>Default Button</description>
+                <width>1300</width>
+                <align>left</align>
+            </control>
+            <control type="radiobutton" id="8">
+                <description>Default Radio Button</description>
+                <radioposx>1222</radioposx>
+                <width>1300</width>
+                <align>left</align>
+            </control>
+            <control type="spincontrolex" id="9">
+                <description>Default Spin Control</description>
+                <width>1300</width>
+                <align>left</align>
+            </control>
+            <control type="button" id="10">
+                <description>Default Category Button</description>
+                <width>480</width>
+                <align>left</align>
+            </control>
+        </control>
+        <control type="group" id="9999">
+            <desription>Menu</desription>
+            <include>MediaMenuOverlay</include>
+            <control type="grouplist">
+                <include>MediaMenuGrouplist</include>
+                <control type="button">
+                    <description>Appearance Settings</description>
+                    <label>$LOCALIZE[480]</label>
+                    <onclick>ReplaceWindow(appearancesettings)</onclick>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button">
+                    <description>Videos Settings</description>
+                    <label>$LOCALIZE[10006]</label>
+                    <onclick>ReplaceWindow(videossettings)</onclick>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button">
+                    <description>PVR Settings</description>
+                    <label>$LOCALIZE[31100]</label>
+                    <onclick>ReplaceWindow(pvrsettings)</onclick>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button">
+                    <description>Music Settings</description>
+                    <label>$LOCALIZE[2]</label>
+                    <onclick>ReplaceWindow(musicsettings)</onclick>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button">
+                    <description>Pictures Settings</description>
+                    <label>$LOCALIZE[1]</label>
+                    <onclick>ReplaceWindow(picturessettings)</onclick>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button">
+                    <description>Service Settings</description>
+                    <label>$LOCALIZE[14036]</label>
+                    <onclick>ReplaceWindow(servicesettings)</onclick>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button">
+                    <description>Profiles</description>
+                    <label>$LOCALIZE[13200]</label>
+                    <onclick>ReplaceWindow(profiles)</onclick>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button">
+                    <description>System Info</description>
+                    <label>$LOCALIZE[13000]</label>
+                    <onclick>ReplaceWindow(systemsettings)</onclick>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button">
+                    <description>System Info</description>
+                    <label>$LOCALIZE[130]</label>
+                    <onclick>ReplaceWindow(systeminfo)</onclick>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button" id="20">
+                    <description>Setting level button</description>
+                    <label>10037</label>
+                    <onclick>SettingsLevelChange</onclick>
+                    <include>MediaMenuButton</include>
+                    <onclick>SetProperty(MediaMenu,True,Home)</onclick>
+                </control>
+                <control type="button" id="21">
+                    <description>Reset button</description>
+                    <label>10035</label>
+                    <onclick>SettingsReset</onclick>
+                    <include>MediaMenuButton</include>
+                </control>
+                <include>MediaMenuBottomButton</include>
+            </control>
+        </control>
+    </controls>
 </window>

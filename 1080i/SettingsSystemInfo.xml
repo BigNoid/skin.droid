@@ -1,156 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="7">
-	<defaultcontrol always="true">8999</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
-	<previouswindow>Settings</previouswindow>
-	<include>WindowEffect</include>
-	<controls>
-		<include>GlobalBackground</include>
-		<include>NotificationCenter</include>
-		<control type="group" id="6000">
-			<include>WindowEffect</include>
-			<posy>72</posy>
-			<control type="image">
-				<posx>30</posx>
-				<posy>40</posy>
-				<width>480</width>
-				<height>923</height>
-				<texture>dialogs/background_dark.png</texture>
-				<colordiffuse>BBFFFFFF</colordiffuse>
-			</control>
-			<control type="grouplist" id="8999">
-				<posx>30</posx>
-				<posy>70</posy>
-				<width>480</width>
-				<height>899</height>
-				<onup>8999</onup>
-				<ondown>8999</ondown>
-				<onleft>9000</onleft>
-				<onright>9010</onright>
-				<itemgap>0</itemgap>
-				<control type="button" id="95">
-					<description>General</description>
-					<width>480</width>
-					<label>20037</label>
-				</control>
-				<control type="button" id="94">
-					<description>Storage</description>
-					<width>480</width>
-					<label>13277</label>
-				</control>
-				<control type="button" id="96">
-					<description>Network</description>
-					<width>480</width>
-					<label>13279</label>
-				</control>
-				<control type="button" id="97">
-					<description>Video</description>
-					<width>480</width>
-					<label>13280</label>
-				</control>
-				<control type="button" id="98">
-					<description>Hardware</description>
-					<width>480</width>
-					<label>13281</label>
-				</control>
-				<control type="button" id="99">
-					<description>Hardware</description>
-					<width>480</width>
-					<label>19191</label>
-				</control>
-			</control>
-			<control type="group">
-				<posx>510</posx>
-				<posy>40</posy>
-				<control type="image">
-					<posy>0</posy>
-					<width>1380</width>
-					<height>923</height>
-					<texture border="3">dialogs/background_grey.png</texture>
-					<colordiffuse>EFFFFFFF</colordiffuse>
-				</control>
-				<control type="grouplist">
-					<posx>30</posx>
-	                <posy>30</posy>
-	                <width>1300</width>
-	                <height>864</height>
-					<itemgap>0</itemgap>
-					<control type="button" id="2">
-						<description>button 2</description>
-						<width>1440</width>
-						<include>NoTextureButton</include>
-					</control>
-					<control type="button" id="3">
-						<description>button 3</description>
-						<width>1440</width>
-						<include>NoTextureButton</include>
-					</control>
-					<control type="button" id="4">
-						<description>button 4</description>
-						<width>1440</width>
-						<include>NoTextureButton</include>
-					</control>
-					<control type="button" id="5">
-						<description>button 5</description>
-						<width>1440</width>
-						<include>NoTextureButton</include>
-					</control>
-					<control type="button" id="6">
-						<description>button 6</description>
-						<width>1440</width>
-						<include>NoTextureButton</include>
-					</control>
-					<control type="button" id="7">
-						<description>button 7</description>
-						<width>1440</width>
-						<include>NoTextureButton</include>
-					</control>
-					<control type="button" id="8">
-						<description>button 8</description>
-						<width>1440</width>
-						<include>NoTextureButton</include>
-					</control>
-					<control type="button" id="9">
-						<description>button 9</description>
-						<width>1440</width>
-						<include>NoTextureButton</include>
-					</control>
-					<control type="button" id="10">
-						<description>button 10</description>
-						<width>1440</width>
-						<include>NoTextureButton</include>
-					</control>
-					<control type="button" id="11">
-						<description>button 11</description>
-						<width>1440</width>
-						<include>NoTextureButton</include>
-					</control>
-					<control type="button" id="52">
-						<description>XBMC XBE BUILD Version</description>
-						<width>1440</width>
-						<include>NoTextureButton</include>
-					</control>
-					<control type="button" id="21">
-						<description>CPU</description>
-						<width>1440</width>
-						<label>$INFO[System.CPUUsage,$LOCALIZE[13271] ]</label>
-						<label2>$INFO[system.memory(used.percent),$LOCALIZE[31030]: ]</label2>
-						<include>NoTextureButton</include>
-					</control>
-				</control>
-			</control>
-		</control>
-		<control type="panel" id="9000">
-			<posx>0</posx>
-			<posy>990</posy>
-			<width>1920</width>
-			<height>90</height>
-			<onleft>9000</onleft>
-			<onright>9000</onright>
-			<onup>6000</onup>
-			<ondown>9010</ondown>
-			<scrolltime>0</scrolltime>
-			<include>SettingsMenu</include>
-		</control>
-	</controls>
+    <defaultcontrol always="true">8999</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <previouswindow>Settings</previouswindow>
+    <include>WindowEffect</include>
+    <controls>
+        <include>GlobalBackground</include>
+        <include>NotificationCenter</include>
+        <control type="group" id="6000">
+            <include>WindowEffect</include>
+            <posy>72</posy>
+            <control type="image">
+                <posx>30</posx>
+                <posy>40</posy>
+                <width>480</width>
+                <height>923</height>
+                <texture>dialogs/background_dark.png</texture>
+                <colordiffuse>BBFFFFFF</colordiffuse>
+            </control>
+            <control type="grouplist" id="8999">
+                <posx>30</posx>
+                <posy>70</posy>
+                <width>480</width>
+                <height>899</height>
+                <onup>8999</onup>
+                <ondown>8999</ondown>
+                <onleft>9000</onleft>
+                <onright>9010</onright>
+                <itemgap>0</itemgap>
+                <control type="button" id="95">
+                    <description>General</description>
+                    <width>480</width>
+                    <label>20037</label>
+                </control>
+                <control type="button" id="94">
+                    <description>Storage</description>
+                    <width>480</width>
+                    <label>13277</label>
+                </control>
+                <control type="button" id="96">
+                    <description>Network</description>
+                    <width>480</width>
+                    <label>13279</label>
+                </control>
+                <control type="button" id="97">
+                    <description>Video</description>
+                    <width>480</width>
+                    <label>13280</label>
+                </control>
+                <control type="button" id="98">
+                    <description>Hardware</description>
+                    <width>480</width>
+                    <label>13281</label>
+                </control>
+                <control type="button" id="99">
+                    <description>Hardware</description>
+                    <width>480</width>
+                    <label>19191</label>
+                </control>
+            </control>
+            <control type="group">
+                <posx>510</posx>
+                <posy>40</posy>
+                <control type="image">
+                    <posy>0</posy>
+                    <width>1380</width>
+                    <height>923</height>
+                    <texture border="3">dialogs/background_grey.png</texture>
+                    <colordiffuse>EFFFFFFF</colordiffuse>
+                </control>
+                <control type="grouplist">
+                    <posx>30</posx>
+                    <posy>30</posy>
+                    <width>1300</width>
+                    <height>864</height>
+                    <itemgap>0</itemgap>
+                    <control type="button" id="2">
+                        <description>button 2</description>
+                        <width>1440</width>
+                        <include>NoTextureButton</include>
+                    </control>
+                    <control type="button" id="3">
+                        <description>button 3</description>
+                        <width>1440</width>
+                        <include>NoTextureButton</include>
+                    </control>
+                    <control type="button" id="4">
+                        <description>button 4</description>
+                        <width>1440</width>
+                        <include>NoTextureButton</include>
+                    </control>
+                    <control type="button" id="5">
+                        <description>button 5</description>
+                        <width>1440</width>
+                        <include>NoTextureButton</include>
+                    </control>
+                    <control type="button" id="6">
+                        <description>button 6</description>
+                        <width>1440</width>
+                        <include>NoTextureButton</include>
+                    </control>
+                    <control type="button" id="7">
+                        <description>button 7</description>
+                        <width>1440</width>
+                        <include>NoTextureButton</include>
+                    </control>
+                    <control type="button" id="8">
+                        <description>button 8</description>
+                        <width>1440</width>
+                        <include>NoTextureButton</include>
+                    </control>
+                    <control type="button" id="9">
+                        <description>button 9</description>
+                        <width>1440</width>
+                        <include>NoTextureButton</include>
+                    </control>
+                    <control type="button" id="10">
+                        <description>button 10</description>
+                        <width>1440</width>
+                        <include>NoTextureButton</include>
+                    </control>
+                    <control type="button" id="11">
+                        <description>button 11</description>
+                        <width>1440</width>
+                        <include>NoTextureButton</include>
+                    </control>
+                    <control type="button" id="52">
+                        <description>XBMC XBE BUILD Version</description>
+                        <width>1440</width>
+                        <include>NoTextureButton</include>
+                    </control>
+                    <control type="button" id="21">
+                        <description>CPU</description>
+                        <width>1440</width>
+                        <label>$INFO[System.CPUUsage,$LOCALIZE[13271] ]</label>
+                        <label2>$INFO[system.memory(used.percent),$LOCALIZE[31030]: ]</label2>
+                        <include>NoTextureButton</include>
+                    </control>
+                </control>
+            </control>
+        </control>
+        <control type="panel" id="9000">
+            <posx>0</posx>
+            <posy>990</posy>
+            <width>1920</width>
+            <height>90</height>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
+            <onup>6000</onup>
+            <ondown>9010</ondown>
+            <scrolltime>0</scrolltime>
+            <include>SettingsMenu</include>
+        </control>
+    </controls>
 </window>

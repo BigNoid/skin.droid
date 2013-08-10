@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="107">
     <zorder>2</zorder>
-    <include>NotificationEffect</include>    
+    <include>NotificationEffect</include>
     <controls>
         <control type="image">
             <posx>948</posx>

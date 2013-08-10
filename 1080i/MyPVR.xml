@@ -1,123 +1,123 @@
 <window id="600">
-	<defaultcontrol>32</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-	<include>MediaMenuReset</include>
-	<controls>
-		<include>GlobalBackground</include>
-		<include>NotificationCenter</include>
-		<control type="group">
-			<include>WindowEffect</include>
-			<include>PVRViews</include>
-		</control>
-		<include>BreadcrumbsLabel</include>
-		<control type="group" id="9999">
-			<desription>Menu</desription>
-			<include>MediaMenuOverlay</include>
-			<control type="grouplist">
-				<include>MediaMenuGrouplist</include>
-				<control type="button">
-					<description>TV Channels</description>
-					<label>$LOCALIZE[19023]</label>
-					<include>MediaMenuButton</include>
-					<onclick condition="Control.IsVisible(11)">SendClick(32)</onclick>
-					<onclick>SetFocus(32)</onclick>
-				</control>
-				<control type="button">
-					<description>Radio Channels</description>
-					<label>$LOCALIZE[19024]</label>
-					<include>MediaMenuButton</include>
-					<onclick condition="Control.IsVisible(12)">SendClick(33)</onclick>
-					<onclick>SetFocus(33)</onclick>
-				</control>
-				<control type="button">
-					<description>EPG View</description>
-					<label>$INFO[Control.GetLabel(31)]</label>
-					<include>MediaMenuButton</include>
-					<onclick condition="Control.IsVisible(10) | Control.IsVisible(15) | Control.IsVisible(16)">SendClick(31)</onclick>
-					<onclick>SetFocus(31)</onclick>
-				</control>
-				<control type="button">
-					<description>Recordings</description>
-					<label>$LOCALIZE[19163]</label>
-					<include>MediaMenuButton</include>
-					<onclick>SetFocus(34)</onclick>
-				</control>
-				<control type="button">
-					<description>Timer</description>
-					<label>$LOCALIZE[19040]</label>
-					<include>MediaMenuButton</include>
-					<onclick>SetFocus(35)</onclick>
-				</control>
-				<control type="button">
-					<description>Search</description>
-					<label>$LOCALIZE[137]</label>
-					<include>MediaMenuButton</include>
-					<onclick>SetFocus(36)</onclick>
-				</control>
-				<include>MediaMenuBottomButton</include>
-			</control>
-		</control>
+    <defaultcontrol>32</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <include>MediaMenuReset</include>
+    <controls>
+        <include>GlobalBackground</include>
+        <include>NotificationCenter</include>
+        <control type="group">
+            <include>WindowEffect</include>
+            <include>PVRViews</include>
+        </control>
+        <include>BreadcrumbsLabel</include>
+        <control type="group" id="9999">
+            <desription>Menu</desription>
+            <include>MediaMenuOverlay</include>
+            <control type="grouplist">
+                <include>MediaMenuGrouplist</include>
+                <control type="button">
+                    <description>TV Channels</description>
+                    <label>$LOCALIZE[19023]</label>
+                    <include>MediaMenuButton</include>
+                    <onclick condition="Control.IsVisible(11)">SendClick(32)</onclick>
+                    <onclick>SetFocus(32)</onclick>
+                </control>
+                <control type="button">
+                    <description>Radio Channels</description>
+                    <label>$LOCALIZE[19024]</label>
+                    <include>MediaMenuButton</include>
+                    <onclick condition="Control.IsVisible(12)">SendClick(33)</onclick>
+                    <onclick>SetFocus(33)</onclick>
+                </control>
+                <control type="button">
+                    <description>EPG View</description>
+                    <label>$INFO[Control.GetLabel(31)]</label>
+                    <include>MediaMenuButton</include>
+                    <onclick condition="Control.IsVisible(10) | Control.IsVisible(15) | Control.IsVisible(16)">SendClick(31)</onclick>
+                    <onclick>SetFocus(31)</onclick>
+                </control>
+                <control type="button">
+                    <description>Recordings</description>
+                    <label>$LOCALIZE[19163]</label>
+                    <include>MediaMenuButton</include>
+                    <onclick>SetFocus(34)</onclick>
+                </control>
+                <control type="button">
+                    <description>Timer</description>
+                    <label>$LOCALIZE[19040]</label>
+                    <include>MediaMenuButton</include>
+                    <onclick>SetFocus(35)</onclick>
+                </control>
+                <control type="button">
+                    <description>Search</description>
+                    <label>$LOCALIZE[137]</label>
+                    <include>MediaMenuButton</include>
+                    <onclick>SetFocus(36)</onclick>
+                </control>
+                <include>MediaMenuBottomButton</include>
+            </control>
+        </control>
 
-		<!-- Labels and Buttons -->
-		<control type="label" id="29">
-			<description>Empty so we can pass the values up one level</description>
-			<visible>False</visible>
-		</control>
-		<control type="label" id="30">
-			<description>Empty so we can pass the values up one level</description>
-			<visible>False</visible>
-		</control>
-		<control type="button" id="31">
-			<description>EPG View Button</description>
-			<include>NoTextureButton</include>
-			<onfocus>SetFocus(10)</onfocus>
-			<onfocus>SetFocus(16)</onfocus>
-			<visible allowhiddenfocus="true">False</visible>
-		</control>
-		<control type="button" id="32">
-			<description>TV Channel Button</description>
-			<include>NoTextureButton</include>
-			<onfocus>SetFocus(11)</onfocus>
-			<visible allowhiddenfocus="true">False</visible>
-		</control>
-		<control type="button" id="33">
-			<description>Radio Channel Button</description>
-			<include>NoTextureButton</include>
-			<onfocus>SetFocus(11)</onfocus>
-			<visible allowhiddenfocus="true">False</visible>
-		</control>
-		<control type="button" id="34">
-			<description>Recordings Button</description>
-			<include>NoTextureButton</include>
-			<onfocus>SetFocus(13)</onfocus>
-			<visible allowhiddenfocus="true">False</visible>
-		</control>
-		<control type="button" id="35">
-			<description>Timer Button</description>
-			<include>NoTextureButton</include>
-			<onfocus>SetFocus(14)</onfocus>
-			<visible allowhiddenfocus="true">False</visible>
-		</control>
-		<control type="button" id="36">
-			<description>Search Button</description>
-			<include>NoTextureButton</include>
-			<onfocus>SetFocus(17)</onfocus>
-			<visible allowhiddenfocus="true">False</visible>
-		</control>
+        <!-- Labels and Buttons -->
+        <control type="label" id="29">
+            <description>Empty so we can pass the values up one level</description>
+            <visible>False</visible>
+        </control>
+        <control type="label" id="30">
+            <description>Empty so we can pass the values up one level</description>
+            <visible>False</visible>
+        </control>
+        <control type="button" id="31">
+            <description>EPG View Button</description>
+            <include>NoTextureButton</include>
+            <onfocus>SetFocus(10)</onfocus>
+            <onfocus>SetFocus(16)</onfocus>
+            <visible allowhiddenfocus="true">False</visible>
+        </control>
+        <control type="button" id="32">
+            <description>TV Channel Button</description>
+            <include>NoTextureButton</include>
+            <onfocus>SetFocus(11)</onfocus>
+            <visible allowhiddenfocus="true">False</visible>
+        </control>
+        <control type="button" id="33">
+            <description>Radio Channel Button</description>
+            <include>NoTextureButton</include>
+            <onfocus>SetFocus(11)</onfocus>
+            <visible allowhiddenfocus="true">False</visible>
+        </control>
+        <control type="button" id="34">
+            <description>Recordings Button</description>
+            <include>NoTextureButton</include>
+            <onfocus>SetFocus(13)</onfocus>
+            <visible allowhiddenfocus="true">False</visible>
+        </control>
+        <control type="button" id="35">
+            <description>Timer Button</description>
+            <include>NoTextureButton</include>
+            <onfocus>SetFocus(14)</onfocus>
+            <visible allowhiddenfocus="true">False</visible>
+        </control>
+        <control type="button" id="36">
+            <description>Search Button</description>
+            <include>NoTextureButton</include>
+            <onfocus>SetFocus(17)</onfocus>
+            <visible allowhiddenfocus="true">False</visible>
+        </control>
 
-		<!-- Scrollbar visibility controls -->
-		<control type="image" id="9773">
-			<animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
-		</control>
-		<control type="image" id="9772">
-			<animation effect="fade" start="0" end="100" time="0">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-			<visible>Control.HasFocus(60) | !Control.IsVisible(9773)</visible>
-		</control>
-		<control type="image" id="9772">
-			<animation effect="fade" start="0" end="100" time="0">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
-			<visible>!Control.HasFocus(60) + [[Container(10).Scrolling | Container(10).OnScrollNext | Container(10).OnScrollPrevious] | [Container(11).Scrolling | Container(11).OnScrollNext | Container(11).OnScrollPrevious] | [Container(12).Scrolling | Container(12).OnScrollNext | Container(12).OnScrollPrevious] | [Container(13).Scrolling | Container(13).OnScrollNext | Container(13).OnScrollPrevious] | [Container(14).Scrolling | Container(14).OnScrollNext | Container(14).OnScrollPrevious] | [Container(15).Scrolling | Container(15).OnScrollNext | Container(15).OnScrollPrevious] | [Container(16).Scrolling | Container(16).OnScrollNext | Container(16).OnScrollPrevious] | [Container(17).Scrolling | Container(17).OnScrollNext | Container(17).OnScrollPrevious]]</visible>
-		</control>
-	</controls>
+        <!-- Scrollbar visibility controls -->
+        <control type="image" id="9773">
+            <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
+        </control>
+        <control type="image" id="9772">
+            <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+            <visible>Control.HasFocus(60) | !Control.IsVisible(9773)</visible>
+        </control>
+        <control type="image" id="9772">
+            <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
+            <visible>!Control.HasFocus(60) + [[Container(10).Scrolling | Container(10).OnScrollNext | Container(10).OnScrollPrevious] | [Container(11).Scrolling | Container(11).OnScrollNext | Container(11).OnScrollPrevious] | [Container(12).Scrolling | Container(12).OnScrollNext | Container(12).OnScrollPrevious] | [Container(13).Scrolling | Container(13).OnScrollNext | Container(13).OnScrollPrevious] | [Container(14).Scrolling | Container(14).OnScrollNext | Container(14).OnScrollPrevious] | [Container(15).Scrolling | Container(15).OnScrollNext | Container(15).OnScrollPrevious] | [Container(16).Scrolling | Container(16).OnScrollNext | Container(16).OnScrollPrevious] | [Container(17).Scrolling | Container(17).OnScrollNext | Container(17).OnScrollPrevious]]</visible>
+        </control>
+    </controls>
 </window>

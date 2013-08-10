@@ -93,7 +93,7 @@
                         <width>928</width>
                         <height>72</height>
                         <texture>dialogs/listitem_focus.png</texture>
-                            <visible>Control.HasFocus(5)</visible>
+                        <visible>Control.HasFocus(5)</visible>
                     </control>
                     <control type="label">
                         <posx>320</posx>
@@ -121,7 +121,7 @@
                 <width>72</width>
                 <height>72</height>
                 <onclick>pageup(60)</onclick>
-                    </control>
+            </control>
             <control type="image">
                 <posx>600</posx>
                 <posy>1008</posy>
@@ -135,7 +135,7 @@
                 <width>72</width>
                 <height>72</height>
                 <onclick>pagedown(60)</onclick>
-                    </control>
+            </control>
             <control type="image">
                 <posx>58r</posx>
                 <posy>88</posy>

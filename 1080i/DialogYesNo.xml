@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="100">
-	<defaultcontrol always="true">10</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
-	<controls>
-		<include>GlobalOverlay</include>
-		<control type="group">
+    <defaultcontrol always="true">10</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <controls>
+        <include>GlobalOverlay</include>
+        <control type="group">
             <posx>540</posx>
             <posy>324</posy>
             <control type="image">
@@ -28,7 +28,7 @@
                 <textoffsetx>30</textoffsetx>
             </control>
             <control type="image">
-            	<description>Header Line</description>
+                <description>Header Line</description>
                 <posx>12</posx>
                 <posy>72</posy>
                 <width>816</width>
@@ -63,42 +63,42 @@
                 <wrapmultiline>true</wrapmultiline>
             </control>
             <control type="group">
-            	<description>Button Bar</description>
-            	<posx>12</posx>
-            	<posy>367</posy>
-            	<control type="image">
-	            	<description>Line</description>
-	                <height>1</height>
-	                <width>816</width>
-	            	<texture>common/grey.png</texture>
-	            </control>
-	            <control type="grouplist">
-	            	<description>Buttons</description>
-	            	<posx>0</posx>
-	                <posy>1</posy>
-	                <height>70</height>
-	                <width>816</width>
-	                <align>center</align>
-	                <itemgap>0</itemgap>
-	                <orientation>horizontal</orientation>
-	            	<control type="button" id="10">
-						<description>No</description>
-						<include>DefaultButton</include>
-		                <posy>1</posy>
-		                <width>408</width>
-		                <align>center</align>
-		                <label>106</label>
-		            </control>
-					<control type="button" id="11">
-						<description>Yes</description>
-						<include>DefaultButton</include>
-		                <posy>1</posy>
-		                <width>408</width>
-		                <align>center</align>
-		                <label>107</label>
-		            </control>
-	            </control>
+                <description>Button Bar</description>
+                <posx>12</posx>
+                <posy>367</posy>
+                <control type="image">
+                    <description>Line</description>
+                    <height>1</height>
+                    <width>816</width>
+                    <texture>common/grey.png</texture>
+                </control>
+                <control type="grouplist">
+                    <description>Buttons</description>
+                    <posx>0</posx>
+                    <posy>1</posy>
+                    <height>70</height>
+                    <width>816</width>
+                    <align>center</align>
+                    <itemgap>0</itemgap>
+                    <orientation>horizontal</orientation>
+                    <control type="button" id="10">
+                        <description>No</description>
+                        <include>DefaultButton</include>
+                        <posy>1</posy>
+                        <width>408</width>
+                        <align>center</align>
+                        <label>106</label>
+                    </control>
+                    <control type="button" id="11">
+                        <description>Yes</description>
+                        <include>DefaultButton</include>
+                        <posy>1</posy>
+                        <width>408</width>
+                        <align>center</align>
+                        <label>107</label>
+                    </control>
+                </control>
             </control>
         </control>
-	</controls>
+    </controls>
 </window>

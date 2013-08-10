@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="123">
-	<defaultcontrol>5</defaultcontrol>
-	<controls>
+    <defaultcontrol>5</defaultcontrol>
+    <controls>
         <control type="group">
             <control type="image">
                 <posy>72</posy>
@@ -71,45 +71,45 @@
                 <enable>no</enable>
             </control>
         </control>
-		
-		<control type="grouplist" id="5">
-			<description>control area</description>
-			<posx>480</posx>
-			<posy>198</posy>
-			<width>1368</width>
-			<height>720</height>
-			<itemgap>0</itemgap>
+
+        <control type="grouplist" id="5">
+            <description>control area</description>
+            <posx>480</posx>
+            <posy>198</posy>
+            <width>1368</width>
+            <height>720</height>
+            <itemgap>0</itemgap>
             <onleft>9000</onleft>
             <onright>60</onright>
             <orientation>vertical</orientation>
             <pagecontrol>60</pagecontrol>
         </control>
 
-		<control type="button" id="7">
-			<description>Default Button</description>
-			<width>1368</width>
-		</control>
+        <control type="button" id="7">
+            <description>Default Button</description>
+            <width>1368</width>
+        </control>
 
-		<control type="radiobutton" id="8">
-			<description>Default RadioButton</description>
-			<width>1368</width>
-		</control>
+        <control type="radiobutton" id="8">
+            <description>Default RadioButton</description>
+            <width>1368</width>
+        </control>
 
-		<control type="spincontrolex" id="9">
-			<description>Default SpinControlex</description>
-			<width>1368</width>
-		</control>
+        <control type="spincontrolex" id="9">
+            <description>Default SpinControlex</description>
+            <width>1368</width>
+        </control>
 
-		<control type="sliderex" id="10">
-			<description>Default Slider</description>
-			<width>1368</width>
-		</control>
+        <control type="sliderex" id="10">
+            <description>Default Slider</description>
+            <width>1368</width>
+        </control>
 
-		<control type="image" id="11">
-			<description>separator image</description>
-			<height>0</height>
-			<texture>-</texture>
-		</control>
+        <control type="image" id="11">
+            <description>separator image</description>
+            <height>0</height>
+            <texture>-</texture>
+        </control>
         <control type="group">
             <control type="button">
                 <posx>72r</posx>

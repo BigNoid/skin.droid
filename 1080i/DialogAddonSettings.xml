@@ -2,19 +2,19 @@
 <window id="10140">
     <defaultcontrol always="true">9</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <include>DialogEffect</include>    
+    <include>DialogEffect</include>
     <controls>
-    	<include>GlobalOverlay</include>
-    	<control type="button">
-	    	<include>TouchOverlay</include>
-	       	<onclick>Dialog.Close(addonsettings)</onclick>
-	   	</control>
+        <include>GlobalOverlay</include>
+        <control type="button">
+            <include>TouchOverlay</include>
+            <onclick>Dialog.Close(addonsettings)</onclick>
+        </control>
         <control type="group">
             <posx>170</posx>
             <posy>130</posy>
             <control type="button">
-            	<description>Inhibit Overlay Close Action</description>
-            	<posx>-21</posx>
+                <description>Inhibit Overlay Close Action</description>
+                <posx>-21</posx>
                 <posy>-21</posy>
                 <width>1622</width>
                 <height>862</height>
@@ -38,131 +38,131 @@
                 <textoffsetx>8</textoffsetx>
             </control>
             <control type="image">
-				<description>Header Line</description>
-			    <posx>0</posx>
-			    <posy>72</posy>
-			    <width>1580</width>
-			    <height>2</height>
-			    <texture>common/blue2.png</texture>
-			</control>
+                <description>Header Line</description>
+                <posx>0</posx>
+                <posy>72</posy>
+                <width>1580</width>
+                <height>2</height>
+                <texture>common/blue2.png</texture>
+            </control>
             <control type="group">
-            	<posx>20</posx>
-            	<posy>20</posy>
-	            <control type="grouplist" id="9">
-	                <description>Option Categories</description>
-	                <posx>0</posx>
-	                <posy>70</posy>
-	                <width>350</width>
-	                <height>432</height>
-	                <itemgap>0</itemgap>
-	                <onleft>60</onleft>
-	                <onright>2</onright>
-	                <onup>9</onup>
-	                <ondown>9</ondown>
-	            </control>
-	            <control type="group">
-	            	<posx>370</posx>
-	                <posy>0</posy>
-	            	<description>Options</description>
-	            	<control type="grouplist" id="2">
-		                <posx>0</posx>
-		                <posy>70</posy>
-		                <width>1170</width>
-		                <height>600</height>
-		                <itemgap>0</itemgap>
-		                <onup>9001</onup>
-		                <ondown>9001</ondown>
-		                <onleft>9</onleft>
-		                <onright>62</onright>
-		                <pagecontrol>62</pagecontrol>
-		            </control>
-		            <control type="button" id="13">
-		                <description>Default Category Button</description>
-		                <align>left</align>
-		            </control>
-		            <control type="button" id="3">
-		                <description>Default Button</description>
-		                <align>left</align>
-		            </control>
-		            <control type="radiobutton" id="4">
-		                <description>Default RadioButton</description>
-		                <radioposx>1080</radioposx>
-		                <align>left</align>
-		            </control>
-		            <control type="spincontrolex" id="5">
-		                <description>Default spincontrolex</description>
-		                <align>left</align>
-		            </control>
-		            <control type="image" id="6">
-		                <description>Default Seperator</description>
-		                <height>0</height>
-		                <texture>-</texture>
-		            </control>
-		            <control type="label" id="7">
-		                <height>72</height>
-		                <font>Medium_Bold_Floor_Caps</font>
-		                <textcolor>White2</textcolor>
-		            </control>
-		            <control type="sliderex" id="8">
-		                <description>Default Slider</description>
-		            </control>
-		            <control type="scrollbar" id="62">
+                <posx>20</posx>
+                <posy>20</posy>
+                <control type="grouplist" id="9">
+                    <description>Option Categories</description>
+                    <posx>0</posx>
+                    <posy>70</posy>
+                    <width>350</width>
+                    <height>432</height>
+                    <itemgap>0</itemgap>
+                    <onleft>60</onleft>
+                    <onright>2</onright>
+                    <onup>9</onup>
+                    <ondown>9</ondown>
+                </control>
+                <control type="group">
+                    <posx>370</posx>
+                    <posy>0</posy>
+                    <description>Options</description>
+                    <control type="grouplist" id="2">
+                        <posx>0</posx>
+                        <posy>70</posy>
+                        <width>1170</width>
+                        <height>600</height>
+                        <itemgap>0</itemgap>
+                        <onup>9001</onup>
+                        <ondown>9001</ondown>
+                        <onleft>9</onleft>
+                        <onright>62</onright>
+                        <pagecontrol>62</pagecontrol>
+                    </control>
+                    <control type="button" id="13">
+                        <description>Default Category Button</description>
+                        <align>left</align>
+                    </control>
+                    <control type="button" id="3">
+                        <description>Default Button</description>
+                        <align>left</align>
+                    </control>
+                    <control type="radiobutton" id="4">
+                        <description>Default RadioButton</description>
+                        <radioposx>1080</radioposx>
+                        <align>left</align>
+                    </control>
+                    <control type="spincontrolex" id="5">
+                        <description>Default spincontrolex</description>
+                        <align>left</align>
+                    </control>
+                    <control type="image" id="6">
+                        <description>Default Seperator</description>
+                        <height>0</height>
+                        <texture>-</texture>
+                    </control>
+                    <control type="label" id="7">
+                        <height>72</height>
+                        <font>Medium_Bold_Floor_Caps</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                    <control type="sliderex" id="8">
+                        <description>Default Slider</description>
+                    </control>
+                    <control type="scrollbar" id="62">
                         <posx>1164</posx>
                         <posy>70</posy>
                         <height>600</height>
                         <width>6</width>
                         <onleft>2</onleft>
                         <onright>9001</onright>
-      					<showonepage>false</showonepage>
+                        <showonepage>false</showonepage>
                         <texturesliderbackground>-</texturesliderbackground>
                         <texturesliderbar>dialogs/scrollbar.png</texturesliderbar>
                         <texturesliderbarfocus>dialogs/scrollbar.png</texturesliderbarfocus>
                     </control>
-	            </control>
-			</control>   
-			<control type="group">
-				<posy>747</posy>
-				<description>Button Bar</description>
-				<control type="image">
-	            	<description>Line</description>
-	                <height>1</height>
-	                <width>1580</width>
-	            	<texture>common/grey.png</texture>
-	            </control>
-	            <control type="grouplist" id="9001">
-	            	<description>Buttons</description>
-	                <posy>1</posy>
-	                <width>1530</width>
-	                <align>center</align>
-	                <itemgap>0</itemgap>
-	                <onup>2</onup>
-	                <ondown>2</ondown>
-	                <onleft>9001</onleft>
-	                <onright>9001</onright>
-	                <orientation>horizontal</orientation>
-	                <control type="button" id="10">
-	                    <description>OK Button</description>
-	                    <include>DefaultButton</include>
-	                    <width>250</width>
-	                    <label>186</label>
-	                    <align>center</align>
-	                </control>
-	                <control type="button" id="11">
-	                    <description>Cancel Button</description>
-	                    <include>DefaultButton</include>
-	                    <width>250</width>
-	                    <label>222</label>
-	                    <align>center</align>
-	                </control>
-	                <control type="button" id="12">
-	                    <description>Defaults Button</description>
-	                    <include>DefaultButton</include>
-	                    <width>250</width>
-	                    <label>409</label>
-	                    <align>center</align>
-	                </control>
-	            </control>
-			</control>
+                </control>
+            </control>
+            <control type="group">
+                <posy>747</posy>
+                <description>Button Bar</description>
+                <control type="image">
+                    <description>Line</description>
+                    <height>1</height>
+                    <width>1580</width>
+                    <texture>common/grey.png</texture>
+                </control>
+                <control type="grouplist" id="9001">
+                    <description>Buttons</description>
+                    <posy>1</posy>
+                    <width>1530</width>
+                    <align>center</align>
+                    <itemgap>0</itemgap>
+                    <onup>2</onup>
+                    <ondown>2</ondown>
+                    <onleft>9001</onleft>
+                    <onright>9001</onright>
+                    <orientation>horizontal</orientation>
+                    <control type="button" id="10">
+                        <description>OK Button</description>
+                        <include>DefaultButton</include>
+                        <width>250</width>
+                        <label>186</label>
+                        <align>center</align>
+                    </control>
+                    <control type="button" id="11">
+                        <description>Cancel Button</description>
+                        <include>DefaultButton</include>
+                        <width>250</width>
+                        <label>222</label>
+                        <align>center</align>
+                    </control>
+                    <control type="button" id="12">
+                        <description>Defaults Button</description>
+                        <include>DefaultButton</include>
+                        <width>250</width>
+                        <label>409</label>
+                        <align>center</align>
+                    </control>
+                </control>
+            </control>
         </control>
     </controls>
 </window>

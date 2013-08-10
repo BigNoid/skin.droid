@@ -1,291 +1,291 @@
 <window id="610">
-	<defaultcontrol always="true">11</defaultcontrol>
-	<zorder>3</zorder>
-	<include>DialogEffect</include>
-	<controls>
-		<control type="button">
-			<include>TouchOverlay</include>
-			<onclick>Dialog.Close(pvrosdguide)</onclick>
-		</control>
-		<control type="group" id="110">
-			<control type="group">
-				<posx>50</posx>
-				<posy>52</posy>
-				<control type="image">
-					<posx>30</posx>
-					<posy>40</posy>
-					<width>892</width>
-					<height>899</height>
-					<texture>dialogs/background_dark.png</texture>
-					<colordiffuse>EEFFFFFF</colordiffuse>
-				</control>
-				<control type="list" id="11">
-					<posx>30</posx>
-					<posy>40</posy>
-					<width>992</width>
-					<height>899</height>
-					<pagecontrol>60</pagecontrol>
-					<onleft>9010</onleft>
-					<onright>60</onright>
-					<onup>11</onup>
-					<ondown>11</ondown>
-					<viewtype label="535">list</viewtype>
-					<preloaditems>2</preloaditems>
-					<scrolltime tween="cubic" easing="out">500</scrolltime>
-					<itemlayout height="100">
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>892</width>
-							<height>100</height>
-							<texture>dialogs/listitem_nofocus.png</texture>
-						</control>
-						<control type="label">
-							<description>Label</description>
-							<posx>20</posx>
-							<posy>0</posy>
-							<width>635</width>
-							<height>58</height>
-							<font>Medium</font>
-							<align>left</align>
-							<label>$VAR[ListItem.Label]</label>
-							<textcolor>White2</textcolor>
-							<scroll>false</scroll>
-						</control>
-						<control type="label">
-							<description>Time + Genre</description>
-							<posx>20</posx>
-							<posy>44</posy>
-							<width>635</width>
-							<height>50</height>
-							<font>Medium_Small</font>
-							<align>left</align>
-							<label>$VAR[ListItem.StartTime]$VAR[ListItem.EndTime, - ]$VAR[ListItem.Genre, • ]</label>
-							<textcolor>White2</textcolor>
-							<selectedcolor>White</selectedcolor>
-							<scroll>false</scroll>
-						</control>
-						<control type="group">
-							<visible>ListItem.IsRecording</visible>
-							<control type="image">
-								<posx>820</posx>
-								<posy>8</posy>
-								<width>66</width>
-								<height>80</height>
-								<texture>windows/pvr/epg-recording.png</texture>
-							</control>
-							<control type="image">
-								<posx>820</posx>
-								<posy>8</posy>
-								<width>66</width>
-								<height>80</height>
-								<texture>windows/pvr/epg-recording-pulse.png</texture>
-								<animation effect="fade" start="65" end="100" time="750" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
-							</control>
-						</control>
-						<control type="image">
-							<posx>820</posx>
-							<posy>8</posy>
-							<width>66</width>
-							<height>80</height>
-							<texture>windows/pvr/epg-timer.png</texture>
-							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-						</control>
-					</itemlayout>
-					<focusedlayout height="100">
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>892</width>
-							<height>100</height>
-							<texture>dialogs/listitem_nofocus.png</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>892</width>
-							<height>100</height>
-							<texture>dialogs/listitem_focus.png</texture>
-						</control>
-						<control type="label">
-							<description>Label</description>
-							<posx>20</posx>
-							<posy>0</posy>
-							<width>635</width>
-							<height>58</height>
-							<font>Medium</font>
-							<align>left</align>
-							<label>$VAR[ListItem.Label]</label>
-							<textcolor>White2</textcolor>
-							<scroll>false</scroll>
-						</control>
-						<control type="label">
-							<description>Time + Genre</description>
-							<posx>20</posx>
-							<posy>44</posy>
-							<width>635</width>
-							<height>50</height>
-							<font>Medium_Small</font>
-							<align>left</align>
-							<label>$VAR[ListItem.StartTime]$VAR[ListItem.EndTime, - ]$VAR[ListItem.Genre, • ]</label>
-							<textcolor>White2</textcolor>
-							<selectedcolor>White</selectedcolor>
-							<scroll>false</scroll>
-						</control>
-						<control type="group">
-							<visible>ListItem.IsRecording</visible>
-							<control type="image">
-								<posx>820</posx>
-								<posy>8</posy>
-								<width>66</width>
-								<height>80</height>
-								<texture>windows/pvr/epg-recording.png</texture>
-							</control>
-							<control type="image">
-								<posx>820</posx>
-								<posy>8</posy>
-								<width>66</width>
-								<height>80</height>
-								<texture>windows/pvr/epg-recording-pulse.png</texture>
-								<animation effect="fade" start="65" end="100" time="750" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
-							</control>
-						</control>
-						<control type="image">
-							<posx>820</posx>
-							<posy>8</posy>
-							<width>66</width>
-							<height>80</height>
-							<texture>windows/pvr/epg-timer.png</texture>
-							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-						</control>
-					</focusedlayout>
-				</control>
-				<control type="scrollbar" id="60">
-					<description>Scrollbar</description>
-					<posx>916</posx>
-					<posy>40</posy>
-					<height>899</height>
-					<width>6</width>
-					<onleft>11</onleft>
-					<onright>11122</onright>
-					<texturesliderbar>dialogs/scrollbar.png</texturesliderbar>
-					<texturesliderbarfocus>dialogs/scrollbar.png</texturesliderbarfocus>
-					<orientation>vertical</orientation>
-					<showonepage>false</showonepage>
-					<animation effect="fade" start="65" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(60)">Conditional</animation>
-				</control>
-				<!-- Scrollbar visibility controls -->
-				<control type="image" id="9773">
-					<animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
-				</control>
-				<control type="image" id="9772">
-					<animation effect="fade" start="0" end="100" time="0">Visible</animation>
-					<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-					<visible>Control.HasFocus(60) | !Control.IsVisible(9773)</visible>
-				</control>
-				<control type="image" id="9772">
-					<animation effect="fade" start="0" end="100" time="0">Visible</animation>
-					<animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
-					<visible>!Control.HasFocus(60) + [Container(11).Scrolling | Container(11).OnScrollNext | Container(11).OnScrollPrevious]</visible>
-				</control>
-				<control type="group">
-					<description>Channel Info</description>
-					<posx>922</posx>
-					<posy>40</posy>
-					<control type="image">
-						<width>868</width>
-						<height>899</height>
-						<texture>dialogs/background_grey.png</texture>
-						<colordiffuse>EFFFFFFF</colordiffuse>
-					</control>
-					<control type="group">
-						<visible>Container(11).ListItem.HasEpg</visible>
-						<control type="label">
-							<posx>30</posx>
-							<posy>20</posy>
-							<width>806</width>
-							<font>Medium_Caps3</font>
-							<label>$INFO[Container(11).ListItem.Title]</label>
-							<textcolor>White</textcolor>
-							<shadowcolor>22000000</shadowcolor>
-							<scroll>false</scroll>
-						</control>
-						<control type="label">
-							<posx>30</posx>
-							<posy>80</posy>
-							<width>806</width>
-							<font>Smaller</font>
-							<label>$INFO[Container(11).ListItem.StartTime,$LOCALIZE[142] ,]$INFO[Container(11).ListItem.EndTime, - ]$INFO[Container(11).ListItem.StartDate, • ]</label>
-							<textcolor>White2</textcolor>
-							<shadowcolor>22000000</shadowcolor>
-							<scroll>false</scroll>
-						</control>
-						<control type="label">
-							<posx>30</posx>
-							<posy>125</posy>
-							<width>806</width>
-							<font>Smaller</font>
-							<label>$INFO[Container(11).ListItem.NextTitle,$LOCALIZE[19031]: ,]</label>
-							<textcolor>White2</textcolor>
-							<shadowcolor>22000000</shadowcolor>
-							<scroll>false</scroll>
-						</control>
-						<control type="textbox">
-							<description>Plot</description>
-							<posx>30</posx>
-							<posy>200</posy>
-							<width>806</width>
-							<height>550</height>
-							<info>Container(11).ListItem.Plot</info>
-							<align>justify</align>
-							<textcolor>White</textcolor>
-							<shadowcolor>33000000</shadowcolor>
-							<autoscroll delay="13000" time="3000" repeat="13000">True</autoscroll>
-							<font>Normal</font>
-						</control>
-						<control type="label">
-							<description>Empty Plot</description>
-							<visible>IsEmpty(Container(11).ListItem.Plot)</visible>
-							<posx>30</posx>
-							<posy>300</posy>
-							<width>806</width>
-							<height>72</height>
-							<font>Medium_Caps3</font>
-							<label>$LOCALIZE[19055]</label>
-							<textcolor>White</textcolor>
-							<shadowcolor>22000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-						<control type="label">
-							<posx>30</posx>
-							<posy>820</posy>
-							<height>60</height>
-							<width>766</width>
-							<font>Medium_Bold_Floor_Caps</font>
-							<label>$INFO[Container(11).ListItem.Genre]</label>
-							<textcolor>77FFFFFF</textcolor>
-							<shadowcolor>22000000</shadowcolor>
-							<scroll>false</scroll>
-						</control>
-					</control>
-					<control type="label">
-						<visible>!Container(11).ListItem.HasEpg</visible>
-						<posx>30</posx>
-						<posy>300</posy>
-						<width>766</width>
-						<height>72</height>
-						<font>Medium_Caps3</font>
-						<label>$LOCALIZE[19055]</label>
-						<textcolor>White</textcolor>
-						<shadowcolor>22000000</shadowcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<aligny>center</aligny>
-					</control>
-				</control>
-			</control>
-		</control>
-	</controls>
+    <defaultcontrol always="true">11</defaultcontrol>
+    <zorder>3</zorder>
+    <include>DialogEffect</include>
+    <controls>
+        <control type="button">
+            <include>TouchOverlay</include>
+            <onclick>Dialog.Close(pvrosdguide)</onclick>
+        </control>
+        <control type="group" id="110">
+            <control type="group">
+                <posx>50</posx>
+                <posy>52</posy>
+                <control type="image">
+                    <posx>30</posx>
+                    <posy>40</posy>
+                    <width>892</width>
+                    <height>899</height>
+                    <texture>dialogs/background_dark.png</texture>
+                    <colordiffuse>EEFFFFFF</colordiffuse>
+                </control>
+                <control type="list" id="11">
+                    <posx>30</posx>
+                    <posy>40</posy>
+                    <width>992</width>
+                    <height>899</height>
+                    <pagecontrol>60</pagecontrol>
+                    <onleft>9010</onleft>
+                    <onright>60</onright>
+                    <onup>11</onup>
+                    <ondown>11</ondown>
+                    <viewtype label="535">list</viewtype>
+                    <preloaditems>2</preloaditems>
+                    <scrolltime tween="cubic" easing="out">500</scrolltime>
+                    <itemlayout height="100">
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>892</width>
+                            <height>100</height>
+                            <texture>dialogs/listitem_nofocus.png</texture>
+                        </control>
+                        <control type="label">
+                            <description>Label</description>
+                            <posx>20</posx>
+                            <posy>0</posy>
+                            <width>635</width>
+                            <height>58</height>
+                            <font>Medium</font>
+                            <align>left</align>
+                            <label>$VAR[ListItem.Label]</label>
+                            <textcolor>White2</textcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="label">
+                            <description>Time + Genre</description>
+                            <posx>20</posx>
+                            <posy>44</posy>
+                            <width>635</width>
+                            <height>50</height>
+                            <font>Medium_Small</font>
+                            <align>left</align>
+                            <label>$VAR[ListItem.StartTime]$VAR[ListItem.EndTime, - ]$VAR[ListItem.Genre, • ]</label>
+                            <textcolor>White2</textcolor>
+                            <selectedcolor>White</selectedcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="group">
+                            <visible>ListItem.IsRecording</visible>
+                            <control type="image">
+                                <posx>820</posx>
+                                <posy>8</posy>
+                                <width>66</width>
+                                <height>80</height>
+                                <texture>windows/pvr/epg-recording.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>820</posx>
+                                <posy>8</posy>
+                                <width>66</width>
+                                <height>80</height>
+                                <texture>windows/pvr/epg-recording-pulse.png</texture>
+                                <animation effect="fade" start="65" end="100" time="750" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>820</posx>
+                            <posy>8</posy>
+                            <width>66</width>
+                            <height>80</height>
+                            <texture>windows/pvr/epg-timer.png</texture>
+                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="100">
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>892</width>
+                            <height>100</height>
+                            <texture>dialogs/listitem_nofocus.png</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>892</width>
+                            <height>100</height>
+                            <texture>dialogs/listitem_focus.png</texture>
+                        </control>
+                        <control type="label">
+                            <description>Label</description>
+                            <posx>20</posx>
+                            <posy>0</posy>
+                            <width>635</width>
+                            <height>58</height>
+                            <font>Medium</font>
+                            <align>left</align>
+                            <label>$VAR[ListItem.Label]</label>
+                            <textcolor>White2</textcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="label">
+                            <description>Time + Genre</description>
+                            <posx>20</posx>
+                            <posy>44</posy>
+                            <width>635</width>
+                            <height>50</height>
+                            <font>Medium_Small</font>
+                            <align>left</align>
+                            <label>$VAR[ListItem.StartTime]$VAR[ListItem.EndTime, - ]$VAR[ListItem.Genre, • ]</label>
+                            <textcolor>White2</textcolor>
+                            <selectedcolor>White</selectedcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="group">
+                            <visible>ListItem.IsRecording</visible>
+                            <control type="image">
+                                <posx>820</posx>
+                                <posy>8</posy>
+                                <width>66</width>
+                                <height>80</height>
+                                <texture>windows/pvr/epg-recording.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>820</posx>
+                                <posy>8</posy>
+                                <width>66</width>
+                                <height>80</height>
+                                <texture>windows/pvr/epg-recording-pulse.png</texture>
+                                <animation effect="fade" start="65" end="100" time="750" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>820</posx>
+                            <posy>8</posy>
+                            <width>66</width>
+                            <height>80</height>
+                            <texture>windows/pvr/epg-timer.png</texture>
+                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <control type="scrollbar" id="60">
+                    <description>Scrollbar</description>
+                    <posx>916</posx>
+                    <posy>40</posy>
+                    <height>899</height>
+                    <width>6</width>
+                    <onleft>11</onleft>
+                    <onright>11122</onright>
+                    <texturesliderbar>dialogs/scrollbar.png</texturesliderbar>
+                    <texturesliderbarfocus>dialogs/scrollbar.png</texturesliderbarfocus>
+                    <orientation>vertical</orientation>
+                    <showonepage>false</showonepage>
+                    <animation effect="fade" start="65" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(60)">Conditional</animation>
+                </control>
+                <!-- Scrollbar visibility controls -->
+                <control type="image" id="9773">
+                    <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
+                </control>
+                <control type="image" id="9772">
+                    <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+                    <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+                    <visible>Control.HasFocus(60) | !Control.IsVisible(9773)</visible>
+                </control>
+                <control type="image" id="9772">
+                    <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+                    <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
+                    <visible>!Control.HasFocus(60) + [Container(11).Scrolling | Container(11).OnScrollNext | Container(11).OnScrollPrevious]</visible>
+                </control>
+                <control type="group">
+                    <description>Channel Info</description>
+                    <posx>922</posx>
+                    <posy>40</posy>
+                    <control type="image">
+                        <width>868</width>
+                        <height>899</height>
+                        <texture>dialogs/background_grey.png</texture>
+                        <colordiffuse>EFFFFFFF</colordiffuse>
+                    </control>
+                    <control type="group">
+                        <visible>Container(11).ListItem.HasEpg</visible>
+                        <control type="label">
+                            <posx>30</posx>
+                            <posy>20</posy>
+                            <width>806</width>
+                            <font>Medium_Caps3</font>
+                            <label>$INFO[Container(11).ListItem.Title]</label>
+                            <textcolor>White</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>30</posx>
+                            <posy>80</posy>
+                            <width>806</width>
+                            <font>Smaller</font>
+                            <label>$INFO[Container(11).ListItem.StartTime,$LOCALIZE[142] ,]$INFO[Container(11).ListItem.EndTime, - ]$INFO[Container(11).ListItem.StartDate, • ]</label>
+                            <textcolor>White2</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>30</posx>
+                            <posy>125</posy>
+                            <width>806</width>
+                            <font>Smaller</font>
+                            <label>$INFO[Container(11).ListItem.NextTitle,$LOCALIZE[19031]: ,]</label>
+                            <textcolor>White2</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="textbox">
+                            <description>Plot</description>
+                            <posx>30</posx>
+                            <posy>200</posy>
+                            <width>806</width>
+                            <height>550</height>
+                            <info>Container(11).ListItem.Plot</info>
+                            <align>justify</align>
+                            <textcolor>White</textcolor>
+                            <shadowcolor>33000000</shadowcolor>
+                            <autoscroll delay="13000" time="3000" repeat="13000">True</autoscroll>
+                            <font>Normal</font>
+                        </control>
+                        <control type="label">
+                            <description>Empty Plot</description>
+                            <visible>IsEmpty(Container(11).ListItem.Plot)</visible>
+                            <posx>30</posx>
+                            <posy>300</posy>
+                            <width>806</width>
+                            <height>72</height>
+                            <font>Medium_Caps3</font>
+                            <label>$LOCALIZE[19055]</label>
+                            <textcolor>White</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <scroll>false</scroll>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                        </control>
+                        <control type="label">
+                            <posx>30</posx>
+                            <posy>820</posy>
+                            <height>60</height>
+                            <width>766</width>
+                            <font>Medium_Bold_Floor_Caps</font>
+                            <label>$INFO[Container(11).ListItem.Genre]</label>
+                            <textcolor>77FFFFFF</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <scroll>false</scroll>
+                        </control>
+                    </control>
+                    <control type="label">
+                        <visible>!Container(11).ListItem.HasEpg</visible>
+                        <posx>30</posx>
+                        <posy>300</posy>
+                        <width>766</width>
+                        <height>72</height>
+                        <font>Medium_Caps3</font>
+                        <label>$LOCALIZE[19055]</label>
+                        <textcolor>White</textcolor>
+                        <shadowcolor>22000000</shadowcolor>
+                        <scroll>false</scroll>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
 </window>

@@ -147,33 +147,33 @@
                         </control>
                     </itemlayout>
                     <focusedlayout height="72" width="1184">
-                            <control type="image">
-                                <width>1184</width>
-                                <height>72</height>
-                                <include>toast_back</include>
-                            </control>
-                            <control type="image">
-                                <width>1184</width>
-                                <height>72</height>
-                                <texture>dialogs/listitem_focus.png</texture>
-                                <visible>Control.HasFocus(10)</visible>
-                            </control>
-                            <control type="label">
-                                <width>1184</width>
-                                <height>72</height>
-                                <font>Small</font>
-                                <label>$INFO[ListItem.Label]</label>
-                                <textoffsetx>30</textoffsetx>
-                            </control>
-                            <control type="label">
-                                <posx>1184</posx>
-                                <width>1184</width>
-                                <height>72</height>
-                                <font>Small</font>
-                                <align>right</align>
-                                <label>$INFO[ListItem.Label2]</label>
-                                <textoffsetx>30</textoffsetx>
-                            </control>
+                        <control type="image">
+                            <width>1184</width>
+                            <height>72</height>
+                            <include>toast_back</include>
+                        </control>
+                        <control type="image">
+                            <width>1184</width>
+                            <height>72</height>
+                            <texture>dialogs/listitem_focus.png</texture>
+                            <visible>Control.HasFocus(10)</visible>
+                        </control>
+                        <control type="label">
+                            <width>1184</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textoffsetx>30</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>1184</posx>
+                            <width>1184</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <align>right</align>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textoffsetx>30</textoffsetx>
+                        </control>
                     </focusedlayout>
                 </control>
 

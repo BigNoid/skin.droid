@@ -46,7 +46,7 @@
     <!--<variable name="BannerThumbVar">
         <value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
         <value>$INFO[ListItem.Icon]</value>
-    </variable>-->
+        </variable> -->
     <variable name="PosterThumbVar">
         <value condition="Container.Content(genres) + !StringCompare(ListItem.Label,..)">$INFO[ListItem.Label,special://skin/extras/genre/videos/icons/,.jpg]</value>
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
@@ -86,14 +86,14 @@
         <value condition="Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) | Window.IsActive(systeminfo)">SetFocus(6000)</value>
         <value>SetFocus(50)</value>
     </variable>
-    
+
     <variable name="NotificationNowPlaying.Label2">
-    	<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]</value>
-    	<value condition="Player.HasVideo + VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
-    	<value condition="Player.HasVideo + VideoPlayer.Content(movies)">$INFO[VideoPlayer.Tagline]</value>
-    	<value></value>
+        <value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]</value>
+        <value condition="Player.HasVideo + VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
+        <value condition="Player.HasVideo + VideoPlayer.Content(movies)">$INFO[VideoPlayer.Tagline]</value>
+        <value></value>
     </variable>
-   
+
     <variable name="ListItemSeasonVar">
         <value condition="!IntegerGreaterThan(ListItem.Season,9)">$INFO[ListItem.Season,0]</value>
         <value>$INFO[ListItem.Season]</value>
@@ -204,8 +204,8 @@
         <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,24)">overlays/progress/25.png</value>
         <value condition="ListItem.IsResumable + IntegerGreaterThan(ListItem.PercentPlayed,12)">overlays/progress/12.5.png</value>
         <value>$INFO[ListItem.Overlay,overlays/progress/]</value>
-    </variable>-->
-    
+        </variable> -->
+
     <variable name="ListItem.Overlay">
         <value condition="ListItem.IsResumable">overlays/list/resumable.png</value>
         <value>$INFO[ListItem.Overlay,overlays/list/]</value>
@@ -285,7 +285,7 @@
     </variable>
 
     <variable name="BreadcrumbsVar">
-    	<value condition="Container.Content(livetv) | Window.IsActive(tv)">$LOCALIZE[19020]: </value>
+        <value condition="Container.Content(livetv) | Window.IsActive(tv)">$LOCALIZE[19020]: </value>
         <value condition="Container.Content(movies)">$LOCALIZE[20342]: </value>
         <value condition="Container.Content(tvshows) | Container.Content(seasons) | StringCompare(Container.FolderPath,videodb://5/)">$LOCALIZE[20343]: </value>
         <value condition="Container.Content(episodes) + !StringCompare(Container.FolderName,ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle]: </value>
@@ -296,7 +296,7 @@
     </variable>
 
     <variable name="ListOverlayEpisodesVar">
-        <value condition="IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),99)">   99 +</value>
+        <value condition="IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),99)"> 99 +</value>
         <value>$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
     </variable>
 
@@ -358,7 +358,7 @@
         <value condition="Container.Content(movies)">$INFO[ListItem.Year]</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$INFO[Window(Home).Property(NextAired.NextDate)]</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(Window(Home).Property(NextAired.NextDate))">$INFO[ListItem.Premiered]</value>
-        <!--<value>N/A</value>-->
+        <!--<value>N/A</value> -->
     </variable>
 
     <variable name="TimeRemainingVar">

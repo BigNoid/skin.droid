@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="34">
-	<defaultcontrol always="true">4</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
-	<controls>
+    <defaultcontrol always="true">4</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <controls>
         <include>NotificationCenter</include>
         <control type="group" id="6000">
             <include>WindowEffect</include>
@@ -21,74 +21,74 @@
                 <include>toast_back</include>
             </control>
             <control type="radiobutton" id="4">
-				<description>Enable Login Screen</description>
-				<posx>480</posx>
-				<posy>72</posy>
-				<width>1440</width>
+                <description>Enable Login Screen</description>
+                <posx>480</posx>
+                <posy>72</posy>
+                <width>1440</width>
                 <radioposx>1354</radioposx>
                 <label>20096</label>
-				<align>left</align>
-				<onright>9010</onright>
-				<onleft>9000</onleft>
-				<onup>9010</onup>
-				<ondown>2</ondown>
-			</control>
-			<control type="list" id="2">
-				<posx>480</posx>
-				<posy>144</posy>
-				<width>1440</width>
-				<height>846</height>
-				<onleft>9000</onleft>
-				<onright>9010</onright>
-				<onup>4</onup>
-				<ondown>4</ondown>
-				<itemlayout height="72" width="1440">
+                <align>left</align>
+                <onright>9010</onright>
+                <onleft>9000</onleft>
+                <onup>9010</onup>
+                <ondown>2</ondown>
+            </control>
+            <control type="list" id="2">
+                <posx>480</posx>
+                <posy>144</posy>
+                <width>1440</width>
+                <height>846</height>
+                <onleft>9000</onleft>
+                <onright>9010</onright>
+                <onup>4</onup>
+                <ondown>4</ondown>
+                <itemlayout height="72" width="1440">
                     <control type="image">
                         <width>1440</width>
                         <height>72</height>
                         <include>toast_back</include>
                     </control>
                     <control type="label">
-						<width>1440</width>
+                        <width>1440</width>
                         <textoffsetx>30</textoffsetx>
-						<info>ListItem.Label</info>
+                        <info>ListItem.Label</info>
                         <textcolor>White2</textcolor>
-					</control>
-					<control type="label">
-						<posx>1440</posx>
-						<width>1440</width>
-						<align>right</align>
-						<info>ListItem.Label2</info>
+                    </control>
+                    <control type="label">
+                        <posx>1440</posx>
+                        <width>1440</width>
+                        <align>right</align>
+                        <info>ListItem.Label2</info>
                         <textoffsetx>30</textoffsetx>
                         <textcolor>White2</textcolor>
                     </control>
-				</itemlayout>
+                </itemlayout>
                 <focusedlayout height="72" width="1440">
-                        <control type="image">
-                            <width>1440</width>
-                            <height>72</height>
-                            <include>toast_back</include>
-                        </control>
-                        <control type="image">
-                            <width>1440</width>
-                            <height>72</height>
-                            <texture border="8">dialogs/button_focus.png</texture>
-                            <visible>Control.HasFocus(2)</visible>
-                        </control>
-                        <control type="label">
-                            <width>1440</width>
-                            <info>ListItem.Label</info>
-                            <textoffsetx>30</textoffsetx>
-                        </control>
-                        <control type="label">
-                            <posx>1440</posx>
-                            <width>1440</width>
-                            <align>right</align>
-                            <info>ListItem.Label2</info>
-                            <textoffsetx>30</textoffsetx>
-                        </control>
-				</focusedlayout>
-			</control>
+                    <control type="image">
+                        <width>1440</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <width>1440</width>
+                        <height>72</height>
+                        <texture border="8">dialogs/button_focus.png</texture>
+                        <visible>Control.HasFocus(2)</visible>
+                    </control>
+                    <control type="label">
+                        <width>1440</width>
+                        <info>ListItem.Label</info>
+                        <textoffsetx>30</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>1440</posx>
+                        <width>1440</width>
+                        <align>right</align>
+                        <info>ListItem.Label2</info>
+                        <textoffsetx>30</textoffsetx>
+                    </control>
+                </focusedlayout>
+            </control>
         </control>
         <control type="panel" id="9000">
             <posx>0</posx>

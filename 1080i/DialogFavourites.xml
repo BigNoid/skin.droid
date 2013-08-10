@@ -6,15 +6,15 @@
     <controls>
         <include>GlobalOverlay</include>
         <control type="button">
-	    	<include>TouchOverlay</include>
-	       	<onclick>Dialog.Close(favourites)</onclick>
-	   	</control>
+            <include>TouchOverlay</include>
+            <onclick>Dialog.Close(favourites)</onclick>
+        </control>
         <control type="group">
             <posx>320</posx>
             <posy>180</posy>
             <control type="button">
-            	<description>Inhibit Overlay Close Action</description>
-            	<posx>-21</posx>
+                <description>Inhibit Overlay Close Action</description>
+                <posx>-21</posx>
                 <posy>-21</posy>
                 <width>1322</width>
                 <height>762</height>
@@ -41,7 +41,7 @@
                 <enable>no</enable>
             </control>
             <control type="image">
-            	<description>Header Line</description>
+                <description>Header Line</description>
                 <posx>0</posx>
                 <posy>72</posy>
                 <width>1280</width>

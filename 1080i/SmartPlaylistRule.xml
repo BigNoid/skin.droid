@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="129">
-	<defaultcontrol always="true">15</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+    <defaultcontrol always="true">15</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
     <animation type="WindowOpen" reversible="false">
         <effect type="fade" start="0" end="100" time="200" />
     </animation>
@@ -47,8 +47,8 @@
             </control>
         </control>
         <control type="group" id="9002">
-			<posx>480</posx>
-			<posy>72</posy>
+            <posx>480</posx>
+            <posy>72</posy>
             <control type="button" id="2">
                 <description>header label</description>
                 <width>1440</width>
@@ -72,13 +72,13 @@
                 <height>576</height>
                 <include>toast_back</include>
             </control>
-			<control type="button" id="0">
-				<description>Rule match label</description>
-				<posx>0</posx>
-				<posy>126</posy>
-				<width>1440</width>
-				<disabledcolor>Blue2</disabledcolor>
-				<label>21422</label>
+            <control type="button" id="0">
+                <description>Rule match label</description>
+                <posx>0</posx>
+                <posy>126</posy>
+                <width>1440</width>
+                <disabledcolor>Blue2</disabledcolor>
+                <label>21422</label>
                 <enable>no</enable>
             </control>
             <control type="spincontrolex" id="15">
@@ -122,28 +122,28 @@
                 <textoffsetx>30</textoffsetx>
             </control>
             <control type="edit" id="17">
-				<description>Value Button</description>
-				<posx>0</posx>
-				<posy>270</posy>
-				<width>1184</width>
-				<label>-</label>
-				<onup>15</onup>
-				<onleft>9000</onleft>
-				<onright>20</onright>
-				<ondown>15</ondown>
+                <description>Value Button</description>
+                <posx>0</posx>
+                <posy>270</posy>
+                <width>1184</width>
+                <label>-</label>
+                <onup>15</onup>
+                <onleft>9000</onleft>
+                <onright>20</onright>
+                <ondown>15</ondown>
                 <hinttext>21420</hinttext>
-			</control>
-			<control type="button" id="20">
-				<description>Browse Button</description>
-				<posx>1184</posx>
-				<posy>270</posy>
-				<width>256</width>
-				<label>1024</label>
-				<onup>16</onup>
-				<onleft>17</onleft>
-				<onright>9000</onright>
-				<ondown>16</ondown>
-			</control>
-		</control>
-	</controls>
+            </control>
+            <control type="button" id="20">
+                <description>Browse Button</description>
+                <posx>1184</posx>
+                <posy>270</posy>
+                <width>256</width>
+                <label>1024</label>
+                <onup>16</onup>
+                <onleft>17</onleft>
+                <onright>9000</onright>
+                <ondown>16</ondown>
+            </control>
+        </control>
+    </controls>
 </window>

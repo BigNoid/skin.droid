@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="131">
-	<defaultcontrol always="true">5</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
+    <defaultcontrol always="true">5</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
     <animation type="WindowOpen" reversible="false">
         <effect type="fade" start="0" end="100" time="200" />
     </animation>
@@ -97,5 +97,5 @@
                 <width>1440</width>
             </control>
         </control>
-	</controls>
+    </controls>
 </window>

@@ -139,44 +139,44 @@
         </control>
         <control type="group" id="9999">
             <include>MediaMenuOverlay</include>
-        	<control type="grouplist">
-	            <include>MediaMenuGrouplist</include>
-	            <control type="button" id="2">
-	                <description>View</description>
-	                <include>MediaMenuButton</include>
-	            </control>
-	            <control type="button" id="3">
-	                <description>Sort</description>
-	                <include>MediaMenuButton</include>
-	            </control>
-	            <control type="togglebutton" id="4">
-	                <description>Ascending</description>
-	                <label>584</label>
-	                <altlabel>585</altlabel>
-	                <include>MediaMenuButton</include>
-	            </control>
-	            <control type="radiobutton" id="20">
-	                <description>Shuffle</description>
-	                <label>191</label>
-	                <include>MediaMenuButton</include>
-	            </control>
-	            <control type="button" id="21">
-	                <description>Save</description>
-	                <label>190</label>
-	                <include>MediaMenuButton</include>
-	            </control>
-	            <control type="button" id="22">
-	                <description>Clear</description>
-	                <label>192</label>
-	                <include>MediaMenuButton</include>
-	            </control>
-	            <control type="button" id="23">
-	                <description>Play</description>
-	                <label>208</label>
-	                <include>MediaMenuButton</include>
-	            </control>
-	            <include>MediaMenuBottomButton</include>
-        	</control>
+            <control type="grouplist">
+                <include>MediaMenuGrouplist</include>
+                <control type="button" id="2">
+                    <description>View</description>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button" id="3">
+                    <description>Sort</description>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="togglebutton" id="4">
+                    <description>Ascending</description>
+                    <label>584</label>
+                    <altlabel>585</altlabel>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="radiobutton" id="20">
+                    <description>Shuffle</description>
+                    <label>191</label>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button" id="21">
+                    <description>Save</description>
+                    <label>190</label>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button" id="22">
+                    <description>Clear</description>
+                    <label>192</label>
+                    <include>MediaMenuButton</include>
+                </control>
+                <control type="button" id="23">
+                    <description>Play</description>
+                    <label>208</label>
+                    <include>MediaMenuButton</include>
+                </control>
+                <include>MediaMenuBottomButton</include>
+            </control>
         </control>
     </controls>
 </window>

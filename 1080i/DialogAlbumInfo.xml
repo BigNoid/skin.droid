@@ -394,11 +394,11 @@
                     </control>
                 </itemlayout>
                 <focusedlayout width="600" height="72">
-                        <control type="image">
-                            <width>600</width>
-                            <height>72</height>
-                            <include>toast_back</include>
-                        </control>
+                    <control type="image">
+                        <width>600</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
                     <control type="group">
                         <visible>!Control.HasFocus(50)</visible>
                         <control type="label">

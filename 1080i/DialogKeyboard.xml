@@ -4,16 +4,16 @@
     <allowoverlay>yes</allowoverlay>
     <zorder>3</zorder>
     <controls>
-    	<include>GlobalOverlay</include>
-    	<control type="button">
-	    	<include>TouchOverlay</include>
-	       	<onclick>Dialog.Close(virtualkeyboard)</onclick>
-	   	</control>
+        <include>GlobalOverlay</include>
+        <control type="button">
+            <include>TouchOverlay</include>
+            <onclick>Dialog.Close(virtualkeyboard)</onclick>
+        </control>
         <control type="group">
             <posx>0</posx>
             <posy>540</posy>
             <animation effect="slide" start="0,507" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
-    		<animation effect="slide" end="0,507" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
+            <animation effect="slide" end="0,507" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
             <animation effect="slide" start="0" end="-1024" time="500" tween="cubic" easing="out" condition="Window.IsVisible(numericinput)">Conditional</animation>
             <control type="image">
                 <posx>0</posx>

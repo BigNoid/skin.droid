@@ -17,7 +17,7 @@
             </animation>
             <animation type="WindowClose" reversible="false">
                 <effect type="zoom" start="100" end="50" center="940,400" easing="in" tween="cubic" time="200" />
-                <effect type="fade" start="100" end="0" time="200"/>
+                <effect type="fade" start="100" end="0" time="200" />
             </animation>
             <control type="image">
                 <posx>-21</posx>

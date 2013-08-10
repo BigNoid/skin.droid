@@ -229,20 +229,20 @@
                         <texture border="25">views/showcase/infopanel.png</texture>
                     </control>
                 </control>
-                <!-- 
-                <control type="image">
+                <!--
+                    <control type="image">
                     <posy>0</posy>
                     <animation effect="slide" start="0,0" end="0,20" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
                     <include>Dimensions_Fullscreen</include>
                     <texture border="1">background/floor_back.png</texture>
                     <animation type="WindowOpen" reversible="false">
-                        <effect type="fade" start="0" end="100" time="300" />
+                    <effect type="fade" start="0" end="100" time="300" />
                     </animation>
                     <animation type="WindowClose" reversible="false">
-                        <effect type="fade" start="100" end="0" time="300" />
+                    <effect type="fade" start="100" end="0" time="300" />
                     </animation>
-                </control>
-                <control type="image">
+                    </control>
+                    <control type="image">
                     <posx>185</posx>
                     <posy>740</posy>
                     <width>1550</width>
@@ -251,25 +251,25 @@
                     <colordiffuse>$VAR[ThemeColorVar]</colordiffuse>
                     <animation effect="slide" start="0,0" end="0,20" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
                     <animation type="WindowOpen" reversible="false">
-                        <effect type="fade" start="0" end="100" time="300" />
+                    <effect type="fade" start="0" end="100" time="300" />
                     </animation>
                     <animation type="WindowClose" reversible="false">
-                        <effect type="fade" start="100" end="0" time="300" />
+                    <effect type="fade" start="100" end="0" time="300" />
                     </animation>
-                </control>
-                <control type="image">
+                    </control>
+                    <control type="image">
                     <posy>160r</posy>
                     <width>1920</width>
                     <height>160</height>
                     <texture>background/bottom_fade_under.png</texture>
-                </control>
-                <control type="image">
+                    </control>
+                    <control type="image">
                     <posy>219r</posy>
                     <width>1920</width>
                     <height>219</height>
                     <texture>background/bottom_fade.png</texture>
-                </control>
-                 -->
+                    </control>
+                -->
             </control>
         </control>
     </include>
@@ -541,7 +541,7 @@
                     </control>
                 </control>
                 <control type="group">
-                	<description>Media Menu Button</description>
+                    <description>Media Menu Button</description>
                     <width>90</width>
                     <height>68</height>
                     <visible>Control.IsVisible(9999)</visible>
@@ -719,7 +719,7 @@
             <effect type="fade" start="100" end="0" time="200" />
         </animation>
     </include>
- 
+
     <include name="NotificationEffect">
         <animation effect="slide" start="0,-80" end="0,0" time="500" tween="cubic" easing="out" delay="200">WindowOpen</animation>
         <animation effect="slide" end="0,-80" start="0,0" time="500" tween="cubic" easing="out" delay="200">WindowClose</animation>
@@ -751,27 +751,27 @@
         </animation>
         <animation type="Conditional" reversible="false" condition="IsEmpty(Window(Home).Property(MediaMenu))">
             <effect type="zoom" start="100" end="0" center="auto" easing="in" tween="cubic" time="200" />
-            <effect type="fade" start="100" end="0" time="200"/>
+            <effect type="fade" start="100" end="0" time="200" />
         </animation>
     </include>
-    
+
     <include name="MediaMenuReset">
-    	<onunload>ClearProperty(MediaMenu,Home)</onunload>
+        <onunload>ClearProperty(MediaMenu,Home)</onunload>
     </include>
-    
+
     <include name="MediaMenuOverlay">
-    	<control type="button">
-    		<description>Touch Overlay</description>
-        	<posy>0</posy>
-        	<posx>0</posx>
-        	<width>1920</width>
-        	<height>1080</height>
-        	<include>NoTextureButton</include>
-        	<onclick>ClearProperty(MediaMenu,Home)</onclick>
-        	<visible>!IsEmpty(Window(Home).Property(MediaMenu))</visible>
-       	</control>
+        <control type="button">
+            <description>Touch Overlay</description>
+            <posy>0</posy>
+            <posx>0</posx>
+            <width>1920</width>
+            <height>1080</height>
+            <include>NoTextureButton</include>
+            <onclick>ClearProperty(MediaMenu,Home)</onclick>
+            <visible>!IsEmpty(Window(Home).Property(MediaMenu))</visible>
+        </control>
     </include>
-    
+
     <include name="MediaMenuButton">
         <width>414</width>
         <align>left</align>
@@ -795,7 +795,7 @@
             <texturenofocus border="14,14,14,3">dialogs/contextmenu_bottom.png</texturenofocus>
             <disabledcolor>$VAR[ThemeColorVar]</disabledcolor>
             <enable>no</enable>
-            </control>
+        </control>
     </include>
 
     <include name="KeyboardSmall">
@@ -836,7 +836,7 @@
     <include name="toast_back">
         <texture border="3">dialogs/toast_back_blue.png</texture>
     </include>
-    
+
     <include name="FloorFlagsBack">
         <control type="grouplist">
             <posx>0</posx>
@@ -892,7 +892,7 @@
         <control type="group">
             <visible>!Control.IsVisible(53)</visible>
             <control type="button" id="14000">
-            	<posx>20</posx>
+                <posx>20</posx>
                 <posy>75r</posy>
                 <width>1890</width>
                 <height>90</height>
@@ -905,7 +905,7 @@
                 <texturenofocus border="18">-</texturenofocus>
                 <disabledcolor>White2</disabledcolor>
                 <enable>no</enable>
-                <visible>![Control.IsVisible(50) | Control.IsVisible(51)  | Control.IsVisible(55)]</visible>
+                <visible>![Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(55)]</visible>
                 <include>WindowEffect</include>
             </control>
             <control type="button" id="14001">
@@ -933,7 +933,7 @@
                 <textoffsetx>18</textoffsetx>
                 <disabledcolor>White2</disabledcolor>
                 <enable>no</enable>
-                <visible>[Control.IsVisible(50) | Control.IsVisible(51)  | Control.IsVisible(55)] + ![Container.Content(livetv) | Window.IsActive(tv) | Control.IsVisible(14003)]</visible>
+                <visible>[Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(55)] + ![Container.Content(livetv) | Window.IsActive(tv) | Control.IsVisible(14003)]</visible>
                 <include>WindowEffect</include>
             </control>
             <control type="button" id="14003">
@@ -957,123 +957,123 @@
         <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
         <bordersize>21</bordersize>
     </include>
-    
+
     <include name="SliderControl">
-	    <control type="group" id="4010">
-	    	<description>Slider Control</description>
-	        <posx>0</posx>
-	        <posy>984</posy>
-	        <animation type="VisibleChange" reversible="false">
-	            <effect type="fade" start="0" end="100" time="200" />
-	        </animation>
-	        <control type="image">
-	            <posx>0</posx>
-	            <posy>-184</posy>
-	            <width>1920</width>
-	            <height>280</height>
-	            <texture>views/landscape/shade.png</texture>
-	        </control>
-	        <control type="label">
-	            <posx>0</posx>
-	            <posy>-60</posy>
-	            <width>1920</width>
-	            <height>96</height>
-	            <align>left</align>
-	            <font>Medium_Caps</font>
-	            <textcolor>White2</textcolor>
-	            <label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
-	            <textoffsetx>30</textoffsetx>
-	            <visible>Player.ChapterCount</visible>
-	        </control>
-	        <control type="label">
-	            <posx>256</posx>
-	            <posy>0</posy>
-	            <width>256</width>
-	            <height>96</height>
-	            <align>right</align>
-	            <font>Medium_Caps3</font>
-	            <textcolor>White2</textcolor>
-	            <label>$INFO[Player.Time]</label>
-	            <textoffsetx>30</textoffsetx>
-	        </control>
-	        <control type="label">
-	            <posx>1644</posx>
-	            <posy>0</posy>
-	            <width>1680</width>
-	            <height>96</height>
-	            <font>Medium_Caps3</font>
-	            <label>$VAR[TimeRemainingVar]</label>
-	            <textcolor>White2</textcolor>
-	            <textoffsetx>30</textoffsetx>
-	        </control>
-	        <control type="progress">
-	            <description>Progress Bar</description>
-	            <posx>260</posx>
-	            <posy>40</posy>
-	            <width>1400</width>
-	            <info>Player.ProgressCache</info>
-	            <visible>true</visible>
-	            <midtexture border="1">common/texturesliderbar.png</midtexture>
-	            <righttexture border="1">common/texturesliderbar.png</righttexture>
-	        </control>
-	        <control type="progress" id="23">
-	            <description>Progress Bar</description>
-	            <posx>260</posx>
-	            <posy>40</posy>
-	            <width>1400</width>
-	            <info>Player.Progress</info>
-	            <visible>true</visible>
-	            <texturebg border="2">settings/texturebg_cache.png</texturebg>
-	            <righttexture border="0,0,26,0">-</righttexture>
-	            <colordiffuse>Blue2</colordiffuse>
-	        </control>
-	        <control type="slider" id="24">
-	            <description>Seekbar</description>
-	            <posx>260</posx>
-	            <posy>20</posy>
-	            <width>1400</width>
-	            <height>66</height>
-	            <texturesliderbar border="2">settings/texturebg_slider.png</texturesliderbar>
-	            <textureslidernib>osd/slider_nf.png</textureslidernib>
-	            <textureslidernibfocus>osd/slider.png</textureslidernibfocus>
-	            <controloffsetx>0</controloffsetx>
-	            <controloffsety>0</controloffsety>
-	            <action>seek</action>
-	            <info>player.progress</info>
-	            <visible>true</visible>
-	            <colordiffuse>Blue2</colordiffuse>
-	        </control>
-	    </control>
-	</include>
-	
+        <control type="group" id="4010">
+            <description>Slider Control</description>
+            <posx>0</posx>
+            <posy>984</posy>
+            <animation type="VisibleChange" reversible="false">
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <control type="image">
+                <posx>0</posx>
+                <posy>-184</posy>
+                <width>1920</width>
+                <height>280</height>
+                <texture>views/landscape/shade.png</texture>
+            </control>
+            <control type="label">
+                <posx>0</posx>
+                <posy>-60</posy>
+                <width>1920</width>
+                <height>96</height>
+                <align>left</align>
+                <font>Medium_Caps</font>
+                <textcolor>White2</textcolor>
+                <label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
+                <textoffsetx>30</textoffsetx>
+                <visible>Player.ChapterCount</visible>
+            </control>
+            <control type="label">
+                <posx>256</posx>
+                <posy>0</posy>
+                <width>256</width>
+                <height>96</height>
+                <align>right</align>
+                <font>Medium_Caps3</font>
+                <textcolor>White2</textcolor>
+                <label>$INFO[Player.Time]</label>
+                <textoffsetx>30</textoffsetx>
+            </control>
+            <control type="label">
+                <posx>1644</posx>
+                <posy>0</posy>
+                <width>1680</width>
+                <height>96</height>
+                <font>Medium_Caps3</font>
+                <label>$VAR[TimeRemainingVar]</label>
+                <textcolor>White2</textcolor>
+                <textoffsetx>30</textoffsetx>
+            </control>
+            <control type="progress">
+                <description>Progress Bar</description>
+                <posx>260</posx>
+                <posy>40</posy>
+                <width>1400</width>
+                <info>Player.ProgressCache</info>
+                <visible>true</visible>
+                <midtexture border="1">common/texturesliderbar.png</midtexture>
+                <righttexture border="1">common/texturesliderbar.png</righttexture>
+            </control>
+            <control type="progress" id="23">
+                <description>Progress Bar</description>
+                <posx>260</posx>
+                <posy>40</posy>
+                <width>1400</width>
+                <info>Player.Progress</info>
+                <visible>true</visible>
+                <texturebg border="2">settings/texturebg_cache.png</texturebg>
+                <righttexture border="0,0,26,0">-</righttexture>
+                <colordiffuse>Blue2</colordiffuse>
+            </control>
+            <control type="slider" id="24">
+                <description>Seekbar</description>
+                <posx>260</posx>
+                <posy>20</posy>
+                <width>1400</width>
+                <height>66</height>
+                <texturesliderbar border="2">settings/texturebg_slider.png</texturesliderbar>
+                <textureslidernib>osd/slider_nf.png</textureslidernib>
+                <textureslidernibfocus>osd/slider.png</textureslidernibfocus>
+                <controloffsetx>0</controloffsetx>
+                <controloffsety>0</controloffsety>
+                <action>seek</action>
+                <info>player.progress</info>
+                <visible>true</visible>
+                <colordiffuse>Blue2</colordiffuse>
+            </control>
+        </control>
+    </include>
+
     <include name="ShutdownMenuButton">
-		<texturefocus border="14,0,14,2">dialogs/shutdown_focus.png</texturefocus>
-		<texturenofocus border="14,0,14,2">dialogs/shutdown_nofocus.png</texturenofocus>
+        <texturefocus border="14,0,14,2">dialogs/shutdown_focus.png</texturefocus>
+        <texturenofocus border="14,0,14,2">dialogs/shutdown_nofocus.png</texturenofocus>
     </include>
-    
+
     <include name="VideoOSDButton">
-    	<width>96</width>
-		<height>96</height>
-		<font>-</font>
-    	<texturenofocus border="3" flipx="true">dialogs/toast_back_blue.png</texturenofocus>
-    	<texturefocus>dialogs/listitem_focus.png</texturefocus>
+        <width>96</width>
+        <height>96</height>
+        <font>-</font>
+        <texturenofocus border="3" flipx="true">dialogs/toast_back_blue.png</texturenofocus>
+        <texturefocus>dialogs/listitem_focus.png</texturefocus>
     </include>
-    
+
     <include name="NoTextureButton">
-    	<texturenofocus></texturenofocus>
-    	<texturefocus></texturefocus>
+        <texturenofocus></texturenofocus>
+        <texturefocus></texturefocus>
     </include>
-    
+
     <include name="DefaultButton">
-       	<texturenofocus></texturenofocus>
-       	<texturefocus>dialogs/button_focus.png</texturefocus>
+        <texturenofocus></texturenofocus>
+        <texturefocus>dialogs/button_focus.png</texturefocus>
     </include>
-    
+
     <include name="TouchOverlay">
-    	<posy>0</posy>
-       	<posx>0</posx>
-       	<width>1920</width>
-       	<height>1080</height>
-       	<include>NoTextureButton</include>
+        <posy>0</posy>
+        <posx>0</posx>
+        <width>1920</width>
+        <height>1080</height>
+        <include>NoTextureButton</include>
     </include>
 </includes>

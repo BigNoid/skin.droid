@@ -6,9 +6,9 @@
     <controls>
         <include>GlobalOverlay</include>
         <control type="button">
-	    	<include>TouchOverlay</include>
-	       	<onclick>Dialog.Close(shutdownmenu)</onclick>
-	   	</control>
+            <include>TouchOverlay</include>
+            <onclick>Dialog.Close(shutdownmenu)</onclick>
+        </control>
         <control type="grouplist" id="3110">
             <posx>560</posx>
             <posy>0</posy>
@@ -30,7 +30,7 @@
                 <aligny>top</aligny>
                 <textoffsety>24</textoffsety>
                 <texturefocus border="14,14,14,3">dialogs/shutdown_top.png</texturefocus>
-	    		<texturenofocus border="14,14,14,3">dialogs/shutdown_top.png</texturenofocus>
+                <texturenofocus border="14,14,14,3">dialogs/shutdown_top.png</texturenofocus>
                 <disabledcolor>$VAR[ThemeColorVar]</disabledcolor>
                 <enable>no</enable>
             </control>
@@ -132,7 +132,7 @@
                 <label>$LOCALIZE[31049]</label>
                 <onclick>Dialog.Close(all,true)</onclick>
                 <onclick>ReloadSkin</onclick>
-                <onclick>Dialog.Close(111)</onclick> 
+                <onclick>Dialog.Close(111)</onclick>
             </control>
             <control type="button" id="3121">
                 <description>Bottombutton</description>

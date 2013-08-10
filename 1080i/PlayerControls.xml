@@ -5,9 +5,9 @@
     <controls>
         <include>GlobalOverlay</include>
         <control type="button">
-	    	<include>TouchOverlay</include>
-	       	<onclick>Dialog.Close(playercontrols)</onclick>
-	   	</control>
+            <include>TouchOverlay</include>
+            <onclick>Dialog.Close(playercontrols)</onclick>
+        </control>
         <control type="group">
             <posx>548</posx>
             <posy>310</posy>

@@ -175,26 +175,26 @@
             <include>BreadcrumbsLabel</include>
             <control type="group" id="9999">
                 <include>MediaMenuOverlay</include>
-	        	<control type="grouplist">
-		            <include>MediaMenuGrouplist</include>
-	                <control type="button" id="6">
-	                    <description>Open Button</description>
-	                    <label>31019</label>
-	                    <include>MediaMenuButton</include>
-	                </control>
-	                <control type="button" id="7">
-	                    <description>Save Button</description>
-	                    <label>31020</label>
-	                    <include>MediaMenuButton</include>
-	                </control>
-	                <control type="button" id="8">
-	                    <description>Clear button</description>
-	                    <label>31021</label>
-	                    <include>MediaMenuButton</include>
-	                </control>
-	                <include>MediaMenuBottomButton</include>
-	            </control>
-           </control>
+                <control type="grouplist">
+                    <include>MediaMenuGrouplist</include>
+                    <control type="button" id="6">
+                        <description>Open Button</description>
+                        <label>31019</label>
+                        <include>MediaMenuButton</include>
+                    </control>
+                    <control type="button" id="7">
+                        <description>Save Button</description>
+                        <label>31020</label>
+                        <include>MediaMenuButton</include>
+                    </control>
+                    <control type="button" id="8">
+                        <description>Clear button</description>
+                        <label>31021</label>
+                        <include>MediaMenuButton</include>
+                    </control>
+                    <include>MediaMenuBottomButton</include>
+                </control>
+            </control>
         </control>
     </controls>
 </window>

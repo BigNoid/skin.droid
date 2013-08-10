@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="126">
-	<defaultcontrol always="true">450</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
+    <defaultcontrol always="true">450</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
     <include>DialogEffect</include>
     <controls>
-   		<include>GlobalOverlay</include>
-   		<control type="button">
-	    	<include>TouchOverlay</include>
-	       	<onclick>Dialog.Close(filebrowser)</onclick>
-	   	</control>
-   		<control type="group">
+        <include>GlobalOverlay</include>
+        <control type="button">
+            <include>TouchOverlay</include>
+            <onclick>Dialog.Close(filebrowser)</onclick>
+        </control>
+        <control type="group">
             <posx>220</posx>
             <posy>130</posy>
             <control type="button">
-            	<description>Inhibit Overlay Close Action</description>
-            	<posx>-21</posx>
+                <description>Inhibit Overlay Close Action</description>
+                <posx>-21</posx>
                 <posy>-21</posy>
                 <width>1522</width>
                 <height>862</height>
@@ -38,7 +38,7 @@
                 <textoffsetx>8</textoffsetx>
             </control>
             <control type="image">
-            	<description>Header Line</description>
+                <description>Header Line</description>
                 <posx>0</posx>
                 <posy>72</posy>
                 <width>1480</width>
@@ -46,29 +46,29 @@
                 <texture>common/blue2.png</texture>
             </control>
             <control type="label" id="412">
-				<description>Path</description>
-				<posx>15</posx>
-				<posy>57</posy>
-				<width>750</width>
-				<haspath>true</haspath>
+                <description>Path</description>
+                <posx>15</posx>
+                <posy>57</posy>
+                <width>750</width>
+                <haspath>true</haspath>
                 <font>-</font>
-			</control>
-			<control type="list" id="450">
-				<posx>20</posx>
-				<posy>84</posy>
-				<width>1440</width>
-				<height>576</height>
-				<onup>450</onup>
-				<onleft>9000</onleft>
-				<onright>60</onright>
+            </control>
+            <control type="list" id="450">
+                <posx>20</posx>
+                <posy>84</posy>
+                <width>1440</width>
+                <height>576</height>
+                <onup>450</onup>
+                <onleft>9000</onleft>
+                <onright>60</onright>
                 <pagecontrol>60</pagecontrol>
-				<ondown>450</ondown>
+                <ondown>450</ondown>
                 <itemlayout height="72" width="1440">
                     <control type="image">
-					    <width>1440</width>
-					    <height>72</height>
-					    <texture>dialogs/listitem_nofocus.png</texture>
-					</control>
+                        <width>1440</width>
+                        <height>72</height>
+                        <texture>dialogs/listitem_nofocus.png</texture>
+                    </control>
                     <control type="label">
                         <width>1440</width>
                         <height>72</height>
@@ -89,7 +89,7 @@
                     </control>
                 </itemlayout>
                 <focusedlayout height="72" width="1440">
-					<control type="image">
+                    <control type="image">
                         <width>1440</width>
                         <height>72</height>
                         <texture>dialogs/listitem_nofocus.png</texture>
@@ -100,25 +100,25 @@
                         <texture>dialogs/listitem_focus.png</texture>
                         <visible>Control.HasFocus(450)</visible>
                     </control>
-					<control type="label">
-					    <width>1440</width>
-					    <height>72</height>
-					    <font>Small</font>
-					    <label>$INFO[ListItem.Label]</label>
-					    <textoffsetx>30</textoffsetx>
-					</control>
-					<control type="label">
-					    <posx>1440</posx>
-					    <width>1440</width>
-					    <height>72</height>
-					    <font>Small</font>
-					    <label>$INFO[ListItem.Label2]</label>
-					    <textoffsetx>30</textoffsetx>
-					    <align>right</align>
-					</control>
+                    <control type="label">
+                        <width>1440</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textoffsetx>30</textoffsetx>
+                    </control>
+                    <control type="label">
+                        <posx>1440</posx>
+                        <width>1440</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textoffsetx>30</textoffsetx>
+                        <align>right</align>
+                    </control>
                 </focusedlayout>
-			</control>
-			<control type="scrollbar" id="60">
+            </control>
+            <control type="scrollbar" id="60">
                 <posx>1460</posx>
                 <posy>84</posy>
                 <height>576</height>
@@ -141,56 +141,56 @@
                 <enable>no</enable>
             </control>
             <control type="group">
-				<posy>747</posy>
-				<description>Button Bar</description>
-				<control type="image">
-	            	<description>Line</description>
-	                <height>1</height>
-	                <width>1480</width>
-	            	<texture>common/grey.png</texture>
-	            </control>
-	            <control type="grouplist" id="9000">
-	                <posx>0</posx>
-	                <posy>1</posy>
-	                <width>1480</width>
-	                <height>918</height>
-	                <itemgap>0</itemgap>
-	                <orientation>horizontal</orientation>
-	                <onup>450</onup>
-	                <ondown>450</ondown>
-	                <onleft>9000</onleft>
-	                <onright>9000</onright>
-	                <control type="button" id="413">
-	                    <description>Ok</description>
-	                    <include>DefaultButton</include>
-	                    <width>370</width>
-	                    <label>186</label>
-	                    <align>center</align>
-	                </control>
-	                <control type="button" id="414">
-	                    <description>Cancel</description>
-	                    <include>DefaultButton</include>
-	                    <width>370</width>
-	                    <label>222</label>
-	                    <align>center</align>
-	                </control>
-	                <control type="button" id="415">
-	                    <description>Create Folder</description>
-	                    <include>DefaultButton</include>
-	                    <width>370</width>
-	                    <label>119</label>
-	                    <align>center</align>
-	                </control>
-	                <control type="radiobutton" id="416">
-	                    <description>Horizontal Flip</description>
-	                    <include>DefaultButton</include>
-	                    <width>370</width>
-	                    <align>left</align>
-	                    <label>749</label>
-	                    <align>center</align>
-	                </control>
-	            </control>
+                <posy>747</posy>
+                <description>Button Bar</description>
+                <control type="image">
+                    <description>Line</description>
+                    <height>1</height>
+                    <width>1480</width>
+                    <texture>common/grey.png</texture>
+                </control>
+                <control type="grouplist" id="9000">
+                    <posx>0</posx>
+                    <posy>1</posy>
+                    <width>1480</width>
+                    <height>918</height>
+                    <itemgap>0</itemgap>
+                    <orientation>horizontal</orientation>
+                    <onup>450</onup>
+                    <ondown>450</ondown>
+                    <onleft>9000</onleft>
+                    <onright>9000</onright>
+                    <control type="button" id="413">
+                        <description>Ok</description>
+                        <include>DefaultButton</include>
+                        <width>370</width>
+                        <label>186</label>
+                        <align>center</align>
+                    </control>
+                    <control type="button" id="414">
+                        <description>Cancel</description>
+                        <include>DefaultButton</include>
+                        <width>370</width>
+                        <label>222</label>
+                        <align>center</align>
+                    </control>
+                    <control type="button" id="415">
+                        <description>Create Folder</description>
+                        <include>DefaultButton</include>
+                        <width>370</width>
+                        <label>119</label>
+                        <align>center</align>
+                    </control>
+                    <control type="radiobutton" id="416">
+                        <description>Horizontal Flip</description>
+                        <include>DefaultButton</include>
+                        <width>370</width>
+                        <align>left</align>
+                        <label>749</label>
+                        <align>center</align>
+                    </control>
+                </control>
             </control>
         </control>
-	</controls>
+    </controls>
 </window>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="133">
-	<defaultcontrol always="true">401</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
+    <defaultcontrol always="true">401</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
     <include>NotificationEffect</include>
     <controls>
         <control type="group">

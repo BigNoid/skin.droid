@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="10140">
-	<defaultcontrol always="true">20</defaultcontrol>
-	<controls>
-		<control type="group">
+    <defaultcontrol always="true">20</defaultcontrol>
+    <controls>
+        <control type="group">
             <control type="image">
                 <posy>72</posy>
                 <width>480</width>
@@ -52,14 +52,14 @@
                 <include>toast_back</include>
             </control>
             <control type="list" id="20">
-				<posx>480</posx>
-				<posy>126</posy>
-				<width>1368</width>
-				<height>864</height>
-				<onup>20</onup>
+                <posx>480</posx>
+                <posy>126</posy>
+                <width>1368</width>
+                <height>864</height>
+                <onup>20</onup>
                 <onleft>10</onleft>
                 <onright>10</onright>
-				<ondown>20</ondown>
+                <ondown>20</ondown>
                 <pagecontrol>60</pagecontrol>
                 <itemlayout height="72" width="1368">
                     <control type="image">
@@ -87,11 +87,11 @@
                     </control>
                 </itemlayout>
                 <focusedlayout height="72" width="1368">
-                        <control type="image">
-                            <width>1368</width>
-                            <height>72</height>
-                            <include>toast_back</include>
-                        </control>
+                    <control type="image">
+                        <width>1368</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
                     <control type="group">
                         <visible>!Control.HasFocus(20)</visible>
                         <control type="label">
@@ -138,7 +138,7 @@
                         </control>
                     </control>
                 </focusedlayout>
-			</control>
+            </control>
             <control type="group">
                 <control type="button">
                     <posx>72r</posx>
@@ -189,5 +189,5 @@
                 </control>
             </control>
         </control>
-	</controls>
+    </controls>
 </window>

@@ -20,16 +20,16 @@
         <include>NotificationCenter</include>
         <control type="group" id="9999">
             <include>MediaMenuOverlay</include>
-        	<control type="grouplist">
-	            <include>MediaMenuGrouplist</include>
-	            <control type="button" id="1">
-	                <description>Set background</description>
-	                <label>33070</label>
-	                <onclick>ClearProperty(MediaMenu,Home)</onclick>
-	                <onclick>ActivateWindow(1112)</onclick>
-	                <include>MediaMenuButton</include>
-	            </control>
-	            <include>MediaMenuBottomButton</include>
+            <control type="grouplist">
+                <include>MediaMenuGrouplist</include>
+                <control type="button" id="1">
+                    <description>Set background</description>
+                    <label>33070</label>
+                    <onclick>ClearProperty(MediaMenu,Home)</onclick>
+                    <onclick>ActivateWindow(1112)</onclick>
+                    <include>MediaMenuButton</include>
+                </control>
+                <include>MediaMenuBottomButton</include>
             </control>
         </control>
     </controls>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2008">
-	<defaultcontrol always="true">450</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
+    <defaultcontrol always="true">450</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
     <animation type="WindowClose" reversible="false">
         <effect type="fade" start="100" end="0" time="100" />
     </animation>

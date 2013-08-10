@@ -8,31 +8,31 @@
     <onload>ClearProperty(TVGuide.SundayList,Home)</onload>
     <include>MediaMenuReset</include>
     <allowoverlay>no</allowoverlay>
-	<controls>
+    <controls>
         <include>NotificationCenter</include>
         <control type="group">
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<animation effect="fade" time="250">WindowClose</animation>
-			<control type="grouplist">
-				<description>Day labels</description>
-				<posx>0</posx>
-				<posy>72</posy>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <control type="grouplist">
+                <description>Day labels</description>
+                <posx>0</posx>
+                <posy>72</posy>
                 <height>1008</height>
                 <itemgap>0</itemgap>
                 <orientation>vertical</orientation>
-				<control type="button">
-					<description>Monday</description>
+                <control type="button">
+                    <description>Monday</description>
                     <posx>300</posx>
-					<width>300</width>
-					<height>144</height>
-					<label>$VAR[TVDayLabelMon]</label>
-					<font>Medium</font>
+                    <width>300</width>
+                    <height>144</height>
+                    <label>$VAR[TVDayLabelMon]</label>
+                    <font>Medium</font>
                     <textcolor>Blue2</textcolor>
-					<disabledcolor>White2</disabledcolor>
+                    <disabledcolor>White2</disabledcolor>
                     <enable>StringCompare(System.Date(ddd),$LOCALIZE[41])</enable>
-				</control>
-				<control type="button">
-					<description>Tuesday</description>
+                </control>
+                <control type="button">
+                    <description>Tuesday</description>
                     <posx>300</posx>
                     <width>300</width>
                     <height>144</height>
@@ -41,9 +41,9 @@
                     <textcolor>Blue2</textcolor>
                     <disabledcolor>White2</disabledcolor>
                     <enable>StringCompare(System.Date(ddd),$LOCALIZE[42])</enable>
-				</control>
-				<control type="button">
-					<description>Wednesday</description>
+                </control>
+                <control type="button">
+                    <description>Wednesday</description>
                     <posx>300</posx>
                     <width>300</width>
                     <height>144</height>
@@ -52,9 +52,9 @@
                     <textcolor>Blue2</textcolor>
                     <disabledcolor>White2</disabledcolor>
                     <enable>StringCompare(System.Date(ddd),$LOCALIZE[43])</enable>
-				</control>
-				<control type="button">
-					<description>Thursday</description>
+                </control>
+                <control type="button">
+                    <description>Thursday</description>
                     <posx>300</posx>
                     <width>300</width>
                     <height>144</height>
@@ -63,9 +63,9 @@
                     <textcolor>Blue2</textcolor>
                     <disabledcolor>White2</disabledcolor>
                     <enable>StringCompare(System.Date(ddd),$LOCALIZE[44])</enable>
-				</control>
-				<control type="button">
-					<description>Friday</description>
+                </control>
+                <control type="button">
+                    <description>Friday</description>
                     <posx>300</posx>
                     <width>300</width>
                     <height>144</height>
@@ -74,9 +74,9 @@
                     <textcolor>Blue2</textcolor>
                     <disabledcolor>White2</disabledcolor>
                     <enable>StringCompare(System.Date(ddd),$LOCALIZE[45])</enable>
-				</control>
-				<control type="button">
-					<description>Saturday</description>
+                </control>
+                <control type="button">
+                    <description>Saturday</description>
                     <posx>300</posx>
                     <width>300</width>
                     <height>144</height>
@@ -85,9 +85,9 @@
                     <textcolor>Blue2</textcolor>
                     <disabledcolor>White2</disabledcolor>
                     <enable>StringCompare(System.Date(ddd),$LOCALIZE[46])</enable>
-				</control>
-				<control type="button">
-					<description>Sunday</description>
+                </control>
+                <control type="button">
+                    <description>Sunday</description>
                     <posx>300</posx>
                     <width>300</width>
                     <height>144</height>
@@ -96,9 +96,9 @@
                     <textcolor>Blue2</textcolor>
                     <disabledcolor>White2</disabledcolor>
                     <enable>StringCompare(System.Date(ddd),$LOCALIZE[47])</enable>
-				</control>
-			</control>
-			<control type="group" id="9002">
+                </control>
+            </control>
+            <control type="group" id="9002">
                 <posx>300</posx>
                 <control type="grouplist">
                     <posx>0</posx>
@@ -150,67 +150,67 @@
                     </control>
                 </control>
                 <control type="list" id="200">
-					<description>Monday list</description>
-					<posx>0</posx>
-					<posy>72</posy>
-					<width>1120</width>
-					<height>144</height>
-					<orientation>horizontal</orientation>
-					<scrolltime>0</scrolltime>
-					<onup>206</onup>
-					<ondown>201</ondown>
-					<onleft>SetProperty(TVGuide.MondayList,1,Home)</onleft>
-					<onleft>9010</onleft>
-					<onright>200</onright>
-					<itemgap>5</itemgap>
-					<itemlayout height="144" width="224">
+                    <description>Monday list</description>
+                    <posx>0</posx>
+                    <posy>72</posy>
+                    <width>1120</width>
+                    <height>144</height>
+                    <orientation>horizontal</orientation>
+                    <scrolltime>0</scrolltime>
+                    <onup>206</onup>
+                    <ondown>201</ondown>
+                    <onleft>SetProperty(TVGuide.MondayList,1,Home)</onleft>
+                    <onleft>9010</onleft>
+                    <onright>200</onright>
+                    <itemgap>5</itemgap>
+                    <itemlayout height="144" width="224">
                         <control type="image">
                             <width>224</width>
                             <height>144</height>
                             <include>toast_back</include>
                         </control>
-						<control type="label">
-							<description>Airing time</description>
-							<posx>112</posx>
-							<posy>100</posy>
-							<width>224</width>
-							<height>30</height>
-							<label>$INFO[ListItem.Property(ShortTime)]</label>
-							<textcolor>White2</textcolor>
-							<font>Small</font>
-							<align>center</align>
-						</control>
-						<control type="image">
-							<description>Thumb</description>
-							<width>224</width>
-							<height>90</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-							<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
-                            <bordersize>4</bordersize>
-						</control>
-						<control type="image">
-							<description>Banner</description>
+                        <control type="label">
+                            <description>Airing time</description>
+                            <posx>112</posx>
+                            <posy>100</posy>
+                            <width>224</width>
+                            <height>30</height>
+                            <label>$INFO[ListItem.Property(ShortTime)]</label>
+                            <textcolor>White2</textcolor>
+                            <font>Small</font>
+                            <align>center</align>
+                        </control>
+                        <control type="image">
+                            <description>Thumb</description>
                             <width>224</width>
                             <height>90</height>
                             <aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
+                            <texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
+                            <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
                             <bordersize>4</bordersize>
                         </control>
-						<control type="image">
-							<description>Logo</description>
+                        <control type="image">
+                            <description>Banner</description>
                             <width>224</width>
                             <height>90</height>
                             <aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-							<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+                            <texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
+                            <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
                             <bordersize>4</bordersize>
                         </control>
-					</itemlayout>
-					<focusedlayout height="144" width="224">
-						<control type="group">
-							<visible>Control.HasFocus(200)</visible>
+                        <control type="image">
+                            <description>Logo</description>
+                            <width>224</width>
+                            <height>90</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
+                            <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+                            <bordersize>4</bordersize>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="144" width="224">
+                        <control type="group">
+                            <visible>Control.HasFocus(200)</visible>
                             <control type="image">
                                 <width>224</width>
                                 <height>144</height>
@@ -227,8 +227,8 @@
                                 <align>center</align>
                             </control>
                         </control>
-						<control type="group">
-							<visible>!Control.HasFocus(200)</visible>
+                        <control type="group">
+                            <visible>!Control.HasFocus(200)</visible>
                             <control type="image">
                                 <width>224</width>
                                 <height>144</height>
@@ -274,7 +274,7 @@
                             <bordersize>4</bordersize>
                         </control>
                     </focusedlayout>
-				</control>
+                </control>
                 <control type="grouplist">
                     <posx>0</posx>
                     <posy>216</posy>
@@ -325,19 +325,19 @@
                     </control>
                 </control>
                 <control type="list" id="201">
-					<description>Tuesday list</description>
-					<posx>0</posx>
-					<posy>216</posy>
-					<width>1120</width>
-					<height>144</height>
-					<orientation>horizontal</orientation>
-					<scrolltime>0</scrolltime>
-					<onup>200</onup>
-					<ondown>202</ondown>
-					<onleft>SetProperty(TVGuide.TuesdayList,1,Home)</onleft>
-					<onleft>9010</onleft>
-					<onright>201</onright>
-					<itemgap>5</itemgap>
+                    <description>Tuesday list</description>
+                    <posx>0</posx>
+                    <posy>216</posy>
+                    <width>1120</width>
+                    <height>144</height>
+                    <orientation>horizontal</orientation>
+                    <scrolltime>0</scrolltime>
+                    <onup>200</onup>
+                    <ondown>202</ondown>
+                    <onleft>SetProperty(TVGuide.TuesdayList,1,Home)</onleft>
+                    <onleft>9010</onleft>
+                    <onright>201</onright>
+                    <itemgap>5</itemgap>
                     <itemlayout height="144" width="224">
                         <control type="image">
                             <width>224</width>
@@ -500,19 +500,19 @@
                     </control>
                 </control>
                 <control type="list" id="202">
-					<description>Wednesday list</description>
-					<posx>0</posx>
-					<posy>360</posy>
-					<width>1120</width>
-					<height>144</height>
-					<orientation>horizontal</orientation>
-					<scrolltime>0</scrolltime>
-					<onup>201</onup>
-					<ondown>203</ondown>
-					<onleft>SetProperty(TVGuide.WednesdayList,1,Home)</onleft>
-					<onleft>9010</onleft>
-					<onright>202</onright>
-					<itemgap>5</itemgap>
+                    <description>Wednesday list</description>
+                    <posx>0</posx>
+                    <posy>360</posy>
+                    <width>1120</width>
+                    <height>144</height>
+                    <orientation>horizontal</orientation>
+                    <scrolltime>0</scrolltime>
+                    <onup>201</onup>
+                    <ondown>203</ondown>
+                    <onleft>SetProperty(TVGuide.WednesdayList,1,Home)</onleft>
+                    <onleft>9010</onleft>
+                    <onright>202</onright>
+                    <itemgap>5</itemgap>
                     <itemlayout height="144" width="224">
                         <control type="image">
                             <width>224</width>
@@ -675,18 +675,18 @@
                     </control>
                 </control>
                 <control type="list" id="203">
-					<description>Thursday list</description>
-					<posx>0</posx>
-					<posy>504</posy>
-					<width>1120</width>
-					<height>144</height>
-					<orientation>horizontal</orientation>
-					<scrolltime>0</scrolltime>
-					<onup>202</onup>
-					<ondown>204</ondown>
-					<onleft>SetProperty(TVGuide.ThursdayList,1,Home)</onleft>
-					<onleft>9010</onleft>
-					<onright>203</onright>
+                    <description>Thursday list</description>
+                    <posx>0</posx>
+                    <posy>504</posy>
+                    <width>1120</width>
+                    <height>144</height>
+                    <orientation>horizontal</orientation>
+                    <scrolltime>0</scrolltime>
+                    <onup>202</onup>
+                    <ondown>204</ondown>
+                    <onleft>SetProperty(TVGuide.ThursdayList,1,Home)</onleft>
+                    <onleft>9010</onleft>
+                    <onright>203</onright>
                     <itemlayout height="144" width="224">
                         <control type="image">
                             <width>224</width>
@@ -849,18 +849,18 @@
                     </control>
                 </control>
                 <control type="list" id="204">
-					<description>Friday list</description>
-					<posx>0</posx>
-					<posy>648</posy>
-					<width>1120</width>
-					<height>144</height>
-					<orientation>horizontal</orientation>
-					<scrolltime>0</scrolltime>
-					<onup>203</onup>
-					<ondown>205</ondown>
-					<onleft>SetProperty(TVGuide.FridayList,1,Home)</onleft>
-					<onleft>9010</onleft>
-					<onright>204</onright>
+                    <description>Friday list</description>
+                    <posx>0</posx>
+                    <posy>648</posy>
+                    <width>1120</width>
+                    <height>144</height>
+                    <orientation>horizontal</orientation>
+                    <scrolltime>0</scrolltime>
+                    <onup>203</onup>
+                    <ondown>205</ondown>
+                    <onleft>SetProperty(TVGuide.FridayList,1,Home)</onleft>
+                    <onleft>9010</onleft>
+                    <onright>204</onright>
                     <itemlayout height="144" width="224">
                         <control type="image">
                             <width>224</width>
@@ -1023,18 +1023,18 @@
                     </control>
                 </control>
                 <control type="list" id="205">
-					<description>Saturday list</description>
-					<posx>0</posx>
-					<posy>792</posy>
-					<width>1120</width>
-					<height>144</height>
-					<orientation>horizontal</orientation>
-					<scrolltime>0</scrolltime>
-					<onup>204</onup>
-					<ondown>206</ondown>
-					<onleft>SetProperty(TVGuide.SaturdayList,1,Home)</onleft>
-					<onleft>9010</onleft>
-					<onright>205</onright>
+                    <description>Saturday list</description>
+                    <posx>0</posx>
+                    <posy>792</posy>
+                    <width>1120</width>
+                    <height>144</height>
+                    <orientation>horizontal</orientation>
+                    <scrolltime>0</scrolltime>
+                    <onup>204</onup>
+                    <ondown>206</ondown>
+                    <onleft>SetProperty(TVGuide.SaturdayList,1,Home)</onleft>
+                    <onleft>9010</onleft>
+                    <onright>205</onright>
                     <itemlayout height="144" width="224">
                         <control type="image">
                             <width>224</width>
@@ -1197,18 +1197,18 @@
                     </control>
                 </control>
                 <control type="list" id="206">
-					<description>Sunday list</description>
-					<posx>0</posx>
-					<posy>936</posy>
-					<width>1120</width>
-					<height>144</height>
-					<orientation>horizontal</orientation>
-					<scrolltime>0</scrolltime>
-					<onup>205</onup>
-					<ondown>200</ondown>
-					<onleft>SetProperty(TVGuide.SundayList,1,Home)</onleft>
-					<onleft>9010</onleft>
-					<onright>206</onright>
+                    <description>Sunday list</description>
+                    <posx>0</posx>
+                    <posy>936</posy>
+                    <width>1120</width>
+                    <height>144</height>
+                    <orientation>horizontal</orientation>
+                    <scrolltime>0</scrolltime>
+                    <onup>205</onup>
+                    <ondown>200</ondown>
+                    <onleft>SetProperty(TVGuide.SundayList,1,Home)</onleft>
+                    <onleft>9010</onleft>
+                    <onright>206</onright>
                     <itemlayout height="144" width="224">
                         <control type="image">
                             <width>224</width>
@@ -1321,7 +1321,7 @@
                         </control>
                     </focusedlayout>
                 </control>
-			</control>
+            </control>
             <control type="image">
                 <posx>1420</posx>
                 <posy>72</posy>
@@ -1330,13 +1330,13 @@
                 <include>toast_back</include>
             </control>
             <control type="grouplist">
-				<description>Additional show info</description>
+                <description>Additional show info</description>
                 <posx>1420</posx>
                 <posy>72</posy>
                 <height>1008</height>
                 <itemgap>0</itemgap>
                 <orientation>vertical</orientation>
-				<visible>Control.HasFocus(200) | !IsEmpty(Window(Home).Property(TVGuide.MondayList))</visible>
+                <visible>Control.HasFocus(200) | !IsEmpty(Window(Home).Property(TVGuide.MondayList))</visible>
                 <control type="group">
                     <width>500</width>
                     <height>288</height>
@@ -2099,32 +2099,32 @@
                     <enable>no</enable>
                 </control>
             </control>
-		</control>
+        </control>
         <control type="group" id="9999">
             <include>MediaMenuOverlay</include>
-        	<control type="grouplist">
-	            <include>MediaMenuGrouplist</include>
-	            <control type="button" id="8">
-	                <description>Settings</description>
-	                <label>5</label>
-	                <onleft>ClearProperty(TVGuide.MondayList,Home)</onleft>
-	                <onleft>ClearProperty(TVGuide.TuesdayList,Home)</onleft>
-	                <onleft>ClearProperty(TVGuide.WednesdayList,Home)</onleft>
-	                <onleft>ClearProperty(TVGuide.ThursdayList,Home)</onleft>
-	                <onleft>ClearProperty(TVGuide.FridayList,Home)</onleft>
-	                <onleft>ClearProperty(TVGuide.SaturdayList,Home)</onleft>
-	                <onleft>ClearProperty(TVGuide.SundayList,Home)</onleft>
-	                <onright>ClearProperty(TVGuide.MondayList,Home)</onright>
-	                <onright>ClearProperty(TVGuide.TuesdayList,Home)</onright>
-	                <onright>ClearProperty(TVGuide.WednesdayList,Home)</onright>
-	                <onright>ClearProperty(TVGuide.ThursdayList,Home)</onright>
-	                <onright>ClearProperty(TVGuide.FridayList,Home)</onright>
-	                <onright>ClearProperty(TVGuide.SaturdayList,Home)</onright>
-	                <onright>ClearProperty(TVGuide.SundayList,Home)</onright>
-	                <include>MediaMenuButton</include>
-	                <onclick>ClearProperty(MediaMenu,Home)</onclick>
-	            </control>
-	            <include>MediaMenuBottomButton</include>
+            <control type="grouplist">
+                <include>MediaMenuGrouplist</include>
+                <control type="button" id="8">
+                    <description>Settings</description>
+                    <label>5</label>
+                    <onleft>ClearProperty(TVGuide.MondayList,Home)</onleft>
+                    <onleft>ClearProperty(TVGuide.TuesdayList,Home)</onleft>
+                    <onleft>ClearProperty(TVGuide.WednesdayList,Home)</onleft>
+                    <onleft>ClearProperty(TVGuide.ThursdayList,Home)</onleft>
+                    <onleft>ClearProperty(TVGuide.FridayList,Home)</onleft>
+                    <onleft>ClearProperty(TVGuide.SaturdayList,Home)</onleft>
+                    <onleft>ClearProperty(TVGuide.SundayList,Home)</onleft>
+                    <onright>ClearProperty(TVGuide.MondayList,Home)</onright>
+                    <onright>ClearProperty(TVGuide.TuesdayList,Home)</onright>
+                    <onright>ClearProperty(TVGuide.WednesdayList,Home)</onright>
+                    <onright>ClearProperty(TVGuide.ThursdayList,Home)</onright>
+                    <onright>ClearProperty(TVGuide.FridayList,Home)</onright>
+                    <onright>ClearProperty(TVGuide.SaturdayList,Home)</onright>
+                    <onright>ClearProperty(TVGuide.SundayList,Home)</onright>
+                    <include>MediaMenuButton</include>
+                    <onclick>ClearProperty(MediaMenu,Home)</onclick>
+                </control>
+                <include>MediaMenuBottomButton</include>
             </control>
         </control>
     </controls>

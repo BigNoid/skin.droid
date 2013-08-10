@@ -1,135 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="603">
-	<defaultcontrol>29</defaultcontrol>
-	<include>DialogEffect</include>
-	<controls>
-		<include>GlobalOverlay</include>
-		<control type="button">
-			<include>TouchOverlay</include>
-			<onclick>Dialog.Close(pvrguidesearch)</onclick>
-		</control>
-		<control type="group">
-			<posx>542</posx>
-			<posy>130</posy>
-			<control type="button">
-				<description>Inhibit Overlay Close Action</description>
-				<posx>-21</posx>
-				<posy>-21</posy>
-				<width>835</width>
-				<height>862</height>
-				<include>NoTextureButton</include>
-			</control>
-			<control type="image">
-				<posx>-21</posx>
-				<posy>-21</posy>
-				<width>835</width>
-				<height>862</height>
-				<include>DialogBack</include>
-			</control>
-			<control type="label" id="2">
-				<description>Heading</description>
-				<posx>20</posx>
-				<width>750</width>
-				<height>72</height>
-				<font>Medium</font>
-				<aligny>center</aligny>
-				<label>-</label>
-				<textcolor>$VAR[ThemeColorVar]</textcolor>
-				<textoffsetx>8</textoffsetx>
-			</control>
-			<control type="image">
-				<description>Header Line</description>
-				<posx>0</posx>
-				<posy>72</posy>
-				<width>793</width>
-				<height>2</height>
-				<texture>common/blue2.png</texture>
-			</control>
-			<control type="group">
-				<posx>20</posx>
-				<posy>94</posy>
-				<control type="grouplist" id="5">
-					<description>Control Area</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>750</width>
-					<height>610</height>
-					<itemgap>0</itemgap>
-					<onup>8000</onup>
-					<ondown>8000</ondown>
-					<onleft>8000</onleft>
-					<onright>61</onright>
-					<pagecontrol>61</pagecontrol>
-				</control>
-				<control type="button" id="7">
-					<description>Default Button</description>
-				</control>
-				<control type="radiobutton" id="8">
-					<description>Default Radio Button</description>
-				</control>
-				<control type="spincontrolex" id="9">
-					<description>Default Spin Control</description>
-				</control>
-				<control type="sliderex" id="10">
-					<description>Default Slider</description>
-				</control>
-				<control type="image" id="11">
-					<description>Default Image</description>
-				</control>
-				<control type="edit" id="12">
-					<description>Default Edit</description>
-				</control>
-				<control type="scrollbar" id="61">
-					<posx>762</posx>
-					<posy>0</posy>
-					<height>610</height>
-					<width>6</width>
-					<onleft>5</onleft>
-					<onright>8000</onright>
-					<showonepage>false</showonepage>
-					<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(61)">Conditional</animation>
-				</control>
-			</control>
-			<control type="group">
-				<posy>747</posy>
-				<description>Button Bar</description>
-				<control type="image">
-					<description>Line</description>
-					<height>1</height>
-					<width>793</width>
-					<texture>common/grey.png</texture>
-				</control>
-				<control type="grouplist" id="8000">
-					<posx>0</posx>
-					<posy>1</posy>
-					<width>793</width>
-					<height>72</height>
-					<itemgap>0</itemgap>
-					<orientation>horizontal</orientation>
-					<onleft>5</onleft>
-					<onright>61</onright>
-					<onup>5</onup>
-					<ondown>5</ondown>
-					<control type="button" id="29">
-						<description>Close</description>
-						<include>DefaultButton</include>
-						<label>$LOCALIZE[31050]</label>
-						<align>center</align>
-						<width>396</width>
-						<onup>5</onup>
-						<ondown>5</ondown>
-					</control>
-					<control type="button" id="28">
-						<description>Select</description>
-						<include>DefaultButton</include>
-						<label>$LOCALIZE[186]</label>
-						<align>center</align>
-						<width>396</width>
-						<onup>5</onup>
-						<ondown>5</ondown>
-					</control>
-				</control>
-			</control>
-		</control>
-	</controls>
+    <defaultcontrol>29</defaultcontrol>
+    <include>DialogEffect</include>
+    <controls>
+        <include>GlobalOverlay</include>
+        <control type="button">
+            <include>TouchOverlay</include>
+            <onclick>Dialog.Close(pvrguidesearch)</onclick>
+        </control>
+        <control type="group">
+            <posx>542</posx>
+            <posy>130</posy>
+            <control type="button">
+                <description>Inhibit Overlay Close Action</description>
+                <posx>-21</posx>
+                <posy>-21</posy>
+                <width>835</width>
+                <height>862</height>
+                <include>NoTextureButton</include>
+            </control>
+            <control type="image">
+                <posx>-21</posx>
+                <posy>-21</posy>
+                <width>835</width>
+                <height>862</height>
+                <include>DialogBack</include>
+            </control>
+            <control type="label" id="2">
+                <description>Heading</description>
+                <posx>20</posx>
+                <width>750</width>
+                <height>72</height>
+                <font>Medium</font>
+                <aligny>center</aligny>
+                <label>-</label>
+                <textcolor>$VAR[ThemeColorVar]</textcolor>
+                <textoffsetx>8</textoffsetx>
+            </control>
+            <control type="image">
+                <description>Header Line</description>
+                <posx>0</posx>
+                <posy>72</posy>
+                <width>793</width>
+                <height>2</height>
+                <texture>common/blue2.png</texture>
+            </control>
+            <control type="group">
+                <posx>20</posx>
+                <posy>94</posy>
+                <control type="grouplist" id="5">
+                    <description>Control Area</description>
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>750</width>
+                    <height>610</height>
+                    <itemgap>0</itemgap>
+                    <onup>8000</onup>
+                    <ondown>8000</ondown>
+                    <onleft>8000</onleft>
+                    <onright>61</onright>
+                    <pagecontrol>61</pagecontrol>
+                </control>
+                <control type="button" id="7">
+                    <description>Default Button</description>
+                </control>
+                <control type="radiobutton" id="8">
+                    <description>Default Radio Button</description>
+                </control>
+                <control type="spincontrolex" id="9">
+                    <description>Default Spin Control</description>
+                </control>
+                <control type="sliderex" id="10">
+                    <description>Default Slider</description>
+                </control>
+                <control type="image" id="11">
+                    <description>Default Image</description>
+                </control>
+                <control type="edit" id="12">
+                    <description>Default Edit</description>
+                </control>
+                <control type="scrollbar" id="61">
+                    <posx>762</posx>
+                    <posy>0</posy>
+                    <height>610</height>
+                    <width>6</width>
+                    <onleft>5</onleft>
+                    <onright>8000</onright>
+                    <showonepage>false</showonepage>
+                    <animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(61)">Conditional</animation>
+                </control>
+            </control>
+            <control type="group">
+                <posy>747</posy>
+                <description>Button Bar</description>
+                <control type="image">
+                    <description>Line</description>
+                    <height>1</height>
+                    <width>793</width>
+                    <texture>common/grey.png</texture>
+                </control>
+                <control type="grouplist" id="8000">
+                    <posx>0</posx>
+                    <posy>1</posy>
+                    <width>793</width>
+                    <height>72</height>
+                    <itemgap>0</itemgap>
+                    <orientation>horizontal</orientation>
+                    <onleft>5</onleft>
+                    <onright>61</onright>
+                    <onup>5</onup>
+                    <ondown>5</ondown>
+                    <control type="button" id="29">
+                        <description>Close</description>
+                        <include>DefaultButton</include>
+                        <label>$LOCALIZE[31050]</label>
+                        <align>center</align>
+                        <width>396</width>
+                        <onup>5</onup>
+                        <ondown>5</ondown>
+                    </control>
+                    <control type="button" id="28">
+                        <description>Select</description>
+                        <include>DefaultButton</include>
+                        <label>$LOCALIZE[186]</label>
+                        <align>center</align>
+                        <width>396</width>
+                        <onup>5</onup>
+                        <ondown>5</ondown>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
 </window>

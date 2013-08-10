@@ -1,14 +1,14 @@
 <window>
-	<allowoverlay>no</allowoverlay>
+    <allowoverlay>no</allowoverlay>
     <include>PopUpEffect</include>
     <onunload>ClearProperty(SubSettings,Home)</onunload>
     <controls>
-		<control type="group" id="250">
+        <control type="group" id="250">
             <control type="group">
                 <posx>320</posx>
                 <posy>180</posy>
                 <animation type="Conditional" condition="!IsEmpty(Window(Home).Property(SubSettings)) | Control.hasFocus(150)">
-                    <effect type="slide" start="0" end="240" easing="out" tween="cubic" time="200"/>
+                    <effect type="slide" start="0" end="240" easing="out" tween="cubic" time="200" />
                 </animation>
                 <control type="image">
                     <posx>-21</posx>
@@ -283,17 +283,17 @@
                     <visible>Control.IsVisible(120)</visible>
                 </control>
             </control>
-            
-			<control type="group">
+
+            <control type="group">
                 <posx>-400</posx>
                 <posy>180</posy>
                 <animation type="Conditional" reversible="false" condition="!IsEmpty(Window(Home).Property(SubSettings)) | Control.HasFocus(150)">
-                    <effect type="slide" start="0" end="480" easing="out" tween="cubic" time="200"/>
+                    <effect type="slide" start="0" end="480" easing="out" tween="cubic" time="200" />
                     <effect type="fade" start="0" end="100" time="200" />
                 </animation>
                 <animation type="Conditional" reversible="false" condition="IsEmpty(Window(Home).Property(SubSettings)) + !Control.HasFocus(150)">
                     <effect type="fade" start="100" end="0" time="200" />
-                    <effect type="slide" end="0" start="480" easing="out" tween="cubic" time="200"/>
+                    <effect type="slide" end="0" start="480" easing="out" tween="cubic" time="200" />
                 </animation>
                 <control type="image">
                     <posx>-21</posx>
@@ -417,6 +417,6 @@
                     <texture>common/blue2.png</texture>
                 </control>
             </control>
-		</control>
-	</controls>
+        </control>
+    </controls>
 </window>

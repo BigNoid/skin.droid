@@ -6,16 +6,16 @@
         <include>GlobalBackground</include>
         <include>NotificationCenter</include>
         <control type="group" id="8000">
-        	<posy>72</posy>
+            <posy>72</posy>
             <include>WindowEffect</include>
             <control type="image">
-				<posx>30</posx>
-				<posy>40</posy>
-				<width>890</width>
+                <posx>30</posx>
+                <posy>40</posy>
+                <width>890</width>
                 <height>923</height>
-				<texture>dialogs/background_dark.png</texture>
-				<colordiffuse>BBFFFFFF</colordiffuse>
-			</control>
+                <texture>dialogs/background_dark.png</texture>
+                <colordiffuse>BBFFFFFF</colordiffuse>
+            </control>
             <control type="panel" id="800">
                 <posx>30</posx>
                 <posy>40</posy>
@@ -194,33 +194,33 @@
                 </content>
             </control>
             <control type="scrollbar" id="60">
-				<description>Scrollbar</description>
-				<posx>914</posx>
-				<posy>40</posy>
-				<height>899</height>
-				<width>6</width>
-				<onleft>50</onleft>
-				<onright>11122</onright>
-				<texturesliderbar>dialogs/scrollbar.png</texturesliderbar>
-				<texturesliderbarfocus>dialogs/scrollbar.png</texturesliderbarfocus>
-				<orientation>vertical</orientation>
-				<showonepage>false</showonepage>
-				<animation effect="fade" start="65" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(60)">Conditional</animation>
-			</control>
-			<!-- Scrollbar visibility controls -->
-	        <control type="image" id="9773">
-	            <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
-	        </control>
-	        <control type="image" id="9772">
-	            <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-	            <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-	            <visible>Control.HasFocus(60) | !Control.IsVisible(9773)</visible>
-	        </control>
-	        <control type="image" id="9772">
-	            <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-	            <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
-	            <visible>!Control.HasFocus(60) + [Container(800).Scrolling | Container(800).OnScrollNext | Container(800).OnScrollPrevious]</visible>
-	        </control>
+                <description>Scrollbar</description>
+                <posx>914</posx>
+                <posy>40</posy>
+                <height>899</height>
+                <width>6</width>
+                <onleft>50</onleft>
+                <onright>11122</onright>
+                <texturesliderbar>dialogs/scrollbar.png</texturesliderbar>
+                <texturesliderbarfocus>dialogs/scrollbar.png</texturesliderbarfocus>
+                <orientation>vertical</orientation>
+                <showonepage>false</showonepage>
+                <animation effect="fade" start="65" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(60)">Conditional</animation>
+            </control>
+            <!-- Scrollbar visibility controls -->
+            <control type="image" id="9773">
+                <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
+            </control>
+            <control type="image" id="9772">
+                <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+                <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+                <visible>Control.HasFocus(60) | !Control.IsVisible(9773)</visible>
+            </control>
+            <control type="image" id="9772">
+                <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+                <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
+                <visible>!Control.HasFocus(60) + [Container(800).Scrolling | Container(800).OnScrollNext | Container(800).OnScrollPrevious]</visible>
+            </control>
             <control type="group">
                 <posx>920</posx>
                 <posy>40</posy>
