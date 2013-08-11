@@ -635,7 +635,7 @@
         <control type="group">
             <width>900</width>
             <height>69</height>
-            <visible>Player.HasMedia</visible>
+            <visible>Player.HasMedia + !Window.IsVisible(busydialog) + !Window.IsVisible(infodialog)</visible>
             <control type="button">
                 <posx>0</posx>
                 <posy>0</posy>
