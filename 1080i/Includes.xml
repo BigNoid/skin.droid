@@ -432,6 +432,32 @@
                     </control>
                 </control>
                 <control type="group">
+                    <description>Back Button</description>
+                    <width>90</width>
+                    <height>68</height>
+                    <visible>!Window.IsActive(home)</visible>
+                    <include>NotificationVisibilityEffect</include>
+                    <control type="button" id="11123">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>90</width>
+                        <height>68</height>
+                        <onclick>Back</onclick>
+                        <onleft>11117</onleft>
+                        <onright>11121</onright>
+                        <ondown>$VAR[NotificationButtonActionsVar]</ondown>
+                        <include>DefaultButton</include>
+                    </control>
+                    <control type="image">
+                        <posx>21</posx>
+                        <posy>9</posy>
+                        <width>48</width>
+                        <height>48</height>
+                        <texture>icons/arrow_left.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Home Button</description>
                     <width>90</width>
                     <height>68</height>
                     <visible>!Window.IsActive(home)</visible>
@@ -459,6 +485,7 @@
                     </control>
                 </control>
                 <control type="group">
+                    <description>Mute Icon</description>
                     <width>90</width>
                     <height>68</height>
                     <visible>Window.IsActive(mutebug)</visible>
@@ -809,7 +836,7 @@
         <texturefocus border="10">keyboard/key_fo.png</texturefocus>
         <textoffsetx>8</textoffsetx>
     </include>
-    
+
     <include name="KeyboardKeyDark">
         <posx>0</posx>
         <posy>0</posy>
