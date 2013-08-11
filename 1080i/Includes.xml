@@ -649,7 +649,7 @@
                 <posy>9</posy>
                 <width>48</width>
                 <height>48</height>
-                <texture>osd/pause_nf.png</texture>
+                <texture>icons/pause.png</texture>
                 <include>NotificationVisibilityEffect</include>
                 <visible>Player.Paused</visible>
             </control>
@@ -659,7 +659,7 @@
                 <posy>9</posy>
                 <width>48</width>
                 <height>48</height>
-                <texture>osd/play_nf.png</texture>
+                <texture>icons/play.png</texture>
                 <include>NotificationVisibilityEffect</include>
                 <visible>!Player.Paused</visible>
             </control>
