@@ -798,15 +798,27 @@
         </control>
     </include>
 
-    <include name="KeyboardSmall">
+    <include name="KeyboardKey">
         <posx>0</posx>
         <posy>0</posy>
         <width>147</width>
         <height>108</height>
         <font>Large</font>
         <align>center</align>
-        <texturenofocus border="10">keyboard/key_small_nf.png</texturenofocus>
-        <texturefocus border="10">keyboard/key_small_fo.png</texturefocus>
+        <texturenofocus border="10">keyboard/key_nf.png</texturenofocus>
+        <texturefocus border="10">keyboard/key_fo.png</texturefocus>
+        <textoffsetx>8</textoffsetx>
+    </include>
+    
+    <include name="KeyboardKeyDark">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>147</width>
+        <height>108</height>
+        <font>Large</font>
+        <align>center</align>
+        <texturenofocus border="10">keyboard/key_dark_nf.png</texturenofocus>
+        <texturefocus border="10">keyboard/key_fo.png</texturefocus>
         <textoffsetx>8</textoffsetx>
     </include>
 
@@ -817,8 +829,8 @@
         <height>108</height>
         <font>Large</font>
         <align>left</align>
-        <texturenofocus border="10">keyboard/key_medium_nf.png</texturenofocus>
-        <texturefocus border="10">keyboard/key_small_fo.png</texturefocus>
+        <texturenofocus border="10">keyboard/key_dark_nf.png</texturenofocus>
+        <texturefocus border="10">keyboard/key_fo.png</texturefocus>
         <textoffsetx>18</textoffsetx>
         <radioposy>0</radioposy>
         <radioposx>0</radioposx>

@@ -2,150 +2,204 @@
 <window id="109">
     <defaultcontrol always="true">21</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <animation effect="slide" start="1024" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
-    <animation effect="slide" end="1024" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
+    <zorder>4</zorder>
+    <include>DialogEffect</include>
     <controls>
+        <include>GlobalOverlay</include>
+        <control type="button">
+            <include>TouchOverlay</include>
+            <onclick>Dialog.Close(numericinput)</onclick>
+        </control>
         <control type="group">
-            <posy>573</posy>
+            <posx>690</posx>
+            <posy>230</posy>
             <control type="image">
-                <posx>896</posx>
-                <posy>0</posy>
-                <width>1024</width>
-                <height>500</height>
-                <texture border="2">keyboard/keyboard_background.png</texture>
-                <colordiffuse>$VAR[ThemeColorVar]</colordiffuse>
+                <posx>-9</posx>
+                <posy>-21</posy>
+                <width>522</width>
+                <height>722</height>
+                <texture border="4">dialogs/background_grey.png</texture>
+                <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
+                <bordersize>21</bordersize>
             </control>
             <control type="label" id="1">
-                <description>dialog Heading</description>
-                <posx>920</posx>
-                <width>500</width>
-                <font>Medium</font>
-            </control>
-            <control type="label" id="4">
-                <description>Edit Text</description>
-                <posx>920</posx>
-                <posy>40</posy>
-                <width>1024</width>
-                <height>75</height>
-            </control>
-            <control type="grouplist" id="320">
+                <description>Heading</description>
                 <posx>0</posx>
                 <posy>0</posy>
-                <width>1920</width>
-                <height>120</height>
-                <orientation>horizontal</orientation>
-                <itemgap>0</itemgap>
-                <align>right</align>
-                <aligny>center</aligny>
-                <onup>316</onup>
-                <ondown>313</ondown>
-                <scrolltime tween="quadratic" easing="out">200</scrolltime>
-                <control type="button" id="17">
-                    <description>'7' button</description>
-                    <label>12317</label>
-                    <include>KeyboardSmall</include>
+                <height>72</height>
+                <label>-</label>
+                <width>492</width>
+                <textcolor>$VAR[ThemeColorVar]</textcolor>
+                <textoffsetx>30</textoffsetx>
+            </control>
+            <control type="image">
+                <posx>12</posx>
+                <posy>72</posy>
+                <width>480</width>
+                <height>2</height>
+                <texture>common/blue2.png</texture>
+            </control>
+            <control type="group">
+                <posx>30</posx>
+                <posy>81</posy>
+                <control type="label" id="4">
+                    <description>Edit Text</description>
+                    <posx>10</posx>
+                    <posy>0</posy>
+                    <font>Medium</font>
+                    <width>984</width>
+                    <height>75</height>
                 </control>
-                <control type="button" id="18">
-                    <description>'8' button</description>
-                    <label>12318</label>
-                    <include>KeyboardSmall</include>
+                <control type="grouplist" id="320">
+                    <posx>0</posx>
+                    <posy>72</posy>
+                    <width>501</width>
+                    <height>120</height>
+                    <orientation>horizontal</orientation>
+                    <itemgap>0</itemgap>
+                    <aligny>center</aligny>
+                    <onup>316</onup>
+                    <ondown>313</ondown>
+                    <scrolltime tween="quadratic" easing="out">200</scrolltime>
+                    <control type="button" id="17">
+                        <description>'7' button</description>
+                        <label>12317</label>
+                        <include>KeyboardKey</include>
+                    </control>
+                    <control type="button" id="18">
+                        <description>'8' button</description>
+                        <label>12318</label>
+                        <include>KeyboardKey</include>
+                    </control>
+                    <control type="button" id="19">
+                        <description>'9' button</description>
+                        <label>12319</label>
+                        <include>KeyboardKey</include>
+                    </control>
                 </control>
-                <control type="button" id="19">
-                    <description>'9' button</description>
-                    <label>12319</label>
-                    <include>KeyboardSmall</include>
+                <control type="grouplist" id="321">
+                    <posx>0</posx>
+                    <posy>180</posy>
+                    <width>984</width>
+                    <height>120</height>
+                    <orientation>horizontal</orientation>
+                    <itemgap>0</itemgap>
+                    <aligny>center</aligny>
+                    <onup>316</onup>
+                    <ondown>313</ondown>
+                    <scrolltime tween="quadratic" easing="out">200</scrolltime>
+                    <control type="button" id="14">
+                        <description>'4' button</description>
+                        <label>12314</label>
+                        <include>KeyboardKey</include>
+                    </control>
+                    <control type="button" id="15">
+                        <description>'5' button</description>
+                        <label>12315</label>
+                        <include>KeyboardKey</include>
+                    </control>
+                    <control type="button" id="16">
+                        <description>'6' button</description>
+                        <label>12316</label>
+                        <include>KeyboardKey</include>
+                    </control>
+                </control>
+                <control type="grouplist" id="322">
+                    <posx>0</posx>
+                    <posy>288</posy>
+                    <width>984</width>
+                    <height>120</height>
+                    <orientation>horizontal</orientation>
+                    <itemgap>0</itemgap>
+                    <aligny>center</aligny>
+                    <onup>316</onup>
+                    <ondown>313</ondown>
+                    <scrolltime tween="quadratic" easing="out">200</scrolltime>
+                    <control type="button" id="11">
+                        <description>'1' button</description>
+                        <label>12311</label>
+                        <include>KeyboardKey</include>
+                    </control>
+                    <control type="button" id="12">
+                        <description>'2' button</description>
+                        <label>12312</label>
+                        <include>KeyboardKey</include>
+                    </control>
+                    <control type="button" id="13">
+                        <description>'3' button</description>
+                        <label>12313</label>
+                        <include>KeyboardKey</include>
+                    </control>
+                </control>
+                <control type="grouplist" id="323">
+                    <posx>0</posx>
+                    <posy>396</posy>
+                    <width>984</width>
+                    <height>120</height>
+                    <orientation>horizontal</orientation>
+                    <itemgap>0</itemgap>
+                    <aligny>center</aligny>
+                    <onup>316</onup>
+                    <ondown>313</ondown>
+                    <scrolltime tween="quadratic" easing="out">200</scrolltime>
+                    <control type="group">
+                        <width>147</width>
+                        <control type="button" id="20">
+                            <description>prev button</description>
+                            <include>KeyboardKeyDark</include>
+                        </control>
+                        <control type="image">
+                            <description>Previous button icon</description>
+                            <posx>40</posx>
+                            <posy>25</posy>
+                            <width>64</width>
+                            <heigh>64</heigh>
+                            <texture>keyboard/key_icon_arrow_left.png</texture>
+                        </control>
+                    </control>
+                    <control type="button" id="10">
+                        <description>'0' button</description>
+                        <label>12310</label>
+                        <include>KeyboardKey</include>
+                    </control>
+                    <control type="group">
+                        <width>147</width>
+                        <control type="button" id="22">
+                            <description>next button</description>
+                            <include>KeyboardKeyDark</include>
+                        </control>
+                        <control type="image">
+                            <description>Next button icon</description>
+                            <posx>40</posx>
+                            <posy>25</posy>
+                            <width>64</width>
+                            <heigh>64</heigh>
+                            <texture>keyboard/key_icon_arrow_right.png</texture>
+                        </control>
+                    </control>
                 </control>
             </control>
-            <control type="grouplist" id="321">
-                <posx>0</posx>
-                <posy>120</posy>
-                <width>1920</width>
-                <height>120</height>
-                <orientation>horizontal</orientation>
-                <itemgap>0</itemgap>
-                <align>right</align>
-                <aligny>center</aligny>
-                <onup>316</onup>
-                <ondown>313</ondown>
-                <scrolltime tween="quadratic" easing="out">200</scrolltime>
-                <control type="button" id="14">
-                    <description>'4' button</description>
-                    <label>12314</label>
-                    <include>KeyboardSmall</include>
+            <control type="group">
+                <description>Button Bar</description>
+                <posx>12</posx>
+                <posy>608</posy>
+                <control type="image">
+                    <description>Line</description>
+                    <height>1</height>
+                    <width>480</width>
+                    <texture>common/grey.png</texture>
                 </control>
-                <control type="button" id="15">
-                    <description>'5' button</description>
-                    <label>12315</label>
-                    <include>KeyboardSmall</include>
-                </control>
-                <control type="button" id="16">
-                    <description>'6' button</description>
-                    <label>12316</label>
-                    <include>KeyboardSmall</include>
-                </control>
-            </control>
-            <control type="grouplist" id="322">
-                <posx>0</posx>
-                <posy>240</posy>
-                <width>1920</width>
-                <height>120</height>
-                <orientation>horizontal</orientation>
-                <itemgap>0</itemgap>
-                <align>right</align>
-                <aligny>center</aligny>
-                <onup>316</onup>
-                <ondown>313</ondown>
-                <scrolltime tween="quadratic" easing="out">200</scrolltime>
-                <control type="button" id="11">
-                    <description>'1' button</description>
-                    <label>12311</label>
-                    <include>KeyboardSmall</include>
-                </control>
-                <control type="button" id="12">
-                    <description>'2' button</description>
-                    <label>12312</label>
-                    <include>KeyboardSmall</include>
-                </control>
-                <control type="button" id="13">
-                    <description>'3' button</description>
-                    <label>12313</label>
-                    <include>KeyboardSmall</include>
-                </control>
-            </control>
-            <control type="grouplist" id="323">
-                <posx>0</posx>
-                <posy>360</posy>
-                <width>1920</width>
-                <height>120</height>
-                <orientation>horizontal</orientation>
-                <itemgap>0</itemgap>
-                <align>right</align>
-                <aligny>center</aligny>
-                <onup>316</onup>
-                <ondown>313</ondown>
-                <scrolltime tween="quadratic" easing="out">200</scrolltime>
                 <control type="button" id="21">
-                    <description>Done button</description>
+                    <description>Done</description>
+                    <posy>1</posy>
+                    <width>480</width>
                     <label>20177</label>
-                    <texturenofocus border="10">keyboard/key_medium_nf.png</texturenofocus>
-                    <include>KeyboardSmall</include>
-                </control>
-                <control type="button" id="20">
-                    <description>prev button</description>
-                    <label>&lt;</label>
-                    <texturenofocus border="10">keyboard/key_medium_nf.png</texturenofocus>
-                    <include>KeyboardSmall</include>
-                </control>
-                <control type="button" id="10">
-                    <description>'0' button</description>
-                    <label>12310</label>
-                    <include>KeyboardSmall</include>
-                </control>
-                <control type="button" id="22">
-                    <description>next button</description>
-                    <label>&gt;</label>
-                    <texturenofocus border="10">keyboard/key_medium_nf.png</texturenofocus>
-                    <include>KeyboardSmall</include>
+                    <align>center</align>
+                    <onleft>10</onleft>
+                    <onright>10</onright>
+                    <onup>10</onup>
+                    <ondown>10</ondown>
+                    <include>DefaultButton</include>
                 </control>
             </control>
         </control>
