@@ -419,7 +419,7 @@
                         <height>68</height>
                         <onclick>ActivateWindow(shutdownmenu)</onclick>
                         <onleft>11117</onleft>
-                        <onright>11119</onright>
+                        <onright>11123</onright>
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
                         <include>DefaultButton</include>
                     </control>
@@ -443,8 +443,8 @@
                         <width>90</width>
                         <height>68</height>
                         <onclick>Back</onclick>
-                        <onleft>11117</onleft>
-                        <onright>11121</onright>
+                        <onleft>11118</onleft>
+                        <onright>11119</onright>
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
                         <include>DefaultButton</include>
                     </control>
@@ -472,7 +472,7 @@
                         <onright condition="Window.IsActive(movieinformation)">9</onright>
                         <onright condition="Window.IsActive(musicinformation)">6</onright>
                         <onright condition="Window.IsActive(weather)">2</onright>
-                        <onleft>11117</onleft>
+                        <onleft>11123</onleft>
                         <onright>11121</onright>
                         <ondown>$VAR[NotificationButtonActionsVar]</ondown>
                         <include>DefaultButton</include>
