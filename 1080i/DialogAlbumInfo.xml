@@ -110,7 +110,6 @@
                     </control>
                 </control>
             </control>
-            <include>NotificationCenterProgress</include>
             <control type="image">
                 <posy>72</posy>
                 <width>600</width>
