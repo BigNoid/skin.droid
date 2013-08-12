@@ -4,199 +4,13 @@
     <allowoverlay>yes</allowoverlay>
     <onunload>ClearProperty(FanartZoom,musicinformation)</onunload>
     <controls>
-        <control type="group" id="9010">
-            <control type="image">
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>1920</width>
-                <height>72</height>
-                <texture>dialogs/listitem_nofocus.png</texture>
-            </control>
-            <control type="grouplist" id="11111">
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>1920</width>
-                <height>72</height>
-                <align>left</align>
-                <aligny>center</aligny>
-                <itemgap>0</itemgap>
-                <orientation>horizontal</orientation>
-                <onleft>11121</onleft>
-                <onright>11121</onright>
-                <control type="button">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>15</width>
-                    <height>48</height>
-                    <texturenofocus>-</texturenofocus>
-                    <texturefocus>-</texturefocus>
-                    <onclick>noop</onclick>
-                    <enable>no</enable>
-                </control>
-                <control type="label" id="11112">
-                    <posy>0</posy>
-                    <posx>0</posx>
-                    <height>68</height>
-                    <width min="10" max="400">auto</width>
-                    <font>Clock</font>
-                    <aligny>center</aligny>
-                    <textcolor>White2</textcolor>
-                    <label>$INFO[System.Time]</label>
-                </control>
-                <control type="button">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>15</width>
-                    <height>48</height>
-                    <texturenofocus>-</texturenofocus>
-                    <texturefocus>-</texturefocus>
-                    <onclick>noop</onclick>
-                    <enable>no</enable>
-                </control>
-                <control type="group">
-                    <width>90</width>
-                    <height>72</height>
-                    <control type="button" id="11115">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>90</width>
-                        <height>72</height>
-                        <onclick>ActivateWindow(settings)</onclick>
-                        <onleft>11121</onleft>
-                        <onright>11116</onright>
-                        <ondown>50</ondown>
-                    </control>
-                    <control type="image">
-                        <posx>21</posx>
-                        <posy>12</posy>
-                        <width>48</width>
-                        <height>48</height>
-                        <texture>icons/settings_nf.png</texture>
-                    </control>
-                </control>
-                <control type="group">
-                    <width>90</width>
-                    <height>72</height>
-                    <control type="button" id="11116">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>90</width>
-                        <height>72</height>
-                        <onclick>ActivateWindow(favourites)</onclick>
-                        <onleft>11115</onleft>
-                        <onright>11117</onright>
-                        <ondown>50</ondown>
-                    </control>
-                    <control type="image">
-                        <posx>21</posx>
-                        <posy>12</posy>
-                        <width>48</width>
-                        <height>48</height>
-                        <texture>icons/fav_nf.png</texture>
-                    </control>
-                </control>
-                <control type="group">
-                    <width>90</width>
-                    <height>72</height>
-                    <control type="button" id="11117">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>90</width>
-                        <height>72</height>
-                        <onclick>RunScript(script.globalsearch)</onclick>
-                        <onleft>11116</onleft>
-                        <onright>11118</onright>
-                        <ondown>50</ondown>
-                    </control>
-                    <control type="image">
-                        <posx>21</posx>
-                        <posy>12</posy>
-                        <width>48</width>
-                        <height>48</height>
-                        <texture>icons/search_nf.png</texture>
-                    </control>
-                </control>
-                <control type="group">
-                    <width>90</width>
-                    <height>72</height>
-                    <control type="button" id="11118">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>90</width>
-                        <height>72</height>
-                        <onclick>ActivateWindow(shutdownmenu)</onclick>
-                        <onleft>11117</onleft>
-                        <onright>11119</onright>
-                        <ondown>50</ondown>
-                    </control>
-                    <control type="image">
-                        <posx>21</posx>
-                        <posy>12</posy>
-                        <width>48</width>
-                        <height>48</height>
-                        <texture>icons/power_nf.png</texture>
-                    </control>
-                </control>
-                <control type="group">
-                    <width>90</width>
-                    <height>72</height>
-                    <control type="button" id="11119">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>90</width>
-                        <height>72</height>
-                        <onclick>Dialog.Close(all,true)</onclick>
-                        <onclick>ActivateWindow(home)</onclick>
-                        <onleft>11117</onleft>
-                        <onright>6</onright>
-                        <ondown>50</ondown>
-                    </control>
-                    <control type="image">
-                        <posx>21</posx>
-                        <posy>12</posy>
-                        <width>48</width>
-                        <height>48</height>
-                        <texture>icons/home.png</texture>
-                    </control>
-                </control>
-                <control type="group">
-                    <width>90</width>
-                    <height>72</height>
-                    <visible>Window.IsActive(mutebug)</visible>
-                    <include>NotificationVisibilityEffect</include>
-                    <control type="button" id="11120">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>90</width>
-                        <height>72</height>
-                        <onclick>noop</onclick>
-                        <enable>no</enable>
-                    </control>
-                    <control type="image">
-                        <posx>21</posx>
-                        <posy>12</posy>
-                        <width>48</width>
-                        <height>48</height>
-                        <texture>icons/mute.png</texture>
-                    </control>
-                </control>
-                <include>NotificationNowPlaying</include>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>2</width>
-                    <height>72</height>
-                    <texture>dialogs/toast_back_blue_border.png</texture>
-                </control>
-            </control>
-        </control>
+        <include>NotificationCenter</include>
         <control type="group">
-            <include>DialogEffect</include>
             <control type="grouplist" id="5000">
                 <posx>0</posx>
                 <posy>0</posy>
                 <width>1920</width>
-                <height>72</height>
+                <height>68</height>
                 <itemgap>0</itemgap>
                 <align>right</align>
                 <onup>50</onup>
@@ -204,76 +18,45 @@
                 <onright>5000</onright>
                 <onleft>5000</onleft>
                 <orientation>horizontal</orientation>
-                <control type="label">
-                    <description>Busy label</description>
-                    <width min="100" max="450">auto</width>
-                    <height>72</height>
-                    <aligny>center</aligny>
-                    <label>$LOCALIZE[20186]...</label>
-                    <visible>Window.IsVisible(busydialog)</visible>
-                </control>
                 <control type="group">
-                    <width>72</width>
-                    <height>72</height>
-                    <visible>Window.IsVisible(busydialog)</visible>
-                    <control type="image">
-                        <description>Busy animation</description>
-                        <posx>12</posx>
-                        <posy>12</posy>
-                        <width>48</width>
-                        <height>48</height>
-                        <texture>dialogs/busy_in.png</texture>
-                        <aspectratio>keep</aspectratio>
-                        <animation effect="rotate" start="0" end="360" center="auto" time="2000" loop="true" condition="true">conditional</animation>
-                    </control>
-                    <control type="image">
-                        <description>Busy animation</description>
-                        <posx>12</posx>
-                        <posy>12</posy>
-                        <width>48</width>
-                        <height>48</height>
-                        <texture>dialogs/busy_out.png</texture>
-                        <aspectratio>keep</aspectratio>
-                        <animation effect="rotate" start="360" end="0" center="auto" time="2000" loop="true" condition="true">conditional</animation>
-                    </control>
-                </control>
-                <control type="group">
+                    <description>Refresh Button</description>
                     <width>90</width>
-                    <height>72</height>
+                    <height>68</height>
                     <control type="button" id="6">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
                         <height>72</height>
-                        <onup>50</onup>
-                        <ondown>4002</ondown>
+                        <ondown>50</ondown>
                         <onright>10</onright>
                         <onleft>11119</onleft>
+                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>12</posy>
+                        <posy>9</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/sync.png</texture>
                     </control>
                 </control>
-                <control type="group">
+               <control type="group">
+                    <description>Choose Art Button</description>
                     <width>90</width>
-                    <height>72</height>
+                    <height>68</height>
                     <control type="button" id="10">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
                         <height>72</height>
-                        <onup>50</onup>
-                        <ondown>4002</ondown>
-                        <onright>12</onright>
+                        <ondown>50</ondown>
+                        <onright>11121</onright>
                         <onleft>6</onleft>
+                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>12</posy>
+                        <posy>9</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/art.png</texture>
@@ -281,15 +64,14 @@
                 </control>
                 <control type="group">
                     <width>90</width>
-                    <height>72</height>
+                    <height>68</height>
                     <visible>Container.Content(artists)</visible>
                     <control type="button" id="12">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
-                        <height>72</height>
-                        <onup>50</onup>
-                        <ondown>4002</ondown>
+                        <height>68</height>
+                        <ondown>50</ondown>
                         <onright>11121</onright>
                         <onleft>10</onleft>
                     </control>

@@ -470,6 +470,7 @@
                         <onclick>Dialog.Close(all,true)</onclick>
                         <onclick>ActivateWindow(home)</onclick>
                         <onright condition="Window.IsActive(movieinformation)">9</onright>
+                        <onright condition="Window.IsActive(musicinformation)">6</onright>
                         <onright condition="Window.IsActive(weather)">2</onright>
                         <onleft>11117</onleft>
                         <onright>11121</onright>
