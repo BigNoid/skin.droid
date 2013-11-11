@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="135">
-    <defaultcontrol always="true">14</defaultcontrol>
-    <allowoverlay>yes</allowoverlay>
+	<defaultcontrol always="true">14</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
     <onunload>ClearProperty(FanartZoom,songinformation)</onunload>
-    <include>DialogEffect</include>
     <controls>
-        <include>NotificationCenter</include>
-        <control type="group">
-            <control type="image">
+		<include>NotificationCenter</include>
+		<control type="group">
+			<include>DialogEffect</include>
+			<control type="image">
                 <posy>72</posy>
                 <width>600</width>
-                <height>1008</height>
+                <height>600</height>
                 <include>toast_back</include>
             </control>
             <control type="image" id="3">
@@ -32,7 +32,7 @@
                 <ondown>9000</ondown>
                 <itemgap>0</itemgap>
                 <orientation>vertical</orientation>
-                <control type="button" id="10">
+                <control type="button" id ="10">
                     <description>Ok button</description>
                     <width>600</width>
                     <label>186</label>
@@ -170,26 +170,26 @@
                         <height>72</height>
                         <include>toast_back</include>
                     </control>
-                    <control type="label">
-                        <posx>256</posx>
-                        <width>256</width>
-                        <height>72</height>
-                        <font>Small</font>
-                        <align>right</align>
-                        <textcolor>$VAR[ThemeColorVar]</textcolor>
-                        <label>$LOCALIZE[515]:</label>
-                        <textoffsetx>8</textoffsetx>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>256</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <align>right</align>
+                            <textcolor>$VAR[ThemeColorVar]</textcolor>
+                            <label>$LOCALIZE[515]:</label>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>1064</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <label>$INFO[ListItem.Genre]</label>
+                            <textcolor>White2</textcolor>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
                     </control>
-                    <control type="label">
-                        <posx>256</posx>
-                        <width>1064</width>
-                        <height>72</height>
-                        <font>Small</font>
-                        <label>$INFO[ListItem.Genre]</label>
-                        <textcolor>White2</textcolor>
-                        <textoffsetx>8</textoffsetx>
-                    </control>
-                </control>
                 <control type="group">
                     <posy>306</posy>
                     <control type="image">
@@ -476,6 +476,6 @@
                 <bordersize>2</bordersize>
                 <animation effect="zoom" start="1320,450,600,342" end="-10,-10,1940,1100" time="640" tween="cubic" condition="!IsEmpty(Window(songinformation).Property(FanartZoom))">Conditional</animation>
             </control>
-        </control>
-    </controls>
+		</control>
+	</controls>
 </window>
