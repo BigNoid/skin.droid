@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <!-- Included non-default/custom XML files -->
-    <include file="Defaults.xml" />
+    <include file="defaults.xml" />
     <include file="Variables.xml" />
     <include file="Includes_Home.xml" />
     <include file="Includes_PVR.xml" />
@@ -85,11 +85,14 @@
                 <effect type="fade" start="100" end="0" time="200" />
             </animation>
         </control>
-    </include>
+		<control type="button">
+			<include>TouchOverlay</include>
+			<onclick>Dialog.Close(all,true)</onclick>
+		</control>
+	</include>
 
     <include name="GlobalBackground">
         <control type="group">
-            <!-- <visible>![[Control.isVisible(50) | Control.isVisible(51) | Control.isVisible(55)] + !Window.IsActive(home)]</visible> -->
             <include>VisibleChangeEffect</include>
             <control type="fadelabel" id="6053">
                 <posy>-100</posy>
@@ -203,7 +206,8 @@
                 <colordiffuse>$VAR[FanartDiffuseVar]</colordiffuse>
             </control>
             <control type="group">
-                <control type="group">
+				<visible>[Control.isVisible(52) | Control.isVisible(53) | Control.isVisible(54) | Control.isVisible(56)]</visible>
+				<control type="group">
                     <posy>132</posy>
                     <posx>120</posx>
                     <visible>Container.Content(movies) + Skin.HasSetting(ShowCase.InfoPanel) + Control.IsVisible(53)</visible>
@@ -229,48 +233,48 @@
                         <texture border="25">views/showcase/infopanel.png</texture>
                     </control>
                 </control>
-                <!--
-                    <control type="image">
-                    <posy>0</posy>
-                    <animation effect="slide" start="0,0" end="0,20" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
-                    <include>Dimensions_Fullscreen</include>
-                    <texture border="1">background/floor_back.png</texture>
-                    <animation type="WindowOpen" reversible="false">
-                    <effect type="fade" start="0" end="100" time="300" />
-                    </animation>
-                    <animation type="WindowClose" reversible="false">
-                    <effect type="fade" start="100" end="0" time="300" />
-                    </animation>
-                    </control>
-                    <control type="image">
-                    <posx>185</posx>
-                    <posy>740</posy>
-                    <width>1550</width>
-                    <height>262</height>
-                    <texture>background/mid_fade.png</texture>
-                    <colordiffuse>$VAR[ThemeColorVar]</colordiffuse>
-                    <animation effect="slide" start="0,0" end="0,20" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
-                    <animation type="WindowOpen" reversible="false">
-                    <effect type="fade" start="0" end="100" time="300" />
-                    </animation>
-                    <animation type="WindowClose" reversible="false">
-                    <effect type="fade" start="100" end="0" time="300" />
-                    </animation>
-                    </control>
-                    <control type="image">
-                    <posy>160r</posy>
-                    <width>1920</width>
-                    <height>160</height>
-                    <texture>background/bottom_fade_under.png</texture>
-                    </control>
-                    <control type="image">
-                    <posy>219r</posy>
-                    <width>1920</width>
-                    <height>219</height>
-                    <texture>background/bottom_fade.png</texture>
-                    </control>
-                -->
-            </control>
+				<control type="image">
+					<posy>0</posy>
+					<animation effect="slide" start="0,0" end="0,20" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
+					<include>Dimensions_Fullscreen</include>
+					<texture border="1">background/floor_back.png</texture>
+					<animation type="WindowOpen" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>185</posx>
+					<posy>740</posy>
+					<width>1550</width>
+					<height>262</height>
+					<texture>background/mid_fade.png</texture>
+					<colordiffuse>$VAR[ThemeColorVar]</colordiffuse>
+					<animation effect="slide" start="0,0" end="0,20" time="500" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
+					<animation type="WindowOpen" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" />
+					</animation>
+				</control>
+				<control type="image">
+					<posy>160r</posy>
+					<width>1920</width>
+					<height>160</height>
+					<texture>background/bottom_fade_under.png</texture>
+				</control>
+				<control type="image">
+					<posy>219r</posy>
+					<width>1920</width>
+					<height>219</height>
+					<texture>background/bottom_fade.png</texture>
+				</control>
+
+
+			</control>
         </control>
     </include>
 
@@ -602,133 +606,158 @@
         </control>
     </include>
 
-    <include name="NotificationCenterProgress">
-        <control type="group">
-            <visible>Player.HasMedia</visible>
-            <control type="progress">
-                <description>Progress Bar</description>
-                <posx>0</posx>
-                <posy>1070</posy>
-                <width>1920</width>
-                <height>23</height>
-                <info>Player.ProgressCache</info>
-                <visible>true</visible>
-                <texturebg border="2">settings/texturebg_cache.png</texturebg>
-                <midtexture border="1">common/texturesliderbar.png</midtexture>
-                <righttexture border="1">common/texturesliderbar.png</righttexture>
-            </control>
-            <control type="progress" id="23">
-                <description>Progress Bar</description>
-                <posx>0</posx>
-                <posy>1070</posy>
-                <width>1920</width>
-                <height>23</height>
-                <info>Player.Progress</info>
-                <visible>true</visible>
-                <texturebg border="2">settings/texturebg_cache.png</texturebg>
-                <righttexture border="0,0,26,0">-</righttexture>
-                <colordiffuse>Blue2</colordiffuse>
-            </control>
-        </control>
-    </include>
+	<include name="NotificationCenterProgress">
+		<control type="group">
+			<visible>Player.HasMedia</visible>
+			<control type="progress">
+				<description>Progress Bar</description>
+				<posx>0</posx>
+				<posy>-10</posy>
+				<width>1920</width>
+				<height>23</height>
+				<info>Player.ProgressCache</info>
+				<visible>true</visible>
+				<texturebg border="2">settings/texturebg_cache.png</texturebg>
+				<midtexture border="1">common/texturesliderbar.png</midtexture>
+				<righttexture border="1">common/texturesliderbar.png</righttexture>
+			</control>
+			<control type="progress" id="23">
+				<description>Progress Bar</description>
+				<posx>0</posx>
+				<posy>-10</posy>
+				<width>1920</width>
+				<height>23</height>
+				<info>Player.Progress</info>
+				<visible>true</visible>
+				<texturebg border="2">settings/texturebg_cache.png</texturebg>
+				<righttexture border="0,0,26,0">-</righttexture>
+				<colordiffuse>Blue2</colordiffuse>
+			</control>
+		</control>
+	</include>
 
-    <include name="NotificationNowPlaying">
-        <control type="group">
-            <width>900</width>
-            <height>69</height>
-            <visible>Player.HasMedia + !Window.IsVisible(busydialog) + !Window.IsVisible(infodialog)</visible>
-            <control type="button">
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>90</width>
-                <height>69</height>
-                <onclick>ActivateWindow(PlayerControls)</onclick>
-            </control>
-            <control type="image">
-                <description>Now Playing - Paused</description>
-                <posx>21</posx>
-                <posy>9</posy>
-                <width>48</width>
-                <height>48</height>
-                <texture>icons/pause.png</texture>
-                <include>NotificationVisibilityEffect</include>
-                <visible>Player.Paused</visible>
-            </control>
-            <control type="image">
-                <description>Now Playing - Play</description>
-                <posx>21</posx>
-                <posy>9</posy>
-                <width>48</width>
-                <height>48</height>
-                <texture>icons/play.png</texture>
-                <include>NotificationVisibilityEffect</include>
-                <visible>!Player.Paused</visible>
-            </control>
-            <control type="button">
-                <posx>90</posx>
-                <posy>0</posy>
-                <width>800</width>
-                <height>69</height>
-                <onclick>ActivateWindow(musicplaylist)</onclick>
-                <enable>Player.HasAudio</enable>
-            </control>
-            <control type="group">
-                <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
-                <posx>33</posx>
-                <animation effect="slide" start="0,-80" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
-                <control type="label">
-                    <posy>6</posy>
-                    <posx>72</posx>
-                    <height>32</height>
-                    <width min="10" max="800">auto</width>
-                    <font>Small_Caps</font>
-                    <textcolor>$VAR[ThemeColorVar]</textcolor>
-                    <aligny>center</aligny>
-                    <label>$INFO[Player.Title]</label>
-                    <visible>!IsEmpty(Control.GetLabel(11200))</visible>
-                </control>
-                <control type="label">
-                    <posy>17</posy>
-                    <posx>72</posx>
-                    <height>32</height>
-                    <width min="10" max="800">auto</width>
-                    <font>Small_Caps</font>
-                    <textcolor>$VAR[ThemeColorVar]</textcolor>
-                    <aligny>center</aligny>
-                    <label>$INFO[Player.Title]</label>
-                    <visible>IsEmpty(Control.GetLabel(11200))</visible>
-                </control>
-                <control type="label" id="11200">
-                    <posy>36</posy>
-                    <posx>72</posx>
-                    <height>32</height>
-                    <width min="10" max="800">auto</width>
-                    <font>Medium_Small_Caps</font>
-                    <aligny>center</aligny>
-                    <textcolor>White2</textcolor>
-                    <label>$VAR[NotificationNowPlaying.Label2]</label>
-                </control>
-            </control>
-        </control>
-    </include>
-    <include name="NotificationVisibilityEffect">
-        <animation type="Visible">
-            <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-            <effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
-        </animation>
-        <animation type="Hidden">
-            <effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
-            <effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
-        </animation>
-    </include>
+	<include name="NotificationNowPlaying">
+		<control type="group">
+			<width>900</width>
+			<height>72</height>
+			<visible>Player.HasMedia</visible>
+			<control type="button">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>90</width>
+				<height>72</height>
+				<onclick>ActivateWindow(PlayerControls)</onclick>
+			</control>
+			<control type="button">
+				<posx>90</posx>
+				<posy>0</posy>
+				<width>800</width>
+				<height>72</height>
+				<onclick condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
+				<onclick condition="Player.HasVideo">ActivateWindow(videoplaylist)</onclick>
+				<enable>[Player.HasVideo + !StringCompare(Playlist.Length(video),0)] | [Player.HasAudio + !StringCompare(Playlist.Length(music),0)]</enable>
+			</control>
+			<control type="image">
+				<description>Now Playing - Paused</description>
+				<posx>21</posx>
+				<posy>12</posy>
+				<width>48</width>
+				<height>48</height>
+				<texture>osd/pause_nf.png</texture>
+				<include>NotificationVisibilityEffect</include>
+				<visible>Player.Paused</visible>
+			</control>
+			<control type="image">
+				<description>Now Playing - Play</description>
+				<posx>21</posx>
+				<posy>12</posy>
+				<width>48</width>
+				<height>48</height>
+				<texture>osd/play_nf.png</texture>
+				<include>NotificationVisibilityEffect</include>
+				<visible>!Player.Paused</visible>
+			</control>
+			<control type="group">
+				<visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+				<posx>33</posx>
+				<animation effect="slide" start="0,-80" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
+				<control type="label">
+					<posy>4</posy>
+					<posx>72</posx>
+					<height>32</height>
+					<width min="10" max="800">auto</width>
+					<font>Smaller_Caps</font>
+					<textcolor>$VAR[ThemeColorVar]</textcolor>
+					<aligny>center</aligny>
+					<label>$INFO[Player.Title]</label>
+				</control>
+				<control type="label">
+					<posy>35</posy>
+					<posx>72</posx>
+					<height>32</height>
+					<width min="10" max="800">auto</width>
+					<font>Smaller_Caps</font>
+					<aligny>center</aligny>
+					<textcolor>White2</textcolor>
+					<label>$INFO[MusicPlayer.Artist]</label>
+					<visible>Player.HasAudio</visible>
+				</control>
+				<control type="label">
+					<posy>35</posy>
+					<posx>72</posx>
+					<height>32</height>
+					<width min="10" max="800">auto</width>
+					<font>Smaller_Caps</font>
+					<aligny>center</aligny>
+					<textcolor>White2</textcolor>
+					<label>$INFO[VideoPlayer.TvShowTitle]</label>
+					<visible>Player.HasVideo + VideoPlayer.Content(episodes)</visible>
+				</control>
+				<control type="label">
+					<posy>35</posy>
+					<posx>72</posx>
+					<height>32</height>
+					<width min="10" max="800">auto</width>
+					<font>Smaller_Caps</font>
+					<aligny>center</aligny>
+					<textcolor>White2</textcolor>
+					<label>$INFO[VideoPlayer.Tagline]</label>
+					<visible>Player.HasVideo + VideoPlayer.Content(movies)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="NotificationVisibilityEffect">
+		<animation type="Visible">
+			<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+			<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+			<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
+		</animation>
+	</include>
 
-    <include name="WindowEffect">
-        <animation type="WindowOpen" reversible="false" condition="Window.Previous(home)">
-            <effect type="zoom" start="200" end="100" center="960,540" easing="out" tween="cubic" time="300" />
+	<include name="WindowEffect">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" start="0" end="100" time="200" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+		<animation type="Visible" reversible="false">
+			<effect type="fade" start="0" end="100" time="200" />
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+
+		<!--<animation type="WindowOpen" reversible="false" condition="Window.Previous(home)">
+            <effect type="zoom" start="200" end="100" center="auto" easing="out" tween="cubic" time="300" />
             <effect type="fade" start="0" end="100" time="300" />
         </animation>
         <animation type="WindowClose" reversible="false" condition="Window.Next(home)">
-            <effect type="zoom" start="100" end="200" center="960,540" easing="in" tween="cubic" time="300" />
+            <effect type="zoom" start="100" end="200" center="auto" easing="in" tween="cubic" time="300" />
             <effect type="fade" start="100" end="0" time="300" />
         </animation>
         <animation type="WindowOpen" reversible="false" condition="![Window.Previous(home)]">
@@ -736,7 +765,7 @@
         </animation>
         <animation type="WindowClose" reversible="false" condition="![Window.Next(home)]">
             <effect type="fade" start="100" end="0" time="200" />
-        </animation>
+        </animation>-->
     </include>
 
     <include name="DialogEffect">
@@ -932,73 +961,73 @@
         <control type="group">
             <visible>!Control.IsVisible(53)</visible>
             <control type="button" id="14000">
-                <posx>20</posx>
-                <posy>75r</posy>
-                <width>1890</width>
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
                 <height>90</height>
                 <font>Medium_Bold_Floor_Caps</font>
                 <label>$VAR[BreadcrumbsVar]$INFO[Container.FolderName]</label>
                 <label2>$INFO[Container.NumItems,, $LOCALIZE[31027]]</label2>
                 <aligny>top</aligny>
                 <textoffsety>28</textoffsety>
-                <textoffsetx>18</textoffsetx>
-                <texturenofocus border="18">-</texturenofocus>
-                <disabledcolor>White2</disabledcolor>
+				<textoffsetx>18</textoffsetx>
+				<texturenofocus border="18">-</texturenofocus>
+                <disabledcolor>Floor</disabledcolor>
                 <enable>no</enable>
                 <visible>![Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(55)]</visible>
                 <include>WindowEffect</include>
             </control>
             <control type="button" id="14001">
-                <posx>20</posx>
-                <posy>75r</posy>
-                <width>1890</width>
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
                 <height>90</height>
                 <font>Medium_Bold_Floor_Caps</font>
                 <label>$VAR[BreadcrumbsVar]$INFO[Control.GetLabel(29)]$INFO[Control.GetLabel(30), - ]</label>
                 <label2>$INFO[Container.NumItems,, $LOCALIZE[31027]]</label2>
-                <textoffsetx>18</textoffsetx>
-                <disabledcolor>White2</disabledcolor>
+				<textoffsetx>18</textoffsetx>
+				<disabledcolor>White2</disabledcolor>
                 <enable>no</enable>
                 <visible>Container.Content(livetv) | Window.IsActive(tv)</visible>
                 <include>WindowEffect</include>
             </control>
             <control type="button" id="14002">
-                <posx>20</posx>
-                <posy>75r</posy>
-                <width>1890</width>
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
                 <height>90</height>
                 <font>Medium_Bold_Floor_Caps</font>
                 <label>$VAR[BreadcrumbsVar]$INFO[Container.FolderName]</label>
                 <label2>$INFO[Container.NumItems,, $LOCALIZE[31027]]</label2>
-                <textoffsetx>18</textoffsetx>
-                <disabledcolor>White2</disabledcolor>
+				<textoffsetx>18</textoffsetx>
+				<disabledcolor>White2</disabledcolor>
                 <enable>no</enable>
                 <visible>[Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(55)] + ![Container.Content(livetv) | Window.IsActive(tv) | Control.IsVisible(14003)]</visible>
                 <include>WindowEffect</include>
             </control>
             <control type="button" id="14003">
-                <posx>20</posx>
-                <posy>75r</posy>
-                <width>1890</width>
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
                 <height>90</height>
                 <font>Medium_Bold_Floor_Caps</font>
                 <label>$INFO[ListItem.Label]</label>
                 <label2>$INFO[ListItem.Label2]</label2>
-                <textoffsetx>18</textoffsetx>
-                <disabledcolor>White2</disabledcolor>
+				<textoffsetx>18</textoffsetx>
+				<disabledcolor>White2</disabledcolor>
                 <enable>no</enable>
                 <visible>[[Control.IsVisible(51) + !Container.Content(episodes)] | Control.IsVisible(55)] + !System.IdleTime(10)</visible>
             </control>
         </control>
     </include>
 
-    <include name="DialogBack">
-        <texture border="4">dialogs/background_grey.png</texture>
-        <bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
-        <bordersize>21</bordersize>
-    </include>
+	<include name="DialogBack">
+		<texture border="4">dialogs/toast_back_blue.png</texture>
+		<bordertexture border="21">thumbs/thumb_shadow.png</bordertexture>
+		<bordersize>21</bordersize>
+	</include>
 
-    <include name="SliderControl">
+	<include name="SliderControl">
 	    <control type="group" id="4010">
 	    	<description>Slider Control</description>
 	        <posx>0</posx>
@@ -1104,4 +1133,55 @@
         <height>1080</height>
         <include>NoTextureButton</include>
     </include>
+
+	<include name="SideScrollbar">
+		<control type="button">
+			<posx>72r</posx>
+			<posy>72</posy>
+			<width>72</width>
+			<height>72</height>
+			<onclick>pageup(60)</onclick>
+		</control>
+		<control type="button">
+			<posx>72r</posx>
+			<posy>918</posy>
+			<width>72</width>
+			<height>72</height>
+			<onclick>pagedown(60)</onclick>
+		</control>
+		<control type="image">
+			<posx>58r</posx>
+			<posy>88</posy>
+			<width>40</width>
+			<height>40</height>
+			<aspectratio>keep</aspectratio>
+			<texture flipy="true">arrowdown.png</texture>
+		</control>
+		<control type="image">
+			<posx>58r</posx>
+			<posy>934</posy>
+			<width>40</width>
+			<height>40</height>
+			<aspectratio>keep</aspectratio>
+			<texture>arrowdown.png</texture>
+		</control>
+		<control type="image">
+			<posx>72r</posx>
+			<posy>144</posy>
+			<width>72</width>
+			<height>774</height>
+			<include>toast_back</include>
+		</control>
+		<control type="scrollbar" id="60">
+			<posx>58r</posx>
+			<posy>144</posy>
+			<height>774</height>
+			<width>40</width>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<texturesliderbackground border="3">dialogs/toast_back_blue.png</texturesliderbackground>
+			<animation effect="fade" start="100" end="50" time="400" condition="!Control.HasFocus(60)">Conditional</animation>
+		</control>
+	</include>
+
 </includes>

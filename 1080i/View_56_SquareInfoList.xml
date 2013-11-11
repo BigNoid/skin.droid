@@ -3,10 +3,6 @@
     <include name="View_56_SquareInfoList">
         <control type="group">
             <visible>Control.isVisible(56)</visible>
-            <animation type="VisibleChange" reversible="false">
-                <effect type="zoom" start="200" end="100" center="960,560" easing="out" tween="cubic" time="300" />
-                <effect type="fade" start="0" end="100" time="300" />
-            </animation>
             <control type="group">
                 <posx>66</posx>
                 <posy>412</posy>
@@ -223,7 +219,7 @@
                                 <width>820</width>
                                 <height>72</height>
                                 <include>toast_back</include>
-                                </control> -->
+                            </control>-->
                             <control type="label">
                                 <posx>0</posx>
                                 <width>820</width>
@@ -249,11 +245,11 @@
                                 <width>820</width>
                                 <height>72</height>
                                 <include>toast_back</include>
-                                </control> -->
+                            </control>-->
                             <control type="image">
                                 <width>820</width>
                                 <height>72</height>
-                                <texture>dialogs/listitem_focus.png</texture>
+                                <texture border="8">listselect_fo.png</texture>
                                 <visible>Control.HasFocus(56)</visible>
                             </control>
                             <control type="label">
@@ -293,7 +289,7 @@
                         <width>820</width>
                         <height>32</height>
                         <texture border="3">dialogs/toast_back_blue_mask.png</texture>
-                        </control> -->
+                    </control>-->
                     <control type="image">
                         <posx>454</posx>
                         <posy>504</posy>

@@ -1,120 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="147">
-    <defaultcontrol>61</defaultcontrol>
-    <controls>
-        <include>GlobalOverlay</include>
-        <include>DialogEffect</include>
-        <control type="button">
-            <include>TouchOverlay</include>
-            <onclick>Dialog.Close(textviewer)</onclick>
-        </control>
-        <control type="group">
-            <posx>320</posx>
-            <posy>230</posy>
-            <control type="button">
-                <description>Inhibit Overlay Close Action</description>
-                <posx>-21</posx>
-                <posy>-21</posy>
-                <width>1322</width>
-                <height>662</height>
-                <include>NoTextureButton</include>
-            </control>
+	<defaultcontrol>60</defaultcontrol>
+
+	<controls>
+		<include>NotificationCenter</include>
+		<control type="group">
+            <animation type="WindowOpen" reversible="false">
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="fade" start="100" end="0" time="200" />
+            </animation>
             <control type="image">
-                <posx>-21</posx>
-                <posy>-21</posy>
-                <width>1322</width>
-                <height>662</height>
-                <include>DialogBack</include>
-            </control>
-            <control type="label">
-                <posx>20</posx>
-                <width>1280</width>
-                <height>72</height>
-                <font>Medium</font>
-                <aligny>center</aligny>
-                <label>$LOCALIZE[24054]: $INFO[ListItem.Property(Addon.Name)]</label>
-                <textcolor>$VAR[ThemeColorVar]</textcolor>
-                <textoffsetx>8</textoffsetx>
-            </control>
-            <control type="image">
-                <description>Header Line</description>
                 <posx>0</posx>
                 <posy>72</posy>
-                <width>1280</width>
-                <height>2</height>
-                <texture>common/blue2.png</texture>
+                <width>480</width>
+                <height>486</height>
+                <include>toast_back</include>
+            </control>
+            <control type="image" id="3">
+                <posx>0</posx>
+                <posy>72</posy>
+                <width>480</width>
+                <height>486</height>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$INFO[ListItem.Icon]</texture>
+            </control>
+            <control type="grouplist" id="9000">
+                <posx>0</posx>
+                <posy>558</posy>
+                <width>480</width>
+                <height>432</height>
+                <itemgap>0</itemgap>
+                <onup>60</onup>
+                <ondown>60</ondown>
+                <onright>60</onright>
+                <onleft>60</onleft>
+                <orientation>vertical</orientation>
+                <control type="button" id="6">
+                    <description>filler</description>
+                    <width>480</width>
+                    <label>-</label>
+                    <enable>no</enable>
+                </control>
+                <control type="button" id="7">
+                    <description>filler</description>
+                    <width>480</width>
+                    <label>-</label>
+                    <enable>no</enable>
+                </control>
+                <control type="button" id="9">
+                    <description>filler</description>
+                    <width>480</width>
+                    <label>-</label>
+                    <enable>no</enable>
+                </control>
+                <control type="button" id="8">
+                    <description>filler</description>
+                    <width>480</width>
+                    <label>-</label>
+                    <enable>no</enable>
+                </control>
+                <control type="button" id="10">
+                    <description>Back button</description>
+                    <width>480</width>
+                    <label>186</label>
+                    <onclick>Dialog.Close(147)</onclick>
+                </control>
+                <control type="button" id="11">
+                    <description>filler</description>
+                    <width>480</width>
+                    <label>-</label>
+                    <enable>no</enable>
+                </control>
             </control>
             <control type="group">
-                <posx>20</posx>
-                <posy>20</posy>
-                <control type="image" id="3">
-                    <posx>20</posx>
-                    <posy>70</posy>
-                    <width>250</width>
-                    <height>250</height>
-                    <aspectratio>scale</aspectratio>
-                    <bordersize>2</bordersize>
-                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                </control>
-                <control type="group">
-                    <posx>300</posx>
-                    <posy>70</posy>
-                    <control type="textbox" id="5">
-                        <description>Description</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>932</width>
-                        <height>430</height>
-                        <align>left</align>
-                        <font>Smaller</font>
-                        <pagecontrol>61</pagecontrol>
-                        <autoscroll>False</autoscroll>
-                    </control>
-                    <control type="scrollbar" id="61">
-                        <posx>938</posx>
-                        <posy>0</posy>
-                        <height>430</height>
-                        <width>6</width>
-                        <onleft>10</onleft>
-                        <onright>10</onright>
-                        <texturesliderbackground>-</texturesliderbackground>
-                        <texturesliderbar>-</texturesliderbar>
-                        <texturesliderbarfocus>dialogs/scrollbar.png</texturesliderbarfocus>
-                    </control>
-                </control>
-            </control>
-            <control type="group">
-                <description>Button Bar</description>
-                <posy>549</posy>
+                <posx>480</posx>
+                <posy>72</posy>
                 <control type="image">
-                    <description>Line</description>
-                    <height>1</height>
-                    <width>1280</width>
-                    <texture>common/grey.png</texture>
+                    <width>1368</width>
+                    <height>918</height>
+                    <include>toast_back</include>
                 </control>
-                <control type="grouplist">
-                    <description>Buttons</description>
-                    <posx>0</posx>
-                    <posy>1</posy>
-                    <height>70</height>
-                    <width>1230</width>
-                    <onleft>61</onleft>
-                    <onright>61</onright>
-                    <onup>61</onup>
-                    <ondown>16</ondown>
-                    <align>center</align>
-                    <itemgap>0</itemgap>
-                    <orientation>horizontal</orientation>
-                    <control type="button" id="10">
-                        <description>Back button</description>
-                        <include>DefaultButton</include>
-                        <width>200</width>
-                        <label>186</label>
-                        <align>center</align>
-                        <onclick>Dialog.Close(textviewer)</onclick>
-                    </control>
+                <control type="textbox" id="5">
+                    <description>Description</description>
+                    <posx>28</posx>
+                    <posy>10</posy>
+                    <width>1320</width>
+                    <height>900</height>
+                    <align>left</align>
+                    <font>Plot</font>
+                    <pagecontrol>60</pagecontrol>
+                    <autoscroll>False</autoscroll>
                 </control>
             </control>
+            <include>SideScrollbar</include>
         </control>
     </controls>
+
 </window>

@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="View_55_SmallIcons">
-        <control type="group">
-            <visible>Control.isVisible(55)</visible>
-            <posx>0</posx>
-            <posy>72</posy>
-            <animation type="VisibleChange" reversible="false">
-                <effect type="zoom" start="200" end="100" center="960,540" easing="out" tween="cubic" time="300" />
-                <effect type="fade" start="0" end="100" time="300" />
-            </animation>
+
+	<include name="View_55_SmallIcons">
+		<control type="group">
+			<visible>Control.isVisible(55)</visible>
             <control type="image">
-                <posx>30</posx>
-                <posy>20</posy>
-                <width>1858</width>
-                <height>930</height>
-                <texture>dialogs/background_dark.png</texture>
-                <colordiffuse>BBFFFFFF</colordiffuse>
+                <posy>72</posy>
+                <width>1848</width>
+                <height>918</height>
+                <include>toast_back</include>
             </control>
             <control type="panel" id="55">
-                <posx>35</posx>
-                <posy>25</posy>
+                <posx>0</posx>
+                <posy>72</posy>
                 <width>1848</width>
-                <height>920</height>
+                <height>918</height>
                 <onleft>9010</onleft>
                 <onright>60</onright>
                 <onup>55</onup>
@@ -147,5 +140,5 @@
             </control>
             <include>SideScrollbar</include>
         </control>
-    </include>
+	</include>
 </includes>

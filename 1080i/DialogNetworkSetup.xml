@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="128">
-    <defaultcontrol always="true">10</defaultcontrol>
-    <allowoverlay>yes</allowoverlay>
-    <controls>
-        <control type="group">
-            <control type="image">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>NotificationCenter</include>
+		<control type="group">
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="200" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="200" />
+			</animation>
+			<control type="image">
                 <posy>72</posy>
                 <width>480</width>
                 <height>54</height>
@@ -53,8 +60,7 @@
                     <description>Filler</description>
                     <width>480</width>
                     <label>-</label>
-                    <height>720</height>
-                    fdsfsdf
+                    <height>720</height>fdsfsdf
                     <font>-</font>
                     <enable>no</enable>
                 </control>
@@ -118,6 +124,6 @@
                     <enable>no</enable>
                 </control>
             </control>
-        </control>
-    </controls>
+		</control>
+	</controls>
 </window>

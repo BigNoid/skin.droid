@@ -1,203 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="132">
     <defaultcontrol always="true">3</defaultcontrol>
-    <include>DialogEffect</include>
+    <allowoverlay>yes</allowoverlay>
     <controls>
-        <include>GlobalOverlay</include>
-        <control type="button">
-            <include>TouchOverlay</include>
-            <onclick>Dialog.Close(contentsettings)</onclick>
-        </control>
-        <control type="group">
-            <posx>220</posx>
-            <posy>130</posy>
-            <control type="button">
-                <description>Inhibit Overlay Close Action</description>
-                <posx>-21</posx>
-                <posy>-21</posy>
-                <width>1522</width>
-                <height>862</height>
-                <include>NoTextureButton</include>
-            </control>
+		<include>NotificationCenter</include>
+		<control type="group">
+            <animation type="WindowOpen" reversible="false">
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="fade" start="100" end="0" time="200" />
+            </animation>
             <control type="image">
-                <posx>-21</posx>
-                <posy>-21</posy>
-                <width>1522</width>
-                <height>862</height>
-                <include>DialogBack</include>
-            </control>
-            <control type="label">
-                <posx>20</posx>
-                <width>1460</width>
-                <height>72</height>
-                <font>Medium</font>
-                <aligny>center</aligny>
-                <label>$INFO[System.CurrentWindow]</label>
-                <textcolor>$VAR[ThemeColorVar]</textcolor>
-                <textoffsetx>8</textoffsetx>
-            </control>
-            <control type="image">
-                <description>Header Line</description>
                 <posx>0</posx>
                 <posy>72</posy>
-                <width>1480</width>
-                <height>2</height>
-                <texture>common/blue2.png</texture>
+                <width>480</width>
+                <height>486</height>
+                <include>toast_back</include>
             </control>
-            <control type="group">
-                <posx>20</posx>
-                <posy>84</posy>
-                <control type="spincontrolex" id="3">
-                    <description>Directory Content</description>
-                    <width>1440</width>
-                    <font>Small</font>
-                    <onup>5</onup>
-                    <ondown>4</ondown>
-                    <onleft>9000</onleft>
-                    <onright>9000</onright>
+            <control type="image">
+                <posx>0</posx>
+                <posy>72</posy>
+                <width>480</width>
+                <height>486</height>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$INFO[ListItem.Icon]</texture>
+            </control>
+            <control type="grouplist" id="9000">
+                <posx>0</posx>
+                <posy>558</posy>
+                <width>480</width>
+                <height>432</height>
+                <itemgap>0</itemgap>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <onright>4</onright>
+                <onleft>5</onleft>
+                <orientation>vertical</orientation>
+                <control type="button" id="6">
+                    <description>Settings</description>
+                    <width>480</width>
+                    <label>5</label>
                 </control>
-                <control type="label">
-                    <description>Directory Contains</description>
-                    <width>1440</width>
-                    <height>72</height>
-                    <textoffsetx>30</textoffsetx>
-                    <label>20344</label>
+                <control type="button" id="28">
+                    <description>Ok</description>
+                    <width>480</width>
+                    <label>186</label>
                 </control>
-                <control type="list" id="4">
-                    <posy>80</posy>
-                    <width>1440</width>
-                    <height>246</height>
-                    <onup>3</onup>
-                    <onleft>9000</onleft>
-                    <onright>60</onright>
-                    <ondown>5</ondown>
-                    <pagecontrol>60</pagecontrol>
-                    <itemlayout height="72" width="1440">
-                        <control type="image">
-                            <width>1440</width>
-                            <height>72</height>
-                            <texture>dialogs/listitem_nofocus.png</texture>
-                        </control>
-                        <control type="label">
-                            <width>1440</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <textoffsetx>30</textoffsetx>
-                            <textcolor>White2</textcolor>
-                        </control>
-                        <control type="label">
-                            <posx>1440</posx>
-                            <width>1440</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <align>right</align>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <textoffsetx>30</textoffsetx>
-                            <textcolor>grey</textcolor>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout height="72" width="1440">
-                        <control type="image">
-                            <width>1440</width>
-                            <height>72</height>
-                            <texture>dialogs/listitem_nofocus.png</texture>
-                        </control>
-                        <control type="image">
-                            <width>1440</width>
-                            <height>72</height>
-                            <texture>dialogs/listitem_focus.png</texture>
-                            <visible>Control.HasFocus(4)</visible>
-                        </control>
-                        <control type="label">
-                            <width>1440</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <textoffsetx>30</textoffsetx>
-                            <textcolor>$VAR[ThemeColorVar]</textcolor>
-                        </control>
-                        <control type="label">
-                            <posx>1440</posx>
-                            <width>1440</width>
-                            <height>72</height>
-                            <font>Small</font>
-                            <align>right</align>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <textoffsetx>30</textoffsetx>
-                        </control>
-                    </focusedlayout>
+                <control type="button" id="29">
+                    <description>Cancel</description>
+                    <width>480</width>
+                    <label>222</label>
                 </control>
-                <control type="scrollbar" id="60">
-                    <posx>1440</posx>
-                    <posy>80</posy>
+                <control type="button" id="4000">
+                    <description>Filler</description>
+                    <width>480</width>
+                    <label>-</label>
                     <height>216</height>
-                    <width>6</width>
-                    <onleft>4</onleft>
-                    <onright>9000</onright>
-                    <showonepage>true</showonepage>
-                    <animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(60) + !Container(4).OnScrollNext + !Container(4).OnScrollPrevious">Conditional</animation>
+                    <font>-</font>
+                    <enable>no</enable>
                 </control>
-                <control type="grouplist" id="5">
-                    <description>Control Area</description>
-                    <posy>356</posy>
-                    <width>1440</width>
-                    <height>432</height>
-                    <itemgap>0</itemgap>
-                    <onup>4</onup>
-                    <ondown>29</ondown>
-                    <onleft>4</onleft>
-                    <onright>29</onright>
-                    <orientation>vertical</orientation>
-                </control>
-                <control type="button" id="7">
-                    <description>default</description>
-                </control>
-                <control type="radiobutton" id="8">
-                    <description>radioButton</description>
-                </control>
+            </control>
+            <control type="button" id="20">
+                <description>Header Label</description>
+                <posx>480</posx>
+                <posy>72</posy>
+                <width>1440</width>
+                <height>54</height>
+                <font>Small</font>
+                <disabledcolor>Blue2</disabledcolor>
+                <label>20333</label>
+                <textoffsetx>30</textoffsetx>
+                <enable>no</enable>
+            </control>
+            <control type="spincontrolex" id="3">
+                <description>Directory Content</description>
+                <posx>480</posx>
+                <posy>126</posy>
+                <width>1440</width>
+                <font>Small</font>
+                <onup>5</onup>
+                <ondown>4</ondown>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+            </control>
+            <control type="label">
+                <description>Directory Contains</description>
+                <posx>480</posx>
+                <posy>126</posy>
+                <width>1440</width>
+                <height>72</height>
+                <textoffsetx>30</textoffsetx>
+                <label>20344</label>
+            </control>
+            <!--<control type="label">
+				<description>Content Picker label</description>
+				<posx>1170</posx>
+				<posy>68</posy>
+				<width>458</width>
+				<align>right</align>
+				<label>$INFO[Control.GetLabel(3)]</label>
+			</control>-->
+            <control type="image">
+                <posx>480</posx>
+                <posy>198</posy>
+                <width>1440</width>
+                <height>792</height>
+                <include>toast_back</include>
+            </control>
+            <control type="list" id="4">
+                <posx>480</posx>
+                <posy>198</posy>
+                <width>1440</width>
+                <height>288</height>
+                <onup>3</onup>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <ondown>5</ondown>
+                <itemlayout height="72" width="1440">
+                    <control type="image">
+                        <width>1440</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="label">
+                        <width>1440</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textoffsetx>30</textoffsetx>
+                        <textcolor>White2</textcolor>
+                    </control>
+                    <control type="label">
+                        <posx>1440</posx>
+                        <width>1440</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textoffsetx>30</textoffsetx>
+                        <textcolor>grey</textcolor>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="72" width="1440">
+                    <control type="image">
+                        <width>1440</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <width>1440</width>
+                        <height>72</height>
+                        <texture border="8">listselect_fo.png</texture>
+                        <visible>Control.HasFocus(4)</visible>
+                    </control>
+                    <control type="label">
+                        <width>1440</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textoffsetx>30</textoffsetx>
+                        <textcolor>$VAR[ThemeColorVar]</textcolor>
+                    </control>
+                    <control type="label">
+                        <posx>1440</posx>
+                        <width>1440</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textoffsetx>30</textoffsetx>
+                    </control>
+                </focusedlayout>
             </control>
 
-            <control type="group">
-                <posy>747</posy>
-                <description>Button Bar</description>
-                <control type="image">
-                    <description>Line</description>
-                    <height>1</height>
-                    <width>1480</width>
-                    <texture>common/grey.png</texture>
-                </control>
-                <control type="grouplist" id="9000">
-                    <posx>0</posx>
-                    <posy>1</posy>
-                    <width>1480</width>
-                    <height>918</height>
-                    <itemgap>0</itemgap>
-                    <orientation>horizontal</orientation>
-                    <onup>12</onup>
-                    <ondown>10</ondown>
-                    <control type="button" id="29">
-                        <description>Cancel</description>
-                        <include>DefaultButton</include>
-                        <width>494</width>
-                        <label>222</label>
-                        <align>center</align>
-                    </control>
-                    <control type="button" id="6">
-                        <description>Settings</description>
-                        <include>DefaultButton</include>
-                        <width>493</width>
-                        <label>5</label>
-                        <align>center</align>
-                    </control>
-                    <control type="button" id="28">
-                        <description>Ok</description>
-                        <include>DefaultButton</include>
-                        <width>493</width>
-                        <label>186</label>
-                        <align>center</align>
-                    </control>
-                </control>
+            <control type="grouplist" id="5">
+                <description>Control Area</description>
+                <posx>480</posx>
+                <posy>486</posy>
+                <width>1440</width>
+                <height>432</height>
+                <itemgap>0</itemgap>
+                <onup>4</onup>
+                <ondown>29</ondown>
+                <onleft>4</onleft>
+                <onright>29</onright>
+                <orientation>vertical</orientation>
+            </control>
+
+            <control type="button" id="7">
+                <description>default</description>
+            </control>
+
+            <control type="radiobutton" id="8">
+                <description>radioButton</description>
+            </control>
+            <control type="button">
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
+                <height>90</height>
+                <font>Medium_Bold_Floor_Caps</font>
+                <label>$INFO[System.CurrentWindow]</label>
+                <textoffsetx>18</textoffsetx>
+                <disabledcolor>White2</disabledcolor>
+                <enable>no</enable>
             </control>
         </control>
     </controls>

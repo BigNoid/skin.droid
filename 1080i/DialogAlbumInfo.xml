@@ -4,8 +4,9 @@
     <allowoverlay>yes</allowoverlay>
     <onunload>ClearProperty(FanartZoom,musicinformation)</onunload>
     <controls>
-        <include>NotificationCenter</include>
+		<include>NotificationCenter</include>
         <control type="group">
+            <include>DialogEffect</include>
             <control type="grouplist" id="5000">
                 <posx>0</posx>
                 <posy>0</posy>
@@ -18,45 +19,76 @@
                 <onright>5000</onright>
                 <onleft>5000</onleft>
                 <orientation>horizontal</orientation>
+                <control type="label">
+                    <description>Busy label</description>
+                    <width min="100" max="450">auto</width>
+                    <height>72</height>
+                    <aligny>center</aligny>
+                    <label>$LOCALIZE[20186]...</label>
+                    <visible>Window.IsVisible(busydialog)</visible>
+                </control>
                 <control type="group">
-                    <description>Refresh Button</description>
+                    <width>72</width>
+                    <height>72</height>
+                    <visible>Window.IsVisible(busydialog)</visible>
+                    <control type="image">
+                        <description>Busy animation</description>
+                        <posx>12</posx>
+                        <posy>12</posy>
+                        <width>48</width>
+                        <height>48</height>
+                        <texture>dialogs/busy_in.png</texture>
+                        <aspectratio>keep</aspectratio>
+                        <animation effect="rotate" start="0" end="360" center="auto" time="2000" loop="true" condition="true">conditional</animation>
+                    </control>
+                    <control type="image">
+                        <description>Busy animation</description>
+                        <posx>12</posx>
+                        <posy>12</posy>
+                        <width>48</width>
+                        <height>48</height>
+                        <texture>dialogs/busy_out.png</texture>
+                        <aspectratio>keep</aspectratio>
+                        <animation effect="rotate" start="360" end="0" center="auto" time="2000" loop="true" condition="true">conditional</animation>
+                    </control>
+                </control>
+                <control type="group">
                     <width>90</width>
-                    <height>68</height>
+                    <height>72</height>
                     <control type="button" id="6">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
                         <height>72</height>
-                        <ondown>50</ondown>
+                        <onup>50</onup>
+                        <ondown>4002</ondown>
                         <onright>10</onright>
                         <onleft>11119</onleft>
-                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>9</posy>
+                        <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/sync.png</texture>
                     </control>
                 </control>
-               <control type="group">
-                    <description>Choose Art Button</description>
+                <control type="group">
                     <width>90</width>
-                    <height>68</height>
+                    <height>72</height>
                     <control type="button" id="10">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
                         <height>72</height>
-                        <ondown>50</ondown>
-                        <onright>11121</onright>
+                        <onup>50</onup>
+                        <ondown>4002</ondown>
+                        <onright>12</onright>
                         <onleft>6</onleft>
-                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>9</posy>
+                        <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/art.png</texture>
@@ -64,14 +96,15 @@
                 </control>
                 <control type="group">
                     <width>90</width>
-                    <height>68</height>
+                    <height>72</height>
                     <visible>Container.Content(artists)</visible>
                     <control type="button" id="12">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
-                        <height>68</height>
-                        <ondown>50</ondown>
+                        <height>72</height>
+                        <onup>50</onup>
+                        <ondown>4002</ondown>
                         <onright>11121</onright>
                         <onleft>10</onleft>
                     </control>
@@ -110,6 +143,7 @@
                     </control>
                 </control>
             </control>
+            <include>NotificationCenterProgress</include>
             <control type="image">
                 <posy>72</posy>
                 <width>600</width>
@@ -175,11 +209,11 @@
                     </control>
                 </itemlayout>
                 <focusedlayout width="600" height="72">
-                    <control type="image">
-                        <width>600</width>
-                        <height>72</height>
-                        <include>toast_back</include>
-                    </control>
+                        <control type="image">
+                            <width>600</width>
+                            <height>72</height>
+                            <include>toast_back</include>
+                        </control>
                     <control type="group">
                         <visible>!Control.HasFocus(50)</visible>
                         <control type="label">
@@ -205,7 +239,7 @@
                         <control type="image">
                             <width>600</width>
                             <height>72</height>
-                            <texture>dialogs/listitem_focus.png</texture>
+                            <texture border="8">listselect_fo.png</texture>
                             <visible>Control.HasFocus(50)</visible>
                         </control>
                         <control type="label">

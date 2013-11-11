@@ -7,15 +7,45 @@
         <include>GlobalBackground</include>
 		<include>NotificationCenter</include>
 		<control type="group">
-            <animation type="WindowOpen" reversible="false" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation) | Window.Previous(slideshow)]">
-                <effect type="zoom" start="80" end="100" center="960,540" easing="out" tween="cubic" time="300" />
-                <effect type="fade" start="0" end="100" time="300" />
-            </animation>
-            <animation type="WindowClose" reversible="false">
-                <effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="cubic" time="300" />
-                <effect type="fade" start="100" end="0" time="300" />
-            </animation>
-            <include condition="system.getbool(lookandfeel.enablerssfeeds)">HomeRSSFeed</include>
+			<visible>Player.HasMedia</visible>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="200" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="fade" start="100" end="0" time="200" />
+			</animation>
+			<control type="image">
+				<posx>700</posx>
+				<posy>72</posy>
+				<width>1220</width>
+				<height>920</height>
+				<texture>common/black.png</texture>
+				<visible>[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)]</visible>
+				<include>VisibleFadeEffect</include>
+			</control>
+			<control type="visualisation">
+				<posx>700</posx>
+				<posy>72</posy>
+				<width>1220</width>
+				<height>920</height>
+				<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)</visible>
+			</control>
+			<control type="videowindow">
+				<posx>700</posx>
+				<posy>72</posy>
+				<width>1220</width>
+				<height>920</height>
+				<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="200" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="200" />
+			</animation>
+			<include condition="system.getbool(lookandfeel.enablerssfeeds)">HomeRSSFeed</include>
             <include>HomeItemsPanel</include>
         </control>
         <control type="group" id="9999">
@@ -32,5 +62,6 @@
                 <include>MediaMenuBottomButton</include>
             </control>
         </control>
+
     </controls>
 </window>

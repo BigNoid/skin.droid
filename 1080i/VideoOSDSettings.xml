@@ -15,7 +15,7 @@
             <control type="image">
                 <width>860</width>
                 <height>955</height>
-                <texture>dialogs/background_grey.png</texture>
+                <texture border="3">dialogs/toast_back_blue.png</texture>
                 <colordiffuse>FAFFFFFF</colordiffuse>
             </control>
             <control type="label" id="2">

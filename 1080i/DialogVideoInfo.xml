@@ -2,65 +2,109 @@
 <window id="2003">
     <defaultcontrol>5000</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <include>MediaMenuReset</include>
+    <onload>ClearProperty(MediaMenu,Home)</onload>
+    <onunload>ClearProperty(VideoInfoMediaMenu,Home)</onunload>
     <onunload>ClearProperty(VideoInfoProperties,Home)</onunload>
     <onunload>ClearProperty(FanartZoom,movieinformation)</onunload>
     <controls>
-        <control type="image">
-            <posx>0</posx>
-            <posy>72</posy>
-            <width>1920</width>
-            <height>1008</height>
-            <aspectratio>scale</aspectratio>
-            <texture>$INFO[ListItem.Art(thumb)]</texture>
-            <visible>Container.Content(episodes)</visible>
-        </control>
-        <control type="image">
-            <posx>0</posx>
-            <posy>72</posy>
-            <width>1920</width>
-            <height>1008</height>
-            <aspectratio>scale</aspectratio>
-            <texture>$INFO[ListItem.Art(fanart)]</texture>
-            <visible>!Container.Content(episodes)</visible>
-        </control>
-        <control type="button">
-            <include>TouchOverlay</include>
-            <onclick>Dialog.Close(movieinformation)</onclick>
-        </control>
-        <include>NotificationCenter</include>
+		<include>NotificationCenter</include>
         <control type="group">
+            <animation type="WindowOpen" reversible="false">
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="fade" start="100" end="0" time="200" />
+            </animation>
+
             <control type="grouplist" id="5000">
                 <posx>0</posx>
                 <posy>0</posy>
-                <width>1830</width>
+                <width>1920</width>
                 <height>68</height>
                 <itemgap>0</itemgap>
                 <align>right</align>
                 <onup>50</onup>
                 <ondown condition="Control.IsEnabled(13)">13</ondown>
                 <ondown condition="!Control.IsEnabled(13)">4002</ondown>
+                <onright>5000</onright>
+                <onleft>5000</onleft>
                 <orientation>horizontal</orientation>
+                <control type="label">
+                    <description>Busy label</description>
+                    <width min="100" max="450">auto</width>
+                    <height>72</height>
+                    <aligny>center</aligny>
+                    <label>$LOCALIZE[20186]...</label>
+                    <visible>Window.IsVisible(busydialog)</visible>
+                </control>
                 <control type="group">
-                    <description>Resume Button</description>
+                    <width>72</width>
+                    <height>72</height>
+                    <visible>Window.IsVisible(busydialog)</visible>
+                    <control type="image">
+                        <description>Busy animation</description>
+                        <posx>12</posx>
+                        <posy>12</posy>
+                        <width>48</width>
+                        <height>48</height>
+                        <texture>dialogs/busy_in.png</texture>
+                        <aspectratio>keep</aspectratio>
+                        <animation effect="rotate" start="0" end="360" center="auto" time="2000" loop="true" condition="true">conditional</animation>
+                    </control>
+                    <control type="image">
+                        <description>Busy animation</description>
+                        <posx>12</posx>
+                        <posy>12</posy>
+                        <width>48</width>
+                        <height>48</height>
+                        <texture>dialogs/busy_out.png</texture>
+                        <aspectratio>keep</aspectratio>
+                        <animation effect="rotate" start="360" end="0" center="auto" time="2000" loop="true" condition="true">conditional</animation>
+                    </control>
+                </control>
+                <control type="group">
                     <width>90</width>
-                    <height>68</height>
+                    <height>72</height>
+                    <control type="button" id="8">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>90</width>
+                        <height>72</height>
+                        <onup>50</onup>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
+                        <onright>9</onright>
+                        <onleft>11119</onleft>
+                    </control>
+                    <control type="image">
+                        <posx>21</posx>
+                        <posy>12</posy>
+                        <width>48</width>
+                        <height>48</height>
+                        <texture>osd/play_nf.png</texture>
+                        <animation type="Conditional" reversible="false" condition="true">
+                            <effect type="fade" start="80" end="80" time="0" />
+                        </animation>
+                    </control>
+                </control>
+                <control type="group">
+                    <width>90</width>
+                    <height>72</height>
                     <visible>!Container.Content(tvshows)</visible>
                     <control type="button" id="9">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>90</width>
-                        <height>68</height>
+                        <height>72</height>
                         <onup>50</onup>
                         <ondown condition="Control.IsEnabled(13)">13</ondown>
                         <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                         <onright>6</onright>
-                        <onleft>11119</onleft>
-                        <include>DefaultButton</include>
+                        <onleft>8</onleft>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>9</posy>
+                        <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>osd/resume_nf.png</texture>
@@ -73,9 +117,8 @@
                     </control>
                 </control>
                 <control type="group">
-                    <description>Refresh Button</description>
                     <width>90</width>
-                    <height>68</height>
+                    <height>72</height>
                     <control type="button" id="6">
                         <posx>0</posx>
                         <posy>0</posy>
@@ -86,20 +129,18 @@
                         <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                         <onright>11</onright>
                         <onleft>9</onleft>
-                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>9</posy>
+                        <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/sync.png</texture>
                     </control>
                 </control>
                 <control type="group">
-                    <description>Trailer Button</description>
                     <width>90</width>
-                    <height>68</height>
+                    <height>72</height>
                     <visible>!Container.Content(tvshows)</visible>
                     <control type="button" id="11">
                         <posx>0</posx>
@@ -112,11 +153,10 @@
                         <onright>10</onright>
                         <onleft>6</onleft>
                         <enable>!IsEmpty(ListItem.Trailer)</enable>
-                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>9</posy>
+                        <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/trailer.png</texture>
@@ -126,9 +166,8 @@
                     </control>
                 </control>
                 <control type="group">
-                    <description>Choose Art Button</description>
                     <width>90</width>
-                    <height>68</height>
+                    <height>72</height>
                     <control type="button" id="10">
                         <posx>0</posx>
                         <posy>0</posy>
@@ -139,463 +178,824 @@
                         <ondown condition="!Control.IsEnabled(13)">4002</ondown>
                         <onright>11121</onright>
                         <onleft>11</onleft>
-                        <include>DefaultButton</include>
                     </control>
                     <control type="image">
                         <posx>21</posx>
-                        <posy>9</posy>
+                        <posy>12</posy>
                         <width>48</width>
                         <height>48</height>
                         <texture>icons/art.png</texture>
                     </control>
                 </control>
+                <control type="group">
+                    <width>90</width>
+                    <height>72</height>
+                    <control type="button" id="11121">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>90</width>
+                        <height>72</height>
+                        <onclick condition="IsEmpty(Window(Home).property(VideoInfoMediaMenu))">SetProperty(VideoInfoMediaMenu,True,Home)</onclick>
+                        <onclick condition="IsEmpty(Window(Home).property(VideoInfoMediaMenu))">SetFocus(9000)</onclick>
+                        <onclick condition="!IsEmpty(Window(Home).property(VideoInfoMediaMenu))">ClearProperty(VideoInfoMediaMenu,Home)</onclick>
+                        <onleft>10</onleft>
+                        <onright>11115</onright>
+                        <ondown condition="Control.IsEnabled(13)">13</ondown>
+                        <ondown condition="!Control.IsEnabled(13)">4002</ondown>
+                    </control>
+                    <control type="image">
+                        <posx>21</posx>
+                        <posy>12</posy>
+                        <width>48</width>
+                        <height>48</height>
+                        <texture>icons/menu_nf.png</texture>
+                    </control>
+                </control>
             </control>
-        </control>
-        <control type="group">
-            <posx>170</posx>
-            <posy>140</posy>
-            <control type="button">
-                <description>Inhibit Overlay Close Action</description>
-                <posx>-21</posx>
-                <posy>-21</posy>
-                <width>1622</width>
-                <height>900</height>
-                <include>NoTextureButton</include>
-            </control>
+            <include>NotificationCenterProgress</include>
             <control type="image">
-                <posx>-21</posx>
-                <posy>-21</posy>
-                <width>1622</width>
-                <height>900</height>
-                <include>DialogBack</include>
-            </control>
-            <control type="label">
-                <description>Movie Title</description>
-                <posx>20</posx>
-                <width>1560</width>
-                <height>72</height>
-                <font>Medium</font>
-                <aligny>center</aligny>
-                <label>$INFO[ListItem.Title]$INFO[ListItem.Top250, # , ]</label>
-                <textcolor>$VAR[ThemeColorVar]</textcolor>
-                <textoffsetx>8</textoffsetx>
-                <visible>!Container.Content(episodes)</visible>
-            </control>
-            <control type="label">
-                <description>Year, Duration and Ratings</description>
-                <posx>1560</posx>
-                <width>1560</width>
-                <height>72</height>
-                <font>Smaller</font>
-                <align>right</align>
-                <aligny>center</aligny>
-                <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ,]</label>
-                <textcolor>$VAR[ThemeColorVar]</textcolor>
-                <textoffsetx>8</textoffsetx>
-                <visible>!Container.Content(tvshows)</visible>
-            </control>
-            <control type="label">
-                <description>Epiosode Title</description>
-                <posx>20</posx>
-                <width>1560</width>
-                <height>72</height>
-                <font>Medium</font>
-                <aligny>center</aligny>
-                <label>$VAR[ListItemSeasonVar,S]$VAR[ListItemEpisodeVar,E, - ]$INFO[ListItem.Title]</label>
-                <textcolor>$VAR[ThemeColorVar]</textcolor>
-                <textoffsetx>8</textoffsetx>
-                <visible>Container.Content(episodes)</visible>
-            </control>
-            <control type="label">
-                <description>Year, Duration and Ratings</description>
-                <posx>1560</posx>
-                <width>1560</width>
-                <height>72</height>
-                <font>Smaller</font>
-                <align>right</align>
-                <aligny>center</aligny>
-                <label>$INFO[ListItem.Premiered,$LOCALIZE[31051] ,]</label>
-                <textcolor>$VAR[ThemeColorVar]</textcolor>
-                <textoffsetx>8</textoffsetx>
-                <visible>Container.Content(tvshows) + !IsEmpty(ListItem.Premiered)</visible>
-            </control>
-            <control type="image">
-                <description>Header Line</description>
                 <posx>0</posx>
                 <posy>72</posy>
-                <width>1580</width>
-                <height>2</height>
-                <texture>common/blue2.png</texture>
+                <width>600</width>
+                <height>918</height>
+                <include>toast_back</include>
             </control>
+            <control type="image">
+                <posx>0</posx>
+                <posy>72</posy>
+                <width>600</width>
+                <height>918</height>
+                <aspectratio>stretch</aspectratio>
+                <texture background="true">$VAR[InfoPosterThumbVar]</texture>
+                <bordersize>2</bordersize>
+            </control>
+            <control type="image">
+                <posx>434</posx>
+                <posy>74</posy>
+                <width>166</width>
+                <height>166</height>
+                <texture>$VAR[InfoIconOverlayVar]</texture>
+            </control>
+
             <control type="group">
-                <posx>20</posx>
-                <posy>82</posy>
+                <posx>600</posx>
+                <posy>72</posy>
                 <control type="image">
-                    <description>Poster Thumb</description>
+                    <width>1320</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <posx>60</posx>
+                    <colordiffuse>White2</colordiffuse>
+                    <include>MediaFlagVars</include>
+                    <texture fallback="flags/rating/NR.png">$INFO[ListItem.MPAA,flags/rating/,.png]</texture>
+                </control>
+                <control type="label">
+                    <posx>256</posx>
+                    <width>1064</width>
+                    <height>90</height>
+                    <font>Medium_Caps2</font>
+                    <label>$VAR[ListItemSeasonVar,S]$VAR[ListItemEpisodeVar,E, - ]$INFO[ListItem.Title]</label>
+                    <textoffsetx>8</textoffsetx>
+                    <textcolor>White2</textcolor>
+                    <visible>Container.Content(episodes)</visible>
+                </control>
+                <control type="button">
+                    <posx>256</posx>
+                    <width>1064</width>
+                    <height>90</height>
+                    <font>Medium_Caps2</font>
+                    <label>$INFO[ListItem.Title]</label>
+                    <label2>$INFO[ListItem.Top250, # , ]</label2>
+                    <textoffsetx>8</textoffsetx>
+                    <disabledcolor>White2</disabledcolor>
+                    <enable>no</enable>
+                    <visible>!Container.Content(episodes)</visible>
+                </control>
+                <control type="group">
+                    <posy>90</posy>
+                    <control type="image">
+                        <width>256</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>256</posx>
+                        <width>680</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>936</posx>
+                        <width>384</width>
+                        <height>216</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="group">
+                        <visible>Container.Content(episodes)</visible>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>256</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <align>right</align>
+                            <textcolor>$VAR[ThemeColorVar]</textcolor>
+                            <label>$LOCALIZE[20364]:</label>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>680</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <label>$INFO[ListItem.TvShowTitle]</label>
+                            <textcolor>White2</textcolor>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <visible>!Container.Content(episodes)</visible>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>256</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <align>right</align>
+                            <textcolor>$VAR[ThemeColorVar]</textcolor>
+                            <label>$LOCALIZE[515]:</label>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>680</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <label>$INFO[ListItem.Genre]</label>
+                            <textcolor>White2</textcolor>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                    </control>
+                </control>
+                <control type="group">
+                    <posy>162</posy>
+                    <control type="image">
+                        <width>256</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="button" id="13">
+                        <posx>256</posx>
+                        <posy>0</posy>
+                        <width>680</width>
+                        <height>72</height>
+                        <onup>9010</onup>
+                        <ondown>50</ondown>
+                        <onleft>5000</onleft>
+                        <onright>4002</onright>
+                        <enable>!IsEmpty(ListItem.Director)</enable>
+                    </control>
+                    <control type="group">
+                        <visible>!Container.Content(tvshows)</visible>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>256</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <align>right</align>
+                            <textcolor>$VAR[ThemeColorVar]</textcolor>
+                            <label>$LOCALIZE[20339]:</label>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>680</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <label fallback="N/A">$INFO[ListItem.Director]</label>
+                            <textcolor>White2</textcolor>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <visible>Container.Content(tvshows)</visible>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>256</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <align>right</align>
+                            <textcolor>$VAR[ThemeColorVar]</textcolor>
+                            <label>$LOCALIZE[126]:</label>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>680</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <label>$INFO[Window(Home).Property(NextAired.Status)]</label>
+                            <textcolor>White2</textcolor>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                    </control>
+                </control>
+                <control type="group">
+                    <posy>234</posy>
+                    <control type="image">
+                        <width>256</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>256</posx>
+                        <width>680</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="group">
+                        <visible>!Container.Content(tvshows)</visible>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>256</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <align>right</align>
+                            <textcolor>$VAR[ThemeColorVar]</textcolor>
+                            <label>$LOCALIZE[20417]:</label>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>680</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <label fallback="N/A">$INFO[ListItem.Writer]</label>
+                            <textcolor>White2</textcolor>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <visible>Container.Content(tvshows)</visible>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>256</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <align>right</align>
+                            <textcolor>$VAR[ThemeColorVar]</textcolor>
+                            <label>$LOCALIZE[20416]:</label>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>256</posx>
+                            <width>680</width>
+                            <height>72</height>
+                            <font>Small</font>
+                            <label>$INFO[ListItem.Premiered]</label>
+                            <textcolor>White2</textcolor>
+                            <textoffsetx>8</textoffsetx>
+                        </control>
+                    </control>
+                </control>
+                <control type="group">
+                    <control type="image">
+                        <posy>306</posy>
+                        <width>1320</width>
+                        <height>42</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posy>564</posy>
+                        <width>1320</width>
+                        <height>42</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posy>876</posy>
+                        <width>1320</width>
+                        <height>42</height>
+                        <include>toast_back</include>
+                    </control>
+                    <!--<control type="label">
+                        <posx>1320</posx>
+                        <posy>876</posy>
+                        <width>1320</width>
+                        <height>42</height>
+                        <font>Smaller</font>
+                        <align>right</align>
+                        <textcolor>grey</textcolor>
+                        <haspath>true</haspath>
+                        <label>$INFO[ListItem.FileNameAndPath]</label>
+                        <textoffsetx>8</textoffsetx>
+                    </control>-->
+                </control>
+                <control type="group">
+                    <posy>348</posy>
+                    <control type="image">
+                        <width>256</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posy>72</posy>
+                        <width>256</width>
+                        <height>144</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>1100</posx>
+                        <width>220</width>
+                        <height>216</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="label">
+                        <posx>256</posx>
+                        <width>256</width>
+                        <height>72</height>
+                        <font>Small</font>
+                        <align>right</align>
+                        <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <label>$LOCALIZE[206]:</label>
+                        <textoffsetx>8</textoffsetx>
+                    </control>
+                    <control type="list" id="50">
+                        <description>Cast</description>
+                        <posx>256</posx>
+                        <posy>0</posy>
+                        <width>844</width>
+                        <height>216</height>
+                        <onup>50</onup>
+                        <ondown>50</ondown>
+                        <onleft condition="Control.IsEnabled(13)">13</onleft>
+                        <onleft condition="!Control.IsEnabled(13)">4002</onleft>
+                        <onright>70</onright>
+                        <orientation>vertical</orientation>
+                        <scrolltime tween="quadratic">200</scrolltime>
+                        <itemlayout width="844" height="72">
+                            <control type="image">
+                                <width>844</width>
+                                <height>72</height>
+                                <include>toast_back</include>
+                            </control>
+                            <control type="label">
+                                <width>844</width>
+                                <height>72</height>
+                                <font>Small</font>
+                                <label>$INFO[ListItem.Label]</label>
+                                <textcolor>c5e5e5e5</textcolor>
+                                <textoffsetx>8</textoffsetx>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout width="844" height="72">
+                            <control type="image">
+                                <width>844</width>
+                                <height>72</height>
+                                <include>toast_back</include>
+                            </control>
+                            <control type="image">
+                                <width>844</width>
+                                <height>72</height>
+                                <texture border="8">listselect_fo.png</texture>
+                                            <visible>Control.HasFocus(50)</visible>
+                            </control>
+                            <control type="label">
+                                <width>844</width>
+                                <height>72</height>
+                                <font>Small</font>
+                                <label>$INFO[ListItem.Label]</label>
+                                <textoffsetx>8</textoffsetx>
+                            </control>
+                        </focusedlayout>
+                    </control>
+                    <control type="image">
+                        <posx>1100</posx>
+                        <width>220</width>
+                        <height>216</height>
+                        <aspectratio>keep</aspectratio>
+                        <bordersize>2</bordersize>
+                        <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <posy>606</posy>
+                    <control type="image">
+                        <width>256</width>
+                        <height>72</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posy>72</posy>
+                        <width>256</width>
+                        <height>198</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="image">
+                        <posx>256</posx>
+                        <width>1064</width>
+                        <height>270</height>
+                        <include>toast_back</include>
+                    </control>
+                    <control type="togglebutton" id="70">
+                        <posx>0</posx>
+                        <width>256</width>
+                        <textcolor>$VAR[ThemeColorVar]</textcolor>
+                        <align>right</align>
+                        <onleft>50</onleft>
+                        <onright>61</onright>
+                        <ondown>5000</ondown>
+                        <onup>50</onup>
+                        <label>$VAR[VideoInfoPlotLabelVar]</label>
+                        <altlabel>$VAR[VideoInfoPlotLabelVar]</altlabel>
+                        <textoffsetx>8</textoffsetx>
+                        <onclick>Skin.ToggleSetting(VideoInfoPlotToggle)</onclick>
+                        <usealttexture>Skin.HasSetting(VideoInfoPlotToggle)</usealttexture>
+                        <disabledcolor>$VAR[ThemeColorVar]</disabledcolor>
+                        <enable>!IsEmpty(ListItem.PlotOutline)</enable>
+                    </control>
+                    <control type="textbox">
+                        <description>Plot outline</description>
+                        <posx>264</posx>
+                        <posy>10</posy>
+                        <width>1000</width>
+                        <height>250</height>
+                        <align>left</align>
+                        <font>Plot</font>
+                        <label>$VAR[VideoInfoPlotVar]</label>
+                        <pagecontrol>61</pagecontrol>
+                        <autoscroll>False</autoscroll>
+                        <animation effect="fade" start="100" end="80" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
+                    </control>
+                    <control type="scrollbar" id="61">
+                        <posy>2</posy>
+                        <posx>256</posx>
+                        <width>1064</width>
+                        <height>266</height>
+                        <onleft>70</onleft>
+                        <onright>5000</onright>
+                        <showonepage>false</showonepage>
+                        <texturesliderbackground>-</texturesliderbackground>
+                        <texturesliderbar>-</texturesliderbar>
+                        <texturesliderbarfocus border="2,0,8,0">dialogs/scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+                    </control>
+                </control>
+            </control>
+            <control type="grouplist">
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
+                <align>center</align>
+                <orientation>horizontal</orientation>
+                <itemgap>0</itemgap>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+                <control type="image">
+                    <width>240</width>
+                    <height>90</height>
+                    <include>toast_back</include>
+                </control>
+            </control>
+            <control type="group" id="6050">
+                <posx>0</posx>
+                <posy>90r</posy>
+                <width>1920</width>
+                <align>center</align>
+                <visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + !SubString(Container.FolderPath,plugin://,left)</visible>
+                <control type="label">
                     <posx>0</posx>
                     <posy>0</posy>
-                    <width>300</width>
-                    <height>500</height>
-                    <aspectratio aligny="top">keep</aspectratio>
-                    <texture background="true">$VAR[InfoPosterThumbVar]</texture>
-                    <bordersize>2</bordersize>
+                    <width>240</width>
+                    <height>90</height>
+                    <align>center</align>
+                    <label>[B]$INFO[ListItem.VideoResolution][/B]</label>
+                    <font>Large</font>
+                    <textcolor>White2</textcolor>
+                    <visible>!Container.Content(tvshows)</visible>
                 </control>
-                <!-- 
-                <control type="image">
-                    <description>Watched Indicator</description>
-                    <posx>234</posx>
-                    <posy>-2</posy>
-                    <width>52</width>
-                    <height>48</height>
-                    <texture>$VAR[InfoIconOverlayVar]</texture>
-                </control>
-                 -->
                 <control type="group">
-                    <posx>330</posx>
+                    <visible>Container.Content(tvshows)</visible>
+                    <control type="label">
+                        <posy>2</posy>
+                        <width>240</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label>[B]$INFO[ListItem.Property(TotalSeasons)][/B]</label>
+                        <font>Large</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                    <control type="label">
+                        <posy>52</posy>
+                        <width>240</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
+                        <font>Medium_Small</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                </control>
+                <control type="label">
+                    <posx>240</posx>
                     <posy>0</posy>
-                    <control type="group">
+                    <width>240</width>
+                    <height>90</height>
+                    <align>center</align>
+                    <label>[B]$INFO[ListItem.VideoAspect,,:1][/B]</label>
+                    <font>Large</font>
+                    <textcolor>White2</textcolor>
+                    <visible>!Container.Content(tvshows)</visible>
+                </control>
+                <control type="group">
+                    <visible>Container.Content(tvshows)</visible>
+                    <posx>240</posx>
+                    <control type="label">
+                        <posy>2</posy>
+                        <width>240</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label>[B]$INFO[ListItem.Property(TotalEpisodes)][/B]</label>
+                        <font>Large</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                    <control type="label">
+                        <posy>52</posy>
+                        <width>240</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
+                        <font>Medium_Small</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                </control>
+                <control type="group">
+                    <visible>Container.Content(tvshows)</visible>
+                    <posx>480</posx>
+                    <control type="label">
+                        <posy>2</posy>
+                        <width>240</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label>[B]$INFO[ListItem.Property(UnWatchedEpisodes)][/B]</label>
+                        <font>Large</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                    <control type="label">
+                        <posy>52</posy>
+                        <width>240</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <label>[LOWERCASE]$LOCALIZE[16101][/LOWERCASE]</label>
+                        <font>Medium_Small</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                </control>
+                <control type="group">
+                    <visible>Container.Content(tvshows)</visible>
+                    <posx>720</posx>
+                    <control type="label">
+                        <posx>0</posx>
+                        <posy>2</posy>
+                        <width>240</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label fallback="N/A">$INFO[Window(Home).Property(NextAired.NextDate)]</label>
+                        <font>Medium_Bold_Floor_Caps</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                    <control type="label">
+                        <posy>52</posy>
+                        <width>240</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <label>[LOWERCASE]$LOCALIZE[31010][/LOWERCASE]</label>
+                        <font>Medium_Small</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                </control>
+                <control type="group">
+                    <visible>!Container.Content(tvshows)</visible>
+                    <posx>480</posx>
+                    <control type="label">
+                        <posy>2</posy>
+                        <width>240</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label>[B]$INFO[ListItem.AudioChannels][/B]</label>
+                        <font>Large</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                    <control type="label">
+                        <posy>52</posy>
+                        <width>240</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <label>[LOWERCASE]$LOCALIZE[19019][/LOWERCASE]</label>
+                        <font>Medium_Small</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                </control>
+                <control type="image">
+                    <posx>772</posx>
+                    <colordiffuse>White2</colordiffuse>
+                    <include>MediaFlagVars</include>
+                    <texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
+                    <visible>!Container.Content(tvshows)</visible>
+                </control>
+                <control type="group">
+                    <posx>1012</posx>
+                    <control type="image" id="800011">
+                        <colordiffuse>White2</colordiffuse>
+                        <include>MediaFlagVars</include>
+                        <bordersize>2</bordersize>
+                        <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+                    </control>
+                    <control type="label">
+                        <posx>-10</posx>
+                        <width>155</width>
+                        <height>90</height>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Studio]</label>
+                        <font>Very_Small_Caps</font>
+                        <textcolor>White2</textcolor>
+                        <wrapmultiline>true</wrapmultiline>
+                        <visible>IsEmpty(Control.GetLabel(800011))</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>1200</posx>
+                    <control type="label">
+                        <posx>0</posx>
                         <posy>0</posy>
-                        <control type="label">
-                            <posx>0</posx>
-                            <width>256</width>
-                            <height>62</height>
-                            <font>Smaller</font>
-                            <aligny>top</aligny>
-                            <textcolor>$VAR[ThemeColorVar]</textcolor>
-                            <label>$LOCALIZE[207]:</label>
-                            <textoffsetx>8</textoffsetx>
-                        </control>
-                        <control type="textbox" id="51">
-                            <description>Plot outline</description>
-                            <posx>256</posx>
-                            <posy>0</posy>
-                            <width>880</width>
-                            <height>250</height>
-                            <align>left</align>
-                            <font>Smaller</font>
-                            <label>$VAR[VideoInfoPlotVar]</label>
-                            <pagecontrol>61</pagecontrol>
-                            <autoscroll>false</autoscroll>
-                        </control>
-                        <control type="scrollbar" id="61">
-                            <posx>900</posx>
-                            <posy>0</posy>
-                            <width>6</width>
-                            <height>250</height>
-                            <texturesliderbackground>-</texturesliderbackground>
-                            <texturesliderbar>dialogs/scrollbar.png</texturesliderbar>
-                            <texturesliderbarfocus>dialogs/scrollbar.png</texturesliderbarfocus>
-                            <textureslidernib>-</textureslidernib>
-                            <textureslidernibfocus>-</textureslidernibfocus>
-                            <onleft>50</onleft>
-                            <onright>50</onright>
-                            <showonepage>false</showonepage>
-                            <orientation>vertical</orientation>
-                            <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(61) + !Control.HasFocus(51)">Conditional</animation>
-                        </control>
+                        <width>240</width>
+                        <height>90</height>
+                        <align>center</align>
+                        <label>[B]$INFO[ListItem.Year][/B]</label>
+                        <font>Large</font>
+                        <textcolor>White2</textcolor>
+                        <visible>!Container.Content(episodes)</visible>
                     </control>
-                    <control type="image">
-                        <description>Line</description>
-                        <posx>10</posx>
-                        <posy>264</posy>
-                        <height>1</height>
-                        <width>1186</width>
-                        <texture>common/grey.png</texture>
-                        <colordiffuse>55FFFFFF</colordiffuse>
+                    <control type="label">
+                        <posx>0</posx>
+                        <posy>2</posy>
+                        <width>240</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label>[B]$INFO[ListItem.Premiered][/B]</label>
+                        <font>Medium_Floor_Caps</font>
+                        <textcolor>White2</textcolor>
+                        <visible>Container.Content(episodes)</visible>
                     </control>
-                    <control type="group">
-                        <posy>264</posy>
-                        <control type="group">
-                            <posy>0</posy>
-                            <control type="group">
-                                <description>TV Show Title</description>
-                                <visible>Container.Content(episodes)</visible>
-                                <control type="label">
-                                    <posx>0</posx>
-                                    <width>256</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <textcolor>$VAR[ThemeColorVar]</textcolor>
-                                    <label>$LOCALIZE[20364]:</label>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                                <control type="label">
-                                    <posx>256</posx>
-                                    <width>680</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <label>$INFO[ListItem.TvShowTitle]</label>
-                                    <textcolor>White2</textcolor>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                            </control>
-                            <control type="group">
-                                <description>Genre</description>
-                                <visible>!Container.Content(episodes)</visible>
-                                <control type="label">
-                                    <posx>0</posx>
-                                    <width>256</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <textcolor>$VAR[ThemeColorVar]</textcolor>
-                                    <label>$LOCALIZE[515]:</label>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                                <control type="label">
-                                    <posx>256</posx>
-                                    <width>680</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <label>$INFO[ListItem.Genre]</label>
-                                    <textcolor>White2</textcolor>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <posy>62</posy>
-                            <control type="group">
-                                <description>NextAired Status</description>
-                                <visible>Container.Content(tvshows)</visible>
-                                <control type="label">
-                                    <posx>0</posx>
-                                    <width>256</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <textcolor>$VAR[ThemeColorVar]</textcolor>
-                                    <label>$LOCALIZE[126]:</label>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                                <control type="label">
-                                    <posx>256</posx>
-                                    <width>680</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <label>$INFO[Window(Home).Property(NextAired.Status)]</label>
-                                    <textcolor>White2</textcolor>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                            </control>
-                            <control type="group">
-                                <description>Director</description>
-                                <visible>!Container.Content(tvshows)</visible>
-                                <control type="label">
-                                    <posx>0</posx>
-                                    <width>256</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <textcolor>$VAR[ThemeColorVar]</textcolor>
-                                    <label>$LOCALIZE[20339]:</label>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                                <control type="label">
-                                    <posx>256</posx>
-                                    <width>680</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <label fallback="N/A">$INFO[ListItem.Director]</label>
-                                    <textcolor>White2</textcolor>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <posy>124</posy>
-                            <control type="group">
-                                <description>Premiered</description>
-                                <visible>Container.Content(tvshows)</visible>
-                                <control type="label">
-                                    <posx>0</posx>
-                                    <width>256</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <textcolor>$VAR[ThemeColorVar]</textcolor>
-                                    <label>$LOCALIZE[20416]:</label>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                                <control type="label">
-                                    <posx>256</posx>
-                                    <width>680</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <label>$INFO[ListItem.Premiered]</label>
-                                    <textcolor>White2</textcolor>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                            </control>
-                            <control type="group">
-                                <description>Writer</description>
-                                <visible>!Container.Content(tvshows)</visible>
-                                <control type="label">
-                                    <posx>0</posx>
-                                    <width>256</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <textcolor>$VAR[ThemeColorVar]</textcolor>
-                                    <label>$LOCALIZE[20417]:</label>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                                <control type="label">
-                                    <posx>256</posx>
-                                    <width>680</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <label fallback="N/A">$INFO[ListItem.Writer]</label>
-                                    <textcolor>White2</textcolor>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                            </control>
-                        </control>
+                    <control type="label">
+                        <posy>52</posy>
+                        <width>240</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <label>[LOWERCASE]$LOCALIZE[20416][/LOWERCASE]</label>
+                        <font>Medium_Small</font>
+                        <textcolor>White2</textcolor>
+                        <visible>Container.Content(episodes)</visible>
                     </control>
-                    <control type="image">
-                        <description>Line</description>
-                        <posx>10</posx>
-                        <posy>460</posy>
-                        <height>1</height>
-                        <width>1186</width>
-                        <texture>common/grey.png</texture>
-                        <colordiffuse>55FFFFFF</colordiffuse>
+                </control>
+                <control type="group">
+                    <posx>1440</posx>
+                    <control type="label">
+                        <posx>0</posx>
+                        <posy>2</posy>
+                        <width>240</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label>[B]$VAR[DurationVar][/B]</label>
+                        <font>Large</font>
+                        <textcolor>White2</textcolor>
                     </control>
-                    <control type="group">
-                        <posy>470</posy>
-                        <control type="label">
-                            <posx>0</posx>
-                            <width>256</width>
-                            <height>62</height>
-                            <font>Smaller</font>
-                            <textcolor>$VAR[ThemeColorVar]</textcolor>
-                            <label>$LOCALIZE[206]:</label>
-                            <textoffsetx>8</textoffsetx>
-                        </control>
-                        <control type="list" id="50">
-                            <description>Cast</description>
-                            <posx>256</posx>
-                            <posy>0</posy>
-                            <width>744</width>
-                            <height>216</height>
-                            <onup>50</onup>
-                            <ondown>50</ondown>
-                            <onleft condition="Control.IsEnabled(13)">13</onleft>
-                            <onleft condition="!Control.IsEnabled(13)">4002</onleft>
-                            <onright>62</onright>
-                            <orientation>vertical</orientation>
-                            <scrolltime tween="quadratic">200</scrolltime>
-                            <pagecontrol>62</pagecontrol>
-                            <itemlayout width="644" height="62">
-                                <control type="label">
-                                    <width>644</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <label>$INFO[ListItem.Label]</label>
-                                    <textcolor>c5e5e5e5</textcolor>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                            </itemlayout>
-                            <focusedlayout width="644" height="62">
-                                <control type="image">
-                                    <width>644</width>
-                                    <height>62</height>
-                                    <texture>dialogs/listitem_focus.png</texture>
-                                    <visible>Control.HasFocus(50)</visible>
-                                </control>
-                                <control type="label">
-                                    <width>644</width>
-                                    <height>62</height>
-                                    <font>Smaller</font>
-                                    <label>$INFO[ListItem.Label]</label>
-                                    <textoffsetx>8</textoffsetx>
-                                </control>
-                            </focusedlayout>
-                        </control>
-                        <control type="scrollbar" id="62">
-                            <posx>900</posx>
-                            <posy>0</posy>
-                            <width>6</width>
-                            <height>216</height>
-                            <texturesliderbackground>-</texturesliderbackground>
-                            <texturesliderbar>dialogs/scrollbar.png</texturesliderbar>
-                            <texturesliderbarfocus>dialogs/scrollbar.png</texturesliderbarfocus>
-                            <textureslidernib>-</textureslidernib>
-                            <textureslidernibfocus>-</textureslidernibfocus>
-                            <onleft>50</onleft>
-                            <onright>50</onright>
-                            <showonepage>false</showonepage>
-                            <orientation>vertical</orientation>
-                            <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(61) + !Control.HasFocus(50)">Conditional</animation>
-                        </control>
-                        <control type="image">
-                            <posy>10</posy>
-                            <posx>950</posx>
-                            <width>220</width>
-                            <height>216</height>
-                            <aspectratio>keep</aspectratio>
-                            <bordersize>2</bordersize>
-                            <texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
-                            <animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(61) + !Control.HasFocus(50)">Conditional</animation>
-                        </control>
+                    <control type="label">
+                        <posy>52</posy>
+                        <width>240</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <label>[LOWERCASE]$LOCALIZE[12391][/LOWERCASE]</label>
+                        <font>Medium_Small</font>
+                        <textcolor>White2</textcolor>
                     </control>
-                    <control type="grouplist">
-                        <posx>256</posx>
-                        <posy>690</posy>
-                        <itemgap>20</itemgap>
-                        <orientation>horizontal</orientation>
-                        <control type="image">
-                            <width>100</width>
-                            <height>100</height>
-                            <colordiffuse>White2</colordiffuse>
-                            <texture>$INFO[ListItem.VideoCodec,flags/video/,.png]</texture>
-                            <aspectratio align="center">keep</aspectratio>
-                            <visible>!IsEmpty(ListItem.VideoCodec)</visible>
-                        </control>
-                        <control type="image">
-                            <width>100</width>
-                            <height>100</height>
-                            <colordiffuse>White2</colordiffuse>
-                            <texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
-                            <aspectratio align="center" aligny="center">keep</aspectratio>
-                            <visible>!IsEmpty(ListItem.AudioCodec)</visible>
-                        </control>
-                        <control type="image">
-                            <width>100</width>
-                            <height>100</height>
-                            <colordiffuse>White2</colordiffuse>
-                            <texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-                            <aspectratio align="center" aligny="center">keep</aspectratio>
-                            <visible>!IsEmpty(ListItem.VideoResolution)</visible>
-                        </control>
-                        <control type="image">
-                            <width>100</width>
-                            <height>100</height>
-                            <colordiffuse>White2</colordiffuse>
-                            <texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-                            <aspectratio align="center" aligny="center">keep</aspectratio>
-                            <visible>!IsEmpty(ListItem.VideoAspect)</visible>
-                        </control>
-                        <control type="image">
-                            <width>100</width>
-                            <height>100</height>
-                            <colordiffuse>White2</colordiffuse>
-                            <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
-                            <aspectratio align="center" aligny="center">keep</aspectratio>
-                            <visible>!IsEmpty(ListItem.Studio)</visible>
-                        </control>
-                        <control type="image">
-                            <width>100</width>
-                            <height>100</height>
-                            <colordiffuse>White2</colordiffuse>
-                            <texture>$INFO[ListItem.Rating,flags/stars/,.png]</texture>
-                            <aspectratio align="center" aligny="center">keep</aspectratio>
-                            <visible>!IsEmpty(ListItem.Rating)</visible>
-                        </control>
+                </control>
+                <control type="group">
+                    <posx>1680</posx>
+                    <visible>!IsEmpty(ListItem.Rating)</visible>
+                    <control type="label">
+                        <posx>0</posx>
+                        <posy>2</posy>
+                        <width>240</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label>[B]$INFO[ListItem.Rating][/B]</label>
+                        <font>Large</font>
+                        <textcolor>White2</textcolor>
+                    </control>
+                    <control type="label">
+                        <posy>52</posy>
+                        <width>240</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <label>[LOWERCASE]$VAR[RatingAndVotesVar][/LOWERCASE]</label>
+                        <font>Medium_Small</font>
+                        <textcolor>White2</textcolor>
                     </control>
                 </control>
             </control>
-        </control>
-        <control type="group" id="9999">
-            <desription>Menu</desription>
-            <include>MediaMenuOverlay</include>
-            <control type="grouplist">
-                <include>MediaMenuGrouplist</include>
+            <control type="button" id="4002">
+                <posx>1536</posx>
+                <posy>162</posy>
+                <width>384</width>
+                <height>216</height>
+                <onup>9010</onup>
+                <ondown>50</ondown>
+                <onleft>13</onleft>
+                <onright>50</onright>
+                <onclick condition="IsEmpty(Window(movieinformation).Property(FanartZoom))">SetProperty(FanartZoom,True,movieinformation)</onclick>
+                <onclick condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">ClearProperty(FanartZoom,movieinformation)</onclick>
+                <onback condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">ClearProperty(FanartZoom,movieinformation)</onback>
+                <onback condition="IsEmpty(Window(movieinformation).Property(FanartZoom))">Dialog.Close(movieinformation)</onback>
+                <animation effect="zoom" start="1536,162,384,216" end="-10,-10,1938,1098" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
+            </control>
+            <control type="image">
+                <posx>1536</posx>
+                <posy>162</posy>
+                <width>384</width>
+                <height>216</height>
+                <aspectratio>scale</aspectratio>
+                <texture>$INFO[ListItem.Art(thumb)]</texture>
+                <visible>Container.Content(episodes)</visible>
+                <bordersize>2</bordersize>
+                <animation effect="zoom" start="1536,162,384,216" end="-10,-10,1940,1100" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
+            </control>
+            <control type="image">
+                <posx>1536</posx>
+                <posy>162</posy>
+                <width>384</width>
+                <height>216</height>
+                <aspectratio>scale</aspectratio>
+                <texture>$INFO[ListItem.Art(fanart)]</texture>
+                <bordersize>2</bordersize>
+                <visible>!Container.Content(episodes)</visible>
+                <animation effect="zoom" start="1536,162,384,216" end="-10,-10,1940,1100" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
+            </control>
+
+
+            <control type="grouplist" id="9000">
+                <posx>1520</posx>
+                <posy>72</posy>
+                <width>414</width>
+                <height>900</height>
+                <itemgap>0</itemgap>
+                <onleft>ClearProperty(VideoInfoMediaMenu,Home)</onleft>
+                <onleft>5000</onleft>
+                <onright>ClearProperty(VideoInfoMediaMenu,Home)</onright>
+                <onright>5000</onright>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <onback>ClearProperty(VideoInfoMediaMenu,Home)</onback>
+                <onback>50</onback>
+                <orientation>vertical</orientation>
+                <animation type="Conditional" reversible="false" condition="!IsEmpty(Window(Home).Property(VideoInfoMediaMenu))">
+                    <effect type="zoom" start="0" end="100" center="auto" easing="out" tween="cubic" time="200" />
+                    <effect type="fade" start="0" end="100" time="200" />
+                </animation>
+                <animation type="Conditional" reversible="false" condition="IsEmpty(Window(Home).Property(VideoInfoMediaMenu))">
+                    <effect type="zoom" start="100" end="0" center="auto" easing="in" tween="cubic" time="200" />
+                    <effect type="fade" start="100" end="0" time="200"/>
+                </animation>
                 <control type="button" id="9004">
                     <description>Cinema Experience</description>
                     <label>31038</label>
@@ -603,6 +1003,7 @@
                     <onclick>Playlist.Clear</onclick>
                     <onclick>Dialog.Close(MovieInformation)</onclick>
                     <onclick>RunScript(script.cinema.experience)</onclick>
+                    <onclick>ClearProperty(VideoInfoMediaMenu,Home)</onclick>
                     <onclick>SetFocus(5000)</onclick>
                     <visible>Container.Content(Movies) + system.hasaddon(script.cinema.experience) + !SubString(Container.FolderPath,plugin)</visible>
                 </control>
@@ -611,6 +1012,7 @@
                     <label>21435</label>
                     <include>MediaMenuButton</include>
                     <onclick>ActivateWindow(1111)</onclick>
+                    <onclick>ClearProperty(VideoInfoMediaMenu,Home)</onclick>
                     <onclick>SetFocus(5000)</onclick>
                     <visible>System.HasAddon(script.libraryeditor) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
                 </control>
@@ -620,6 +1022,7 @@
                     <include>MediaMenuButton</include>
                     <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
+                    <onclick>ClearProperty(VideoInfoMediaMenu,Home)</onclick>
                     <onclick>SetFocus(5000)</onclick>
                     <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
                 </control>
@@ -629,11 +1032,13 @@
                     <include>MediaMenuButton</include>
                     <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+                    <onclick>ClearProperty(VideoInfoMediaMenu,Home)</onclick>
                     <onclick>SetFocus(5000)</onclick>
                     <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
                 </control>
                 <include>MediaMenuBottomButton</include>
             </control>
+
         </control>
     </controls>
 </window>

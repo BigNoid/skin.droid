@@ -2,11 +2,7 @@
 <includes>
     <include name="View_52_ThumbWrap">
         <control type="group">
-            <visible>Control.IsVisible(52)</visible>
-            <animation type="VisibleChange" reversible="false">
-                <effect type="zoom" start="200" end="100" center="960,540" easing="out" tween="cubic" time="300" />
-                <effect type="fade" start="0" end="100" time="300" />
-            </animation>
+            <visible>Control.isVisible(52)</visible>
             <posy>168</posy>
             <control type="wraplist" id="52">
                 <posx>0</posx>
@@ -72,7 +68,7 @@
                         <height>340</height>
                         <aspectratio>scale</aspectratio>
                         <texture flipy="true" fallback="DefaultVideoCover.png" diffuse="thumbs/thumb_diffuse.png">$VAR[LandscapeThumbVar]</texture>
-                        <!--<bordersize>25</bordersize> -->
+                        <!--<bordersize>25</bordersize>-->
                     </control>
                 </itemlayout>
                 <focusedlayout width="636" height="680">
@@ -146,6 +142,22 @@
                     </control>
                 </focusedlayout>
             </control>
+            <control type="scrollbar" id="60">
+                <posx>110</posx>
+                <posy>100r</posy>
+                <width>1680</width>
+                <height>12</height>
+                <onup>52</onup>
+                <ondown>9010</ondown>
+                <texturesliderbackground border="1">-</texturesliderbackground>
+                <texturesliderbar border="6,0,6,0">dialogs/scrollbar/texturesliderbar_hor.png</texturesliderbar>
+                <texturesliderbarfocus border="6,0,6,0">dialogs/scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
+                <textureslidernib>-</textureslidernib>
+                <textureslidernibfocus>-</textureslidernibfocus>
+                <showonepage>false</showonepage>
+                <orientation>horizontal</orientation>
+                <animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+            </control>
             <control type="label">
                 <posx>0</posx>
                 <posy>740</posy>
@@ -153,31 +165,14 @@
                 <height>110</height>
                 <align>center</align>
                 <font>Medium_Bold_Floor_Caps</font>
-                <textcolor>White</textcolor>
+                <textcolor>Floor</textcolor>
                 <shadowcolor>FF424244</shadowcolor>
                 <label>$INFO[ListItem.Label]</label>
                 <textoffsetx>30</textoffsetx>
                 <visible>Container.Content(episodes) | [IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(clearlogo))]</visible>
                 <animation type="Visible">
-                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="100" />
-                    <effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" delay="100" />
-                </animation>
-            </control>
-            <control type="label">
-                <posx>0</posx>
-                <posy>780</posy>
-                <width>1920</width>
-                <height>110</height>
-                <align>center</align>
-                <font>Smaller_Caps</font>
-                <textcolor>White</textcolor>
-                <shadowcolor>FF424244</shadowcolor>
-                <label>$INFO[ListItem.Genre]</label>
-                <textoffsetx>30</textoffsetx>
-                <visible>Container.Content(episodes) | [IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(clearlogo))]</visible>
-                <animation type="Visible">
-                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="100" />
-                    <effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" delay="100" />
+                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="100"/>
+                    <effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" delay="100"/>
                 </animation>
             </control>
         </control>
