@@ -43,7 +43,7 @@
                                 <onclick>PlayerControl(forward)</onclick>
                                 <onleft>100</onleft>
                                 <onright>14</onright>
-                                <onup>12</onup>
+                                <onup>21</onup>
                                 <ondown>16</ondown>
                                 <enable>Player.SeekEnabled</enable>
                             </control>
@@ -160,7 +160,29 @@
                                 <texture>osd/rew_nf.png</texture>
                             </control>
                         </control>
-                    </control>
+						<control type="group">
+							<width>96</width>
+							<height>96</height>
+							<control type="button" id="21">
+								<description>Forward</description>
+								<include>VideoOSDButton</include>
+								<label>298</label>
+								<onclick>Dialog.Close(VideoOSD,true)</onclick>
+								<onclick>FullScreen</onclick>
+								<onleft>100</onleft>
+								<onright>14</onright>
+								<onup>12</onup>
+								<ondown>13</ondown>
+							</control>
+							<control type="image">
+								<posx>16</posx>
+								<posy>16</posy>
+								<width>64</width>
+								<height>64</height>
+								<texture>osd/fullscreen_nf.png</texture>
+							</control>
+						</control>
+					</control>
                 </control>
             </control>
             <control type="group">
