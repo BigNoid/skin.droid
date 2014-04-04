@@ -55,7 +55,7 @@
                         <posy>4</posy>
                         <width>64</width>
                         <height>64</height>
-                        <texture>$VAR[OverlayVar]</texture>
+                        <texture>$VAR[ListItem.Overlay]</texture>
                     </control>
                     <control type="image">
                         <posx>1172</posx>
@@ -113,7 +113,7 @@
                         <posy>4</posy>
                         <width>64</width>
                         <height>64</height>
-                        <texture>$VAR[OverlayVar]</texture>
+                        <texture>$VAR[ListItem.Overlay]</texture>
                     </control>
                     <control type="image">
                         <posx>1172</posx>
